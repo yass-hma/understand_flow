@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outcome__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Outcome</label>
+    <referenceTo>Task_Outcome__c</referenceTo>
+    <relationshipLabel>Outcome to WF Tasks</relationshipLabel>
+    <relationshipName>Outcome_to_Operational_Tasks</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
