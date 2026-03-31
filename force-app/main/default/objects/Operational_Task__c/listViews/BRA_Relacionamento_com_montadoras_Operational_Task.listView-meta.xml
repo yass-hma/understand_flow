@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRA_Relacionamento_com_montadoras_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BRA - Relacionamento com montadoras</label>
+    <queue>BRA_Relacionamento_com_montadoras</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

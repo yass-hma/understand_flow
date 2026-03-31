@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <constants>
+        <name>TaskSubject</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>The case is still pending for appointment confirmation for more than 24 normal hours</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Check_if_the_maintenance_status_is_new</name>
+        <label>Check if the maintenance status is new</label>
+        <locationX>881</locationX>
+        <locationY>259</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_maintenance_status_is_new_after_24hrs</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Maintenance_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>STATE_NEW</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_a_task</targetReference>
+            </connector>
+            <label>If maintenance status is new after 24hrs</label>
+        </rules>
+    </decisions>
+    <description>Create a task to case owner saying that the supplier did not confirm the appointment if the case stays with the maintenance status =&quot;New issue&quot; for more than 8 business hours or 24 normal hours.</description>
+    <environments>Default</environments>
+    <interviewLabel>ALDSAT_NewIssue_CreateNotification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ALDSAT_NewIssue_CreateNotification</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>create a task if the maintenance status is still New Issue after 24hrs</description>
+        <name>Create_a_task</name>
+        <label>Create a task</label>
+        <locationX>750</locationX>
+        <locationY>519</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>High</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>TaskSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>287</locationX>
+        <locationY>45</locationY>
+        <filterFormula>AND(
+NOT({!$User.Bypass_Workflow__c}),
+{!$Record.RecordType.DeveloperName} = &apos;Case_External_Colombia&apos;,
+NOT(ISBLANK(TEXT({!$Record.Maintenance_Status__c}))),
+ISPICKVAL({!$Record.Maintenance_Status__c}, &quot;STATE_NEW&quot;))</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <name>Check_Maintenance_Status_Time</name>
+            <connector>
+                <targetReference>Check_if_the_maintenance_status_is_new</targetReference>
+            </connector>
+            <label>Check Maintenance Status Time</label>
+            <offsetNumber>24</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

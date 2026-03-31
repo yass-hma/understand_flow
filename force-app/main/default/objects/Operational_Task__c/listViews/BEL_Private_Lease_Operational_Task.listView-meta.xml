@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BEL_Private_Lease_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BEL - Private Lease</label>
+    <queue>BEL_Private_Lease</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

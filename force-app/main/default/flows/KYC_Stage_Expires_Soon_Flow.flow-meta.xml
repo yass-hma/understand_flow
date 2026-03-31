@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <interviewLabel>KYC Stage Expires Soon FLow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>KYC Stage Expires Soon Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>KYC_Stage_Expired_Update</name>
+        <label>KYC Stage Expired Update</label>
+        <locationX>440</locationX>
+        <locationY>276</locationY>
+        <inputAssignments>
+            <field>KYC_Stage__c</field>
+            <value>
+                <stringValue>Expired</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>KYC_Stage_Expires_Soon_update</name>
+        <label>KYC Stage Expires Soon update</label>
+        <locationX>176</locationX>
+        <locationY>276</locationY>
+        <inputAssignments>
+            <field>KYC_Stage__c</field>
+            <value>
+                <stringValue>Expires Soon</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <filterFormula>AND(
+NOT({!$User.Bypass_Workflow__c}),
+({!$Record.RecordType.DeveloperName} = &apos;KYC_Compliant&apos;),
+NOT(ISBLANK({!$Record.KYC_Expiration_Date__c})),
+NOT(ISBLANK(TEXT({!$Record.AML_rating_Client__c}))),
+NOT(ISBLANK(TEXT({!$Record.KYC_Stage__c}))),
+OR(ISPICKVAL({!$Record.KYC_Stage__c}, &quot;Completed&quot;),
+ISPICKVAL({!$Record.KYC_Stage__c}, &quot;Expires Soon&quot;)))</filterFormula>
+        <object>SurveyTaker__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <name>KYC_Stage_Expires_Soon</name>
+            <connector>
+                <targetReference>KYC_Stage_Expires_Soon_update</targetReference>
+            </connector>
+            <label>KYC Stage Expires Soon</label>
+            <maxBatchSize>100</maxBatchSize>
+            <offsetNumber>-3</offsetNumber>
+            <offsetUnit>Months</offsetUnit>
+            <recordField>KYC_Expiration_Date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>KYC_Stage_Expired</name>
+            <connector>
+                <targetReference>KYC_Stage_Expired_Update</targetReference>
+            </connector>
+            <label>KYC Stage Expired</label>
+            <maxBatchSize>100</maxBatchSize>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>KYC_Expiration_Date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

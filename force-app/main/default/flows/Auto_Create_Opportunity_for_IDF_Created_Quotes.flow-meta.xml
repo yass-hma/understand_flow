@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Creates Opportunities for Quotes Created by IDF User When Opportunity ID is Blank</description>
+    <environments>Default</environments>
+    <interviewLabel>Auto Create Opportunity for IDF Created Quotes {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Auto Create Opportunity for IDF Created Quotes</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create Opportunity from Quotes</description>
+        <name>Create_Opportunity_from_Quotes</name>
+        <label>Create Opportunity from Quotes</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>$Record.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SyncedQuoteId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_Opportunity_from_Quotes</targetReference>
+        </connector>
+        <filterFormula>AND(
+OR(
+        NOT({!$User.Bypass_Workflow__c}),
+        {!$User.Id} = {!$Label.SmartIDFCreatedbyId}  
+    ),
+NOT(ISBLANK({!$Record.IDFUniqueUserID__c})),
+ISBLANK({!$Record.OpportunityId}),
+{!$Record.CreatedById} = {!$Label.SmartIDFCreatedbyId}
+)</filterFormula>
+        <object>Quote</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

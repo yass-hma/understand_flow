@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRA_Documentacao_de_Seminovos_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BRA - Documentação de Seminovos</label>
+    <queue>BRA_Documentacao_de_Seminovos</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

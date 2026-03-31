@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DECPM_Vertragsmanagement_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>DECPM – Vertragsmanagement</label>
+    <queue>DECPM_Vertragsmanagement</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

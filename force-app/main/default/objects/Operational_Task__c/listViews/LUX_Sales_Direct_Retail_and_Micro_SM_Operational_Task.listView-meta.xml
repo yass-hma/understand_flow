@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LUX_Sales_Direct_Retail_and_Micro_SM_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>LUX - Sales - Direct Retail and Micro SM</label>
+    <queue>LUX_Sales_Direct_Retail_and_Micro_SM</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

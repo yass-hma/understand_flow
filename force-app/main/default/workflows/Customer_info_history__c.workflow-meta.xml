@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_UPA_Account_Owner</fullName>
+        <description>Email UPA Account Owner</description>
+        <protected>false</protected>
+        <recipients>
+            <field>IVA_Account_Owner_Lookup__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/Email_UPA_Account_Owner</template>
+    </alerts>
+    <rules>
+        <fullName>Email UPA Account Owner</fullName>
+        <actions>
+            <name>Email_UPA_Account_Owner</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Customer_info_history__c.Active_Note__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Customer_info_history__c.IVA_Account_Owner_Lookup__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Sending email alert to the Owner of the IVA when a customer info history record is created for a NVA</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

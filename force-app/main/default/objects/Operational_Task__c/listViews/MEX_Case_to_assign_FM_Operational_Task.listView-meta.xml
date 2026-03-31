@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MEX_Case_to_assign_FM_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>MEX - Maintenance follow up</label>
+    <queue>MEX_Case_to_assign_FM</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIN_IN_LIFE_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FIN - IN-LIFE</label>
+    <queue>FIN_IN_LIFE</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

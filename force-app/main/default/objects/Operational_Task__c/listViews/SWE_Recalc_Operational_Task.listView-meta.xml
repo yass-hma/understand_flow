@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SWE_Recalc_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>SWE - Recalc</label>
+    <queue>SWE_Recalc</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

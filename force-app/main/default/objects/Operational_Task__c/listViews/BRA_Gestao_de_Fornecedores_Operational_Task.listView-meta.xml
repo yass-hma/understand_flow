@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRA_Gestao_de_Fornecedores_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BRA - Gestão de Fornecedores</label>
+    <queue>BRA_Gestao_de_Fornecedores</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

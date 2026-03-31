@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRA_End_of_contract_remarketing_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BRA - Remarketing</label>
+    <queue>BRA_End_of_contract_remarketing</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

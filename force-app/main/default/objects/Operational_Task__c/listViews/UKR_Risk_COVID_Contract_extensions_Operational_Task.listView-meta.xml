@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UKR_Risk_COVID_Contract_extensions_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UKR - Risk COVID - Contract extensions</label>
+    <queue>UKR_Risk_COVID_Contract_extensions</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

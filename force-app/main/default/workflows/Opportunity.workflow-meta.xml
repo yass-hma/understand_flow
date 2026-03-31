@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>BRA_Reminder_before_close_date</fullName>
+        <description>BRA-Reminder before close date</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>BRA_Abertura_case/BRA_Reminder_before_close_date</template>
+    </alerts>
+    <alerts>
+        <fullName>CHL_COL_PER_Reminder_before_close_date</fullName>
+        <description>CHL_COL_PER-Reminder before close date</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CHL_COL_PER_Templates/CHL_COL_PER_Reminder_before_close_date</template>
+    </alerts>
+    <alerts>
+        <fullName>ESP_Reminder_before_close_date</fullName>
+        <description>ESP Reminder before close date</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ESP/ESP_Reminder_for_close_date</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_for_Internation_Opp_Owner_when_the_closed_is_past</fullName>
+        <description>Email Alert for Internation Opp Owner when the closed is past</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Interalnational_Email_Tempalte/Email_template_sending_to_Internation_Opp_Owner</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_for_Opp_Owner_when_the_closed_is_coming</fullName>
+        <description>Email Alert for Opp Owner when the closed is coming</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/Email_template_sending_to_Opp_Owner_at_closing_soon</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_ELOQUA_Opportunity_Notification</fullName>
+        <description>FRA - ELOQUA Opportunity Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FR_AYVENS_Users_notification/Eloqua_Opportunity_User_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>INT_Notification_to_UPA_Owner</fullName>
+        <description>INT - Notification to UPA Owner</description>
+        <protected>false</protected>
+        <recipients>
+            <field>UPA_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Interalnational_Email_Tempalte/Sending_Email_to_UPA_owner</template>
+    </alerts>
+    <alerts>
+        <fullName>NOR_Reminder_before_close_date</fullName>
+        <description>NOR-Reminder before close date</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>NOR_templates/NOR_Reminder_before_close_date</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_an_Email_international_Child_Opportunity_Italy</fullName>
+        <description>Send an Email international Child Opportunity Italy</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>International_Child_Opportunity</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Interalnational_Email_Tempalte/Email_template_sending_to_Internation_child_Opp_Owner</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_an_Email_international_Child_Opportunity_owner</fullName>
+        <description>Send an Email international Child Opportunity owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Interalnational_Email_Tempalte/Email_template_sending_to_Internation_child_Opp_Owner</template>
+    </alerts>
+    <alerts>
+        <fullName>TUR_template_closing_date_of_the_opportunity</fullName>
+        <description>TUR template closing date of the opportunity</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>TUR_Templates/TUR_template_closing_date_of_the_opportunity</template>
+    </alerts>
+    <alerts>
+        <fullName>Youroppertunityispastclosedate</fullName>
+        <ccEmails>leaseofferte.nl@aldautomotive.com</ccEmails>
+        <description>Your oppertunity is past close date</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/Aggregationfields</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>AccountSubStatusUpdate</fullName>
+        <field>SUB_Status__c</field>
+        <literalValue>To Reconquer</literalValue>
+        <name>AccountSubStatusUpdate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>AccountId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_AutoGenerated_Renewal_Oppty_Flag</fullName>
+        <description>BR264 - When TECH_StartDate_YearlyRenewalOppty__c is reached, the same day the TECH_RenewalOppty_NextYear_AutoGenerated flag on Account needs to be cleared to enable the creation of renewal oppty of next year for that account.</description>
+        <field>TECH_RenewalOppty_NextYear_AutoGenerated__c</field>
+        <literalValue>0</literalValue>
+        <name>Clear AutoGenerated Renewal Oppty Flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>AccountId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Close_Opportunity</fullName>
+        <description>Update stage of the opportunity to &apos;Closed&apos;</description>
+        <field>StageName</field>
+        <literalValue>Closed</literalValue>
+        <name>Close_Opportunity</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_OppOriginalLead</fullName>
+        <description>Update RecordType to France</description>
+        <field>RecordTypeId</field>
+        <lookupValue>OpportunityFranceFleet</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA - Opp Original Lead</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>HasNoLongerOpenOpportunies</fullName>
+        <field>SUB_Status__c</field>
+        <literalValue>Former customer</literalValue>
+        <name>HasNoLongerOpenOpportunies</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>AccountId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>INT_Update_UPA_Owner_Email</fullName>
+        <field>UPA_Owner_Email__c</field>
+        <formula>Account.Parent.Owner.Email</formula>
+        <name>INT - Update UPA Owner Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Init_TECH_StartDate_YearlyRenewalOppty</fullName>
+        <description>The field is used to capture the renewal oppty start date which is basically the start date of the next year (01/01/N+1). It helps to build a time dependent WF on this field in order to clear the Account.TECH_RenewalOppty_NextYear_AutoGenerated__c flag en</description>
+        <field>TECH_StartDate_YearlyRenewalOppty__c</field>
+        <formula>DATE (YEAR(TODAY()) + 1,01, 01)</formula>
+        <name>Init TECH_StartDate_YearlyRenewalOppty</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Close_date_update</fullName>
+        <field>CloseDate</field>
+        <formula>PRIORVALUE(CloseDate)</formula>
+        <name>Opportunity Close date update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UncheckNeedReviewbyUseronOpp</fullName>
+        <field>Need_Review_By_User__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck &apos;Need Review by User&apos; on Opp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Nb_Vehicles_Only_for_Renewal_Opty</fullName>
+        <field>Number_Of_Vehicles__c</field>
+        <formula>TECH_NbOfVehiclesBasedOnContracts__c</formula>
+        <name>Update Nb Vehicles Only for Renewal Opty</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Updateamountfromnumberofvehicles</fullName>
+        <description>workaraound made to keep quantity in amount (need to have amount in opportunity history) in Opportunity</description>
+        <field>Amount</field>
+        <formula>Number_Of_Vehicles__c</formula>
+        <name>Update amount from number of vehicles</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Updatequantityfromnumberofvehicles</fullName>
+        <description>Quantity forecast</description>
+        <field>TotalOpportunityQuantity</field>
+        <formula>Number_Of_Vehicles__c</formula>
+        <name>Update quantity from number of vehicles</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Alert Opportunity Owner 1 day before CloseDate</fullName>
+        <active>true</active>
+        <description>Create a tast, send an email 1 day before CloseDate for Opportunity International Owner</description>
+        <formula>AND( NOT($User.Bypass_Workflow__c),RecordType.DeveloperName = &apos;OpportunityInternational&apos;, NOT(IsClosed), CloseDate &gt;  TODAY())</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Email_Alert_for_Internation_Opp_Owner_when_the_closed_is_past</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Opportunity_is_not_yet_closed</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Opportunity.CloseDate</offsetFromField>
+            <timeLength>-1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Calculate Nb Vehicles Based On Contracts</fullName>
+        <actions>
+            <name>Update_Nb_Vehicles_Only_for_Renewal_Opty</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Only occurs for Renewal Opportunities Record Type</description>
+        <formula>NOT($User.Bypass_Workflow__c) &amp;&amp; RecordType.DeveloperName = &apos;Renewal_Opportunity&apos; &amp;&amp;  ISCHANGED( TECH_NbOfVehiclesBasedOnContracts__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Clear %27Need review%27 field on Opportunity</fullName>
+        <actions>
+            <name>UncheckNeedReviewbyUseronOpp</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>CRM V2 - Clears the field &apos;Need Review&apos; when a user edits an opportunity</description>
+        <formula>AND( Need_Review_By_User__c ,  CreatedDate &lt;&gt;  LastModifiedDate )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Need to review opportunity %28lead conversion%29</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Need_Review_By_User__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Opportunity France Fleet</value>
+        </criteriaItems>
+        <description>CRM V2 - Time based workflow to inform the user to review an opportunity, when the opportunity was created from Lead Conversion and was not edited by user afterwards</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Pleasereviewthisopportunity</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>15</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>FRA - Opp Original Lead</fullName>
+        <actions>
+            <name>FRA_OppOriginalLead</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.LeadSource</field>
+            <operation>equals</operation>
+            <value>ALD SIV</value>
+        </criteriaItems>
+        <description>update RecordType opportunity when the origin is Lead ALD SIV</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>INT - New Opportunity UPA Owner Notification</fullName>
+        <actions>
+            <name>INT_Notification_to_UPA_Owner</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>INT_Update_UPA_Owner_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Sens Email to UPA owner for New opp. On NVA with International Tender &lt;&gt; Yes</description>
+        <formula>AND( NOT($User.Bypass_Workflow__c), CONTAINS( RecordType.Name , &quot;International&quot;),  CONTAINS( Account.RecordType.Name , &quot;International&quot;),  NOT(CONTAINS(Account.Name , &quot;- International&quot;)),   NOT(ISPICKVAL(Request_For_Proposal2__c,&quot;Yes&quot;)))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>NL Check past close date</fullName>
+        <actions>
+            <name>Youroppertunityispastclosedate</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.CloseDate</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Subsidiary__c</field>
+            <operation>equals</operation>
+            <value>Netherlands</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.OwnerId</field>
+            <operation>contains</operation>
+            <value>Peters</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Email reminder if close date is passed</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Opportunity.CloseDate</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Notification at closing opportunity</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.Workflow_Opp_Closing__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>This Workflow will be used for sending an email for opportunities owner when the closedate is today + 8days , based on user field activated or not.</description>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Email_Alert_for_Opp_Owner_when_the_closed_is_coming</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Opportunity_closing_soon</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Opportunity.CloseDate</offsetFromField>
+            <timeLength>-8</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Opportunity Close date update</fullName>
+        <actions>
+            <name>Opportunity_Close_date_update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Renewal Opportunity</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Evaluate the rule when a record is created, and any time it&apos;s edited to subsequently meet criteria</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity_ClosedDateReached</fullName>
+        <active>true</active>
+        <description>BR-264 - Update the renewal opportunity when closed date is reached</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c),NOT(ISBLANK(CloseDate)) &amp;&amp;  (RecordTypeId == $Label.Renewal_Opportunity_RTId))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Close_Opportunity</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Opportunity.CloseDate</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Opportunity_TechnicalStartDateReached</fullName>
+        <active>true</active>
+        <description>BR-264 - Update the related account field [Account.TECH_RenewalOppty_NextYear_AutoGenerated] when [Opportunity.TECH_StartDate_YearlyRenewalOppty__c] date is reached.</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c),NOT(ISBLANK( TECH_StartDate_YearlyRenewalOppty__c)) &amp;&amp;  (RecordTypeId == $Label.Renewal_Opportunity_RTId))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Clear_AutoGenerated_Renewal_Oppty_Flag</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Opportunity.TECH_StartDate_YearlyRenewalOppty__c</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Renewal Opp update</fullName>
+        <actions>
+            <name>AccountSubStatusUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.SUB_Status__c</field>
+            <operation>equals</operation>
+            <value>Former customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Subsidiary_Indicator__c</field>
+            <operation>equals</operation>
+            <value>62001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>PRT - To be deleted end of 2024</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Renewal Opp update 2</fullName>
+        <actions>
+            <name>HasNoLongerOpenOpportunies</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Account.Subsidiary_Indicator__c</field>
+            <operation>equals</operation>
+            <value>62001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Agreement Sign-Off</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Implementation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>PRT - To be deleted end of 2024</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Renewal Opportunity Field Updates</fullName>
+        <actions>
+            <name>Init_TECH_StartDate_YearlyRenewalOppty</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>BR-264 (Enhancement) + BR-1691 + BR-1880 + BR-1902
+WF to Update TECH_StartDate_YearlyRenewalOppty accordingly to be able to manage the unflag of Account.TECH_RenewalOppty_NextYear_AutoGenerated__c only when required.</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c),($RecordType.Id == $Label.Renewal_Opportunity_RTId) &amp;&amp;  YEAR(CloseDate) ==  YEAR(TODAY()) + 1)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send an Email to International child Italy opps created</fullName>
+        <actions>
+            <name>Send_an_Email_international_Child_Opportunity_Italy</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow is created for sending an email to opportunity owners when the child opps are generated on Paren</description>
+        <formula>AND($User.Bypass_Workflow__c=false, RecordTypeId = &apos;01220000000ClTt&apos;  , Opportunity__c &lt;&gt; null, INCLUDES( Target_Countries__c , &apos;ITA&apos;) )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send an Email to International child opps created</fullName>
+        <actions>
+            <name>Send_an_Email_international_Child_Opportunity_owner</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow is created for sending an email to opportunity owners when the child opps are generated on Paren</description>
+        <formula>AND( $User.Bypass_Workflow__c=false,RecordTypeId = &apos;01220000000ClTt&apos;  , Opportunity__c &lt;&gt; null)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update quantity %26 amount from number of vehicles</fullName>
+        <actions>
+            <name>Updateamountfromnumberofvehicles</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Updatequantityfromnumberofvehicles</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>workaraound made to keep quantity in amount (need to have amount in opportunity history) in Opportunity
+Quantity is used for forecasts (CRM v2)
+For Italy rule doent apply even for opportunity renewal and ordered
+quantity is used for forecasts</description>
+        <formula>AND( Name != &apos;&apos;, CONTAINS(RecordType.Name, &apos;France&apos;), $User.Bypass_Workflow__c =False )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Opportunity_closing_soon</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>8</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Opportunity closing soon</subject>
+    </tasks>
+    <tasks>
+        <fullName>Opportunity_is_not_yet_closed</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CloseDate</offsetFromField>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Opportunity is not yet closed.</subject>
+    </tasks>
+    <tasks>
+        <fullName>Pleasereviewthisopportunity</fullName>
+        <assignedToType>creator</assignedToType>
+        <description>This opportunity was created when you converted a Lead. Please review its information and update it.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Please review this opportunity</subject>
+    </tasks>
+</Workflow>

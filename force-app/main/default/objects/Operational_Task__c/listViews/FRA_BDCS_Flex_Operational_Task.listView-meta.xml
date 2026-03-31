@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_BDCS_Flex_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - BDCS Flex</label>
+    <queue>FRA_BDCS_Flex</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

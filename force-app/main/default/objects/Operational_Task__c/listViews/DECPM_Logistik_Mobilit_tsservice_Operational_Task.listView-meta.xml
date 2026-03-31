@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DECPM_Logistik_Mobilit_tsservice_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>DECPM – Logistik &amp; Mobilitätsservice</label>
+    <queue>DECPM_Logistik_Mobilit_tsservice</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

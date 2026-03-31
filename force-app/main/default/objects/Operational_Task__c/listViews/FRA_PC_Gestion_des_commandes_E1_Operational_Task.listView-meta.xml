@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_PC_Gestion_des_commandes_E1_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA PC - Gestion des commandes E1</label>
+    <queue>FRA_PC_Gestion_des_commandes_E1</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

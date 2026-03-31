@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_VEHICLE_REGISTRATION_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ITA - VEHICLE REGISTRATION</label>
+    <queue>ITA_VEHICLE_REGISTRATION</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

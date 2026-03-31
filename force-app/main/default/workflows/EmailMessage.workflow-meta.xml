@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>BEL_EMSG_Update_Status_to_InProgress</fullName>
+        <field>Status</field>
+        <literalValue>In Progress</literalValue>
+        <name>BEL-Update Status to In-Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>BEL-Update Status on Email message sent</fullName>
+        <actions>
+            <name>BEL_EMSG_Update_Status_to_InProgress</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Case External Belgium</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>EmailMessage.Status</field>
+            <operation>equals</operation>
+            <value>Sent</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </criteriaItems>
+        <description>Change the Case stauts to &quot;In-Progress&quot;  whenever the Send Email Button is clicked</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

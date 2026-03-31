@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROM_Quality_mail2case_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ROM - Quality - mail2case</label>
+    <queue>ROM_Quality_mail2case</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alert_on_Expired_Event1</fullName>
+        <description>Alert on Expired Event</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Tasksemailtemplates/Reminder_for_updating_the_meeting_minutes_and_the_status_of_the_event</template>
+    </alerts>
+    <rules>
+        <fullName>CORE - Expired Event</fullName>
+        <active>true</active>
+        <description>This rule is an alert on meetings still in a planned status with start/end date in the past
+Evaluation Criteria: Evaluate the rule when a record is created, and any time it&apos;s edited to subsequently meet criteria</description>
+        <formula>NOT($User.Bypass_Workflow__c) &amp;&amp; 
+CONTAINS($Label.Event_Meeting_Minute_Mandatory_Reminder, TEXT(Owner:User.Subsidiary_Indicator__c))&amp;&amp; 
+Not(ISPICKVAL( Event_Status__c, &apos;Completed&apos;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Alert_on_Expired_Event1</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Event.EndDateTime</offsetFromField>
+            <timeLength>2</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>UK Event Workflow</fullName>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3 OR 4 OR 5 OR 6 OR 7)</booleanFilter>
+        <criteriaItems>
+            <field>Event.CreatedById</field>
+            <operation>notEqual</operation>
+            <value>Sian REES</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Event.OwnerId</field>
+            <operation>equals</operation>
+            <value>Amanda LAWRENCE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Event.OwnerId</field>
+            <operation>equals</operation>
+            <value>Craig ARCHIBALD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Event.OwnerId</field>
+            <operation>equals</operation>
+            <value>Dave MCLAUGHLIN</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Event.OwnerId</field>
+            <operation>equals</operation>
+            <value>Gary WILLCOCKS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Event.OwnerId</field>
+            <operation>equals</operation>
+            <value>Howie LAURIE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Event.OwnerId</field>
+            <operation>equals</operation>
+            <value>John MCMINN</value>
+        </criteriaItems>
+        <description>Case number 20070706-1447 - Event created by Sian REES assigned to user with role &quot;UK New Business (IT) Team Member&quot; -&gt; Users Ian Turner, Mel Dawson and Marketing User receiven an email</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

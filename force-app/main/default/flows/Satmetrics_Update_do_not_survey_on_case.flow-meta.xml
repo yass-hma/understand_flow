@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_Do_not_send_survey_on_Account_Contact_and_Consent_profile</name>
+        <label>Check &apos;Do not send survey&apos;  on Account, Contact and Consent profile</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_Do_no_send_survey_is_true</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Do_not_send_survey__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contact.Do_not_send_Survey__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_do_not_send_survey_on_case</targetReference>
+            </connector>
+            <label>If &apos;Do no send survey&apos; is true</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>Donotsendsurveycheck</name>
+        <dataType>Boolean</dataType>
+        <expression>OR({!$Record.Account.Do_not_send_survey__c},{!$Record.Contact.Do_not_send_Survey__c})</expression>
+    </formulas>
+    <interviewLabel>SAT - Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Satmetrics - Update do not survey on case</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_do_not_send_survey_on_case</name>
+        <label>Update &apos;do not send survey&apos; on case</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Do_not_send_survey__c</field>
+            <value>
+                <elementReference>Donotsendsurveycheck</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Do_not_send_survey_on_Account_Contact_and_Consent_profile</targetReference>
+        </connector>
+        <filterFormula>AND(
+NOT({!$User.Bypass_Workflow__c}),
+NOT(OR(ISBLANK({!$Record.AccountId}),ISBLANK({!$Record.ContactId}))),
+OR(({!$Record.Account.Do_not_send_survey__c}=TRUE),({!$Record.Contact.Individual.Do_not_send_Survey__c}=TRUE)),
+{!$Record.Do_not_send_survey__c}=FALSE,
+CONTAINS({!$Label.Satmetrix_Countries}, TEXT({!$Record.Account.Subsidiary__c})))</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

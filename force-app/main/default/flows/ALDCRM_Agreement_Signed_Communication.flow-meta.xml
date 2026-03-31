@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Agreement_Post_on_group</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>Agreement_Signed_Intimation</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <actionName>Agreement__c.Agreement_Post_on_group</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>myRule_1_A2</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Agreement__c.Agreement_Post_on_group</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>postTarget</name>
+            <value>
+                <stringValue>International Sales Coordinators</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>textJson</name>
+            <value>
+                <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;Dear International Sales Coordinators,\nIt is my pleasure to announce to you that we have signed the {![Agreement__c].Agreement_name__c} with {![Agreement__c].Account__r.Name} with a global scope as follows: \n{![Agreement__c].Scope_of_the_agreement__c}. \n\nThis agreement is a {![Agreement__c].Type__c} and has been signed on {![Agreement__c].Date_of_Signature__c}. \nThe start date is {![Agreement__c].Agreement_start_date__c} and the end date is on {![Agreement__c].Agreement_end_date__c}\n\nhttps://aldcrm.my.salesforce.com/{![Agreement__c].Id}\n\n{![Agreement__c].Account__r.Name} has a total fleet of around {![Agreement__c].Account__r.Total_Fleet_Potential__c} vehicles and ALD is managing {![Agreement__c].Account__r.Total_Fleet__c} vehicles.\n\nFinancial and commercial terms\n{![Agreement__c].Special_Clauses_Detail__c}\n{![Agreement__c].Comments__c}\n\nDo not hesitate to contact me on Chatter or by email/phone for further information on this agreement.\n\nBest regards,\n\n@[{![Agreement__c].Account__r.OwnerId}]&quot;}</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A2</name>
+        <label>Post on International group</label>
+        <locationX>100</locationX>
+        <locationY>300</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <stringValue>Dear International Sales Coordinators,
+It is my pleasure to announce to you that we have signed the {!myVariable_current.Agreement_name__c} with {!myVariable_current.Account__r.Name} with a global scope as follows: 
+{!myVariable_current.Scope_of_the_agreement__c}. 
+
+This agreement is a {!myVariable_current.Type__c} and has been signed on {!myVariable_current.Date_of_Signature__c}. 
+The start date is {!myVariable_current.Agreement_start_date__c} and the end date is on {!myVariable_current.Agreement_end_date__c}
+
+https://aldcrm.my.salesforce.com/{!myVariable_current.Id}
+
+{!myVariable_current.Account__r.Name} has a total fleet of around {!myVariable_current.Account__r.Total_Fleet_Potential__c} vehicles and ALD is managing {!myVariable_current.Account__r.Total_Fleet__c} vehicles.
+
+Financial and commercial terms
+{!myVariable_current.Special_Clauses_Detail__c}
+{!myVariable_current.Comments__c}
+
+Do not hesitate to contact me on Chatter or by email/phone for further information on this agreement.
+
+Best regards,
+
+@[{!myVariable_current.Account__r.OwnerId}]</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>type</name>
+            <value>
+                <stringValue>GROUP</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <stringValue>0F93X000000ggQdSAI</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>postTarget</name>
+            <value>
+                <stringValue>International Sales Coordinators</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>textJson</name>
+            <value>
+                <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;Dear International Sales Coordinators,\n\nIt is my pleasure to announce we have agreed terms applied to {![Agreement__c].Account__r.Name}, the ICA is pending to be signed but you should be aware that terms apply as of now.\n\nhttps://aldcrm.my.salesforce.com/{![Agreement__c].Id}\n\nThe global scope is as follows:\n\n{![Agreement__c].Scope_of_the_agreement__c}\n\nFinancial and commercial terms\n{![Agreement__c].Special_Clauses_Detail__c}\n{![Agreement__c].Comments__c}\n\nDo not hesitate to contact me on Chatter or by email/phone for further information regarding these terms.\n\nBest regards,\n@[{![Agreement__c].Account__r.OwnerId}]&quot;}</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_3_A1</name>
+        <label>Post on International group</label>
+        <locationX>300</locationX>
+        <locationY>200</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <stringValue>Dear International Sales Coordinators,
+
+It is my pleasure to announce we have agreed terms applied to {!myVariable_current.Account__r.Name}, the ICA is pending to be signed but you should be aware that terms apply as of now.
+
+https://aldcrm.my.salesforce.com/{!myVariable_current.Id}
+
+The global scope is as follows:
+
+{!myVariable_current.Scope_of_the_agreement__c}
+
+Financial and commercial terms
+{!myVariable_current.Special_Clauses_Detail__c}
+{!myVariable_current.Comments__c}
+
+Do not hesitate to contact me on Chatter or by email/phone for further information regarding these terms.
+
+Best regards,
+@[{!myVariable_current.Account__r.OwnerId}]</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>type</name>
+            <value>
+                <stringValue>GROUP</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <stringValue>0F93X000000ggQdSAI</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Signed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Account__r.Subsidiary__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>International</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_pmetdec</targetReference>
+            </connector>
+            <label>ALDCRM - International Agreement</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision2</name>
+        <label>myDecision2</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_3</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Terms Apply</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Account__r.Subsidiary__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>International</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_3_A1</targetReference>
+            </connector>
+            <label>ALDCRM - International Agreement(Terms apply)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_1_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>100</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myRule_1_A1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_1_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_old.Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Signed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_old.Account__r.Subsidiary__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>International</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <description>This process builder raises a chatter post to the chatter group &apos;International Sales Coordinators&apos; when the international agreement stage changes to &apos;Signed&apos;</description>
+    <interviewLabel>ALDCRM_Agreement_Signed_Communication-16_InterviewLabel</interviewLabel>
+    <label>ALDCRM-Agreement Signed Communication</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Agreement__c</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <startElementReference>myDecision</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Agreement__c</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Agreement__c</objectType>
+    </variables>
+</Flow>

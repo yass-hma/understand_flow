@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Gestion_Partenaires_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - Gestion Partenaires</label>
+    <queue>FRA_Gestion_Partenaires</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

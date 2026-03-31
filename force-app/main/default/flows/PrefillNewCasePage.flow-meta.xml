@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Case_Country_Without_Auclid_V2</name>
+        <label>Case Country Without Auclid V2</label>
+        <locationX>311</locationX>
+        <locationY>223</locationY>
+        <assignmentItems>
+            <assignToReference>vFinalLocation</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>FReturnUrl_Country</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>From_Where_Creating_Case</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Case_Is_Not_Country</name>
+        <label>Case Is Not Country</label>
+        <locationX>311</locationX>
+        <locationY>362</locationY>
+        <assignmentItems>
+            <assignToReference>vFinalLocation</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>FReturnUrl_Not_Country</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>From_Where_Creating_Case</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>FromAccount</name>
+        <label>FromAccount</label>
+        <locationX>951</locationX>
+        <locationY>225</locationY>
+        <assignmentItems>
+            <assignToReference>vFinalLocation</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>FURL_Case_From_Account_Or_Contact</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>FromContract</name>
+        <label>FromContract</label>
+        <locationX>1227</locationX>
+        <locationY>69</locationY>
+        <assignmentItems>
+            <assignToReference>vFinalLocation</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>FURL_Case_From_Contract</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>From_Where_Creating_Case</name>
+        <label>From Where Creating Case</label>
+        <locationX>618</locationX>
+        <locationY>225</locationY>
+        <defaultConnector>
+            <targetReference>FromAccount</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>Create_Case_From_Contract</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vCtrId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Search_contract_Informations</targetReference>
+            </connector>
+            <label>Create Case From Contract</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>IsCountry</name>
+        <label>IsCountry</label>
+        <locationX>24</locationX>
+        <locationY>225</locationY>
+        <defaultConnector>
+            <targetReference>Case_Is_Not_Country</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>ExisteCountry</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vCountry.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Case_Country_Without_Auclid_V2</targetReference>
+            </connector>
+            <label>ExisteCountry</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <name>BackgroundContext</name>
+        <dataType>String</dataType>
+        <expression>IF({!vCtrId} != &apos;&apos;, 
+&apos;/lightning/r/Contract/&apos; + {!vCtrId} + &apos;/view&apos;, 
+IF({!vCttId} != &apos;&apos;, 
+&apos;/lightning/r/Contact/&apos; + {!vCttId} + &apos;/view&apos;, 
+IF({!vAccId} != &apos;&apos;, 
+&apos;/lightning/r/Account/&apos; + {!vAccId} + &apos;/view&apos;, 
+&apos;/lightning/o/Case/list?filterName=Recent&apos;)))</expression>
+    </formulas>
+    <formulas>
+        <description>Return url for country with &amp; without Auclid V2</description>
+        <name>FReturnUrl_Country</name>
+        <dataType>String</dataType>
+        <expression>&apos;/apex/CaseManagement?RecordType=&apos; + {!vRecordType} + &apos;&amp;retURL={$Parameter.retURL}&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>FReturnUrl_Not_Country</name>
+        <dataType>String</dataType>
+        <expression>IF({!lex}, 
+&apos;/lightning/o/Case/new?recordTypeId=&apos; + {!vRecordType} + &apos;&amp;nooverride=true&apos; + &apos;&amp;backgroundContext=&apos; + {!BackgroundContext} ,
+ &apos;/500/e?RecordType=&apos; + {!vRecordType} + &apos;&amp;nooverride=1&apos;  + &apos;&amp;retURL={$Parameter.retURL}&apos;)</expression>
+    </formulas>
+    <formulas>
+        <description>URL for the creation of a case from an account or a contact</description>
+        <name>FURL_Case_From_Account_Or_Contact</name>
+        <dataType>String</dataType>
+        <expression>IF({!lex},
+{!vFinalLocation} + &apos;&amp;defaultFieldValues=&apos; + IF(ISBLANK(TRIM({!vAccId})), &apos;&apos;, &apos;AccountId%3D&apos; + {!vAccId}) + IF(ISBLANK(TRIM({!vCttId})), &apos;&apos;, &apos;%2CContactId%3D&apos; + {!vCttId}) + IF(ISBLANK({!def_parent_id}), &apos;&apos;, &apos;%2CParentId%3D&apos; + {!def_parent_id}),
+{!vFinalLocation} + IF(ISBLANK(TRIM({!vAccId})), &apos;&apos;, &apos;&amp;def_account_id=&apos; + {!vAccId}) + IF(ISBLANK(TRIM({!vCttId})), &apos;&apos;, &apos;&amp;def_contact_id=&apos; + {!vCttId}) + IF(ISBLANK({!def_parent_id}), &apos;&apos;, &apos;&amp;def_parent_id=&apos; + {!def_parent_id})
+)</expression>
+    </formulas>
+    <formulas>
+        <name>FURL_Case_From_Contract</name>
+        <dataType>String</dataType>
+        <expression>IF({!lex},
+{!vFinalLocation} + &apos;&amp;defaultFieldValues=&apos; + IF(ISBLANK({!vContract.AccountId}), &apos;&apos;, &apos;AccountId%3D&apos; + {!vContract.AccountId}) + &apos;%2CCF00N20000001K06g%3D&apos; + {!vContract.Name} + &apos;%2CContract%5F%5Fc%3D&apos; + {!vContract.Id} + IF(ISBLANK({!vContract.CustomerSignedId})  || ISNULL({!vContract.CustomerSignedId}), &apos;&apos;, &apos;%2CContactId%3D&apos; + {!vContract.CustomerSignedId}) + IF(ISBLANK({!def_parent_id}), &apos;&apos;, &apos;%2CParentId%3D&apos; + {!def_parent_id}),
+{!vFinalLocation} + IF(ISBLANK({!vContract.AccountId}), &apos;&apos;, &apos;&amp;def_account_id=&apos; + {!vContract.AccountId}) + &apos;&amp;CF00N20000001K06g=&apos; + {!vContract.Name} + &apos;&amp;CF00N20000001K06g_lkid=&apos; + {!vContract.Id} + IF(ISBLANK({!vContract.CustomerSignedId})  || ISNULL({!vContract.CustomerSignedId}), &apos;&apos;, &apos;&amp;def_contact_id=&apos; + {!vContract.CustomerSignedId}) + IF(ISBLANK({!def_parent_id}), &apos;&apos;, &apos;&amp;def_parent_id=&apos; + {!def_parent_id})
+)</expression>
+    </formulas>
+    <formulas>
+        <description>checks whether a user is in lightning mode or in classic mode</description>
+        <name>lex</name>
+        <dataType>Boolean</dataType>
+        <expression>CONTAINS({!$User.UITheme}, &apos;Theme4&apos;)</expression>
+    </formulas>
+    <interviewLabel>PrefillNewCasePage {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PrefillNewCasePage</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Search_contract_Informations</name>
+        <label>Search contract Informations</label>
+        <locationX>956</locationX>
+        <locationY>70</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>FromContract</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>vCtrId</elementReference>
+            </value>
+        </filters>
+        <object>Contract</object>
+        <outputReference>vContract</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>AccountId</queriedFields>
+        <queriedFields>CustomerSignedId</queriedFields>
+        <queriedFields>Name</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>Search_Country_Record</name>
+        <label>Search Country Record</label>
+        <locationX>23</locationX>
+        <locationY>24</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>IsCountry</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Enable_Custom_Case_Catagories__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId__c</field>
+            <operator>StartsWith</operator>
+            <value>
+                <elementReference>vRecordType</elementReference>
+            </value>
+        </filters>
+        <object>Country__c</object>
+        <outputAssignments>
+            <assignToReference>vCountry.AUCLID__c</assignToReference>
+            <field>AUCLID__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>vCountry.Id</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Search_Country_Record</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>def_parent_id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Account Id</description>
+        <name>vAccId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Source Case Id (if any)</description>
+        <name>vCaseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>vContract</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Contract</objectType>
+    </variables>
+    <variables>
+        <name>vCountry</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Country__c</objectType>
+    </variables>
+    <variables>
+        <description>Contrat Id</description>
+        <name>vCtrId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Contact Id</description>
+        <name>vCttId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>The Target Final Location for the flow</description>
+        <name>vFinalLocation</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Source Record Type</description>
+        <name>vRecordType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

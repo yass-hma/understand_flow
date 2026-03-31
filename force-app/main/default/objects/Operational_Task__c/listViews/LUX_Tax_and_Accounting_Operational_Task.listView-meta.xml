@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LUX_Tax_and_Accounting_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>LUX - Tax and Accounting</label>
+    <queue>LUX_Tax_and_Accounting</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

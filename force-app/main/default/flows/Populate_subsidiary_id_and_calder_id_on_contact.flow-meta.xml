@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Calder_ID</name>
+        <label>Assign Calder ID</label>
+        <locationX>707</locationX>
+        <locationY>303</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Local_Calder_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Local_CALDER_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Subsidiary_id</name>
+        <label>Assign Subsidiary id</label>
+        <locationX>525</locationX>
+        <locationY>301</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Local_Subsidiary_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Subsidiary_Indicator__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Subsidiary_id_and_calder_id</name>
+        <label>Assign Subsidiary id and calder id</label>
+        <locationX>313</locationX>
+        <locationY>303</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Local_Subsidiary_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Subsidiary_Indicator__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Local_Calder_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Local_CALDER_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_for_the_blank_fields</name>
+        <label>Check for the blank fields</label>
+        <locationX>521</locationX>
+        <locationY>89</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>subsidiary_id_and_calder_id_are_blank</name>
+            <conditionLogic>(1 OR 2) AND (3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Local_Subsidiary_ID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Local_Subsidiary_ID__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Local_Calder_ID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Local_Calder_ID__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Subsidiary_id_and_calder_id</targetReference>
+            </connector>
+            <label>subsidiary id and calder id are blank</label>
+        </rules>
+        <rules>
+            <name>Only_Subsidiary_id_is_null</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Local_Subsidiary_ID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Local_Subsidiary_ID__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Subsidiary_id</targetReference>
+            </connector>
+            <label>Only Subsidiary id is null</label>
+        </rules>
+        <rules>
+            <name>Only_Calder_id_is_blank</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Local_Calder_ID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Local_Calder_ID__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Calder_ID</targetReference>
+            </connector>
+            <label>Only Calder id is blank</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Populate subsidiary id and calder id on contact {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Populate subsidiary id and calder id on contact</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>7</locationX>
+        <locationY>19</locationY>
+        <connector>
+            <targetReference>Check_for_the_blank_fields</targetReference>
+        </connector>
+        <filterFormula>AND( NOT({!$User.Bypass_Workflow__c}),
+OR(
+AND(NOT(ISNULL(TEXT({!$Record.Account.Subsidiary_Indicator__c}))), OR(ISNULL({!$Record.Local_Subsidiary_ID__c}), ISBLANK({!$Record.Local_Subsidiary_ID__c}))),
+AND(NOT(ISNULL({!$Record.Account.Local_CALDER_ID__c})), OR(ISNULL({!$Record.Local_Calder_ID__c}), ISBLANK({!$Record.Local_Calder_ID__c})))
+)
+)</filterFormula>
+        <object>Contact</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>500</triggerOrder>
+</Flow>

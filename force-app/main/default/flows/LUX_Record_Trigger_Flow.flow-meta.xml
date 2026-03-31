@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Case_Category_and_Detail</name>
+        <label>Assign Case Category and Detail</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.External_Case_Category__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Quotation</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.External_Case_Detail__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Quotation - cars</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_The_EmailToCaseReceiver</name>
+        <label>Check The EmailToCaseReceiver</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>EmailToCaseReceiver_is_ayvensprivatelease</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Emailtocasereceiver__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>lu.ayvensprivatelease@ayvens.com</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Case_Category_and_Detail</targetReference>
+            </connector>
+            <label>EmailToCaseReceiver  is ayvensprivatelease</label>
+        </rules>
+        <rules>
+            <name>EmailToCaseReceiver_is_Partnerships</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Emailtocasereceiver__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>lu.partnerships@axus.lu</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Case_Category_and_Detail</targetReference>
+            </connector>
+            <label>EmailToCaseReceiver is Partnerships</label>
+        </rules>
+        <rules>
+            <name>EmailToCaseReceiver_is_Privatelease</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Emailtocasereceiver__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>privatelease@axus.lu</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Case_Category_and_Detail</targetReference>
+            </connector>
+            <label>EmailToCaseReceiver is Privatelease</label>
+        </rules>
+        <rules>
+            <name>EmailToCaseReceiver_is_indirectquotes</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Emailtocasereceiver__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>lu.indirectquotes@axus.lu</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Case_Category_and_Detail</targetReference>
+            </connector>
+            <label>EmailToCaseReceiver is indirectquotes</label>
+        </rules>
+        <rules>
+            <name>EmailToCaseReceiver_is_Rent</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Emailtocasereceiver__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>contact.rent@ayvens.com</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Case_Category_and_Detail</targetReference>
+            </connector>
+            <label>EmailToCaseReceiver is Rent</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>LUX-Record Trigger Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>LUX-Record Trigger Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_The_EmailToCaseReceiver</targetReference>
+        </connector>
+        <filterFormula>{!$Record.RecordType.DeveloperName}=&apos;Case_External_Luxembourg&apos;</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

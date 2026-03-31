@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_DR_SMALL_IDF_PSC_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - DR SMALL IDF PSC</label>
+    <queue>FRA_DR_SMALL_IDF_PSC</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

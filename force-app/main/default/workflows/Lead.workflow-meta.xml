@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>FRA_PartnerSendEmail_Concession</fullName>
+        <description>FRA - Partner Send email Concession</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SellerEmailAdress__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FR_Partenaires_mod_les/LeadPartenaireNotification1</template>
+    </alerts>
+    <alerts>
+        <fullName>GRC_Web_to_Lead</fullName>
+        <description>GRC - Web to Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>GRC_Web_To_Lead</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/LeadsNewassignmentnotificationSAMPLE</template>
+    </alerts>
+    <alerts>
+        <fullName>LTU_Notify_when_a_Lithuanian_Web2Lead_is_created</fullName>
+        <description>LTU - Notify when a Lithuanian Web2Lead is created</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>service.lt@ayvens.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ALL/LeadsNewassignmentnotificationSAMPLE</template>
+    </alerts>
+    <alerts>
+        <fullName>New_ALD_Provider_Request</fullName>
+        <ccEmails>proveedores.ald@aldautomotive.com</ccEmails>
+        <ccEmails>ainhoa.rosales@aldautomotive.com</ccEmails>
+        <description>New ALD Provider Request</description>
+        <protected>false</protected>
+        <senderAddress>no-responder@ayvens.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ESP_Leads_Templates/Non_Sales_Leads</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Customer_Care_Request</fullName>
+        <ccEmails>atencion.cliente@aldautomotive.com</ccEmails>
+        <ccEmails>ainhoa.rosales@aldautomotive.com</ccEmails>
+        <description>New Customer Care Request</description>
+        <protected>false</protected>
+        <senderAddress>no-responder@ayvens.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ESP_Leads_Templates/Non_Sales_Leads</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Human_Resourses_Request</fullName>
+        <ccEmails>ald.rrhha@aldautomotive.com</ccEmails>
+        <ccEmails>ainhoa.rosales@aldautomotive.com</ccEmails>
+        <description>New Human Resourses Request</description>
+        <protected>false</protected>
+        <senderAddress>no-responder@ayvens.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ESP_Leads_Templates/Non_Sales_Leads</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Used_Vehicle_Purchase_Request</fullName>
+        <ccEmails>carmarketspain@aldautomotive.com</ccEmails>
+        <ccEmails>ainhoa.rosales@aldautomotive.com</ccEmails>
+        <description>New Used Vehicle Purchase Request</description>
+        <protected>false</protected>
+        <senderAddress>no-responder@ayvens.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ESP_Leads_Templates/Non_Sales_Leads</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_info_aldautomotive_com_when_a_german_CPM_lead_is_created</fullName>
+        <ccEmails>info@carprofessional.de</ccEmails>
+        <description>Notify when a German  CPM Web to Lead is created.</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CPM_Web_to_Lead</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/Lead_Assignement_for_CPM</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_info_aldautomotive_com_when_a_german_lead_is_created</fullName>
+        <ccEmails>info@aldautomotive.com</ccEmails>
+        <description>Notify when a German Web to Lead is created.</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/LeadAssignement</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_users</fullName>
+        <description>Notify Brasilian users assigned to BRA - Web To Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/BRASILLeadAssignmentTemplate</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_when_a_Belgian_Web_to_Lead_is_created</fullName>
+        <description>Notify when a Belgian Web to Lead is created.</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sofie.vandendriessche-lpext@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>BEL_All_Users/BELGIUMLeadAssignmentTemplate</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_when_a_Estonian_Web_to_Lead_is_created</fullName>
+        <description>Notify when a Estonian Web to Lead is created.</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>allen.tammiksaar@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>risto.ojassaar@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>siim.sander@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/LeadAssignement</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_when_a_Latvian_Web_to_Lead_is_Created</fullName>
+        <ccEmails>info.lv@aldautomotive.com</ccEmails>
+        <description>Notify when a Latvian Web to Lead is Created</description>
+        <protected>false</protected>
+        <senderAddress>service.lv@ayvens.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>ALL/LeadAssignement</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_when_a_Swiss_lead_is_created</fullName>
+        <description>Notify when a Swiss lead is created.</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>SWZ_Lead_Assignment_Notification</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/LeadsNewassignmentnotificationSAMPLE</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_when_an_Algerian_lead_is_created</fullName>
+        <description>Notify when an Algerian lead is created.</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ryad.bachsais@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/LeadAssignement</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_when_an_Austrian_lead_is_created</fullName>
+        <ccEmails>AUSTRIA-HelpDesk@aldautomotive.com</ccEmails>
+        <description>Notify when an Austrian lead is created.</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>AUT_Web_to_Lead_2</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/AUT_Lead_Assignement</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_when_an_lead_is_created_for_Bulgaria</fullName>
+        <description>Notify when an lead is created for Bulgaria</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>BGR_Web_to_Lead</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Bulgaria_Templates/Bulgaria_Web_to_Lead_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>ROM_Web_to_Lead</fullName>
+        <ccEmails>vanzari.ro@aldautomotive.com</ccEmails>
+        <description>ROM - Web to Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ROU_Web_to_lead</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/LeadsNewassignmentnotificationSAMPLE</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Consent_Profile_Update</fullName>
+        <field>Consent_profile_history__c</field>
+        <formula>Individual.FirstName + &quot; &quot; + Individual.LastName</formula>
+        <name>Consent Profile Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ESP_Lead_Source_Text_Update</fullName>
+        <description>Updates the &quot;Lead Source Text&quot; custom field from the &quot;Lead Source&quot; standard field.
+This is required for lead conversion fields mapping on Account.</description>
+        <field>Lead_Source_Text__c</field>
+        <formula>TEXT(LeadSource)</formula>
+        <name>ESP - Lead Source Text Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_LeadParticulierDateScoringUpdate</fullName>
+        <field>ScoringValidationDate__c</field>
+        <formula>NOW()</formula>
+        <name>FRA Lead Particulier Date Scoring Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_LeadParticulierRecordTypeChang</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>LeadFranceParticulierComplete</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA Lead Particulier Record Type Change</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Lead_Parcours_Record_Type_Update</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>LeadFranceParcoursComplete</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA Lead Parcours Record Type Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Lead_Partner_Record_Type_Update</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Lead_France_Partner_Complete</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA Lead Partner Record Type Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_PartnerLeadChangeReason</fullName>
+        <description>Change Reason to blank value</description>
+        <field>Reason__c</field>
+        <name>FRA - Partner Lead change Reason</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_PartnerLeadChangeStatus</fullName>
+        <field>Status</field>
+        <literalValue>Negotiation</literalValue>
+        <name>FRA - Partner Lead Change Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_PartnerLeadCheckSendEmail</fullName>
+        <field>SendEmail__c</field>
+        <literalValue>0</literalValue>
+        <name>FRA - Partner Lead Check Send Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Update_Lead_ALD_Subsidiary</fullName>
+        <field>HQ_Country_Names_List__c</field>
+        <literalValue>France</literalValue>
+        <name>FRA - Update Lead ALD Subsidiary</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Update_Lead_ALD_Subsidiary_ID</fullName>
+        <field>Subsidiary_ID__c</field>
+        <literalValue>25001</literalValue>
+        <name>FRA - Update Lead ALD Subsidiary ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Update_Lead_BP_Subsidiary</fullName>
+        <field>HQ_Country_Names_List__c</field>
+        <literalValue>France Business Partner</literalValue>
+        <name>FRA - Update Lead BP Subsidiary</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Update_Lead_BP_Subsidiary_ID</fullName>
+        <field>Subsidiary_ID__c</field>
+        <literalValue>25002</literalValue>
+        <name>FRA - Update Lead BP Subsidiary ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Update_Lead_PC_Subsidiary</fullName>
+        <field>HQ_Country_Names_List__c</field>
+        <literalValue>France Parcours</literalValue>
+        <name>FRA - Update Lead PC Subsidiary</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Update_Lead_PC_Subsidiary_ID</fullName>
+        <field>Subsidiary_ID__c</field>
+        <literalValue>25003</literalValue>
+        <name>FRA - Update Lead PC Subsidiary ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>France_LeadRecordTypeUpdate</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>LeadFranceComplete</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>France_Lead Record Type Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>POR_TUR_Record_type_field_update</fullName>
+        <description>To make sure that web2Lead Populates Lead object with the right record type</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Lead_Classic</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>POR - TUR - Record type field update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Account_Anonymization_Bypass</fullName>
+        <description>This field update has been set up to reset the Anonymization_Bypass__c field to false once it has been set to true by the anonymization process. 
+It prevents the record from bypassing VRs after having been anonymized.</description>
+        <field>Anonymization_Bypass__c</field>
+        <literalValue>0</literalValue>
+        <name>Reset Account Anonymization Bypass</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Lead_Source_Owner_to_True</fullName>
+        <field>Lead_Source_Owner__c</field>
+        <literalValue>0</literalValue>
+        <name>Update Lead Source Owner to True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Consent profile history</fullName>
+        <actions>
+            <name>Consent_Profile_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), Individual.Id !=null)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>ESP - Lead Source Text</fullName>
+        <actions>
+            <name>ESP_Lead_Source_Text_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Used to update the &quot;Lead Source Text&quot; custom field from the &quot;Lead Source&quot; standard field whenever it is updated.
+This is required for lead conversion fields mapping on Account.</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), ISCHANGED(LeadSource))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>ESP- Customer Care Leads from aldautomotive Spain</fullName>
+        <actions>
+            <name>New_Customer_Care_Request</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Type_Of_Request__c</field>
+            <operation>equals</operation>
+            <value>Customer Care</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead Spain</value>
+        </criteriaItems>
+        <description>Rule for those leads coming from the corporate Spanish website with the Type of reuqest: Customer Care (Atención al Cliente)</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>ESP- Human Resources Leads from aldautomotive Spain</fullName>
+        <actions>
+            <name>New_Human_Resourses_Request</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Type_Of_Request__c</field>
+            <operation>equals</operation>
+            <value>Human Resources</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead Spain</value>
+        </criteriaItems>
+        <description>Rule for those leads coming from the corporate Spanish website with the Type of reuqest: Human Resources (Recursos Humanos)</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>ESP- Remarketing Leads from aldautomotive Spain</fullName>
+        <actions>
+            <name>New_Used_Vehicle_Purchase_Request</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Type_Of_Request__c</field>
+            <operation>equals</operation>
+            <value>Purchase of second-hand cars for private use</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead Spain</value>
+        </criteriaItems>
+        <description>Rule for those leads coming from the corporate Spanish website with the Type of reuqest: Purchase of second-hand cars for private use (Vehiculo Usado)</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>ESP- Suppliers Leads from aldautomotive Spain</fullName>
+        <actions>
+            <name>New_ALD_Provider_Request</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Type_Of_Request__c</field>
+            <operation>equals</operation>
+            <value>Become an ALD provider</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead Spain</value>
+        </criteriaItems>
+        <description>Rule for those leads coming from the corporate Spanish website with the Type of reuqest: Become a ALD Provider (Ser proveedor ALD)</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Lead Parcours Record Type change</fullName>
+        <actions>
+            <name>FRA_Lead_Parcours_Record_Type_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Valid_for_Conversion_Rate__c</field>
+            <operation>equals</operation>
+            <value>100</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead France Parcours</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Lead Particulier Complete documents</fullName>
+        <actions>
+            <name>FRA_LeadParticulierDateScoringUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( NOT($User.Bypass_Workflow__c), ISCHANGED( ValidatedScoringDocuments__c ), ValidatedScoringDocuments__c,RecordType.Name =&apos;Lead France Particulier&apos; )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Lead Particulier Record Type change</fullName>
+        <actions>
+            <name>FRA_LeadParticulierRecordTypeChang</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead France Particulier</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Valid_for_Conversion_Rate__c</field>
+            <operation>equals</operation>
+            <value>100</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Lead Partner Record Type change</fullName>
+        <actions>
+            <name>FRA_Lead_Partner_Record_Type_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead France Partenaire</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Valid_for_Conversion_Rate_Partner__c</field>
+            <operation>equals</operation>
+            <value>100</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Lead Record Type change</fullName>
+        <actions>
+            <name>France_LeadRecordTypeUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Valid_for_Conversion_Rate__c</field>
+            <operation>equals</operation>
+            <value>100</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead France</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>CRM V2 - Changes the record type of the lead when enough information has been filled in</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Partner Send email</fullName>
+        <actions>
+            <name>FRA_PartnerSendEmail_Concession</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>FRA_PartnerLeadChangeReason</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_PartnerLeadChangeStatus</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_PartnerLeadCheckSendEmail</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Partner french Send email Concession</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), OR(RecordType.DeveloperName =&apos;LeadFrancePartenaire&apos;,RecordType.DeveloperName =&apos;Lead_France_Partner_Complete&apos;), ISCHANGED(SendEmail__c))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Subsidiaries ALD Group</fullName>
+        <actions>
+            <name>FRA_Update_Lead_ALD_Subsidiary</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_Update_Lead_ALD_Subsidiary_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 2) AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Lead.HQ_Country_Names_List__c</field>
+            <operation>notEqual</operation>
+            <value>France</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Subsidiary_ID__c</field>
+            <operation>notEqual</operation>
+            <value>25001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.NetWork__c</field>
+            <operation>notEqual</operation>
+            <value>BREMANY,FFM,G-LEASE,ORIGIN PARCOURS,PARCOURS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead France Particulier,Lead France</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Subsidiaries BP Group</fullName>
+        <actions>
+            <name>FRA_Update_Lead_BP_Subsidiary</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_Update_Lead_BP_Subsidiary_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.HQ_Country_Names_List__c</field>
+            <operation>notEqual</operation>
+            <value>France Business Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Subsidiary_ID__c</field>
+            <operation>notEqual</operation>
+            <value>25002</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.NetWork__c</field>
+            <operation>equals</operation>
+            <value>BREMANY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead France Particulier</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Subsidiaries PC Group</fullName>
+        <actions>
+            <name>FRA_Update_Lead_PC_Subsidiary</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_Update_Lead_PC_Subsidiary_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>5 AND 4 AND 3 AND (1 OR 2)</booleanFilter>
+        <criteriaItems>
+            <field>Lead.HQ_Country_Names_List__c</field>
+            <operation>notEqual</operation>
+            <value>France Parcours</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Subsidiary_ID__c</field>
+            <operation>notEqual</operation>
+            <value>25003</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.NetWork__c</field>
+            <operation>equals</operation>
+            <value>ORIGIN PARCOURS,PARCOURS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead France Particulier,Lead France</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Source Owner Update</fullName>
+        <actions>
+            <name>Update_Lead_Source_Owner_to_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.HQ_Country_Names_List__c</field>
+            <operation>equals</operation>
+            <value>Italy</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Lead_Source_Owner__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>POR - TUR - Update web2Lead Record type</fullName>
+        <actions>
+            <name>POR_TUR_Record_type_field_update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 4) AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Lead Classic</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.HQ_Country_Names_List__c</field>
+            <operation>equals</operation>
+            <value>Portugal,Turkey,Chile,Colombia,Mexico,Peru,Brazil,Romania,Algeria,Greece,India,Morocco,Austria,Czech Republic,Denmark,Denmark (NORDEA),Finland,Finland (NORDEA),Hungary,Ireland,Norway,Norway (NORDEA),Poland,Slovakia</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.HQ_Country_Names_List__c</field>
+            <operation>equals</operation>
+            <value>Sweden,Sweden (NORDEA),Switzerland,Luxembourg</value>
+        </criteriaItems>
+        <description>Update web2Lead Record type for Turkey and Portugal</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reset Lead Anonymization Bypass</fullName>
+        <actions>
+            <name>Reset_Account_Anonymization_Bypass</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Anonymization_Bypass__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>This workflow &amp; field update has been set up to reset the Anonymization_Bypass__c field to false once it has been set to true by the anonymization process. 
+It prevents the record from bypassing VRs after having been anonymized.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>SWZ - Leads from aldautomotive Switzerland</fullName>
+        <actions>
+            <name>Notify_when_a_Swiss_lead_is_created</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Website</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.HQ_Country_Names_List__c</field>
+            <operation>equals</operation>
+            <value>Switzerland</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lead Country B</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Notify user by email when swiss lead is created via Web To Lead.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

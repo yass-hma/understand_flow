@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Update_Spoken_Language_c</name>
+        <label>Update Spoken_Language__c</label>
+        <locationX>1074</locationX>
+        <locationY>528</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Spoken_Language__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LeadSpokenLanguageCode</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Should_update_Language</name>
+        <label>Should update Language?</label>
+        <locationX>555</locationX>
+        <locationY>341</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Locale_is_New_or_Changed</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Locale__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Locale__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Locale__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Locale__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Spoken_Language_c</targetReference>
+            </connector>
+            <label>Locale is New or Changed</label>
+        </rules>
+    </decisions>
+    <description>This flow automatically populates the correct language from the locale__c field based on BR-7253</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>this formula field creates the needed language picklist value from the triggering leads written language (Locale__c)</description>
+        <name>LeadSpokenLanguageCode</name>
+        <dataType>String</dataType>
+        <expression>CASE(Lower(LEFT({!$Record.Locale__c}, 2)),
+&quot;es&quot;,&quot;6&quot;,
+&quot;it&quot;,&quot;5&quot;,
+&quot;de&quot;,&quot;4&quot;,
+&quot;en&quot;, &quot;3&quot;, 
+&quot;nl&quot;, &quot;2&quot;,
+&quot;fr&quot;, &quot;1&quot;,
+&quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Lead_Language_Update_flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead_Language_Update_flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>626</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Should_update_Language</targetReference>
+        </connector>
+        <filterFormula>AND(
+NOT({!$User.Bypass_Workflow__c}),
+NOT(ISBLANK(TEXT({!$Record.HQ_Country_Names_List__c}))),
+NOT(ISBLANK({!$Record.Locale__c})),
+CONTAINS({!$Label.Language_Locale_Subsidiaries}, TEXT({!$Record.HQ_Country_Names_List__c})),
+OR(
+ISNEW(),
+ISCHANGED({!$Record.Locale__c})
+)
+)</filterFormula>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

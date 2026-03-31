@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_LOGI_OP_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - LOGI OP</label>
+    <queue>FRA_LOGI_OP</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

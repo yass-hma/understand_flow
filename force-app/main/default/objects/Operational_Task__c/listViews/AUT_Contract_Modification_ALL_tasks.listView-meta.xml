@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AUT_Contract_Modification_ALL_tasks</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+    <columns>Case__c</columns>
+    <columns>Case_Status__c</columns>
+    <columns>Account__c</columns>
+    <columns>Case_Subject__c</columns>
+    <columns>NAME</columns>
+    <columns>Owner__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>Age_in_Hours__c</columns>
+    <columns>Status__c</columns>
+    <columns>Account_CSE__c</columns>
+    <columns>Case_Contact__c</columns>
+    <columns>Case_Contract_License_plate__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>completed</value>
+    </filters>
+    <filters>
+        <field>Subsidiary_Indicator__c</field>
+        <operation>equals</operation>
+        <value>4001</value>
+    </filters>
+    <filters>
+        <field>OWNER.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>AUT - Trash</value>
+    </filters>
+    <filters>
+        <field>Owner__c</field>
+        <operation>contains</operation>
+        <value>AUT - Contract Modification</value>
+    </filters>
+    <filters>
+        <field>Owner__c</field>
+        <operation>contains</operation>
+        <value>Barbara Schmieder,Bernhard Heiss,Klaus Kerbler,Kanchev,Kurtesi K,Raphael Patron</value>
+    </filters>
+    <label>AUT - Contract Modification ALL tasks</label>
+    <sharedTo>
+        <roleAndSubordinates>AustriaCM</roleAndSubordinates>
+    </sharedTo>
+</ListView>

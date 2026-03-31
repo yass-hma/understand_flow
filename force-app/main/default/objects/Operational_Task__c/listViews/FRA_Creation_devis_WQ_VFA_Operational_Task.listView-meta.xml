@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Creation_devis_WQ_VFA_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - Creation devis WQ VFA</label>
+    <queue>FRA_Creation_devis_WQ_VFA</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

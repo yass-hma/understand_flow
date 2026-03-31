@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IND_Payment_Terms_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>IND - Payment Terms</label>
+    <queue>IND_Payment_Terms</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

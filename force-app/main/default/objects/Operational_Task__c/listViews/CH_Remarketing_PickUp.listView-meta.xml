@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CH_Remarketing_PickUp</fullName>
+    <columns>Case__c</columns>
+    <columns>Case_Status__c</columns>
+    <columns>Case_Subject__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Owner__c</columns>
+    <columns>Age_in_Hours__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>completed</value>
+    </filters>
+    <filters>
+        <field>Subsidiary_Indicator__c</field>
+        <operation>equals</operation>
+        <value>75601</value>
+    </filters>
+    <filters>
+        <field>OWNER.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>CH - Trash</value>
+    </filters>
+    <label>CH - Remarketing PickUp</label>
+    <queue>CH_Remarketing_PickUp</queue>
+    <sharedTo>
+        <roleAndSubordinates>AustriaCM</roleAndSubordinates>
+        <roleAndSubordinates>Switzerland_CMIC</roleAndSubordinates>
+    </sharedTo>
+</ListView>

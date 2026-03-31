@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_M2C_CARMARKET_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ITA - M2C USATO</label>
+    <queue>ITA_M2C_CARMARKET</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

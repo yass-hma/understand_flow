@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRO_Case_to_assign_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>HRV - Case to assign</label>
+    <queue>CRO_Case_to_assign</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

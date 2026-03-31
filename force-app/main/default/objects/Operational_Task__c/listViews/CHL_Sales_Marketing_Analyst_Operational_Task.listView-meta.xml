@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CHL_Sales_Marketing_Analyst_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>CHL - Sales &amp; Marketing Analyst​</label>
+    <queue>CHL_Sales_Marketing_Analyst</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

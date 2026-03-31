@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>IDEA_New_idea_posted</fullName>
+        <description>IDEA - New idea posted</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ALD_Key_Contacts_Community</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Interalnational_Email_Tempalte/Ideas_New_Idea</template>
+    </alerts>
+    <rules>
+        <fullName>IDEA - Notification Email New Idea</fullName>
+        <actions>
+            <name>IDEA_New_idea_posted</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Idea.Status</field>
+            <operation>equals</operation>
+            <value>Posted</value>
+        </criteriaItems>
+        <description>Notify by email the key contacts community when a new idea is posted</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

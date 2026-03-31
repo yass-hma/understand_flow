@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NLD_Quotations_B2C_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>NLD - Quotations B2C</label>
+    <queue>NLD_Quotations_B2C</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Pistes_SMALL_IDF_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - Pistes SMALL IDF</label>
+    <queue>FRA_Pistes_SMALL_IDF</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

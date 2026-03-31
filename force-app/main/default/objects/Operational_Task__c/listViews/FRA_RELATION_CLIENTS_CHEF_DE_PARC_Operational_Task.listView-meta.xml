@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_RELATION_CLIENTS_CHEF_DE_PARC_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - RELATION CLIENTS CHEF DE PARC</label>
+    <queue>FRA_RELATION_CLIENTS_CHEF_DE_PARC</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

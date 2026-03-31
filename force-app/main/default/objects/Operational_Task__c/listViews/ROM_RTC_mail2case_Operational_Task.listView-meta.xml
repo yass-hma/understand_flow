@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROM_RTC_mail2case_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ROM - RTC - mail2case</label>
+    <queue>ROM_RTC_mail2case</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

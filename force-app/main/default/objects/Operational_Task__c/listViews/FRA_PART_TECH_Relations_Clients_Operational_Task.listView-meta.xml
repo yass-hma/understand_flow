@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_PART_TECH_Relations_Clients_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - PART TECH – Relations Clients</label>
+    <queue>FRA_PART_TECH_Relations_Clients</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

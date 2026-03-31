@@ -1,0 +1,3505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>BAL_General_Manager_Credit_Check_Credit_rejected</fullName>
+        <description>BAL(General Manager Step) - Credit Check - Credit rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>BAL_risk_analysts</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>BAL_General_Manager_Step_Credit_Check_Credit_approved</fullName>
+        <description>BAL(General Manager Step) - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>BAL_risk_analysts</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>marcis.maurins@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>BAL_Risk_Manager_Credit_Check_Credit_rejected</fullName>
+        <description>BAL(Risk Manager) - Credit Check - Credit rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>BAL_risk_analysts</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>BAL_Risk_Manager_Step_Credit_Check_Credit_approved</fullName>
+        <description>BAL(Risk Manager Step) - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>BAL_risk_analysts</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>BAL_SGEE_Credit_Check_Credit_rejected</fullName>
+        <description>BAL(SG-EE) - Credit Check - Credit rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>BAL_EE_General_Manager</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>BAL_SGLT_Credit_Check_Credit_rejected</fullName>
+        <description>BAL(SG-LT) - Credit Check - Credit rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>BAL_LT_General_Manager</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>BAL_SGLV_Credit_Check_Credit_rejected</fullName>
+        <description>BAL(SG-LV) - Credit Check - Credit rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>BAL_LV_General_Manager</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>BAL_SG_Credit_Check_Credit_rejected</fullName>
+        <description>BAL(SG) - Credit Check - Credit rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>BAL_SG_EE_Credit_Check_Credit_approved</fullName>
+        <description>BAL(SG-EE) - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>BAL_SG_LT_Credit_Check_Credit_approved</fullName>
+        <description>BAL(SG-LT) - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>marcis.maurins@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>BAL_SG_LV_Credit_Check_Credit_approved</fullName>
+        <description>BAL(SG-LV) - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>CE_Credit_Check_Approved_V2</fullName>
+        <description>CE Credit Check Approved V2</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>CRO_Notify_Croatia_users_when_credit_check_is_created</fullName>
+        <description>CRO - Notify Croatia users when credit check is created.</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CRO_Credit_check_email_recipients</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_Registered</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Approval_Copy_INT</fullName>
+        <ccEmails>ALDA.CREDITRISK@aldautomotive.com</ccEmails>
+        <description>Credit Check Approval Copy INT</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Interalnational_Email_Tempalte/Credit_Check_Approval_request_INT</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Approved_BP</fullName>
+        <ccEmails>Analyse.FINANCIERE@businesspartnerfr.com</ccEmails>
+        <description>Credit Check Approved BP</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapprovedFRA</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Approved_FRA</fullName>
+        <description>Credit Check Approved FRA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>AccountOwnerEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapprovedFRA</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Approved_Romania</fullName>
+        <description>Credit Check Approved Romania</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>adina.goran@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>george.onea@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/CreditCheckCreditapprovedRestricted</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Austria_Approval</fullName>
+        <description>Credit Check Austria - Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>farhad.farahani@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jovan.andjelic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Austria_Final_Approval</fullName>
+        <description>Credit Check Austria - Final Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Austria</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>farhad.farahani@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Austria_Final_Approval_by_GM</fullName>
+        <description>Credit Check Austria - Final Approval by GM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Austria</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Management_Austria</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Austria_Final_Rejection</fullName>
+        <description>Credit Check Austria - Final Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Austria</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>goran.maric@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Austria_Final_Rejection_by_GM</fullName>
+        <description>Credit Check Austria - Final Rejection by GM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Austria</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Management_Austria</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Austria_Rejection</fullName>
+        <description>Credit Check Austria - Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>andreas.bernscherer@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Croatia_Approval</fullName>
+        <description>Credit Check Croatia - Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>andreas.bernscherer@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Croatia_Final_Approval</fullName>
+        <description>Credit Check Croatia - Final Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_General_Manager_Croatia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Croatia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>jaksa.milicic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Croatia_Final_Approval_by_GM</fullName>
+        <description>Credit Check Croatia - Final Approval by GM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Croatia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Management_Croatia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>jaksa.milicic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Croatia_Final_Rejection</fullName>
+        <description>Credit Check Croatia - Final Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_General_Manager_Croatia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Croatia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>jaksa.milicic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Croatia_Rejection</fullName>
+        <description>Credit Check Croatia - Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dimo.statkov@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jovan.andjelic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Hungary_Approval</fullName>
+        <description>Credit Check Hungary - Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dimo.statkov@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jovan.andjelic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Hungary_Final_Approval</fullName>
+        <description>Credit Check Hungary - Final Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Hungary</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>zoltan.borbely@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Hungary_Final_Approval_by_GM</fullName>
+        <description>Credit Check Hungary - Final Approval by GM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Hungary</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Management_Hungary</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>zoltan.borbely@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Hungary_Final_Rejection</fullName>
+        <description>Credit Check Hungary - Final Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Hungary</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>zoltan.borbely@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Hungary_Final_Rejection_by_GM</fullName>
+        <description>Credit Check Hungary - Final Rejection by GM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Hungary</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Management_Hungary</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>zoltan.borbely@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Hungary_Rejection</fullName>
+        <description>Credit Check Hungary - Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dimo.statkov@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jovan.andjelic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Recall</fullName>
+        <description>Credit Check Recall</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Recall</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Recall_FRA</fullName>
+        <description>Credit Check Recall FRA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>AccountOwnerEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Recall_FRA</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Recall_V2</fullName>
+        <description>Credit Check Recall</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Recall</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Rejected_By_Risk_Notification</fullName>
+        <description>Credit Check Rejected By Risk Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Rejected_By_Risk_Notification_BP</fullName>
+        <ccEmails>Analyse.FINANCIERE@businesspartnerfr.com</ccEmails>
+        <description>Credit Check Rejected By Risk Notification - BP</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ManagerEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected_FRA</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Rejected_By_Risk_Notification_FRA</fullName>
+        <description>Credit Check Rejected By Risk Notification FRA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ManagerEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected_FRA</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Rejected_Romania</fullName>
+        <description>Credit Check Rejected Romania</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>adina.goran@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>george.onea@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/Credit_Check_Credit_rejected_restricted</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Risk_Advice_INT</fullName>
+        <ccEmails>ALDA.CREDITRISK@aldautomotive.com</ccEmails>
+        <description>Credit Check Risk Advice INT</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Interalnational_Email_Tempalte/Credit_Check_Risk_Advice_INT</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Serbia_Approval</fullName>
+        <description>Credit Check Serbia - Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dimo.statkov@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jovan.andjelic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Serbia_Final_Approval</fullName>
+        <description>Credit Check Serbia - Final Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Serbia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>slavko.opacic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Serbia_Final_Approval_by_GM</fullName>
+        <description>Credit Check Serbia - Final Approval by GM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Serbia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Management_Serbia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>slavko.opacic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Serbia_Final_Rejection_by_GM</fullName>
+        <description>Credit Check Serbia - Final Rejection by GM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Serbia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Management_Serbia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>slavko.opacic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Serbia_Rejection</fullName>
+        <description>Credit Check Serbia - Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dimo.statkov@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jovan.andjelic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Slovenia_Approval</fullName>
+        <description>Credit Check Slovenia - Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>andreas.bernscherer@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Slovenia_Final_Approval</fullName>
+        <description>Credit Check Slovenia - Final Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Slovenia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>damjana.vidmar@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>hrvoje.rados@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Slovenia_Final_Approval_by_GM</fullName>
+        <description>Credit Check Slovenia - Final Approval by GM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Slovenia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Management_Slovenia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>damjana.vidmar@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Slovenia_Final_Rejection</fullName>
+        <description>Credit Check Slovenia - Final Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Slovenia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>damjana.vidmar@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Slovenia_Final_Rejection_by_GM</fullName>
+        <description>Credit Check Slovenia - Final Rejection by GM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Slovenia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Management_Slovenia</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>damjana.vidmar@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Slovenia_Rejection</fullName>
+        <description>Credit Check Slovenia - Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dimo.statkov@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jovan.andjelic@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Switzerland_Approval</fullName>
+        <description>Credit Check Switzerland - Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>andreas.bernscherer@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Switzerland_Final_Approval</fullName>
+        <description>Credit Check Switzerland - Final Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_General_Manager_Switzerland</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Switzerland</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Switzerland_Final_Rejection_by_GM</fullName>
+        <description>Credit Check Switzerland - Final Rejection by GM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CE_Risk_Analyst_Switzerland</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>CE_Risk_Management_Switzerland</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Credit_Check_Switzerland_Rejection</fullName>
+        <description>Credit Check Switzerland - Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>andreas.bernscherer@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_notification_to_the_owner</fullName>
+        <description>Email notification to the owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckApprovalrequest</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_Credit_Check_Accepted</fullName>
+        <description>FRA - Credit Check Accepted</description>
+        <protected>false</protected>
+        <recipients>
+            <field>AccountOwnerEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/FRA_Credit_Check_Accepted</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_Credit_Check_Accepted_Kia_Flex</fullName>
+        <ccEmails>conseil@flex.kia.fr</ccEmails>
+        <description>FRA - Credit Check Accepted Kia Flex</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/FRA_Credit_Check_Accepted</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_Credit_Check_Approved_Risk_Analyst_notification</fullName>
+        <description>FRA - Credit Check Approved - Risk Analyst notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Risk_Analyst_Approver__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapprovedFRA</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_Credit_Check_Mgr_Approval_Notification_ALD</fullName>
+        <description>FRA_Credit_Check_Mgr_Approval_Notification_ALD</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ManagerEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapprovedFRA</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_Credit_Check_Mgr_Approval_Notification_BP</fullName>
+        <description>FRA_Credit_Check_Mgr_Approval_Notification_BP</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ManagerEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapprovedFRA</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_Credit_Check_Mgr_Approval_Notification_ORIGIN</fullName>
+        <description>FRA_Credit_Check_Mgr_Approval_Notification_ORIGIN</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ManagerEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/FRA_Credit_Check_Accepted</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_Credit_Check_Recalled</fullName>
+        <description>FRA - Credit Check Recalled</description>
+        <protected>false</protected>
+        <recipients>
+            <field>AccountOwnerEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/FRA_Credit_Check_Recalled</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_Credit_Check_Recalled_Kia_Flex</fullName>
+        <ccEmails>conseil@flex.kia.fr</ccEmails>
+        <description>FRA - Credit Check Recalled Kia Flex</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/FRA_Credit_Check_Recalled</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_Credit_Check_Rejected</fullName>
+        <description>FRA - Credit Check Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <field>AccountOwnerEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>ManagerEmail__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/FRA_Credit_Check_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_Credit_Check_Rejected_KIA_Flex</fullName>
+        <ccEmails>conseil@flex.kia.fr</ccEmails>
+        <description>FRA - Credit Check Rejected KIA Flex</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/FRA_Credit_Check_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Hub_NEE_Credit_Check_Credit_rejected</fullName>
+        <description>Hub NEE - Credit Check - Credit rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Hub_SEE_BGR_Credit_Check_Credit_approved</fullName>
+        <description>Hub SEE BGR - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>BGR_Risk_Managers</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Risk_Analyst_Approver__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Hub_SEE_Credit_Check_Credit_rejected</fullName>
+        <description>Hub SEE - Credit Check - Credit rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Risk_Analyst_Approver__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Hub_SEE_Credit_Check_Recall</fullName>
+        <description>Hub SEE – Credit Check - Recall</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_Recall</template>
+    </alerts>
+    <alerts>
+        <fullName>Hub_SEE_GRE_Credit_Check_Credit_approved</fullName>
+        <description>Hub SEE GRE - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>GRE_Risk_Managers</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Risk_Analyst_Approver__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Hub_SEE_ROU_Credit_Check_Credit_approved</fullName>
+        <description>Hub SEE ROU - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ROU_Risk_Managers</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Risk_Analyst_Approver__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Hub_SEE_TUR_Credit_Check_Credit_approved</fullName>
+        <description>Hub SEE TUR  - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>TUR_Risk_Managers</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Risk_Analyst_Approver__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>India_Credit_Check_Credit_approved</fullName>
+        <description>India - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IND_Document_checker</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Risk_Analyst_Approver__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>India_Credit_Check_Credit_rejected</fullName>
+        <description>India - Credit Check - Credit rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IND_Document_checker</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Risk_Analyst_Approver__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>India_Credit_Check_DocumentCheker</fullName>
+        <description>India - Credit - Check DocumentCheker</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/India_Credit_Check_Document_Check</template>
+    </alerts>
+    <alerts>
+        <fullName>Nee_Risk_Analyst_Final_Approval</fullName>
+        <description>NEE Risk Analyst Final Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Poland_Credit_Check_Approved</fullName>
+        <description>Poland - Credit Check Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>malgorzata.ozarowska@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>malgorzata.szmigiel@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sylwia.fabijanska@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/CreditCheckCreditapproved</template>
+    </alerts>
+    <alerts>
+        <fullName>Poland_Credit_Check_Registered</fullName>
+        <description>Poland - Credit Check Registered</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>agata.cieslak@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_Registered</template>
+    </alerts>
+    <alerts>
+        <fullName>Poland_Credit_Check_Rejected</fullName>
+        <description>Poland - Credit Check Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>agata.cieslak@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>iwona.bak@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>malgorzata.szmigiel@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marek.malachowski@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>monika.skorupka@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>pawel.partycki@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ryan.mugford@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Poland_Credit_Check_SG_Decision</fullName>
+        <description>Poland - Credit Check SG Decision</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>iwona.bak@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>malgorzata.szmigiel@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marek.malachowski@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>monika.skorupka@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ryan.mugford@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_SG_Decision</template>
+    </alerts>
+    <alerts>
+        <fullName>Poland_Credit_Check_Submitted_to_SG</fullName>
+        <description>Poland - Credit Check Submitted to SG</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>malgorzata.szmigiel@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>monika.skorupka@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ryan.mugford@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Credit_Check_submitted_to_SG</template>
+    </alerts>
+    <alerts>
+        <fullName>Recall_Approval_Email_Alert</fullName>
+        <ccEmails>ccrecall@kqzapsulmsvgnpd57h6413kx.2-xwweam.eu0.apex.salesforce.com</ccEmails>
+        <description>Recall Approval Email Alert</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>ALL/Recall_Approval_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>SEE_Bulgaria_Notification_to_GM_for_SG_Approval</fullName>
+        <description>SEE - Bulgaria - Notification to GM for SG Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>BGR_Country_GM_CEO</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>SEE_Email_notification_2_months_before_expiration_of_guarantee</fullName>
+        <description>SEE - Email notification 2 months before expiration of guarantee</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <field>Risk_Analyst_Approver__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_GUarantee_expiring_in_2_months</template>
+    </alerts>
+    <alerts>
+        <fullName>SEE_Email_notification_when_credit_check_is_rejected</fullName>
+        <description>SEE - Email notification when credit check is rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Risk_Analyst_Approver__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>SEE_Greece_Notification_to_GM_for_SG_Approval</fullName>
+        <description>SEE - Greece - Notification to GM for SG Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>GRE_Country_GM_CEO</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>SEE_Greece_notification_for_GM</fullName>
+        <description>SEE - Greece notification for GM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>GRE_Country_GM_CEO</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>SEE_Romania_Notification_to_GM_for_SG_Approval</fullName>
+        <description>SEE - Romania - Notification to GM for SG Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ROU_Country_GM_CEO</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Credit_Check_Template/Hub_SEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>UKR_General_Manager_Credit_Check_Credit_rejected</fullName>
+        <description>UKR(General Manager Step) - Credit Check - Credit rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>UKR_risk_analysts</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>UKR_General_Manager_Step_Credit_Check_Credit_approved</fullName>
+        <description>UKR(General Manager Step) - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>UKR_risk_analysts</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>UKR_Risk_Manager_Credit_Check_Credit_rejected</fullName>
+        <description>UKR(Risk Manager) - Credit Check - Credit rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>UKR_risk_analysts</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>UKR_Risk_Manager_Step_Credit_Check_Credit_approved</fullName>
+        <description>UKR(Risk Manager Step) - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>UKR_risk_analysts</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>UKR_SG_Credit_Check_Credit_approved</fullName>
+        <description>UKR(SG) - Credit Check - Credit approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>UKR_SG_Credit_Check_Credit_rejected</fullName>
+        <description>UKR(SG) - Credit Check - Credit rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>UKR_General_Manager</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>rolands.vacers@aldautomotive.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Credit_Check_Template/Hub_NEE_Credit_Check_Credit_rejected</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Approval_Process_End_Date</fullName>
+        <field>Approval_Process_End_Date__c</field>
+        <formula>now()</formula>
+        <name>Approval Process End Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Proposed_by_Documents_check</fullName>
+        <field>Status__c</field>
+        <literalValue>Approval Proposed by Documents Check</literalValue>
+        <name>Approval Proposed by Documents check</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Proposed_by_HubRisk_Manager</fullName>
+        <field>Status__c</field>
+        <literalValue>Approval proposed by Hub Risk Manager</literalValue>
+        <name>Approval Proposed by HubRisk Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Proposed_by_Risk_Analyst</fullName>
+        <field>Status__c</field>
+        <literalValue>Approval Proposed by Risk Analyst</literalValue>
+        <name>Approval Proposed by Risk Analyst</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Proposed_by_Risk_Analyst_CHE</fullName>
+        <description>Approval Proposed by Risk Analyst  Switzerland</description>
+        <field>Status__c</field>
+        <literalValue>Approval Proposed by Risk Analyst</literalValue>
+        <name>Approval Proposed by Risk Analyst CHE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Proposed_by_Risk_Analyst_HUN</fullName>
+        <description>Approval Proposed by Risk Analyst</description>
+        <field>Status__c</field>
+        <literalValue>Approval Proposed by Risk Analyst</literalValue>
+        <name>Approval Proposed by Risk Analyst HUN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Proposed_by_Risk_Analyst_SRB</fullName>
+        <description>Approval Proposed by Risk Analyst Serbia</description>
+        <field>Status__c</field>
+        <literalValue>Approval Proposed by Risk Analyst</literalValue>
+        <name>Approval Proposed by Risk Analyst SRB</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Proposed_by_Risk_Analyst_SVN</fullName>
+        <description>Approval Proposed by Risk Analyst Slovenia</description>
+        <field>Status__c</field>
+        <literalValue>Approval Proposed by Risk Analyst</literalValue>
+        <name>Approval Proposed by Risk Analyst SVN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Proposed_by_Risk_Anlyst_Austria</fullName>
+        <description>Approval Proposed by Risk Analyst Austria</description>
+        <field>Status__c</field>
+        <literalValue>Approval Proposed by Risk Analyst</literalValue>
+        <name>Approval Proposed by Risk Anlyst Austria</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Proposed_by_Risk_Anlyst_Croatia</fullName>
+        <description>Approval Proposed by Risk Anlyst Croatia</description>
+        <field>Status__c</field>
+        <literalValue>Approval Proposed by Risk Analyst</literalValue>
+        <name>Approval Proposed by Risk Anlyst Croatia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Proposed_by_Sales_Manager</fullName>
+        <field>Status__c</field>
+        <literalValue>Approval proposed by Sales Manager</literalValue>
+        <name>Approval Proposed by Sales Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_proposed_by_Country_GM_CEO</fullName>
+        <field>Status__c</field>
+        <literalValue>Approval proposed by Country GM / CEO</literalValue>
+        <name>Approval proposed by Country GM / CEO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_proposed_by_Hub_GM_CEO</fullName>
+        <field>Status__c</field>
+        <literalValue>Approval proposed by Hub GM / CEO</literalValue>
+        <name>Approval proposed by Hub GM / CEO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_proposed_by_Risk_Manager</fullName>
+        <field>Status__c</field>
+        <literalValue>Approval Proposed By Risk Manager</literalValue>
+        <name>Approval proposed by Risk Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approve_By_Compliance</fullName>
+        <field>Status__c</field>
+        <literalValue>Approval proposed by Compliance</literalValue>
+        <name>Approval By Compliance</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_by_SG</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved by SG</literalValue>
+        <name>Approved by SG</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Complaince_Decision_Date</fullName>
+        <field>Compliance_Decision_Date__c</field>
+        <formula>now()</formula>
+        <name>Complaince Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Country_FM_Submission_Date</fullName>
+        <field>Financial_Manager_Submission_Date__c</field>
+        <formula>now()</formula>
+        <name>Country FM Submission Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Country_GM_CEO_Decision_Date</fullName>
+        <field>Country_GM_CEO_Decision_Date__c</field>
+        <formula>now()</formula>
+        <name>Country GM / CEO Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Country_GM_CEO_Submission_Date</fullName>
+        <field>Country_GM_CEO_Submission_Date__c</field>
+        <formula>now()</formula>
+        <name>Country GM / CEO Submission Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Document_Check_Decision_Date</fullName>
+        <description>Documents validation date will be updated in Documents check step when the record is approved.</description>
+        <field>Document_Check_Decision_Date__c</field>
+        <formula>now()</formula>
+        <name>Document Check Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Document_Check_Decision_Date_Rejection</fullName>
+        <field>Document_Check_Decision_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Document Check Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Uncheck_Require_GManager_Approval</fullName>
+        <field>Require_GM_Approval__c</field>
+        <literalValue>0</literalValue>
+        <name>FRA - Uncheck Require GManager Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FinalDecisionMakerCurrentUser</fullName>
+        <field>Analyst__c</field>
+        <formula>/*$User.FirstName &amp; &quot; &quot; &amp;  $User.LastName*/
+
+$User.Id</formula>
+        <name>Final Decision Maker: Current User</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FinalDecisionMakerurrentUser</fullName>
+        <field>Analyst__c</field>
+        <formula>/*$User.FirstName &amp; &quot; &quot; &amp;  $User.LastName*/ $User.Id</formula>
+        <name>Final Decision Maker : Current User</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_Decision_Maker_Current_User</fullName>
+        <description>Final Decision Maker : Current User</description>
+        <field>Analyst__c</field>
+        <formula>$User.Id</formula>
+        <name>Final Decision Maker : Current User</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_Decision_Maker_Current_User_V2</fullName>
+        <description>Final Decision Maker : Current User V2</description>
+        <field>Analyst__c</field>
+        <formula>$User.Id</formula>
+        <name>Final Decision Maker : Current User</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Financial_Manager_Decision_Date</fullName>
+        <field>Financial_Manager_Decision_Date__c</field>
+        <formula>now()</formula>
+        <name>Financial Manager Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Hub_GM_CEO_Decision_Date</fullName>
+        <field>Hub_GM_CEO_Decision_Date__c</field>
+        <formula>now()</formula>
+        <name>Hub GM / CEO Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Hub_GM_CEO_Submission_Date</fullName>
+        <field>Hub_GM_CEO_Submission_Date__c</field>
+        <formula>now()</formula>
+        <name>Hub GM / CEO Submission Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Hub_Risk_Manager_Decision_Date</fullName>
+        <field>Hub_Risk_Manager_Decision_Date__c</field>
+        <formula>now()</formula>
+        <name>Hub Risk Manager Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Hub_Risk_Manager_Submission_Date</fullName>
+        <field>HUB_Risk_Manager_Submission_Date__c</field>
+        <formula>now()</formula>
+        <name>Hub Risk Manager Submission Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>InvokeFMApprovalTrue</fullName>
+        <field>Financial_Manager_Approval__c</field>
+        <literalValue>1</literalValue>
+        <name>InvokeFMApprovalTrue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>InvokeSeeApprovalTrue</fullName>
+        <description>To Check the InvokeApprovalProcess check box to true so that SEE Approval Process Will Execute</description>
+        <field>InvokeSEEApprovalProcess__c</field>
+        <literalValue>1</literalValue>
+        <name>InvokeSeeApprovalTrue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NEE_Check_Risk_Analyst</fullName>
+        <field>Risk_Analyst_Check_Box__c</field>
+        <literalValue>1</literalValue>
+        <name>NEE - Check Risk Analyst</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Number_of_Submission</fullName>
+        <field>number_of_submit__c</field>
+        <formula>number_of_submit__c +1</formula>
+        <name>Number of Submission</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Recheck_Needed_True</fullName>
+        <field>Recheck_needed__c</field>
+        <literalValue>1</literalValue>
+        <name>Recheck Needed True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Recheck_Needed_True_V2</fullName>
+        <description>Recheck Needed True</description>
+        <field>Recheck_needed__c</field>
+        <literalValue>1</literalValue>
+        <name>Recheck Needed True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reject_By_Compliance</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejection proposed by Compliance</literalValue>
+        <name>Rejection By Compliance</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reject_proposed_by_Country_GM_CEO</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejection proposed by Country GM / CEO</literalValue>
+        <name>Rejection proposed by Country GM / CEO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reject_proposed_by_Hub_GM_CEO</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejection proposed by Hub GM / CEO</literalValue>
+        <name>Reject proposed by Hub GM / CEO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_Documents_check</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected by Documents check</literalValue>
+        <name>Rejected by Documents check</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_by_SG</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected by SG</literalValue>
+        <name>Rejected by SG</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejection_Proposd_by_Risk_Anlyst_Austria</fullName>
+        <description>Rejection Proposd by Risk Anlyst Austria</description>
+        <field>Status__c</field>
+        <literalValue>Rejection Proposed by Risk Analyst</literalValue>
+        <name>Rejection Proposd by Risk Anlyst Austria</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejection_Proposed_By_Hub_Risk_Manager</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejection proposed by Hub Risk Manager</literalValue>
+        <name>Rejection Proposed By Hub Risk Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejection_Proposed_by_Risk_Analyst</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejection Proposed by Risk Analyst</literalValue>
+        <name>Rejection Proposed by Risk Analyst</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejection_Proposed_by_Risk_Analyst_CHE</fullName>
+        <description>Rejection Proposed by Risk Analyst Switzerland</description>
+        <field>Status__c</field>
+        <literalValue>Rejection Proposed by Risk Analyst</literalValue>
+        <name>Rejection Proposed by Risk Analyst CHE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejection_Proposed_by_Risk_Analyst_Cro</fullName>
+        <description>Rejection Proposed by Risk Analyst Croatia</description>
+        <field>Status__c</field>
+        <literalValue>Rejection Proposed by Risk Analyst</literalValue>
+        <name>Rejection Proposed by Risk Analyst Cro</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejection_Proposed_by_Risk_Analyst_HUN</fullName>
+        <description>Rejection Proposed by Risk Analyst Hungary</description>
+        <field>Status__c</field>
+        <literalValue>Rejection Proposed by Risk Analyst</literalValue>
+        <name>Rejection Proposed by Risk Analyst HUN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejection_Proposed_by_Risk_Analyst_SRB</fullName>
+        <description>Rejection Proposed by Risk Analyst Serbia</description>
+        <field>Status__c</field>
+        <literalValue>Rejection Proposed by Risk Analyst</literalValue>
+        <name>Rejection Proposed by Risk Analyst SRB</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejection_Proposed_by_Risk_Analyst_SVN</fullName>
+        <description>Rejection Proposed by Risk Analyst Slovenia</description>
+        <field>Status__c</field>
+        <literalValue>Rejection Proposed by Risk Analyst</literalValue>
+        <name>Rejection Proposed by Risk Analyst SVN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejection_Proposed_by_Sales_Manager</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejection proposed by Sales Manager</literalValue>
+        <name>Rejection Proposed by Sales Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_number_of_submit</fullName>
+        <field>number_of_submit__c</field>
+        <formula>0</formula>
+        <name>Reset number of submit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_number_of_submit_V2</fullName>
+        <description>Reset number of submit</description>
+        <field>number_of_submit__c</field>
+        <formula>0</formula>
+        <name>Reset number of submit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Risk_Analyst_Approver</fullName>
+        <field>isPolandRisk_Analyst_Approver__c</field>
+        <literalValue>1</literalValue>
+        <name>Risk Analyst Approver</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Risk_Analyst_Decision_Date</fullName>
+        <field>Risk_Analyst_Decision_Date__c</field>
+        <formula>now()</formula>
+        <name>Risk Analyst Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Risk_Analyst_approver_Current_User</fullName>
+        <field>Risk_Analyst_Approver_Id__c</field>
+        <formula>$User.Id</formula>
+        <name>Risk Analyst approver : Current User Id</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Risk_Manager_Bypass_FP_TRUE</fullName>
+        <field>NEE_Risk_Manager_Flag__c</field>
+        <literalValue>1</literalValue>
+        <name>Risk Manager Bypass FP TRUE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Risk_Manager_Decision_Date</fullName>
+        <field>Risk_Manager_Decision_Date__c</field>
+        <formula>now()</formula>
+        <name>Risk Manager Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Risk_Manager_Submission_Date</fullName>
+        <field>Risk_Manager_Submission_Date__c</field>
+        <formula>now()</formula>
+        <name>Risk Manager Submission Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SG_Validation_Date</fullName>
+        <field>SG_Validation_Date__c</field>
+        <formula>NOW()</formula>
+        <name>SG Validation date and hrs</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sales_Manager_Submission_date</fullName>
+        <description>Sales Manager Submission date</description>
+        <field>Sales_Manager_Submission_Date__c</field>
+        <formula>Now()</formula>
+        <name>Sales Manager Submission date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sales_Manager_decision_date</fullName>
+        <field>Sales_Manager_Decision_Date__c</field>
+        <formula>Now()</formula>
+        <name>Sales Manager decision date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetBusinessApprovalDate</fullName>
+        <field>Business_Approval_Date__c</field>
+        <formula>now()</formula>
+        <name>Set Business Approval Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetRiskApprovalSubmissionDate</fullName>
+        <field>RiskApprovalSubmissionDate__c</field>
+        <formula>now()</formula>
+        <name>Set Risk Approval Submission Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetRiskApprovaldate</fullName>
+        <field>Risk_Approval_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Risk Approval date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetSubmissiondate</fullName>
+        <field>BusinessApprovalSubmissionDate__c</field>
+        <formula>NOW()</formula>
+        <name>Set Submission date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Contract_Number_Value</fullName>
+        <field>Contract_Number__c</field>
+        <formula>Account__r.Price_range__c</formula>
+        <name>Set Contract Number Value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Final_Decision_Date</fullName>
+        <field>Final_Decision_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Final Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Final_Decision_Date_V2</fullName>
+        <description>Set Final Decision Date</description>
+        <field>Final_Decision_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Final Decision Date V2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Final_Decision_Date_V2_1</fullName>
+        <description>Set Final Decision Date</description>
+        <field>Final_Decision_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Final Decision Date V2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Final_Decision_Date_to_Null</fullName>
+        <field>Final_Decision_Date__c</field>
+        <name>Set Final Decision Date to Null</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Final_Decision_Maker_Analyst_null</fullName>
+        <description>HUB NEE</description>
+        <field>Analyst__c</field>
+        <name>Set Final Decision Maker(Analyst) null</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Final_Rejection_Date</fullName>
+        <field>Final_Rejection_Date__c</field>
+        <formula>now()</formula>
+        <name>Set Final Rejection Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_GM_Decision_Date</fullName>
+        <field>General_Manager_Decision_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set GM Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Lead_Number_Value</fullName>
+        <field>Lead_Id__c</field>
+        <formula>Account__r.PA_LeadNumber__c</formula>
+        <name>Set Lead Number Value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Recheck_Needed_Date</fullName>
+        <field>Recheck_needed_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Recheck Needed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Recheck_Needed_Date_V2</fullName>
+        <description>Set Recheck Needed Date</description>
+        <field>Recheck_needed_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Recheck Needed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Approval_date_AUT</fullName>
+        <description>Set Risk Approval date Austria</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Approval date AUT</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Approval_date_Austria</fullName>
+        <description>Set Risk Approval date Austria</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Risk Approval date Austria</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Approval_date_CHE</fullName>
+        <description>Set Risk Approval date Switzerland</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Approval date CHE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Approval_date_CRO</fullName>
+        <description>Set Risk Approval date Croatia</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Approval date CRO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Approval_date_Croatia</fullName>
+        <description>Set Risk Approval date Croatia</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Approval date Croatia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Approval_date_HUN</fullName>
+        <description>Set Risk Approval date Hungary</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Approval date HUN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Approval_date_Hungary</fullName>
+        <description>Set Risk Approval date Hungary</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Approval date Hungary</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Approval_date_SRB</fullName>
+        <description>Set Risk Approval date Serbia</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Approval date SRB</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Approval_date_SVN</fullName>
+        <description>Set Risk Approval date Slovenia</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Approval date SVN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Approval_date_Serbia</fullName>
+        <description>Set Risk Approval date Serbia</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Approval date Serbia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Approval_date_Slovenia</fullName>
+        <description>Set Risk Approval date Slovenia</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Approval date Slovenia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Approval_date_Switzerland</fullName>
+        <description>Set Risk Approval date Switzerland</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Approval date Switzerland</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Decision_Date</fullName>
+        <field>Risk_Approval_Date__c</field>
+        <formula>now()</formula>
+        <name>Set Risk Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Domain_Text</fullName>
+        <field>Risk_Domain_text__c</field>
+        <formula>Case( 
+Subsidiary_Indicator__c ,
+&apos;25001&apos;,&apos;France&apos;,
+&apos;25002&apos;,&apos;France&apos;,
+&apos;25003&apos;,&apos;France&apos;,
+&apos;38001&apos;,&apos;Italy&apos;,
+&apos;4001&apos;,&apos;Central Europe&apos;,
+&apos;19101&apos;,&apos;Central Europe&apos;,
+&apos;19102&apos;,&apos;Central Europe&apos;,
+&apos;34801&apos;,&apos;Central Europe&apos;,
+&apos;68801&apos;,&apos;Central Europe&apos;,
+&apos;70301&apos;,&apos;Central Europe&apos;,
+&apos;70501&apos;,&apos;Central Europe&apos;,
+&apos;75601&apos;,&apos;Central Europe&apos;,
+&apos;61601&apos;,&apos;Poland&apos;,
+&apos;64301&apos;,&apos;HUB NEE&apos;,
+&apos;80401&apos;,&apos;HUB NEE&apos;,
+&apos;42801&apos;,&apos;HUB NEE&apos;,
+&apos;44001&apos;,&apos;HUB NEE&apos;,
+&apos;23301&apos;,&apos;HUB NEE&apos;,
+&apos;11201&apos;,&apos;HUB NEE&apos;,
+&apos;39801&apos;,&apos;HUB NEE&apos;,
+&apos;79201&apos;,&apos;HUB SEE&apos;, 
+&apos;10001&apos;,&apos;HUB SEE&apos;,
+&apos;30001&apos;,&apos;HUB SEE&apos;,
+&apos;64201&apos;,&apos;HUB SEE&apos;,
+&apos;35601&apos;,&apos;INDIA&apos;,
+&apos;34802&apos;,&apos;Central Europe&apos;,
+&apos;International&apos;)</formula>
+        <name>Set Risk Domain Text</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Manager_Decision_Date</fullName>
+        <field>Risk_Manager_Decision_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Risk Manager Decision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Rejection_Date</fullName>
+        <field>Risk_Rejection_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Risk Rejection Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Rejection_Date_AUT</fullName>
+        <description>Set Risk Rejection Date AUT</description>
+        <field>Risk_Rejection_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Risk Rejection Date AUT</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Rejection_Date_Austria</fullName>
+        <description>Set Risk Rejection Date Austria</description>
+        <field>Risk_Rejection_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Rejection Date Austria</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Rejection_Date_CHE</fullName>
+        <description>Set Risk Rejection Date Switzerland</description>
+        <field>Risk_Rejection_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Rejection Date CHE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Rejection_Date_CRO</fullName>
+        <description>Set Risk Rejection Date Croatia</description>
+        <field>Risk_Rejection_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Rejection Date CRO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Rejection_Date_Croatia</fullName>
+        <description>Set Risk Rejection Date Croatia</description>
+        <field>Risk_Rejection_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Rejection Date Croatia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Rejection_Date_Hungary</fullName>
+        <description>Set Risk Rejection Date Hungary</description>
+        <field>Risk_Rejection_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Rejection Date Hungary</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Rejection_Date_Hungary_V2</fullName>
+        <description>Set Risk Rejection Date Hungary</description>
+        <field>Risk_Rejection_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Rejection Date Hungary</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Rejection_Date_SRB</fullName>
+        <description>Set Risk Rejection Date Serba</description>
+        <field>Risk_Rejection_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Rejection Date SRB</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Rejection_Date_SVN</fullName>
+        <description>Set Risk Rejection Date Slovenia</description>
+        <field>Risk_Rejection_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Rejection Date SVN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Rejection_Date_Switzerland</fullName>
+        <description>Set Risk Rejection Date Switzerland</description>
+        <field>Risk_Rejection_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Rejection Date Switzerland</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Risk_Rejection_date_Serbia</fullName>
+        <description>Set Risk Rejection date Serbia</description>
+        <field>Risk_Approval_Date__c</field>
+        <formula>Now()</formula>
+        <name>Set Risk Rejection date Serbia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_SG_Submission_date</fullName>
+        <field>SG_Submission_Date__c</field>
+        <formula>now()</formula>
+        <name>Set SG Submission date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_SG_decision_date</fullName>
+        <field>SG_Validation_Date__c</field>
+        <formula>now()</formula>
+        <name>Set SG decision date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Approval_Proposed_by_FM</fullName>
+        <description>HUB NEE</description>
+        <field>Status__c</field>
+        <literalValue>Approval proposed by FM</literalValue>
+        <name>Set Status Approval Proposed by FM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Approval_Proposed_by_RM</fullName>
+        <description>HUB NEE</description>
+        <field>Status__c</field>
+        <literalValue>Approval Proposed By Risk Manager</literalValue>
+        <name>Set Status Approval Proposed by RM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Rejection_Proposed_by_FM</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejection proposed by FM</literalValue>
+        <name>Set Status Rejection Proposed by FM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Rejection_Proposed_by_RM</fullName>
+        <description>HUB NEE</description>
+        <field>Status__c</field>
+        <literalValue>Rejection Proposed By Risk Manager</literalValue>
+        <name>Set Status Rejection Proposed by RM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_on_Reject_Buffer</fullName>
+        <field>Status_On_Reject__c</field>
+        <literalValue>Rejected by Risk Manager</literalValue>
+        <name>Set Status on Reject (Buffer) Reject RM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_on_Reject_Buffer_Reject_RA</fullName>
+        <field>Status_On_Reject__c</field>
+        <literalValue>Rejected by Risk Analyst</literalValue>
+        <name>Set Status on Reject (Buffer) Reject RA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_on_Reject_Final_Rej_by_GM</fullName>
+        <description>HUB NEE</description>
+        <field>Status_On_Reject__c</field>
+        <literalValue>Final Rejection by Gm</literalValue>
+        <name>Set Status on Reject Final Rej  by GM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_on_Reject_Rej_by_SG</fullName>
+        <field>Status_On_Reject__c</field>
+        <literalValue>Rejected by SG</literalValue>
+        <name>Set Status on Reject Rej by SG</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_to_Submited_to_SG_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Approval submitted to SG</literalValue>
+        <name>Set Status to Submited to SG Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_status_Pre_scoring_Approval_Recomman</fullName>
+        <field>Status__c</field>
+        <literalValue>Pre-scoring Approval Recommandation</literalValue>
+        <name>Set status Pre-scoring Approval Recomman</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_status_Pre_scoring_RejectionRecomman</fullName>
+        <field>Status__c</field>
+        <literalValue>Pre-scoring Rejection Recommandation</literalValue>
+        <name>Set status Pre-scoring RejectionRecomman</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>StatusAccepted</fullName>
+        <field>Status__c</field>
+        <literalValue>Accepted</literalValue>
+        <name>Status: Accepted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>StatusFinalReviewRiskManager</fullName>
+        <field>Status__c</field>
+        <literalValue>Final Review by Risk Manager</literalValue>
+        <name>Status: Final Review Risk Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>StatusRejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status : Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>StatusRejectedbyRisk</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>StatusRejectedbyRiskManager</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk Manager</literalValue>
+        <name>Status: Rejected by Risk Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>StatusRejectedbySalesManager</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected by Sales Manager</literalValue>
+        <name>Status: Rejected by Sales Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>StatusSubmittedbySales</fullName>
+        <field>Status__c</field>
+        <literalValue>Submitted by Sales</literalValue>
+        <name>Status: Submitted by Sales</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>StatusSubmittedbySalesReevalWF</fullName>
+        <description>Field update action with the Re-evaluate Workflow Rules after Field Change option checked. Used in project &quot;France Stratégie Risques&quot;</description>
+        <field>Status__c</field>
+        <literalValue>Submitted by Sales</literalValue>
+        <name>Status: Submitted by SalesReevalWF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>StatusSubmittedtoRisk</fullName>
+        <field>Status__c</field>
+        <literalValue>Submitted to Risk</literalValue>
+        <name>Status: Submitted to Risk</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Accepted</fullName>
+        <description>Status: Accepted</description>
+        <field>Status__c</field>
+        <literalValue>Accepted</literalValue>
+        <name>Status: Accepted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Accepted_ORIGIN</fullName>
+        <field>Status__c</field>
+        <literalValue>Accepted</literalValue>
+        <name>Status: Accepted ORIGIN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Accepted_by_Risk_Austria</fullName>
+        <description>Status:Accepted by Risk Austria</description>
+        <field>Status__c</field>
+        <literalValue>Accepted by Risk</literalValue>
+        <name>Status:Accepted by Risk Austria</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Accepted_by_Risk_CHE</fullName>
+        <description>Status:Accepted by Risk Switzerland</description>
+        <field>Status__c</field>
+        <literalValue>Accepted by Risk</literalValue>
+        <name>Status:Accepted by Risk CHE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Accepted_by_Risk_CRO</fullName>
+        <description>Status:Accepted by Risk Croatia</description>
+        <field>Status__c</field>
+        <literalValue>Accepted by Risk</literalValue>
+        <name>Status:Accepted by Risk CRO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Accepted_by_Risk_HUN</fullName>
+        <description>Status:Accepted by Risk Hungary</description>
+        <field>Status__c</field>
+        <literalValue>Accepted by Risk</literalValue>
+        <name>Status:Accepted by Risk HUN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Accepted_by_Risk_SRB</fullName>
+        <description>Status:Accepted by Risk Serbia</description>
+        <field>Status__c</field>
+        <literalValue>Accepted by Risk</literalValue>
+        <name>Status:Accepted by Risk SRB</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Accepted_by_Risk_SVN</fullName>
+        <description>Status:Accepted by Risk Slovenia</description>
+        <field>Status__c</field>
+        <literalValue>Accepted by Risk</literalValue>
+        <name>Status:Accepted by Risk SVN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Recheck_Needed</fullName>
+        <field>Status__c</field>
+        <literalValue>Recheck Needed</literalValue>
+        <name>Status:Recheck Needed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Recheck_Needed_ORIGIN</fullName>
+        <field>Status__c</field>
+        <literalValue>Recheck Needed</literalValue>
+        <name>Status:Recheck Needed ORIGIN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_AUT</fullName>
+        <description>Status: Rejected by Risk AUT</description>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk AUT</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_Austria</fullName>
+        <description>Status: Rejected by Risk Austria</description>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk Austria</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_CHE</fullName>
+        <description>Status: Rejected by Risk Switzerland</description>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk CHE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_CRO</fullName>
+        <description>Status: Rejected by Risk Croatia</description>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk CRO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_Croatia</fullName>
+        <description>Status: Rejected by Risk Croatia</description>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk Croatia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_Hungary</fullName>
+        <description>Status: Rejected by Risk Hungary</description>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk Hungary</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_Hungary_V2</fullName>
+        <description>Status: Rejected by Risk Hungary</description>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk Hungary</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_Manager_ORIGIN</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk Manager</literalValue>
+        <name>Status: Rejected by Risk Manager	ORIGIN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_ORIGIN</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk	ORIGIN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_SRB</fullName>
+        <description>Status: Rejected by Risk Serbia</description>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk SRB</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_SVN</fullName>
+        <description>Status: Rejected by Risk Slovenia</description>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk SVN</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_Serbia</fullName>
+        <description>Status: Rejected by Risk Serbia</description>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk Serbia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_Slovenia</fullName>
+        <description>Status: Rejected by Risk Slovenia</description>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk Slovenia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected_by_Risk_Switzerland</fullName>
+        <description>Status: Rejected by Risk Switzerland</description>
+        <field>Status__c</field>
+        <literalValue>Rejected by Risk</literalValue>
+        <name>Status: Rejected by Risk Switzerland</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Submitted_by_SalesManager</fullName>
+        <field>Status__c</field>
+        <literalValue>Submitted to Sales Manager</literalValue>
+        <name>Status: Submitted by SalesManager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_to_Registered</fullName>
+        <field>Status__c</field>
+        <literalValue>Registered</literalValue>
+        <name>Status to Registered</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submission_Number</fullName>
+        <description>Number of Submissions</description>
+        <field>number_of_submit__c</field>
+        <formula>number_of_submit__c +1</formula>
+        <name>Submission Number</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submission_risk_Date</fullName>
+        <description>Track date when status of credit check is changed from submitted to risk queue to registered .</description>
+        <field>Submission_to_risk_Queue_Date__c</field>
+        <formula>Now()</formula>
+        <name>Submission risk Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submited_to_Risk</fullName>
+        <field>Status__c</field>
+        <literalValue>Submitted to Risk</literalValue>
+        <name>Submited to Risk</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submited_to_Risk2</fullName>
+        <field>Status__c</field>
+        <literalValue>Submitted to Risk2</literalValue>
+        <name>Submited to Risk</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Checkbox_Tech_Field</fullName>
+        <field>Fra_Tech_Is_Custom_Recall__c</field>
+        <literalValue>0</literalValue>
+        <name>Update Checkbox Tech Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Reflect_New_field</fullName>
+        <field>Status_Reflect_New__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Status Reflect New field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Verify_Risk_Approval_Date</fullName>
+        <description>When process is submited by sales manager the Risk Approval submission date is not populated</description>
+        <field>RiskApprovalSubmissionDate__c</field>
+        <formula>IF(AND(ISNULL( RiskApprovalSubmissionDate__c),NOT(ISNULL( Risk_Final_Decision_Date__c ))), BusinessApprovalSubmissionDate__c ,RiskApprovalSubmissionDate__c)</formula>
+        <name>Verify Risk Approval Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>set_Number_Of_Submit_to_Zero</fullName>
+        <field>number_of_submit__c</field>
+        <formula>0</formula>
+        <name>set Number Of Submit to Zero</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>CRO - Credit Check Created</fullName>
+        <actions>
+            <name>CRO_Notify_Croatia_users_when_credit_check_is_created</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>Send Email when credit check is created</description>
+        <formula>OR( Subsidiary_Indicator__c = &apos;19101&apos;,Subsidiary_Indicator__c = &apos;19102&apos;)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA Credit Check Set Field Value 1</fullName>
+        <actions>
+            <name>Set_Lead_Number_Value</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>this workflow will set the value of the lead if field based on the value of the account lead value, only if this value is not already field on the CC</description>
+        <formula>AND( $User.Bypass_Workflow__c == false, ISBLANK(Lead_Id__c ), !ISBLANK(Account__c), OR(Identification_Criteria__c == &apos;ORIGIN TEMSYS&apos;, Identification_Criteria__c == &apos;ORIGIN PARCOURS&apos;), RecordType.DeveloperName == &apos;CreditCheckFrance&apos;	 )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA Credit Check Set Field Value 2</fullName>
+        <actions>
+            <name>Set_Contract_Number_Value</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>this workflow will set the value of the contract number field based on the value of the account Contract number value, only if this value is not already field on the CC</description>
+        <formula>AND( $User.Bypass_Workflow__c == false, ISBLANK(Contract_Number__c), !ISBLANK(Account__c), OR(Identification_Criteria__c == &apos;ORIGIN TEMSYS&apos;, Identification_Criteria__c == &apos;ORIGIN PARCOURS&apos;), RecordType.DeveloperName == &apos;CreditCheckFrance&apos;	 )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>HUB SEE - Recall Approval</fullName>
+        <actions>
+            <name>Recall_Approval_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow will fire only for Bulgaria, Turkey, Greece and Romania</description>
+        <formula>AND( OR( Subsidiary_Indicator__c == &quot;79201&quot;,Subsidiary_Indicator__c == &quot;30001&quot;,Subsidiary_Indicator__c == &quot;30002&quot;, Subsidiary_Indicator__c == &quot;64201&quot;, Subsidiary_Indicator__c == &quot;10001&quot;,Subsidiary_Indicator__c == &quot;64301&quot;,Subsidiary_Indicator__c == &quot;80401&quot;,Subsidiary_Indicator__c == &quot;42801&quot;,Subsidiary_Indicator__c == &quot;44001&quot;,Subsidiary_Indicator__c == &quot;23301&quot;,Subsidiary_Indicator__c == &quot;11201&quot;,Subsidiary_Indicator__c == &quot;39801&quot;) , Recall_Record__c == true)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>India - Email notification to owner for rejection</fullName>
+        <actions>
+            <name>India_Credit_Check_Credit_rejected</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>Work flow rule to send Final Rejection email to the owner.</description>
+        <formula>AND(CONTAINS($Label.India_Subsidiary, Subsidiary_Indicator__c),HUBSEEEmailFire__c)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>NEE RA Final Approval</fullName>
+        <actions>
+            <name>Nee_Risk_Analyst_Final_Approval</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Credit_Check__c.RA_Limit_HUB_NEE__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Check__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Accepted</value>
+        </criteriaItems>
+        <description>NEE Risk Analyst Final Approve then check Derogation Limit For email Notification</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>NEE RA Final Reject</fullName>
+        <actions>
+            <name>Hub_NEE_Credit_Check_Credit_rejected</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Credit_Check__c.RA_Limit_HUB_NEE__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Check__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Rejected</value>
+        </criteriaItems>
+        <description>NEE Risk Analyst Final Approve then check Derogation Limit For email Notification</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Nee - Risk Manager Bypass FP TRUE</fullName>
+        <actions>
+            <name>BAL_Risk_Manager_Step_Credit_Check_Credit_approved</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>An email will fire when for Nee in Risk Manager Step when Final Approval</description>
+        <formula>AND( Require_Final_Decision_by_GM__c =False,Require_SG_approval__c = False, NEE_Risk_Manager_Flag__c = true, OR(ISPICKVAL( Status__c , &quot;Accepted&quot;)), OR(Subsidiary_Indicator__c=&apos;44001&apos;, Subsidiary_Indicator__c=&apos;42801&apos;, Subsidiary_Indicator__c=&apos;23301&apos;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Nee - UKR - Risk Manager Bypass FP TRUE</fullName>
+        <actions>
+            <name>UKR_Risk_Manager_Step_Credit_Check_Credit_approved</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>An email will fire when for Nee in Risk Manager Step when Final Approval</description>
+        <formula>AND( Require_Final_Decision_by_GM__c =False,Require_SG_approval__c = False, NEE_Risk_Manager_Flag__c = true, OR(ISPICKVAL( Status__c , &quot;Accepted&quot;)), OR(Subsidiary_Indicator__c=&apos;80401&apos;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SEE - Bulgaria - Notification to GM for SG Approval</fullName>
+        <actions>
+            <name>SEE_Bulgaria_Notification_to_GM_for_SG_Approval</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Notification to GM when the final decision is taken by SG</description>
+        <formula>AND (   Subsidiary__c = &apos;Bulgaria&apos;, ISPICKVAL(Status__c, &apos;Accepted&apos;), Require_SG_approval__c = TRUE )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SEE - Email notification 2 months before expiration of guarantee</fullName>
+        <active>true</active>
+        <description>Notification to the Risk Analysts and to the request creator to be sent with 2 months before the Guarantee Expiration Date</description>
+        <formula>Risk_Domain__c  = &quot;HUB SEE&quot;</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>SEE_Email_notification_2_months_before_expiration_of_guarantee</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Credit_Check__c.Guarantee_Validity_Date__c</offsetFromField>
+            <timeLength>-60</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>SEE - Email notification to owner for rejection</fullName>
+        <actions>
+            <name>Hub_SEE_Credit_Check_Credit_rejected</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>SEE_Email_notification_when_credit_check_is_rejected</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Work flow rule to send Final Rejection email to the owner.</description>
+        <formula>AND(CONTAINS( $Label.HUB_SEE_Risk_Domain, Subsidiary_Indicator__c),HUBSEEEmailFire__c)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SEE - Greece - Notification to GM for SG Approval</fullName>
+        <actions>
+            <name>SEE_Greece_Notification_to_GM_for_SG_Approval</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>Notification to GM when the final decision is taken by SG</description>
+        <formula>AND (   Subsidiary__c = &apos;Greece&apos;, ISPICKVAL(Status__c, &apos;Accepted&apos;), Require_SG_approval__c = TRUE )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SEE - Greece notification for GM</fullName>
+        <actions>
+            <name>SEE_Greece_notification_for_GM</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>Notification to GM for all the final decisions performed by the Credit manager
+Refactoring: Criteria/Filtering on Greece users (Subsidiary: 30001) and User Role &apos;Greece Risk Management&apos;.</description>
+        <formula>AND(Subsidiary__c =&apos;Greece&apos;, ISPICKVAL(Status__c, &apos;Accepted&apos;),  	OR(CONTAINS(Final_decision_maker__r.Profile.Name, &apos;Risk Manager&apos;), 	   AND(CONTAINS(Final_decision_maker__r.UserRole.Name, &apos;Greece Risk Management&apos;), 	  	   ISPICKVAL( Final_decision_maker__r.Subsidiary_Indicator__c , &apos;30001&apos;)) 	  ))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SEE - Romania - Notification to GM for SG Approval</fullName>
+        <actions>
+            <name>SEE_Romania_Notification_to_GM_for_SG_Approval</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Notification to GM when the final decision is taken by SG</description>
+        <formula>AND (   Subsidiary__c = &apos;Romania&apos;, ISPICKVAL(Status__c, &apos;Accepted&apos;), Require_SG_approval__c = TRUE )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SEE - Turkey - Notification to GM for SG Approval</fullName>
+        <active>false</active>
+        <description>Notification to GM when the final decision is taken by SG</description>
+        <formula>AND (   Subsidiary__c = &apos;Turkey&apos;, ISPICKVAL(Status__c, &apos;Accepted&apos;), Require_SG_approval__c = TRUE )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send an Email To CC owner  on Final Rejection by RA</fullName>
+        <actions>
+            <name>Hub_NEE_Credit_Check_Credit_rejected</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Credit_Check__c.Send_an_Email_to_RA__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Check__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Rejected by Risk</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Check__c.Risk_Domain__c</field>
+            <operation>equals</operation>
+            <value>HUB NEE</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Risk Domain Text</fullName>
+        <actions>
+            <name>Set_Risk_Domain_Text</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Credit_Check__c.Subsidiary_Indicator__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Credit_Check_Recall</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Credit_Check__c.Recheck_needed_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Credit Check - Recall</subject>
+    </tasks>
+    <tasks>
+        <fullName>Demande_a_representer</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Vous devez compléter votre demande d&apos;en cours</description>
+        <dueDateOffset>3</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Credit_Check__c.Recheck_needed_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Demande à représenter</subject>
+    </tasks>
+    <tasks>
+        <fullName>Recheck_Needed</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>A task has been created and assigned to you to provide more info on your credit check request</description>
+        <dueDateOffset>3</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Credit_Check__c.Recheck_needed_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Recheck Needed</subject>
+    </tasks>
+    <tasks>
+        <fullName>Recheck_Needed_V2</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>A task has been created and assigned to you to provide more info on your credit check request</description>
+        <dueDateOffset>3</dueDateOffset>
+        <notifyAssignee>true</notifyAssignee>
+        <offsetFromField>Credit_Check__c.Recheck_needed_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Recheck Needed</subject>
+    </tasks>
+</Workflow>

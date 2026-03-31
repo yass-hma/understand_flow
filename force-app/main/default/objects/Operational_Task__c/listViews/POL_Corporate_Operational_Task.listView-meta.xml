@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POL_Corporate_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>POL - Corporate</label>
+    <queue>POL_Corporate</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

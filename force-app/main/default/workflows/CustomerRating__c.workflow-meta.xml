@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Rating_Status</fullName>
+        <field>Status__c</field>
+        <literalValue>Actives</literalValue>
+        <name>Rating Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Last_Rate_Modified_Date</fullName>
+        <field>Last_Rate_Modified_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Last Rate Modified Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Last_update_By_user</fullName>
+        <field>Last_Modified_by_user__c</field>
+        <formula>$User.FirstName &amp; &quot; &quot;&amp; $User.LastName</formula>
+        <name>Set Last update By user</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Peer Pricing Rating Status</fullName>
+        <actions>
+            <name>Rating_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>set to active when a sales change a value</description>
+        <formula>AND(ISPICKVAL(Status__c,&quot;Default&quot;), OR(ISCHANGED(Car_Policy__c), ISCHANGED(Car_Policy_Number_of_Reference__c), ISCHANGED(Nb_of_partners_for_contract_mngt__c), ISCHANGED(Negotiations_central_decentral_score__c), ISCHANGED(Presence_of_an_intermediary__c), ISCHANGED(Request_price_guarantee__c), ISCHANGED(Specific_treatments__c)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Customer Rating updated by user</fullName>
+        <actions>
+            <name>Set_Last_Rate_Modified_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Last_update_By_user</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>if (OR(ISCHANGED(Specific_treatments__c), ISCHANGED(Request_price_guarantee__c), ISCHANGED(Presence_of_an_intermediary__c), ISCHANGED(Negotiations_centralized_decentralize__c), ISCHANGED(Nb_of_partners_for_contract_mngt__c), ISCHANGED(Car_Policy_Number_of_Reference__c), ISCHANGED(Car_Policy__c)),TRUE,FALSE)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

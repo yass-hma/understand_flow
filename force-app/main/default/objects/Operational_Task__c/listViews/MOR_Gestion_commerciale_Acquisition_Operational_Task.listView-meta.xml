@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MOR_Gestion_commerciale_Acquisition_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>MOR - Gestion commerciale - Acquisition</label>
+    <queue>MOR_Gestion_commerciale_Acquisition</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

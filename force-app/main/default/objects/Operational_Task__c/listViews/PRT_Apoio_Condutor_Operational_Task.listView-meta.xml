@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRT_Apoio_Condutor_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PRT - Apoio Condutor</label>
+    <queue>PRT_Apoio_Condutor</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

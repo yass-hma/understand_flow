@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRVInsurance_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>HRV - Insurance</label>
+    <queue>HRVInsurance</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

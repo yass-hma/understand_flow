@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_LARGE_MID_PSC_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - LARGE &amp; MID PSC</label>
+    <queue>FRA_LARGE_MID_PSC</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

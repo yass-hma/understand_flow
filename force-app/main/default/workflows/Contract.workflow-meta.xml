@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>CheckRenewed</fullName>
+        <field>Renewed__c</field>
+        <literalValue>1</literalValue>
+        <name>Check Renewed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Registration_Country</fullName>
+        <field>Registration_Country__c</field>
+        <formula>CASE ( Registration_Country__c ,
+&apos;DZ&apos;,&apos;DZA&apos;,
+&apos;AT&apos;,&apos;AUT&apos;,
+&apos;BE&apos;,&apos;BEL&apos;,
+&apos;BR&apos;,&apos;BRA&apos;,
+&apos;CN&apos;,&apos;CHN&apos;,
+&apos;HR&apos;,&apos;HRV&apos;,
+&apos;CZ&apos;,&apos;CZE&apos;,
+&apos;DK&apos;,&apos;DNK&apos;,
+&apos;EG&apos;,&apos;EGY&apos;,
+&apos;EE&apos;,&apos;EST&apos;,
+&apos;FI&apos;,&apos;FIN&apos;,
+&apos;FR&apos;,&apos;FRA&apos;,
+&apos;DE&apos;,&apos;DEU&apos;,
+&apos;HU&apos;,&apos;HUN&apos;,
+&apos;IN&apos;,&apos;IND&apos;,
+&apos;IT&apos;,&apos;ITA&apos;,
+&apos;LV&apos;,&apos;LVA&apos;,
+&apos;LT&apos;,&apos;LTU&apos;,
+&apos;LU&apos;,&apos;LUX&apos;,
+&apos;MX&apos;,&apos;MEX&apos;,
+&apos;MA&apos;,&apos;MAR&apos;,
+&apos;NL&apos;,&apos;NLD&apos;,
+&apos;NO&apos;,&apos;NOR&apos;,
+&apos;PL&apos;,&apos;POL&apos;,
+&apos;PT&apos;,&apos;PRT&apos;,
+&apos;RO&apos;,&apos;ROU&apos;,
+&apos;RU&apos;,&apos;RUS&apos;,
+&apos;SK&apos;,&apos;SVK&apos;,
+&apos;SI&apos;,&apos;SVN&apos;,
+&apos;ES&apos;,&apos;ESP&apos;,
+&apos;SE&apos;,&apos;SWE&apos;,
+&apos;CH&apos;,&apos;CHE&apos;,
+&apos;TR&apos;,&apos;TUR&apos;,
+&apos;UA&apos;,&apos;UKR&apos;,
+&apos;AE&apos;,&apos;ARE&apos;,
+&apos;GB&apos;,&apos;GBR&apos;,
+&apos;FR&apos;,&apos;FRA&apos;,
+&apos;MY&apos;,&apos;MYS&apos;,
+&apos;RS&apos;,&apos;SRB&apos;,
+&apos;BG&apos;,&apos;BGR&apos;,
+&apos;KZ&apos;,&apos;KAZ&apos;, 
+&apos;BY&apos;,&apos;BLR&apos;, 
+&apos;CL&apos;,&apos;CHL&apos;,
+&apos;PE&apos;,&apos;PER&apos;,
+&apos;CO&apos;,&apos;COL&apos;,
+&apos;IE&apos;,&apos;IRL&apos;,
+&apos;FF&apos;,&apos;FFM&apos;,
+&apos;TH&apos;,&apos;THA&apos;,
+Registration_Country__c)</formula>
+        <name>Registration Country</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Created_Date_First_Time</fullName>
+        <field>Created_Date_First_Time__c</field>
+        <formula>CreatedDate</formula>
+        <name>Set Created Date First Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Last_Contract_End_Date</fullName>
+        <field>Last_Contract_End_Date__c</field>
+        <formula>Contract_End_Date_Calculated__c</formula>
+        <name>Set Last Contract End Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UnCheck_Recreate_Contract</fullName>
+        <field>Recreate_Contract__c</field>
+        <literalValue>0</literalValue>
+        <name>UnCheck Recreate Contract</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Uncheck_extended</fullName>
+        <field>Extended__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck extended</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>checkextended</fullName>
+        <field>Extended__c</field>
+        <literalValue>1</literalValue>
+        <name>check extended</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Contract Extended</fullName>
+        <actions>
+            <name>checkextended</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>jff 2012/11/07 --&gt; adding (PriorValue)&amp;remove temporaly (waiting update from broker)
+ AND(ISCHANGED( Contract_Term_Extension__c),</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), OR(PRIORVALUE( Contract_End_Date_Calculated__c ) &lt; Contract_End_Date_Calculated__c,PRIORVALUE( ContractTerm) &lt; ContractTerm,  PRIORVALUE( Contract_Term_Extension__c)&lt;Contract_Term_Extension__c),  PRIORVALUE( Status2__c)=&apos;Live&apos;,  Status2__c=&apos;Live&apos;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contract Renewed</fullName>
+        <actions>
+            <name>CheckRenewed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Uncheck_extended</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), New_Vehicule_No__c &lt;&gt;&apos;&apos;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Registration Country - Convert Iso2 to Iso</fullName>
+        <actions>
+            <name>Registration_Country</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contract.Registration_Country__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Convert Iso2 to Iso (3chars)</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reset Extended</fullName>
+        <actions>
+            <name>Set_Last_Contract_End_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Uncheck_extended</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contract.Opportunity_Record_Type__c</field>
+            <operation>equals</operation>
+            <value>012200000008pQ1,01220000000MET2</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contract.Opportunity_Stage__c</field>
+            <operation>equals</operation>
+            <value>RFP / RFQ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contract.Extended__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>when creating a renewal opportunity reset extended &amp; save end date</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Created Date First Time</fullName>
+        <actions>
+            <name>Set_Created_Date_First_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contract.Created_Date_First_Time__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>UnCheck Recreate Contract</fullName>
+        <actions>
+            <name>UnCheck_Recreate_Contract</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contract.Recreate_Contract__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

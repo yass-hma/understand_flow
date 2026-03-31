@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Equipe_EIFFAGE_Mail2Case_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - Equipe EIFFAGE Mail2Case</label>
+    <queue>FRA_Equipe_EIFFAGE_Mail2Case</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

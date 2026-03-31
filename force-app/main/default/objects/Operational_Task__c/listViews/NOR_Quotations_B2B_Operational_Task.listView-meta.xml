@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NOR_Quotations_B2B_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>NOR - Quotations B2B</label>
+    <queue>NOR_Quotations_B2B</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>FinalLocalition_Default</name>
+        <label>FinalLocalition_Default</label>
+        <locationX>185</locationX>
+        <locationY>420</locationY>
+        <assignmentItems>
+            <assignToReference>vFinalLocation</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fReturnURL_Default</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Set the vFinalLocation variable</description>
+        <name>FinalLocation</name>
+        <label>FinalLocation</label>
+        <locationX>1068</locationX>
+        <locationY>69</locationY>
+        <assignmentItems>
+            <assignToReference>vFinalLocation</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fReturnURL</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Set the vFinalLocation variable</description>
+        <name>FinalLocation_withSourceAccount</name>
+        <label>FinalLocation_withSourceAccount</label>
+        <locationX>1089</locationX>
+        <locationY>249</locationY>
+        <assignmentItems>
+            <assignToReference>vFinalLocation</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fRetrunURL_withSourceAccount</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>Use to identify if the source entity is a Case.</description>
+        <name>Are_you_from_case</name>
+        <label>Are you from case ?</label>
+        <locationX>807</locationX>
+        <locationY>147</locationY>
+        <defaultConnector>
+            <targetReference>FinalLocation_withSourceAccount</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not From Case</defaultConnectorLabel>
+        <rules>
+            <name>From_Case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vCaseId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>FinalLocation</targetReference>
+            </connector>
+            <label>From Case</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Use to identify if the source entity is an Account or a Case.</description>
+        <name>Where_do_you_come_from</name>
+        <label>Where do you come from ?</label>
+        <locationX>176</locationX>
+        <locationY>145</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>IsFromCase</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vCaseId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetAccountIdFromCase</targetReference>
+            </connector>
+            <label>IsFromCase</label>
+        </rules>
+        <rules>
+            <name>IsFromAccount</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vAccountId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetAccountNameFromId</targetReference>
+            </connector>
+            <label>IsFromAccount</label>
+        </rules>
+        <rules>
+            <name>NotFromCaseNorFromAccount</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vAccountId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>vCaseId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>FinalLocalition_Default</targetReference>
+            </connector>
+            <label>NotFromCaseNorFromAccount</label>
+        </rules>
+    </decisions>
+    <description>Prefill New Opportunity Page - with LX v2</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fRetrunURL_withSourceAccount</name>
+        <dataType>String</dataType>
+        <expression>IF({!IsLEX}, 
+&apos;/lightning/o/Opportunity/new?recordTypeId=&apos; &amp; {!vRecordType} &amp; &apos;&amp;nooverride=true&amp;defaultFieldValues=AccountId=&apos; &amp; {!vAccountId} &amp; &apos;,Name=&apos; &amp; {!vAccountName} &amp; &apos;&amp;backgroundContext=/lightning/r/Account/&apos;+ {!vAccountId}+&apos;/view&apos;, 
+
+&apos;/006/e?opp3=&apos; &amp; {!vAccountName} &amp; &apos;&amp;opp4=&apos; &amp; {!vAccountName} &amp; &apos;&amp;opp4_lkid=&apos; &amp; {!vAccountId} &amp; &apos;&amp;opp16=VUV&amp;nooverride=1&amp;RecordType=&apos; &amp; {!vRecordType} &amp; &apos;&amp;retURL={$Parameter.retURL}&apos; &amp; IF({!vRecordType} = &apos;01220000000Cm8I&apos;, &apos;&amp;opp11=RFP / RFQ&apos;, &apos;&apos;))</expression>
+    </formulas>
+    <formulas>
+        <description>The FinalLocation formula</description>
+        <name>fReturnURL</name>
+        <dataType>String</dataType>
+        <expression>IF({!IsLEX}, 
+&apos;/lightning/o/Opportunity/new?recordTypeId=&apos; &amp; {!vRecordType} &amp; &apos;&amp;nooverride=true,AccountId=&apos; &amp; {!vAccountId} &amp; &apos;,Name=&apos; &amp; {!vAccountName} &amp; &apos;&amp;backgroundContext=/lightning/r/Case/&apos;+ {!vCaseId}+&apos;/view&apos;, 
+
+&apos;/006/e?opp3=&apos; &amp; {!vAccountName} &amp; &apos;&amp;opp4=&apos; &amp; {!vAccountName} &amp; &apos;&amp;opp4_lkid=&apos; &amp; {!vAccountId} &amp; &apos;&amp;opp16=VUV&amp;nooverride=1&amp;RecordType=&apos; &amp; {!vRecordType} &amp; &apos;&amp;retURL={$Parameter.retURL}&apos; &amp; IF({!vRecordType} = &apos;01220000000Cm8I&apos;, &apos;&amp;opp11=RFP / RFQ&apos;, &apos;&apos;))</expression>
+    </formulas>
+    <formulas>
+        <description>Not from Case nor From Account</description>
+        <name>fReturnURL_Default</name>
+        <dataType>String</dataType>
+        <expression>IF({!IsLEX}, 
+
+&apos;/lightning/o/Opportunity/new?recordTypeId=&apos; &amp; {!vRecordType} &amp; &apos;&amp;nooverride=true&amp;backgroundContext=/lightning/o/Opportunity/list?filterName=Recent&apos;, 
+
+&apos;/006/e?opp16=VUV&amp;nooverride=1&amp;RecordType=&apos; &amp; {!vRecordType} &amp; &apos;&amp;retURL={$Parameter.retURL}&apos; &amp; IF({!vRecordType} = &apos;01220000000Cm8I&apos;, &apos;&amp;opp11=RFP / RFQ&apos;, &apos;&apos;))</expression>
+    </formulas>
+    <formulas>
+        <name>IsLEX</name>
+        <dataType>Boolean</dataType>
+        <expression>CONTAINS({!$User.UITheme}, &apos;Theme4&apos;)</expression>
+    </formulas>
+    <interviewLabel>Prefill NewOpportunity {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Prefill NewOpportunity Page</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get the AccountId whose the Case associated to</description>
+        <name>GetAccountIdFromCase</name>
+        <label>GetAccountIdFromCase</label>
+        <locationX>401</locationX>
+        <locationY>258</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GetAccountNameFromId</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>vCaseId</elementReference>
+            </value>
+        </filters>
+        <object>Case</object>
+        <outputAssignments>
+            <assignToReference>vAccountId</assignToReference>
+            <field>AccountId</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the Account.Name from the account id</description>
+        <name>GetAccountNameFromId</name>
+        <label>GetAccountNameFromId</label>
+        <locationX>617</locationX>
+        <locationY>145</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Are_you_from_case</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>vAccountId</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputAssignments>
+            <assignToReference>vAccountName</assignToReference>
+            <field>Name</field>
+        </outputAssignments>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Where_do_you_come_from</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Source Account Id (if any)</description>
+        <name>vAccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Target Account Name</description>
+        <name>vAccountName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Source Case Id (if any)</description>
+        <name>vCaseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>The Target Final Location for the flow</description>
+        <name>vFinalLocation</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Source Record Type</description>
+        <name>vRecordType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

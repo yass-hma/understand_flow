@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mex_Remarketing_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>MEX - Remarketing</label>
+    <queue>Mex_Remarketing</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

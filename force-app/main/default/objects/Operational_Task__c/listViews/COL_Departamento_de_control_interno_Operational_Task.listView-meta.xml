@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COL_Departamento_de_control_interno_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>COL - Departamento de control interno</label>
+    <queue>COL_Departamento_de_control_interno</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

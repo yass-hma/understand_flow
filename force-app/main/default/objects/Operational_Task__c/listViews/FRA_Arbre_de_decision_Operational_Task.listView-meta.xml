@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Arbre_de_decision_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - Arbre de décision</label>
+    <queue>FRA_Arbre_de_decision</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

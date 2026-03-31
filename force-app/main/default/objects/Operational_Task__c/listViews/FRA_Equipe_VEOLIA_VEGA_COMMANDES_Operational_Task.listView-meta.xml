@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Equipe_VEOLIA_VEGA_COMMANDES_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - Equipe VEOLIA/VEGA COMMANDES</label>
+    <queue>FRA_Equipe_VEOLIA_VEGA_COMMANDES</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

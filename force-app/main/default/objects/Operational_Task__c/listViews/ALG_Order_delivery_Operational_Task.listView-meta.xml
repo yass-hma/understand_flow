@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALG_Order_delivery_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ALG - Order &amp; delivery</label>
+    <queue>ALG_Order_delivery</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

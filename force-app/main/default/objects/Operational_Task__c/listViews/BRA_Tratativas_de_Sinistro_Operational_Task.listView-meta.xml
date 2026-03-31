@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRA_Tratativas_de_Sinistro_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BRA - Tratativas de Sinistro</label>
+    <queue>BRA_Tratativas_de_Sinistro</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRA_Sales_farmer_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BRA - Sales farmer</label>
+    <queue>BRA_Sales_farmer</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

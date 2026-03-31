@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRA_Contas_a_pagar_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BRA - Contas a pagar</label>
+    <queue>BRA_Contas_a_pagar</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_OUT_PNEUMATICI_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ITA - OUT PNEUMATICI</label>
+    <queue>ITA_OUT_PNEUMATICI</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

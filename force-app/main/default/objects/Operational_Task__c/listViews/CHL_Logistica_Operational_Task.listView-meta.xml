@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CHL_Logistica_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>CHL - Logistica</label>
+    <queue>CHL_Logistica</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

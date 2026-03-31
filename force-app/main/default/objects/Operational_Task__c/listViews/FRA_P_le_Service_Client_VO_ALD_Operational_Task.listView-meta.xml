@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_P_le_Service_Client_VO_ALD_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - Pôle Service Client VO ALD</label>
+    <queue>FRA_P_le_Service_Client_VO_ALD</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

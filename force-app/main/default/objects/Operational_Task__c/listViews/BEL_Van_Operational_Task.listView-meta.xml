@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BEL_Van_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BEL - Van</label>
+    <queue>BEL_Van</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

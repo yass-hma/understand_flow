@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>SRM_Contract_End_Date_Renewal_Notification_Email_Alert</name>
+        <label>SRM Contract End Date Renewal Notification Email Alert</label>
+        <locationX>1077</locationX>
+        <locationY>121</locationY>
+        <actionName>Account.SRM_Contract_End_Date_Renewal_Notification_Email_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Account.SRM_Contract_End_Date_Renewal_Notification_Email_Alert</nameSegment>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Condition_Check_for_Contract_End_Date</name>
+        <label>Condition Check for Contract End Date</label>
+        <locationX>838</locationX>
+        <locationY>142</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Contract_End_Date</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contract_end_date__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SRM_Contract_End_Date_Renewal_Notification_Email_Alert</targetReference>
+            </connector>
+            <label>Check Contract End Date</label>
+        </rules>
+    </decisions>
+    <description>Send an email notification to the creator of the supplier accounts when Contract End Date is 9 months away from today</description>
+    <environments>Default</environments>
+    <interviewLabel>SRM Contract End Date Email Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SRM Contract End Date Email Notification</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>330</locationX>
+        <locationY>48</locationY>
+        <filterFormula>AND(
+NOT({!$User.Bypass_Workflow__c}),
+OR(({!$Record.RecordType.DeveloperName} = &apos;Romanian_Supplier&apos;),
+({!$Record.RecordType.DeveloperName} = &apos;Supplier_International&apos;)),
+NOT(ISBLANK({!$Record.Contract_end_date__c})),
+ISPICKVAL({!$Record.Contract_status__c}, &quot;Active&quot;))</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>SRM_Email_Notification_270_Days</name>
+            <connector>
+                <targetReference>Condition_Check_for_Contract_End_Date</targetReference>
+            </connector>
+            <label>SRM Email Notification 270 Days</label>
+            <offsetNumber>-270</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>Contract_end_date__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

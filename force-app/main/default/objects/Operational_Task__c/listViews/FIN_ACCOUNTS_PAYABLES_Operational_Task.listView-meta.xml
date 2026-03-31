@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIN_ACCOUNTS_PAYABLES_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FIN - ACCOUNTS PAYABLES</label>
+    <queue>FIN_ACCOUNTS_PAYABLES</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

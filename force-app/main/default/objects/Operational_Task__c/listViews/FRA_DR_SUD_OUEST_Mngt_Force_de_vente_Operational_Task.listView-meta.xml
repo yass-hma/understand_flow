@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_DR_SUD_OUEST_Mngt_Force_de_vente_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - DR SUD OUEST Mgt For vent  OBSOLET</label>
+    <queue>FRA_DR_SUD_OUEST_Mngt_Force_de_vente</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

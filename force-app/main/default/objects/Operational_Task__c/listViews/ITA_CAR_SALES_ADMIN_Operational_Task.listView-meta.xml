@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_CAR_SALES_ADMIN_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ITA - CONTRACT CLOSING</label>
+    <queue>ITA_CAR_SALES_ADMIN</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

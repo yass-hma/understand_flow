@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALG_Case_To_Assign_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ALG - Case To Assign</label>
+    <queue>ALG_Case_To_Assign</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

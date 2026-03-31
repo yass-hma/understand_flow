@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PER_Compra_y_Equipamiento_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PER - Compra y Equipamiento</label>
+    <queue>PER_Compra_y_Equipamiento</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

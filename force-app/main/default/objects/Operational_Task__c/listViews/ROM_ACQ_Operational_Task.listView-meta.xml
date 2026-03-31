@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROM_ACQ_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ROM - Logistics</label>
+    <queue>ROM_ACQ</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

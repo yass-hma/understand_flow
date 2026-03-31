@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_VN_TeleSales_Indirect_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - VN TeleSales Indirect</label>
+    <queue>FRA_VN_TeleSales_Indirect</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

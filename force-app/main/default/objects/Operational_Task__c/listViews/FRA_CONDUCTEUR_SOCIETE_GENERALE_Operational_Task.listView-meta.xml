@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_CONDUCTEUR_SOCIETE_GENERALE_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - CONDUCTEUR SOCIETE GENERALE</label>
+    <queue>FRA_CONDUCTEUR_SOCIETE_GENERALE</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

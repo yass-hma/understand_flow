@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_OUTILS_DIGITAUX_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - OUTILS DIGITAUX</label>
+    <queue>FRA_OUTILS_DIGITAUX</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

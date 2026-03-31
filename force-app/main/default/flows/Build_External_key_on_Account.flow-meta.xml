@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Update_External_key_on_Customer_Account</name>
+        <label>Update External key on Customer Account</label>
+        <locationX>1163</locationX>
+        <locationY>319</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.ExternalId__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>External_key_for_Customer_Account</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Update_External_Key_on_Partner_Account</name>
+        <label>Update External Key on Partner Account</label>
+        <locationX>661</locationX>
+        <locationY>308</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.ExternalId__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>External_key_for_Partner_Account</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Update_External_key_on_Supplier_Account</name>
+        <label>Update External key on Supplier Account</label>
+        <locationX>957</locationX>
+        <locationY>307</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.ExternalId__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>External_key_for_Supplier_Account</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>based on the record type</description>
+        <name>Type_of_the_Account</name>
+        <label>Type of the Account?</label>
+        <locationX>958</locationX>
+        <locationY>99</locationY>
+        <defaultConnector>
+            <targetReference>Update_External_key_on_Customer_Account</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Cutomer Account</defaultConnectorLabel>
+        <rules>
+            <name>Partner_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Account_Partner</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_External_Key_on_Partner_Account</targetReference>
+            </connector>
+            <label>Partner Account</label>
+        </rules>
+        <rules>
+            <name>Supplier_Account</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Romanian_Supplier</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Supplier_International</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_External_key_on_Supplier_Account</targetReference>
+            </connector>
+            <label>Supplier Account</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>External_key_for_Customer_Account</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Record.Subsidiary_Indicator__c}) + &apos;-001-&apos; + {!$Record.Local_CALDER_ID__c}</expression>
+    </formulas>
+    <formulas>
+        <name>External_key_for_Partner_Account</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Record.Identification_Criteria__c}) + &apos;-&apos; + TEXT({!$Record.Subsidiary_Indicator__c})</expression>
+    </formulas>
+    <formulas>
+        <name>External_key_for_Supplier_Account</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Record.Subsidiary_Indicator__c}) + &apos;-001S-&apos; + {!$Record.Local_CALDER_ID__c}</expression>
+    </formulas>
+    <interviewLabel>Build External key on Account {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Build External key on Account</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>328</locationX>
+        <locationY>49</locationY>
+        <connector>
+            <targetReference>Type_of_the_Account</targetReference>
+        </connector>
+        <filterFormula>AND(NOT({!$User.Bypass_Workflow__c}),
+NOT(ISPICKVAL({!$Record.Subsidiary_Indicator__c}, &quot;27601&quot;)),
+IF({!$Record.RecordType.DeveloperName} = &apos;Account_Partner&apos;,
+IF(ISNEW(),
+AND(NOT(OR(ISNULL(TEXT({!$Record.Identification_Criteria__c})), ISBLANK(TEXT({!$Record.Identification_Criteria__c})))), NOT(OR(ISBLANK(TEXT({!$Record.Subsidiary_Indicator__c})), ISNULL(TEXT({!$Record.Subsidiary_Indicator__c})))), OR(ISNULL({!$Record.ExternalId__c}), ISBLANK({!$Record.ExternalId__c}))),
+AND(
+OR(ISCHANGED({!$Record.Identification_Criteria__c}), ISCHANGED({!$Record.Subsidiary_Indicator__c})),
+NOT(ISCHANGED({!$Record.ExternalId__c})),
+AND(NOT(OR(ISNULL(TEXT({!$Record.Identification_Criteria__c})), ISBLANK(TEXT({!$Record.Identification_Criteria__c})))), NOT(OR(ISBLANK(TEXT({!$Record.Subsidiary_Indicator__c})), ISNULL(TEXT({!$Record.Subsidiary_Indicator__c})))))
+)),
+IF(ISNEW(),
+AND(NOT(OR(ISNULL({!$Record.Local_CALDER_ID__c}), ISBLANK({!$Record.Local_CALDER_ID__c}))), NOT(OR(ISBLANK(TEXT({!$Record.Subsidiary_Indicator__c})), ISNULL(TEXT({!$Record.Subsidiary_Indicator__c})))), OR(ISNULL({!$Record.ExternalId__c}), ISBLANK({!$Record.ExternalId__c}))),
+AND(
+OR(ISCHANGED({!$Record.Local_CALDER_ID__c}), ISCHANGED({!$Record.Subsidiary_Indicator__c})),
+NOT(ISCHANGED({!$Record.ExternalId__c})),
+AND(NOT(OR(ISNULL({!$Record.Local_CALDER_ID__c}), ISBLANK({!$Record.Local_CALDER_ID__c}))), NOT(OR(ISBLANK(TEXT({!$Record.Subsidiary_Indicator__c})), ISNULL(TEXT({!$Record.Subsidiary_Indicator__c})))))
+))
+)
+)</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LUX_Delivery_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>LUX - Delivery</label>
+    <queue>LUX_Delivery</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

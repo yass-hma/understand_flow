@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customErrors>
+        <description>No Account Found</description>
+        <name>No_Account_Found</name>
+        <label>No Account Found</label>
+        <locationX>842</locationX>
+        <locationY>539</locationY>
+        <customErrorMessages>
+            <errorMessage>Error: No account related to the contact is found</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>No_account_or_contact_found</name>
+        <label>No account or contact found</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <customErrorMessages>
+            <errorMessage>Error: Contact / Account with the specified Showroom ID could not be found.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <description>No Contact Found</description>
+        <name>NO_Contact_Found</name>
+        <label>No Contact Found</label>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
+        <customErrorMessages>
+            <errorMessage>Error: No Contact found for the given Showroom ID.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Both_Contact_and_Account_Found</name>
+        <label>Both Contact and Account Found</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Both_Contact_and_Account_Found_outcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account_Records</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Contact_Based_on_Showroom_ID</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Quote</targetReference>
+            </connector>
+            <label>Both Contact and Account Found outcome</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>IDF_Quote_Account_Contact_ {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>IDFShowroom_Quote_Account_Contact_Association</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Account_Records</name>
+        <label>Get Account Records</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Both_Contact_and_Account_Found</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>No_Account_Found</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Contact_Based_on_Showroom_ID.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <queriedFields>Id</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get Contact Based on Showroom ID</description>
+        <name>Get_Contact_Based_on_Showroom_ID</name>
+        <label>Get Contact Based on Showroom ID</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Account_Records</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>NO_Contact_Found</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IDFUniqueUserID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.IDFUniqueUserID__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>AccountId</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update Quote with account and contact</description>
+        <name>Update_Quote</name>
+        <label>Update Quote</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <faultConnector>
+            <targetReference>No_account_or_contact_found</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Account__c</field>
+            <value>
+                <elementReference>Get_Account_Records.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <elementReference>Get_Contact_Based_on_Showroom_ID.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Contact_Based_on_Showroom_ID</targetReference>
+        </connector>
+        <filterFormula>AND(
+    OR(
+        NOT({!$User.Bypass_Workflow__c}),
+        {!$User.Id} = {!$Label.SmartIDFCreatedbyId}  
+    ),
+    NOT(ISBLANK({!$Record.IDFUniqueUserID__c})),
+    ISBLANK({!$Record.Account__c}),
+    ISBLANK({!$Record.ContactId}),
+    {!$Record.CreatedById} = {!$Label.SmartIDFCreatedbyId}
+)</filterFormula>
+        <object>Quote</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

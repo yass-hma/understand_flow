@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRADAE_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - DAE</label>
+    <queue>FRADAE</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customErrors>
+        <name>Error_Check_KYC_Validation</name>
+        <label>Error Check KYC Validation</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>L&apos;encours ne peut pas être validé, car le KYC des comptes locataire et/ou colocataire n&apos;est pas accepté.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Is_Kyc_Valid</name>
+        <label>Is Kyc Valid</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Error_Check_KYC_Validation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes2</name>
+            <conditionLogic>(1 OR 2) AND (3 OR 4) AND 5</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account__r.KYC_status2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Accepted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account__r.KYC_status2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Webcon In progress – KYC periodic review soon</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_Partner_By_Account.AccountTo.KYC_status2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Accepted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_Partner_By_Account.AccountTo.KYC_status2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Webcon In progress – KYC periodic review soon</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_Partner_By_Account.AccountTo.IsPersonAccount</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_Partner_By_Account</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_No_Partner</name>
+        <label>Is No Partner</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Loop_Partner_By_Account</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes1</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Partner_By_Account</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account__r.KYC_status2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Accepted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account__r.KYC_status2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Webcon In progress – KYC periodic review soon</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>FRA - Webcon CC - Check Tenant / Cotenant KYC Status {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FRA - Webcon CC - Check Tenant / Cotenant KYC Status</label>
+    <loops>
+        <name>Loop_Partner_By_Account</name>
+        <label>Loop Partner By Account</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Get_Partner_By_Account</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Is_Kyc_Valid</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Partner_By_Account</name>
+        <label>Get Partner By Account</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_No_Partner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountFromId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Partner</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Partner_By_Account</targetReference>
+        </connector>
+        <filterFormula>AND(
+    {!$User.Bypass_Workflow__c} = false, 
+    {!$User.Bypass_Validation_Rules__c} = false,
+    ISPICKVAL({!$Record.Status__c}, &apos;Accepted&apos;),
+    {!$Record.Account__r.IsPersonAccount} = true,
+    OR(
+        ISPICKVAL({!$Record.Account__r.Subsidiary_Indicator__c}, &apos;25001&apos;), 
+        ISPICKVAL({!$Record.Account__r.Subsidiary_Indicator__c}, &apos;25002&apos;), 
+        ISPICKVAL({!$Record.Account__r.Subsidiary_Indicator__c}, &apos;25003&apos;)
+    ),
+   ISPICKVAL({!$Record.Account__r.Type_of_account_creation__c}, &apos;Tenant&apos;)
+)</filterFormula>
+        <object>Credit_Check__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

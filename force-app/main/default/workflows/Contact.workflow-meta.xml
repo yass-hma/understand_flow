@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Consent_Profile_Update_on_Contact</fullName>
+        <field>Consent_profile_history__c</field>
+        <formula>Individual.FirstName + &quot; &quot; + Individual.LastName</formula>
+        <name>Consent Profile Update on Contact</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Empty_Rejection_Cause_Contact</fullName>
+        <field>Data_Flow_Reject_Cause__c</field>
+        <name>Empty Rejection Cause_Contact</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRAOriginalContact</fullName>
+        <description>Update RecordType when the contacte created with ALD SIV data</description>
+        <field>RecordTypeId</field>
+        <lookupValue>ContactFrance</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA - Contact Origine</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Role_1_Broker_ID</fullName>
+        <description>Set to account#TC01</description>
+        <field>Local_Broker_Id__c</field>
+        <formula>Account.Local_CALDER_ID__c &amp; &quot;TC01&quot;</formula>
+        <name>FRA Role 1 Broker ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Role_2_Broker_ID</fullName>
+        <description>Set to account # TC02</description>
+        <field>Local_Broker_Id__c</field>
+        <formula>Account.Local_CALDER_ID__c &amp; &quot;TC02&quot;</formula>
+        <name>FRA Role 2 Broker ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Unset_Data_Flow_Creation_Flag</fullName>
+        <field>Data_Flow_Creation_Flag__c</field>
+        <name>FRA Unset Data Flow Creation Flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Unset_Data_Flow_Upd_Flag</fullName>
+        <field>Data_Flow_Update_Flag__c</field>
+        <name>FRA Unset Data Flow Upd Flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>INTUpdateSubsidiary</fullName>
+        <field>Local_Subsidiary_ID__c</field>
+        <formula>CASE(TEXT(Account.Subsidiary_Indicator__c),
+&quot;5601&quot;, &quot;5601&quot;,
+&quot;01201&quot;,&quot;01201&quot;,
+&quot;4001&quot;,&quot;4001&quot;, 
+&quot;5601&quot;,&quot;5601&quot;, 
+&quot;7601&quot;,&quot;7601&quot;, 
+&quot;75601&quot;,&quot;75601&quot;, 
+&quot;15601&quot;,&quot;15601&quot;, 
+&quot;20301&quot;,&quot;20301&quot;, 
+&quot;27601&quot;,&quot;27601&quot;, 
+&quot;27604&quot;,&quot;27604&quot;, 
+&quot;20801&quot;,&quot;20801&quot;, 
+&quot;1201&quot;,&quot;1201&quot;, 
+&quot;81801&quot;,&quot;81801&quot;, 
+&quot;23301&quot;,&quot;23301&quot;, 
+&quot;24601&quot;,&quot;24601&quot;, 
+&quot;25001&quot;,&quot;25001&quot;,
+&quot;25002&quot;,&quot;25002&quot;,
+&quot;25003&quot;,&quot;25003&quot;,
+&quot;19101&quot;,&quot;19101&quot;, 
+&quot;34801&quot;,&quot;34801&quot;, 
+&quot;35601&quot;,&quot;35601&quot;, 
+&quot;38001&quot;,&quot;38001&quot;, 
+&quot;44001&quot;,&quot;44001&quot;, 
+&quot;44201&quot;,&quot;44201&quot;, 
+&quot;42801&quot;,&quot;42801&quot;, 
+&quot;50401&quot;,&quot;50401&quot;, 
+&quot;48401&quot;,&quot;48401&quot;, 
+&quot;52801&quot;,&quot;52801&quot;, 
+&quot;57801&quot;,&quot;57801&quot;, 
+&quot;61601&quot;,&quot;61601&quot;, 
+&quot;62001&quot;,&quot;62001&quot;, 
+&quot;64201&quot;,&quot;64201&quot;, 
+&quot;64301&quot;,&quot;64301&quot;, 
+&quot;72401&quot;,&quot;72401&quot;, 
+&quot;70501&quot;,&quot;70501&quot;, 
+&quot;75201&quot;,&quot;75201&quot;, 
+&quot;79201&quot;,&quot;79201&quot;, 
+&quot;82601&quot;,&quot;82601&quot;,
+&quot;10001&quot;,&quot;10001&quot;,
+&quot;12401&quot;,&quot;12401&quot;,
+&quot;30001&quot;,&quot;30001&quot;, 
+&quot;45801&quot;,&quot;45801&quot;, 
+&quot;68801&quot;,&quot;68801&quot;, 
+&quot;70301&quot;,&quot;70301&quot;, 
+&quot;80401&quot;,&quot;80401&quot;, 
+&quot;84001&quot;,&quot;84001&quot;, 
+&quot;19102&quot;,&quot;19102&quot;, 
+&quot;20802&quot;,&quot;20802&quot;, 
+&quot;24602&quot;,&quot;24602&quot;, 
+&quot;25000&quot;,&quot;25000&quot;, 
+&quot;45803&quot;,&quot;45803&quot;, 
+&quot;45802&quot;,&quot;45802&quot;, 
+&quot;57802&quot;,&quot;57802&quot;, 
+&quot;75202&quot;,&quot;75202&quot;, 
+&quot;15201&quot;,&quot;15201&quot;,
+&quot;60401&quot;,&quot;60401&quot;,
+&quot;17001&quot;,&quot;17001&quot;,
+&quot;37201&quot;,&quot;37201&quot;,
+&quot;82602&quot;,&quot;82602&quot;,
+&quot;76401&quot;,&quot;76401&quot;,
+&quot;78401&quot;,&quot;78401&quot;,
+&quot;&quot;)</formula>
+        <name>INT Update Subsidiary</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Mailing_Country</fullName>
+        <field>MailingCountry</field>
+        <formula>CASE ( MailingCountry ,
+&apos;DZ&apos;,&apos;DZA&apos;,
+&apos;AT&apos;,&apos;AUT&apos;,
+&apos;BE&apos;,&apos;BEL&apos;,
+&apos;BR&apos;,&apos;BRA&apos;,
+&apos;CN&apos;,&apos;CHN&apos;,
+&apos;HR&apos;,&apos;HRV&apos;,
+&apos;CZ&apos;,&apos;CZE&apos;,
+&apos;DK&apos;,&apos;DNK&apos;,
+&apos;EG&apos;,&apos;EGY&apos;,
+&apos;EE&apos;,&apos;EST&apos;,
+&apos;FI&apos;,&apos;FIN&apos;,
+&apos;FI&apos;,&apos;FIN&apos;,
+&apos;FR&apos;,&apos;FRA&apos;,
+&apos;DE&apos;,&apos;DEU&apos;,
+&apos;DE&apos;,&apos;DEU&apos;,
+&apos;HU&apos;,&apos;HUN&apos;,
+&apos;IN&apos;,&apos;IND&apos;,
+&apos;IT&apos;,&apos;ITA&apos;,
+&apos;LV&apos;,&apos;LVA&apos;,
+&apos;LT&apos;,&apos;LTU&apos;,
+&apos;LU&apos;,&apos;LUX&apos;,
+&apos;MX&apos;,&apos;MEX&apos;,
+&apos;MA&apos;,&apos;MAR&apos;,
+&apos;NL&apos;,&apos;NLD&apos;,
+&apos;NO&apos;,&apos;NOR&apos;,
+&apos;PL&apos;,&apos;POL&apos;,
+&apos;PT&apos;,&apos;PRT&apos;,
+&apos;RO&apos;,&apos;ROU&apos;,
+&apos;RU&apos;,&apos;RUS&apos;,
+&apos;SK&apos;,&apos;SVK&apos;,
+&apos;SI&apos;,&apos;SVN&apos;,
+&apos;ES&apos;,&apos;ESP&apos;,
+&apos;SE&apos;,&apos;SWE&apos;,
+&apos;CH&apos;,&apos;CHE&apos;,
+&apos;TR&apos;,&apos;TUR&apos;,
+&apos;UA&apos;,&apos;UKR&apos;,
+&apos;GB&apos;,&apos;GBR&apos;,
+&apos;FR&apos;,&apos;FRA&apos;,
+&apos;MY&apos;,&apos;MYS&apos;,
+&apos;RS&apos;,&apos;SRB&apos;,
+&apos;BG&apos;,&apos;BGR&apos;,
+&apos;KZ&apos;,&apos;KAZ&apos;,
+&apos;BY&apos;,&apos;BLR&apos;,
+&apos;CL&apos;,&apos;CHL&apos;,
+&apos;PE&apos;,&apos;PER&apos;,
+&apos;CO&apos;,&apos;COL&apos;,
+&apos;IE&apos;,&apos;IRL&apos;,
+&apos;FF&apos;,&apos;FFM&apos;,
+&apos;AE&apos;,&apos;ARE&apos;,
+&apos;TH&apos;,&apos;THA&apos;,
+MailingCountry )</formula>
+        <name>Mailing Country</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Real_Time_Croatia_Bypass</fullName>
+        <description>Make Boolean field False to by pass update operation</description>
+        <field>RealTime_Croatia_Bypass__c</field>
+        <literalValue>0</literalValue>
+        <name>Real Time Croatia Bypass</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Account_Anonymization_Bypass</fullName>
+        <description>This field update has been set up to reset the Anonymization_Bypass__c field to false once it has been set to true by the anonymization process. 
+It prevents the record from bypassing VRs after having been anonymized.</description>
+        <field>Anonymization_Bypass__c</field>
+        <literalValue>0</literalValue>
+        <name>Reset Account Anonymization Bypass</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Birthdate</fullName>
+        <field>Birthdate</field>
+        <formula>Tech_Date_of_Birth__c</formula>
+        <name>Update Birthdate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Updatedataflowcreationflag</fullName>
+        <description>CRMV2</description>
+        <field>Data_Flow_Creation_Flag__c</field>
+        <formula>NOW()</formula>
+        <name>Update data flow creation flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Updatedataflowmodificationflag</fullName>
+        <description>CRMV2</description>
+        <field>Data_Flow_Update_Flag__c</field>
+        <formula>NOW()</formula>
+        <name>Update data flow modification flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>set_Contact_Flag</fullName>
+        <field>Data_Flow_Update_Flag__c</field>
+        <formula>NOW()</formula>
+        <name>set Contact Flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Consent profile history</fullName>
+        <actions>
+            <name>Consent_Profile_Update_on_Contact</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( NOT($User.Bypass_Workflow__c), Individual.Id !=null )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contact Birthdate Update</fullName>
+        <actions>
+            <name>Update_Birthdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.Account_Subsidiary__c</field>
+            <operation>equals</operation>
+            <value>Netherlands</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.Tech_Date_of_Birth__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Contact Origine</fullName>
+        <actions>
+            <name>FRAOriginalContact</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.LeadSource</field>
+            <operation>equals</operation>
+            <value>ALD SIV</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Update Record Type when origine is ALD SIV</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Contact creation flag</fullName>
+        <actions>
+            <name>Updatedataflowcreationflag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), RecordTypeId = &quot;01220000000Cm8X&quot;, OR( ISPICKVAL(Role__c,&quot;1 - Contractuel, offres commerciales&quot;), ISPICKVAL(Role__c,&quot;2 - Logistique, editique&quot;) ), trim(Local_Broker_Id__c)=&apos;&apos;, text(Data_Flow_Creation_Flag__c)=&apos;&apos;, OR( Account.RecordTypeId = &apos;01220000000Cm83&apos;, Account.RecordTypeId = &apos;012200000008pQB&apos;, Account.RecordTypeId = &apos;01220000000E0nr&apos;, Account.RecordTypeId = &apos;01220000000E0nw&apos;,Account.RecordType.DeveloperName=&apos;Account_France_Prospect_Parcours&apos;,Account.RecordType.DeveloperName=&apos;Account_France_Customer_Parcours&apos;),IF(Account.Local_CALDER_ID__c&lt;&gt;&apos;&apos;,OR(BEGINS(Account.Local_CALDER_ID__c , &apos;T&apos;),BEGINS(Account.Local_CALDER_ID__c , &apos;B&apos;)), TRUE) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Contact modification flag</fullName>
+        <actions>
+            <name>Empty_Rejection_Cause_Contact</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Updatedataflowmodificationflag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>JFF 28/10/2011 Test on local_customer_id at toplevel
+CRM V2 - used by data flows to detect contact modification</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), $User.Id &lt;&gt; &apos;00520000002jAYc&apos;, $User.Id &lt;&gt; &apos;00520000000pJKv&apos;,  	AND(  		RecordTypeId  = &quot;01220000000Cm8X&quot;, 		Account.Local_CALDER_ID__c&lt;&gt;&apos;&apos;, 		Local_Broker_Id__c&lt;&gt;&apos;&apos;, 		OR( 			ISPICKVAL(Role__c,&quot;1 - Contractuel, offres commerciales&quot;), 			ISPICKVAL(Role__c,&quot;2 - Logistique, editique&quot;) 		), 		OR( 			ISCHANGED(LastName),   			ISCHANGED(FirstName),  			ISCHANGED(Salutation),  			ISCHANGED(Phone),   			ISCHANGED(Role__c ),  			ISCHANGED(Function_List__c ), 			ISCHANGED(AccountId ), 			ISCHANGED( Email ), 			ISCHANGED( Language__c ), 			ISCHANGED( MailingCity ), 			ISCHANGED( MailingCountry ), 			ISCHANGED( MailingPostalCode ), 			ISCHANGED( MailingState ), 			ISCHANGED( MailingStreet ), 			ISCHANGED( Type__c ) 		), 		OR( Account.RecordTypeId = &apos;01220000000Cm83&apos;, Account.RecordTypeId = &apos;012200000008pQB&apos;, Account.RecordTypeId = &apos;01220000000E0nr&apos;,Account.RecordTypeId = &apos;01220000000E0nw&apos;,Account.RecordType.DeveloperName=&apos;Account_France_Prospect_Parcours&apos;,Account.RecordType.DeveloperName=&apos;Account_France_Customer_Parcours&apos;), 			OR(BEGINS(Account.Local_CALDER_ID__c , &apos;T&apos;),BEGINS(Account.Local_CALDER_ID__c , &apos;B&apos;)) 	) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA Role 1 Broker ID</fullName>
+        <actions>
+            <name>FRA_Role_1_Broker_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>To set Local broker id to Account# TC01</description>
+        <formula>AND( NOT($User.Bypass_Workflow__c), $User.Id &lt;&gt; &apos;00520000000pJKv&apos;,  OR( ISPICKVAL(Account.Subsidiary_Indicator__c, &quot;25001&quot; ),ISPICKVAL(Account.Subsidiary_Indicator__c, &quot;25002&quot;),ISPICKVAL(Account.Subsidiary_Indicator__c, &quot;25003&quot;)), Account.Local_CALDER_ID__c &lt;&gt; &apos;&apos;,  ISPICKVAL(Role__c , &apos;1 - Contractuel, offres commerciales&apos;) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA Role 2 Broker ID</fullName>
+        <actions>
+            <name>FRA_Role_2_Broker_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>To set Local broker id to Account# TC02</description>
+        <formula>AND( NOT($User.Bypass_Workflow__c), $User.Id &lt;&gt; &apos;00520000000pJKv&apos;,  OR( ISPICKVAL(Account.Subsidiary_Indicator__c, &quot;25001&quot; ),ISPICKVAL(Account.Subsidiary_Indicator__c, &quot;25002&quot;),ISPICKVAL(Account.Subsidiary_Indicator__c, &quot;25003&quot;)), Account.Local_CALDER_ID__c &lt;&gt; &apos;&apos;,  ISPICKVAL(Role__c , &apos;2 - Logistique, editique&apos;) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA Role 4 Data Flag</fullName>
+        <actions>
+            <name>FRA_Unset_Data_Flow_Creation_Flag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_Unset_Data_Flow_Upd_Flag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>to unset data creation or modification flag</description>
+        <formula>AND( NOT($User.Bypass_Workflow__c), Account.Local_CALDER_ID__c &lt;&gt; &quot;&quot;, ISCHANGED(Role__c) ,ISPICKVAL(Role__c ,&quot;4 - Non synchronisé&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>INT Update Subsidiary</fullName>
+        <actions>
+            <name>INTUpdateSubsidiary</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.Local_Subsidiary_ID__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Update contact&apos;s subsidiary with account&apos;s subsidiary</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Mailing Country - Convert Iso2 to Iso</fullName>
+        <actions>
+            <name>Mailing_Country</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.MailingCountry</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Mailing Country - Convert Iso2 to Iso (3chars)</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Real Time Croatia Bypass</fullName>
+        <actions>
+            <name>Real_Time_Croatia_Bypass</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.RealTime_Croatia_Bypass__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reset Contact Anonymization Bypass</fullName>
+        <actions>
+            <name>Reset_Account_Anonymization_Bypass</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.Anonymization_Bypass__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>This workflow &amp; field update has been set up to reset the Anonymization_Bypass__c field to false once it has been set to true by the anonymization process. 
+It prevents the record from bypassing VRs after having been anonymized.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Contact Role 1</fullName>
+        <actions>
+            <name>FRA_Role_1_Broker_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>set_Contact_Flag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( NOT($User.Bypass_Workflow__c), $User.Id &lt;&gt; &apos;00520000000pJKv&apos;,$User.Id &lt;&gt; &apos;00520000002jAYc&apos;,  OR( ISPICKVAL(Account.Subsidiary_Indicator__c, &quot;25001&quot; ),ISPICKVAL(Account.Subsidiary_Indicator__c, &quot;25002&quot;),ISPICKVAL(Account.Subsidiary_Indicator__c, &quot;25003&quot;)), Account.Local_CALDER_ID__c &lt;&gt; &apos;&apos;,  ISPICKVAL(Role__c , &apos;1 - Contractuel, offres commerciales&apos;) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Contact Role 2</fullName>
+        <actions>
+            <name>FRA_Role_2_Broker_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>set_Contact_Flag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), $User.Id &lt;&gt; &apos;00520000000pJKv&apos;, $User.Id &lt;&gt; &apos;00520000002jAYc&apos;, OR( ISPICKVAL(Account.Subsidiary_Indicator__c, &quot;25001&quot; ),ISPICKVAL(Account.Subsidiary_Indicator__c, &quot;25002&quot;),ISPICKVAL(Account.Subsidiary_Indicator__c, &quot;25003&quot;)), Account.Local_CALDER_ID__c &lt;&gt; &apos;&apos;,  ISPICKVAL(Role__c , &apos;2 - Logistique, editique&apos;) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

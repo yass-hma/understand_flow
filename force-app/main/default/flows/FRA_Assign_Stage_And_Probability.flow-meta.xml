@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Stage_And_Probability</name>
+        <label>Assign Stage And Probability</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>To Prospect</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Probability</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>10.0</numberValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Stage_And_Probability_2</name>
+        <label>Assign Stage And Probability 2</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>First Contact</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Probability</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>25.0</numberValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Stage_And_Probability_3</name>
+        <label>Assign Stage And Probability 3</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>First Contact</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Probability</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>45.0</numberValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Stage_And_Probability_4</name>
+        <label>Assign Stage And Probability 4</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>First Contact</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Probability</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>65.0</numberValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Stage_And_Probability_5</name>
+        <label>Assign Stage And Probability 5</label>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>First Contact</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Probability</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>85.0</numberValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Stage_And_Probability_6</name>
+        <label>Assign Stage And Probability 6</label>
+        <locationX>1370</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Agreement Sign Off / Implementation 2</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Probability</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>100.0</numberValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Stage_And_Probability_7</name>
+        <label>Assign Stage And Probability 7</label>
+        <locationX>1634</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lost</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Probability</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Reason_For_Lost__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Reason_For_Loss_France__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Stage_And_Probability_8</name>
+        <label>Assign Stage And Probability 8</label>
+        <locationX>1898</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Cancelled</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Probability</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_Probability_Label_Value</name>
+        <label>Check Probability Label Value</label>
+        <locationX>1106</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default</defaultConnectorLabel>
+        <rules>
+            <name>Is_Equal_A_Determiner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ProbabilityLabel__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>A déterminer - (5% - 10%)</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Stage_And_Probability</targetReference>
+            </connector>
+            <label>Is Equal A Déterminer</label>
+        </rules>
+        <rules>
+            <name>Is_Equal_Utopique</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ProbabilityLabel__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Utopique - (20% - 30%)</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Stage_And_Probability_2</targetReference>
+            </connector>
+            <label>Is Equal Utopique</label>
+        </rules>
+        <rules>
+            <name>Is_Equal_Optimiste</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ProbabilityLabel__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Optimiste - (40% - 50%)</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Stage_And_Probability_3</targetReference>
+            </connector>
+            <label>Is Equal Optimiste</label>
+        </rules>
+        <rules>
+            <name>Is_Equal_Realiste</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ProbabilityLabel__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Réaliste - (60% - 70%)</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Stage_And_Probability_4</targetReference>
+            </connector>
+            <label>Is Equal Réaliste</label>
+        </rules>
+        <rules>
+            <name>Is_Equal_Certaine</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ProbabilityLabel__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Certaine - (80% - 90%)</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Stage_And_Probability_5</targetReference>
+            </connector>
+            <label>Is Equal Certaine</label>
+        </rules>
+        <rules>
+            <name>Is_Equal_Gagne</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ProbabilityLabel__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Gagné - 100%</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Stage_And_Probability_6</targetReference>
+            </connector>
+            <label>Is Equal Gagné</label>
+        </rules>
+        <rules>
+            <name>Is_Equal_Perdue</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ProbabilityLabel__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Perdue - 0%</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Stage_And_Probability_7</targetReference>
+            </connector>
+            <label>Is Equal Perdue</label>
+        </rules>
+        <rules>
+            <name>Is_Equal_Annule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ProbabilityLabel__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Annulé - 0%</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Stage_And_Probability_8</targetReference>
+            </connector>
+            <label>Is Equal Annulé</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>FRA - {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FRA - Assign Stage And Probability</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>980</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Probability_Label_Value</targetReference>
+        </connector>
+        <filterFormula>{!$User.Bypass_Workflow__c} = false &amp;&amp;  {!$Record.RecordType.DeveloperName} = &apos;OpportunityFranceFleet&apos; &amp;&amp; (ISNEW() || ISCHANGED({!$Record.ProbabilityLabel__c}))</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

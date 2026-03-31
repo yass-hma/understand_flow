@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_DISPUTE_COMMERCIALI_LILLY_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ITA - DISPUTE COMMERCIALI LILLY</label>
+    <queue>ITA_DISPUTE_COMMERCIALI_LILLY</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

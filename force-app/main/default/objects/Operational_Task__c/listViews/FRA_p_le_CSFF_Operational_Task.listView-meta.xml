@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_p_le_CSFF_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - pôle CSFF</label>
+    <queue>FRA_p_le_CSFF</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

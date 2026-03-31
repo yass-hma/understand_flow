@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_MailToCase_ENGLISH_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ITA - MailToCase ENGLISH</label>
+    <queue>ITA_MailToCase_ENGLISH</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

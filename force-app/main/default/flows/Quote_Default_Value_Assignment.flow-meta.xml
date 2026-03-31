@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Set_Default_Value</name>
+        <label>Set Default Value</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.CurrencyIsoCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>VUV</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <environments>Default</environments>
+    <formulas>
+        <description>Today&apos;s date  formatted to YYYYMMDD</description>
+        <name>formattedDate</name>
+        <dataType>String</dataType>
+        <expression>TEXT(YEAR({!TodayDate})) &amp; IF(MONTH({!TodayDate}) &lt;10 , &quot;0&quot; &amp; TEXT(MONTH({!TodayDate})), TEXT(MONTH({!TodayDate}))) &amp; IF(DAY({!TodayDate}) &lt;10 , &quot;0&quot; &amp; TEXT(DAY({!TodayDate})), TEXT(DAY({!TodayDate})))</expression>
+    </formulas>
+    <formulas>
+        <name>QuoteNameLeadRelated</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Lead__r.Company} &amp; &quot; &quot;&amp; {!$Record.Lead__r.Partner__r.Name} &amp; &quot; &quot; &amp; {!formattedDate}</expression>
+    </formulas>
+    <formulas>
+        <name>QuoteNameOpportunityRelated</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Opportunity.Account.Name}&amp; &quot; &quot; &amp;{!$Record.Opportunity.PartnerAccount.Name}&amp; &quot; &quot; &amp; {!formattedDate}</expression>
+    </formulas>
+    <formulas>
+        <description>Today&apos;s date</description>
+        <name>TodayDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>Quote -  Default Value Assignment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Quote -  Default Value Assignment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Default_Value</targetReference>
+        </connector>
+        <object>Quote</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

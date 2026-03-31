@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>FRA_FQRemindNoResposne</fullName>
+        <description>FRA - FQ Remind no resposne</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>no.reply@aldautomotive.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>FR_Direction_Qualit/Quality_RemindNoResponse</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_FQ_Notify_Sender_Owner_Changed</fullName>
+        <description>FRA - FQ Notify Sender Owner Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FR_Direction_Qualit/Quality_Notify_Sender_Transfer</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_FQ_Reminder_Supervisor</fullName>
+        <description>FRA - FQ Reminder Supervisor</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Supervisor__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FR_Direction_Qualit/Quality_Notify_Supervisor</template>
+    </alerts>
+    <alerts>
+        <fullName>FRA_NotifyOwner</fullName>
+        <description>FRA - Notify Owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FR_Direction_Qualit/QualityNotifySender</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>FRA_FQ_DTOwnerUpdateByQS</fullName>
+        <field>Owner_Changed_By_DQ_DT__c</field>
+        <formula>LastModifiedDate</formula>
+        <name>FRA_FQ_DTOwnerUpdateByQS</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_InitationSender</fullName>
+        <field>Sender__c</field>
+        <formula>Owner:User.Full_Name__c</formula>
+        <name>FRA_Initation Sender</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_QualitySheetsUpdateClosedDate</fullName>
+        <description>Set to null closed date where the FQ is reopened.</description>
+        <field>ClosedDate__c</field>
+        <name>FRA QualitySheets Update Closed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_QualitySheetsUpdateDecisionDQDate</fullName>
+        <description>Update Decision DQ date when Status is &apos; DQ Decision &apos;</description>
+        <field>DateOfDecisionDQ__c</field>
+        <formula>today()</formula>
+        <name>FRA_QualitySheetsUpdate DecisionDQ Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_QualitySheetsUpdateReopenedDate</fullName>
+        <description>Update ReOpened date</description>
+        <field>ReOpenDate__c</field>
+        <formula>today()</formula>
+        <name>FRA_QualitySheets Update Reopened Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_QualitySheetsUpdate_Closed_Date</fullName>
+        <description>Update Closed Date</description>
+        <field>ClosedDate__c</field>
+        <formula>Today()</formula>
+        <name>FRA - Quality Sheets update Closed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_UpdateAssignementDate</fullName>
+        <description>Update Assignment Date</description>
+        <field>AssignmentDate__c</field>
+        <formula>Today()</formula>
+        <name>FRA - Update Assignement Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_UpdateOwner</fullName>
+        <field>OwnerId</field>
+        <lookupValue>FRADirectionQualit</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>FRA Update Owner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_UpdateRecodType</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>OptionEdit</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA - RecodTypeUpdate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>FRA - Quality Sheets - Notify Owner Transfer</fullName>
+        <actions>
+            <name>FRA_FQ_Notify_Sender_Owner_Changed</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Send an email alert when the Owner is changed from a User to another User</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), LEFT(OwnerId, 3) == &apos;005&apos;, ISCHANGED(OwnerId))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Quality Sheets - OwnerUpdateByDQ</fullName>
+        <actions>
+            <name>FRA_FQ_DTOwnerUpdateByQS</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update a field used for sending Timed Email alerts</description>
+        <formula>NOT($User.Bypass_Workflow__c) &amp;&amp; ISChanged(OwnerId) &amp;&amp; PRIORVALUE(OwnerId) ==  $Label.QS_Direction_Qualit</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Quality Sheets OptionEditZone</fullName>
+        <actions>
+            <name>FRA_UpdateRecodType</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>QualitySheet__c.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Used to change RecordType</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Quality Sheets Update Assignement Date</fullName>
+        <actions>
+            <name>FRA_UpdateAssignementDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>QualitySheet__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Opened</value>
+        </criteriaItems>
+        <description>This WR update the assignment date when the status is Open</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Quality Sheets Update Closed Date</fullName>
+        <actions>
+            <name>FRA_QualitySheetsUpdate_Closed_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>QualitySheet__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <description>Update closedDate when status is Closed</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Quality Sheets Update Decision DQ Date</fullName>
+        <actions>
+            <name>FRA_QualitySheetsUpdateDecisionDQDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>QualitySheet__c.Status__c</field>
+            <operation>equals</operation>
+            <value>DQ decision</value>
+        </criteriaItems>
+        <description>Update Decision DQ date  when status is  DQ decision</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Quality Sheets Update Reopen Date</fullName>
+        <actions>
+            <name>FRA_QualitySheetsUpdateClosedDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_QualitySheetsUpdateReopenedDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>QualitySheet__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Reopened</value>
+        </criteriaItems>
+        <description>Update Reopened Date when status is Reopened</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Quality Sheets-Initiation Sender</fullName>
+        <actions>
+            <name>FRA_InitationSender</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_UpdateOwner</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>QualitySheet__c.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>1H1</value>
+        </criteriaItems>
+        <description>Initiate the Sender field with the Owner</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Quality Sheets-Notify Owner</fullName>
+        <actions>
+            <name>FRA_NotifyOwner</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Notify Owner when the FQ is Closed</description>
+        <formula>AND(ISCHANGED( Status__c ),  ISPICKVAL( Status__c , &apos;Closed&apos;) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

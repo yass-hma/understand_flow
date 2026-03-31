@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Robot_RPA_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - Robot RPA</label>
+    <queue>FRA_Robot_RPA</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

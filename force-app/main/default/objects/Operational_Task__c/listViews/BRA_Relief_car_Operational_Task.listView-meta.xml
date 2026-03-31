@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRA_Relief_car_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BRA - Relief car</label>
+    <queue>BRA_Relief_car</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

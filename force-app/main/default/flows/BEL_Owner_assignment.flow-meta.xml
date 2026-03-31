@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Owner_Decision</name>
+        <label>Owner Decision</label>
+        <locationX>974</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>No_Owner_Change</defaultConnectorLabel>
+        <rules>
+            <name>CCCM_ILC_Car</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_TRUE_myRule_3</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_CCCM_ILC_Car</targetReference>
+            </connector>
+            <label>CCCM-ILC Car</label>
+        </rules>
+        <rules>
+            <name>CCCM_ILC_Car_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_TRUE_myRule_7</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_CCCM_ILC_Car_2</targetReference>
+            </connector>
+            <label>CCCM-ILC Car 2</label>
+        </rules>
+        <rules>
+            <name>CCCM_ILC_Car_3</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_TRUE_myRule_4</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_CCCM_ILC_Car_3</targetReference>
+            </connector>
+            <label>CCCM-ILC Car 3</label>
+        </rules>
+        <rules>
+            <name>CCCM_ILC_Van</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_TRUE_myRule_5</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_CCCM_ILC_Van</targetReference>
+            </connector>
+            <label>CCCM-ILC Van</label>
+        </rules>
+        <rules>
+            <name>CCCM_ILC_Car_Van_Reopened</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_TRUE_myRule_9</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>CCCM-ILC Car/Van-Reopened</label>
+        </rules>
+        <rules>
+            <name>M2C_fleetmanagement</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_m2c_fleetmanagement</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_M2C_fleetmanagement</targetReference>
+            </connector>
+            <label>M2C fleetmanagement</label>
+        </rules>
+        <rules>
+            <name>LUX_CaseOwner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LUX_OwnerRule</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>LUX_Case_Owner</targetReference>
+            </connector>
+            <label>LUX_CaseOwner</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_m2c_fleetmanagement</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(ISNEW(),
+AND(
+{!$Record.Emailtocasereceiver__c} = {!$Label.m2cfleetmanagement},
+NOT(ISBLANK({!$Record.AccountId})), NOT(ISBLANK(TEXT({!$Record.External_Case_Category__c}))), NOT(ISBLANK(TEXT({!$Record.External_Case_Detail__c}))),
+NOT(ISBLANK({!$Record.Account.Sales_Car_Internal_ID__c})), {!$Record.Account.Sales_Car_Internal_ID__r.IsActive}
+),
+AND(
+{!$Record.Emailtocasereceiver__c} = {!$Label.m2cfleetmanagement},
+NOT(ISCHANGED({!$Record.OwnerId})),
+OR((ISCHANGED({!$Record.AccountId})),ISCHANGED({!$Record.External_Case_Category__c}),ISCHANGED({!$Record.External_Case_Detail__c})),
+NOT(ISBLANK({!$Record.AccountId})), NOT(ISBLANK(TEXT({!$Record.External_Case_Category__c}))), NOT(ISBLANK(TEXT({!$Record.External_Case_Detail__c}))),
+NOT(ISBLANK({!$Record.Account.Sales_Car_Internal_ID__c})), {!$Record.Account.Sales_Car_Internal_ID__r.IsActive}
+)
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TRUE_myRule_3</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(ISNEW(),AND(NOT($User.Bypass_Workflow__c),{!$Record.RecordType.DeveloperName=&apos;Case_External_Belgium&apos;},OR(NOT(ISPICKVAL({!$Record.Status}, &apos;Closed&apos;)),NOT(ISPICKVAL({!$Record.Status}, &apos;Reopened&apos;))),
+NOT(ISBLANK({!$Record.Account.Sales_Car_Internal_ID__c})),{!$Record.Account.Sales_Car_Internal_ID__r.IsActive},NOT(Contains({!$Record.OWNERID},{!$Record.Account.Sales_Car_Internal_ID__c})),
+NOT(ISPICKVAL({!$Record.Account.Partner__r.Account_Source__c}, &apos;Belfius Auto Lease&apos;)),
+NOT(ISBLANK(TEXT({!$Record.External_Case_Category__c}))),
+OR(AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Choose Mobility&apos;),OR(ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - cars&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - bikes &amp; mobility&apos;),
+ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Review quotation&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Rules and procedures&apos;))),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Contract Management&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Study&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Management Services&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;MyApp&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Reporting&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Sales&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Finance&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Invoice details (layout)&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Order &amp; Delivery&apos;),(ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Order management&apos;))))),
+AND(
+NOT($User.Bypass_Workflow__c),NOT(ISCHANGED({!$Record.OwnerId})),{!$Record.RecordType.DeveloperName=&apos;Case_External_Belgium&apos;},
+OR((ISCHANGED({!$Record.AccountId})),ISCHANGED({!$Record.External_Case_Category__c}),ISCHANGED({!$Record.External_Case_Detail__c})),
+OR(NOT(ISPICKVAL({!$Record.Status}, &apos;Closed&apos;)),NOT(ISPICKVAL({!$Record.Status}, &apos;Reopened&apos;))),
+NOT(ISBLANK({!$Record.Account.Sales_Car_Internal_ID__c})),{!$Record.Account.Sales_Car_Internal_ID__r.IsActive},
+NOT(Contains({!$Record.OWNERID},{!$Record.Account.Sales_Car_Internal_ID__c})),
+NOT(ISPICKVAL({!$Record.Account.Partner__r.Account_Source__c}, &apos;Belfius Auto Lease&apos;)),
+NOT(ISBLANK(TEXT({!$Record.External_Case_Category__c}))),
+OR(AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Choose Mobility&apos;),OR(ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - cars&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - bikes &amp; mobility&apos;),
+ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Review quotation&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Rules and procedures&apos;))),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Contract Management&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Study&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Management Services&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;MyApp&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Reporting&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Sales&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Finance&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Invoice details (layout)&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Order &amp; Delivery&apos;),(ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Order management&apos;))))))</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TRUE_myRule_4</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(ISNEW(),AND(NOT($User.Bypass_Workflow__c),{!$Record.RecordType.DeveloperName=&apos;Case_External_Belgium&apos;},OR(NOT(ISPICKVAL({!$Record.Status}, &apos;Closed&apos;)),NOT(ISPICKVAL({!$Record.Status}, &apos;Reopened&apos;))),
+NOT(ISBLANK({!$Record.Account.Sales_Car_Internal_ID__c})),{!$Record.Account.Sales_Car_Internal_ID__r.IsActive},NOT(Contains({!$Record.OWNERID},{!$Record.Account.Sales_Car_Internal_ID__c})),
+NOT(ISPICKVAL({!$Record.Account.Partner__r.Account_Source__c}, &apos;Belfius Auto Lease&apos;)),
+NOT(ISBLANK(TEXT({!$Record.External_Case_Category__c}))),
+OR(AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Choose Mobility&apos;),ISPICKVAL({!$Record.External_Case_Detail__c},&apos;Quotation - Charging solution&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Management Services&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Contact - Account data change&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Out of office&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Other&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Order &amp; Delivery&apos;),(ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Driver participation&apos;))))),
+
+AND(
+NOT($User.Bypass_Workflow__c),NOT(ISCHANGED({!$Record.OwnerId})),{!$Record.RecordType.DeveloperName=&apos;Case_External_Belgium&apos;},
+OR((ISCHANGED({!$Record.AccountId})),ISCHANGED({!$Record.External_Case_Category__c}),ISCHANGED({!$Record.External_Case_Detail__c})),
+OR(NOT(ISPICKVAL({!$Record.Status}, &apos;Closed&apos;)),NOT(ISPICKVAL({!$Record.Status}, &apos;Reopened&apos;))),
+NOT(ISBLANK({!$Record.Account.Sales_Car_Internal_ID__c})),{!$Record.Account.Sales_Car_Internal_ID__r.IsActive},
+NOT(Contains({!$Record.OWNERID},{!$Record.Account.Sales_Car_Internal_ID__c})),
+NOT(ISPICKVAL({!$Record.Account.Partner__r.Account_Source__c}, &apos;Belfius Auto Lease&apos;)),
+NOT(ISBLANK(TEXT({!$Record.External_Case_Category__c}))),
+OR(AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Choose Mobility&apos;),ISPICKVAL({!$Record.External_Case_Detail__c},&apos;Quotation - Charging solution&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Management Services&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Contact - Account data change&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Out of office&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Other&apos;)),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Order &amp; Delivery&apos;),(ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Driver participation&apos;))))))</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TRUE_myRule_5</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+NOT($User.Bypass_Workflow__c),{!$Record.RecordType.DeveloperName=&apos;Case_External_Belgium&apos;},
+OR(NOT(ISPICKVAL({!$Record.Status}, &apos;Closed&apos;)),NOT(ISPICKVAL({!$Record.Status}, &apos;Reopened&apos;))),
+AND(NOT(ISBLANK({!$Record.Account.Sales_Van_Internal_ID__c})),{!$Record.Account.Sales_Van_Internal_ID__r.IsActive},
+NOT(ISPICKVAL({!$Record.Account.Partner__r.Account_Source__c}, &apos;Belfius Auto Lease&apos;))),
+NOT(Contains({!$Record.OWNERID},{!$Record.Account.Sales_Van_Internal_ID__c})),
+AND(NOT(ISBLANK(TEXT({!$Record.External_Case_Category__c}))),ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Choose Mobility&apos;),
+OR (ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - vans&apos;))))</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TRUE_myRule_7</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(ISNEW(),AND(NOT($User.Bypass_Workflow__c),{!$Record.RecordType.DeveloperName=&apos;Case_External_Belgium&apos;},OR(NOT(ISPICKVAL({!$Record.Status}, &apos;Closed&apos;)),NOT(ISPICKVAL({!$Record.Status}, &apos;Reopened&apos;))),
+NOT(ISBLANK({!$Record.Account.Sales_Car_Internal_ID__c})),{!$Record.Account.Sales_Car_Internal_ID__r.IsActive},NOT(Contains({!$Record.OWNERID},{!$Record.Account.Sales_Car_Internal_ID__c})),
+NOT(OR(ISPICKVAL({!$Record.Account.Partner__r.Account_Source__c}, &apos;Belfius Auto Lease&apos;),ISPICKVAL({!$Record.Account.Partner__r.Account_Source__c}, &apos;Ayvens&apos;))),
+NOT(ISBLANK(TEXT({!$Record.External_Case_Category__c}))),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Management Services&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Driver change - less than 10&apos;))),
+AND(
+NOT($User.Bypass_Workflow__c),NOT(ISCHANGED({!$Record.OwnerId})),{!$Record.RecordType.DeveloperName=&apos;Case_External_Belgium&apos;},
+OR((ISCHANGED({!$Record.AccountId})),ISCHANGED({!$Record.External_Case_Category__c}),ISCHANGED({!$Record.External_Case_Detail__c})),
+OR(NOT(ISPICKVAL({!$Record.Status}, &apos;Closed&apos;)),NOT(ISPICKVAL({!$Record.Status}, &apos;Reopened&apos;))),
+NOT(ISBLANK({!$Record.Account.Sales_Car_Internal_ID__c})),{!$Record.Account.Sales_Car_Internal_ID__r.IsActive},
+NOT(Contains({!$Record.OWNERID},{!$Record.Account.Sales_Car_Internal_ID__c})),
+NOT(OR(ISPICKVAL({!$Record.Account.Partner__r.Account_Source__c}, &apos;Belfius Auto Lease&apos;),
+ISPICKVAL({!$Record.Account.Partner__r.Account_Source__c}, &apos;Ayvens&apos;))),
+NOT(ISBLANK(TEXT({!$Record.External_Case_Category__c}))),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Management Services&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Driver change - less than 10&apos;))))</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TRUE_myRule_9</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+NOT($User.Bypass_Workflow__c),{!$Record.RecordType.DeveloperName=&apos;Case_External_Belgium&apos;}, 
+OR(AND(NOT({!$Record.Owner:User.IsActive}),ISPICKVAL({!$Record.Status}, &apos;Reopened&apos;)),AND(({!$Record.Owner:User.On_Vacations__c}),ISPICKVAL({!$Record.Status},&apos;Reopened&apos;))),
+NOT(ISPICKVAL({!$Record.Account.Partner__r.Account_Source__c}, &apos;Belfius Auto Lease&apos;)), 
+NOT(ISBLANK(TEXT({!$Record.External_Case_Category__c}))),
+OR(AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Choose Mobility&apos;),OR(ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - cars&apos;),
+ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - bikes &amp; mobility&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Review quotation&apos;),
+ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Rules and procedures&apos;), ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - vans&apos;),
+ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - Charging solution&apos;))), 
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Contract Management&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Study&apos;)), 
+AND(ISPICKVAL({!$Record.Account.Partner__r.Account_Source__c}, &apos;ALD Automotive (Direct)&apos;),ISPICKVAL({!$Record.External_Case_Category__c},
+&apos;Management Services&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;My ALD&apos;)), 
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Reporting&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Sales&apos;)), 
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Finance&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Invoice details (layout)&apos;)), 
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Order &amp; Delivery&apos;),(ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Order management&apos;)))))</expression>
+    </formulas>
+    <formulas>
+        <name>LUX_OwnerRule</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(ISNEW(),AND(NOT($User.Bypass_Workflow__c),{!$Record.RecordType.DeveloperName=&apos;Case_External_Luxembourg&apos;},OR(NOT(ISPICKVAL({!$Record.Status}, &apos;Closed&apos;)),NOT(ISPICKVAL({!$Record.Status}, &apos;Reopened&apos;))),
+NOT(ISBLANK({!$Record.Account.Sales_Car_Internal_ID__c})),{!$Record.Account.Sales_Car_Internal_ID__r.IsActive},NOT(Contains({!$Record.OWNERID},{!$Record.Account.Sales_Car_Internal_ID__c})),
+NOT(ISBLANK(TEXT({!$Record.External_Case_Category__c}))),
+OR(
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Quotation&apos;),OR(ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Invoicing&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - cars&apos;),
+ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - vans&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;New quotation Flex/ST&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - bikes &amp; mobility&apos;),
+ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Consultancy&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Review quotation&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Mobility sharing&apos;),
+ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Accessories&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Global informations&apos;))),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Management Services&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;KYC&apos;)))),
+AND(
+NOT($User.Bypass_Workflow__c),NOT(ISCHANGED({!$Record.OwnerId})),{!$Record.RecordType.DeveloperName=&apos;Case_External_Luxembourg&apos;},
+OR((ISCHANGED({!$Record.AccountId})),ISCHANGED({!$Record.External_Case_Category__c}),ISCHANGED({!$Record.External_Case_Detail__c})),
+OR(NOT(ISPICKVAL({!$Record.Status}, &apos;Closed&apos;)),NOT(ISPICKVAL({!$Record.Status}, &apos;Reopened&apos;))),
+NOT(ISBLANK({!$Record.Account.Sales_Car_Internal_ID__c})),{!$Record.Account.Sales_Car_Internal_ID__r.IsActive},
+NOT(Contains({!$Record.OWNERID},{!$Record.Account.Sales_Car_Internal_ID__c})),
+NOT(ISBLANK(TEXT({!$Record.External_Case_Category__c}))),
+OR(
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Quotation&apos;),OR(ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Invoicing&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - cars&apos;),
+ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - vans&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;New quotation Flex/ST&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Quotation - bikes &amp; mobility&apos;),
+ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Consultancy&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Review quotation&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Mobility sharing&apos;),
+ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Accessories&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;Global informations&apos;))),
+AND(ISPICKVAL({!$Record.External_Case_Category__c}, &apos;Management Services&apos;),ISPICKVAL({!$Record.External_Case_Detail__c}, &apos;KYC&apos;)))))</expression>
+    </formulas>
+    <interviewLabel>BEL - Owner assignment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>BEL - Owner assignment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>LUX_Case_Owner</name>
+        <label>LUX_Case_Owner</label>
+        <locationX>1634</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Account.Sales_Car_Internal_ID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_CCCM_ILC_Car</name>
+        <label>CCCM-ILC Car</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Account.Sales_Car_Internal_ID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_CCCM_ILC_Car_2</name>
+        <label>CCCM-ILC Car 2</label>
+        <locationX>314</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Account.Sales_Car_Internal_ID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_CCCM_ILC_Car_3</name>
+        <label>CCCM-ILC Car 3</label>
+        <locationX>578</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Account.Sales_Car_Internal_ID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_CCCM_ILC_Van</name>
+        <label>CCCM-ILC Van</label>
+        <locationX>842</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Account.Sales_Van_Internal_ID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_M2C_fleetmanagement</name>
+        <label>M2C_fleetmanagement</label>
+        <locationX>1370</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Account.Sales_Car_Internal_ID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>848</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Owner_Decision</targetReference>
+        </connector>
+        <filterFormula>AND(
+NOT({!$User.Bypass_Workflow__c}),
+({!$Record.RecordType.DeveloperName}=&apos;Case_External_Belgium&apos;)||
+({!$Record.RecordType.DeveloperName}=&apos;Case_External_Luxembourg&apos;)
+)</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>BEL_Sales</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>00G20000001uHWO</stringValue>
+        </value>
+    </variables>
+</Flow>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_SMART_MOBILITY_RENT_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ITA - SMART MOBILITY RENT</label>
+    <queue>ITA_SMART_MOBILITY_RENT</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

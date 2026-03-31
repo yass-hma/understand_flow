@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRAAgIDFOuestRgionCPlePSC_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA – Ag IDF Ouest Région C PSC OBSOLETE</label>
+    <queue>FRAAgIDFOuestRgionCPlePSC</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

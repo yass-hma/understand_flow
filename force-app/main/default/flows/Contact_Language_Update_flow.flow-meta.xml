@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Update_Language_c_on_contact</name>
+        <label>Update Language__c on contact</label>
+        <locationX>877</locationX>
+        <locationY>418</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Language__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ContactLanguageCode</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Should_update_Language</name>
+        <label>Should update Language?</label>
+        <locationX>652</locationX>
+        <locationY>340</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Locale_is_New_or_Changed</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Locale__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Locale__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Locale__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Locale__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Language_c_on_contact</targetReference>
+            </connector>
+            <label>Locale is New or Changed</label>
+        </rules>
+    </decisions>
+    <description>This flow automatically populates the correct language from the locale__c field based on BR-7253</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>this defines the correct picklist value for the language field based on the locale field</description>
+        <name>ContactLanguageCode</name>
+        <dataType>String</dataType>
+        <expression>CASE(Lower(LEFT({!$Record.Locale__c}, 2)),
+&quot;en&quot;, &quot;eng&quot;, 
+&quot;nl&quot;, &quot;dut&quot;,
+&quot;fr&quot;, &quot;fre&quot;,
+&quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Contact Language Update flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Contact Language Update flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>626</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Should_update_Language</targetReference>
+        </connector>
+        <filterFormula>AND(
+NOT({!$User.Bypass_Workflow__c}),
+NOT(ISBLANK(TEXT({!$Record.Account.Subsidiary__c}))),
+NOT(ISBLANK({!$Record.Locale__c})),
+CONTAINS({!$Label.Language_Locale_Subsidiaries}, TEXT({!$Record.Account.Subsidiary__c})),
+OR(
+ISNEW(),
+ISCHANGED({!$Record.Locale__c})
+)
+)</filterFormula>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

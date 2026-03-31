@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIN_PRIVATE_NF_CUSTOMER_ENGAGEMENT_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FIN - PRIVATE CUSTOMER ENGAGEMENT</label>
+    <queue>FIN_PRIVATE_NF_CUSTOMER_ENGAGEMENT</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BEL_2nd_Line_Support_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BEL - C&amp;D 2nd Line Support</label>
+    <queue>BEL_2nd_Line_Support</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

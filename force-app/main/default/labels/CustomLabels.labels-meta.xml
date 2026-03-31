@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Task_Management_Enabled_Countries_RecordTypes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Task Management Enabled Countries RecordTypes</shortDescription>
+        <value>Case External France, Case External Romania,Case External Ireland,Case External Portugal,Case External Switzerland,Case External Austria,Case External Denmark,Case External Sweden,Case External Germany,Case External Mexico,Case External Algeria,Case External Morocco,Case External Belgium,Case External Luxembourg,Case External Chile,Case External Colombia,Case External Peru,Case External Czech Republic,Case External Slovakia,Case External Finland,Case External United Kingdom,Case External Germany Ayvens,Case External Norway,Case External Turkey,Case External Poland,Case External Bulgaria,Case External Croatia,Case External Estonia,Case External Hungary,Case External India,Case External Latvia,Case External Lithuania,Case External Ukraine,Case External Slovenia,Case External Serbia</value>
+    </labels>
+</CustomLabels>

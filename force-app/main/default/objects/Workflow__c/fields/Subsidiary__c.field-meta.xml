@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subsidiary__c</fullName>
+    <label>Subsidiary</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Algeria</fullName>
+                <default>false</default>
+                <label>Algeria</label>
+            </value>
+            <value>
+                <fullName>Austria</fullName>
+                <default>false</default>
+                <label>Austria</label>
+            </value>
+            <value>
+                <fullName>Belarus</fullName>
+                <default>false</default>
+                <label>Belarus</label>
+            </value>
+            <value>
+                <fullName>Belgium</fullName>
+                <default>false</default>
+                <label>Belgium</label>
+            </value>
+            <value>
+                <fullName>Brazil</fullName>
+                <default>false</default>
+                <label>Brazil</label>
+            </value>
+            <value>
+                <fullName>Bulgaria</fullName>
+                <default>false</default>
+                <label>Bulgaria</label>
+            </value>
+            <value>
+                <fullName>Chile</fullName>
+                <default>false</default>
+                <label>Chile</label>
+            </value>
+            <value>
+                <fullName>China</fullName>
+                <default>false</default>
+                <label>China</label>
+            </value>
+            <value>
+                <fullName>Colombia</fullName>
+                <default>false</default>
+                <label>Colombia</label>
+            </value>
+            <value>
+                <fullName>Croatia</fullName>
+                <default>false</default>
+                <label>Croatia</label>
+            </value>
+            <value>
+                <fullName>Croatia CPM</fullName>
+                <default>false</default>
+                <label>Croatia CPM</label>
+            </value>
+            <value>
+                <fullName>Czech Republic</fullName>
+                <default>false</default>
+                <label>Czech Republic</label>
+            </value>
+            <value>
+                <fullName>Denmark</fullName>
+                <default>false</default>
+                <label>Denmark</label>
+            </value>
+            <value>
+                <fullName>Denmark (NORDEA)</fullName>
+                <default>false</default>
+                <label>Denmark (NORDEA)</label>
+            </value>
+            <value>
+                <fullName>Egypt</fullName>
+                <default>false</default>
+                <label>Egypt</label>
+            </value>
+            <value>
+                <fullName>Estonia</fullName>
+                <default>false</default>
+                <label>Estonia</label>
+            </value>
+            <value>
+                <fullName>FFM UK</fullName>
+                <default>false</default>
+                <label>FFM UK</label>
+            </value>
+            <value>
+                <fullName>Finland</fullName>
+                <default>false</default>
+                <label>Finland</label>
+            </value>
+            <value>
+                <fullName>Finland (NORDEA)</fullName>
+                <default>false</default>
+                <label>Finland (NORDEA)</label>
+            </value>
+            <value>
+                <fullName>France</fullName>
+                <default>false</default>
+                <label>France</label>
+            </value>
+            <value>
+                <fullName>France Business Partner</fullName>
+                <default>false</default>
+                <label>France Business Partner</label>
+            </value>
+            <value>
+                <fullName>France Parcours</fullName>
+                <default>false</default>
+                <label>France Parcours</label>
+            </value>
+            <value>
+                <fullName>Germany</fullName>
+                <default>false</default>
+                <label>Germany</label>
+            </value>
+            <value>
+                <fullName>Germany CPM</fullName>
+                <default>false</default>
+                <label>Germany CPM</label>
+            </value>
+            <value>
+                <fullName>Greece</fullName>
+                <default>false</default>
+                <label>Greece</label>
+            </value>
+            <value>
+                <fullName>Hungary</fullName>
+                <default>false</default>
+                <label>Hungary</label>
+            </value>
+            <value>
+                <fullName>India</fullName>
+                <default>false</default>
+                <label>India</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Ireland</fullName>
+                <default>false</default>
+                <label>Ireland</label>
+            </value>
+            <value>
+                <fullName>Italy</fullName>
+                <default>false</default>
+                <label>Italy</label>
+            </value>
+            <value>
+                <fullName>Kazakhstan</fullName>
+                <default>false</default>
+                <label>Kazakhstan</label>
+            </value>
+            <value>
+                <fullName>Latvia</fullName>
+                <default>false</default>
+                <label>Latvia</label>
+            </value>
+            <value>
+                <fullName>Lithuania</fullName>
+                <default>false</default>
+                <label>Lithuania</label>
+            </value>
+            <value>
+                <fullName>Luxembourg</fullName>
+                <default>false</default>
+                <label>Luxembourg</label>
+            </value>
+            <value>
+                <fullName>Malaysia</fullName>
+                <default>false</default>
+                <label>Malaysia</label>
+            </value>
+            <value>
+                <fullName>Malaysia Arac</fullName>
+                <default>false</default>
+                <label>Malaysia Arac</label>
+            </value>
+            <value>
+                <fullName>Malaysia Fleet Management</fullName>
+                <default>false</default>
+                <label>Malaysia Fleet Management</label>
+            </value>
+            <value>
+                <fullName>Mexico</fullName>
+                <default>false</default>
+                <label>Mexico</label>
+            </value>
+            <value>
+                <fullName>Morocco</fullName>
+                <default>false</default>
+                <label>Morocco</label>
+            </value>
+            <value>
+                <fullName>Netherlands</fullName>
+                <default>false</default>
+                <label>Netherlands</label>
+            </value>
+            <value>
+                <fullName>Norway</fullName>
+                <default>false</default>
+                <label>Norway</label>
+            </value>
+            <value>
+                <fullName>Norway (NORDEA)</fullName>
+                <default>false</default>
+                <label>Norway (NORDEA)</label>
+            </value>
+            <value>
+                <fullName>Peru</fullName>
+                <default>false</default>
+                <label>Peru</label>
+            </value>
+            <value>
+                <fullName>Poland</fullName>
+                <default>false</default>
+                <label>Poland</label>
+            </value>
+            <value>
+                <fullName>Portugal</fullName>
+                <default>false</default>
+                <label>Portugal</label>
+            </value>
+            <value>
+                <fullName>Romania</fullName>
+                <default>false</default>
+                <label>Romania</label>
+            </value>
+            <value>
+                <fullName>Russia</fullName>
+                <default>false</default>
+                <label>Russia</label>
+            </value>
+            <value>
+                <fullName>Serbia</fullName>
+                <default>false</default>
+                <label>Serbia</label>
+            </value>
+            <value>
+                <fullName>Slovakia</fullName>
+                <default>false</default>
+                <label>Slovakia</label>
+            </value>
+            <value>
+                <fullName>Slovenia</fullName>
+                <default>false</default>
+                <label>Slovenia</label>
+            </value>
+            <value>
+                <fullName>Spain</fullName>
+                <default>false</default>
+                <label>Spain</label>
+            </value>
+            <value>
+                <fullName>Sweden</fullName>
+                <default>false</default>
+                <label>Sweden</label>
+            </value>
+            <value>
+                <fullName>Sweden (NORDEA)</fullName>
+                <default>false</default>
+                <label>Sweden (NORDEA)</label>
+            </value>
+            <value>
+                <fullName>Switzerland</fullName>
+                <default>false</default>
+                <label>Switzerland</label>
+            </value>
+            <value>
+                <fullName>Thailand</fullName>
+                <default>false</default>
+                <label>Thailand</label>
+            </value>
+            <value>
+                <fullName>Turkey</fullName>
+                <default>false</default>
+                <label>Turkey</label>
+            </value>
+            <value>
+                <fullName>Ukraine</fullName>
+                <default>false</default>
+                <label>Ukraine</label>
+            </value>
+            <value>
+                <fullName>United Kingdom</fullName>
+                <default>false</default>
+                <label>United Kingdom</label>
+            </value>
+            <value>
+                <fullName>USA</fullName>
+                <default>false</default>
+                <label>USA</label>
+            </value>
+            <value>
+                <fullName>United Arab Emirates</fullName>
+                <default>false</default>
+                <label>United Arab Emirates</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

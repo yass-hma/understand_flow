@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRT_Manuten_o_e_Pneus_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PRT - Manutenção e Pneus</label>
+    <queue>PRT_Manuten_o_e_Pneus</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

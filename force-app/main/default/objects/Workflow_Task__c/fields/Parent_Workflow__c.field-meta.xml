@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Workflow__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>Parent Workflow</label>
+    <referenceTo>Workflow__c</referenceTo>
+    <relationshipLabel>Workflow Tasks</relationshipLabel>
+    <relationshipName>Workflow_Tasks</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

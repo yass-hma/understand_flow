@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Update_End_Date_Changed_Tech_Field</name>
+        <label>Update End Date Changed (Tech Field)</label>
+        <locationX>50</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.TECH_Date_of_End_date_changed__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Is_Contract_in_scope</name>
+        <label>Is Contract in scope ?</label>
+        <locationX>182</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_In_Scope</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>EndDateCriteria</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Related_Subsidiary_Setting.Opportunity_Renewal_V3_Enabled__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_End_Date_Changed_Tech_Field</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>original version before deployment of BR-7451</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>EndDateCriteria</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+
+OR(
+AND(IsNew(), NOT(ISBLANK({!$Record.Forecast_End_Date__c})), NOT({!$Record.Forecast_End_Date__c} &lt; TODAY())),
+AND(ISCHANGED( {!$Record.Forecast_End_Date__c} ), NOT({!$Record.Forecast_End_Date__c} &lt; TODAY()))
+),
+
+OR(
+AND(IsNew(), NOT(ISBLANK({!$Record.Real_lease_end_date__c})), NOT({!$Record.Real_lease_end_date__c} &lt; TODAY())),
+AND(ISCHANGED( {!$Record.Real_lease_end_date__c} ), NOT({!$Record.Real_lease_end_date__c} &lt; TODAY()))
+),
+
+OR(
+AND(IsNew(), NOT(ISBLANK({!$Record.EndDate})), NOT({!$Record.EndDate} &lt; TODAY())),
+AND(ISCHANGED( {!$Record.EndDate} ), NOT({!$Record.EndDate} &lt; TODAY()))
+)
+
+)</expression>
+    </formulas>
+    <interviewLabel>Capture the End Date Change of a Contract V3 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Capture the End Date Change of a Contract – Renopp V3</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Related_Subsidiary_Setting</name>
+        <label>Get Related Subsidiary Setting</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Contract_in_scope</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Subsidiary_Indicator__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Account.Subsidiary_Indicator__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>SubsidiarySettings__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Related_Subsidiary_Setting</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Forecast_End_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Real_lease_end_date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>EndDate</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Contract</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

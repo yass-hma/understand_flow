@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DEN_Leasing_Codes_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>DEN Leasing Codes</label>
+    <queue>DEN_Leasing_Codes</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

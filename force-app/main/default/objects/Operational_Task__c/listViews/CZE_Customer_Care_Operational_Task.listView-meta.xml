@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CZE_Customer_Care_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>CZE - Customer Care</label>
+    <queue>CZE_Customer_Care</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

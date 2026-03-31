@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DECPM_Siemens_Sales_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>DECPM - Siemens Serviceflotte</label>
+    <queue>DECPM_Siemens_Sales</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customErrors>
+        <name>Invalid_Category_Detail_Error</name>
+        <label>Invalid Category Detail Error</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <customErrorMessages>
+            <errorMessage>{!MessageError_Formula}</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Which_Use_Case</name>
+        <label>Which Use Case</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Invalid_Category_Detail_Error</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Use_Case_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.External_Case_Category__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Insurance</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.External_Case_Detail__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Rules and procedures</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed without action plan</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FRA_TECH_sendMailCloseCase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>UseCase1</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_Close_Case</targetReference>
+            </connector>
+            <label>Use Case 1</label>
+        </rules>
+        <rules>
+            <name>Use_Case_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.External_Case_Category__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>End of contract</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.External_Case_Detail__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Rules and procedures</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed without action plan</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FRA_TECH_sendMailCloseCase__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>UseCase2</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_Close_Case2</targetReference>
+            </connector>
+            <label>Use Case 2</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>MessageError_Formula</name>
+        <dataType>String</dataType>
+        <expression>IF(OR(ISPICKVAL({!$Record.Status},&apos;Closed&apos;), ISPICKVAL({!$Record.Status},&apos;Closed without action plan&apos;)), &apos;Le status de la requête ne permet pas de faire cette action !&apos;, &apos;La catégorie et le détail renseignés ne sont pas compatibles avec cette action !&apos;)</expression>
+    </formulas>
+    <interviewLabel>FRA - Send Email Close Case TriggerFlow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FRA - Send Email Close Case TriggerFlow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Set_Send_Email_Tech_Field</name>
+        <label>Set Send Email Tech Field</label>
+        <locationX>314</locationX>
+        <locationY>731</locationY>
+        <inputAssignments>
+            <field>FRA_TECH_sendMailCloseCase__c</field>
+            <value>
+                <stringValue>Default</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Which_Use_Case</targetReference>
+        </connector>
+        <filterFormula>AND({!$User.Bypass_Workflow__c} = false, {!$Record.RecordType.DeveloperName} = &apos;CaseExternalFrance&apos;, !ISPICKVAL({!$Record.FRA_TECH_sendMailCloseCase__c}, &apos;Default&apos;), ISCHANGED({!$Record.FRA_TECH_sendMailCloseCase__c}))</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Send_Email_Close_Case</name>
+        <label>Send Email Close Case</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Set_Send_Email_Tech_Field</targetReference>
+        </connector>
+        <flowName>FRA_Send_Email_Close_Case</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Send_Email_Close_Case2</name>
+        <label>Send Email Close Case</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Set_Send_Email_Tech_Field</targetReference>
+        </connector>
+        <flowName>FRA_Send_Email_Close_Case_Use_Case_2</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Record.Id</elementReference>
+        </value>
+    </variables>
+</Flow>

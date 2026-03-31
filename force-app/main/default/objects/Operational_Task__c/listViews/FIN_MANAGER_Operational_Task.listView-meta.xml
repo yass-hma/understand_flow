@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIN_MANAGER_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FIN - MANAGER</label>
+    <queue>FIN_MANAGER</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Qcc_SLA_Breach_Notification</fullName>
+        <description>Qcc - SLA Breach Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Qcc_Credit_check_Templates/Qcc_SLA_Breach_Notification_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Qcc_Send_Credit_Check_Approval_Email</fullName>
+        <description>Qcc - Send Credit Check Approval Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Qcc_Credit_check_Templates/Qcc_Approval_Notification_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Credit_Check_Approval_Email</fullName>
+        <description>Send Credit Check Approval Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>PRT_Email_templates/PRT_Approval_Notification_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>q_Credit_Check_Breach_Email</fullName>
+        <description>q_Credit_Check_Breach_Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>PRT_Email_templates/PRT_SLA_Breach_Notification_Template</template>
+    </alerts>
+</Workflow>

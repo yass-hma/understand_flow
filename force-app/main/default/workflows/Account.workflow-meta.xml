@@ -1,0 +1,1719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>FR_Email_alert_on_accounts_with_New_Orders_Blocked_checked</fullName>
+        <description>[FR] Email alert on accounts with New Orders Blocked checked</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>FR_AYVENS_Users_notification/FR_Email_alert_on_accounts_with_New_Orders_Blocked_checked</template>
+    </alerts>
+    <alerts>
+        <fullName>SRM_Contract_End_Date_Renewal_Notification_Email_Alert</fullName>
+        <description>SRM Contract End Date Renewal Notification Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Supplier_Account/Notification_for_renewal</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Account_Owner</fullName>
+        <field>OwnerId</field>
+        <lookupValue>directioncommerciale@businesspartnerfr.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>FRA - Partner Account Owner BP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Alertupdateaddressinbackoffice</fullName>
+        <description>Display indication to modifiy AS400 when the address has been modified in CRM</description>
+        <field>Alert_Update_Back_Office__c</field>
+        <formula>&quot;Vous venez de changer l’adresse de votre client dans le CRM. Veuillez mettre à jour dans le menu 6 de l&apos;AS400 les adresses d&apos;envoi des états fiscaux (option 02-Modifier, puis F15 pour valider la mise à jour ou F13 pour saisir une nouvelle adresse).&quot;</formula>
+        <name>FRA -Alert update address in back office</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>AlertupdateaddressinbackofficeOK</fullName>
+        <description>Do not display indication when no modification has been done in the address.</description>
+        <field>Alert_Update_Back_Office__c</field>
+        <name>FRA - Alert update address backoffice OK</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Billing_Country</fullName>
+        <description>Convert country iso2 to country iso (3 chars)</description>
+        <field>BillingCountry</field>
+        <formula>CASE (BillingCountry ,
+&apos;DZ&apos;,&apos;DZA&apos;,
+&apos;AT&apos;,&apos;AUT&apos;,
+&apos;BE&apos;,&apos;BEL&apos;,
+&apos;BR&apos;,&apos;BRA&apos;,
+&apos;CN&apos;,&apos;CHN&apos;,
+&apos;HR&apos;,&apos;HRV&apos;,
+&apos;CZ&apos;,&apos;CZE&apos;,
+&apos;DK&apos;,&apos;DNK&apos;,
+&apos;EG&apos;,&apos;EGY&apos;,
+&apos;EE&apos;,&apos;EST&apos;,
+&apos;FI&apos;,&apos;FIN&apos;,
+&apos;FI&apos;,&apos;FIN&apos;,
+&apos;FR&apos;,&apos;FRA&apos;,
+&apos;DE&apos;,&apos;DEU&apos;,
+&apos;DE&apos;,&apos;DEU&apos;,
+&apos;HU&apos;,&apos;HUN&apos;,
+&apos;IN&apos;,&apos;IND&apos;,
+&apos;IT&apos;,&apos;ITA&apos;,
+&apos;LV&apos;,&apos;LVA&apos;,
+&apos;LT&apos;,&apos;LTU&apos;,
+&apos;LU&apos;,&apos;LUX&apos;,
+&apos;MX&apos;,&apos;MEX&apos;,
+&apos;MA&apos;,&apos;MAR&apos;,
+&apos;NL&apos;,&apos;NLD&apos;,
+&apos;NO&apos;,&apos;NOR&apos;,
+&apos;PL&apos;,&apos;POL&apos;,
+&apos;PT&apos;,&apos;PRT&apos;,
+&apos;RO&apos;,&apos;ROU&apos;,
+&apos;RU&apos;,&apos;RUS&apos;,
+&apos;SK&apos;,&apos;SVK&apos;,
+&apos;SI&apos;,&apos;SVN&apos;,
+&apos;ES&apos;,&apos;ESP&apos;,
+&apos;SE&apos;,&apos;SWE&apos;,
+&apos;CH&apos;,&apos;CHE&apos;,
+&apos;TR&apos;,&apos;TUR&apos;,
+&apos;UA&apos;,&apos;UKR&apos;,
+&apos;AE&apos;,&apos;ARE&apos;,
+&apos;GB&apos;,&apos;GBR&apos;,
+&apos;FR&apos;,&apos;FRA&apos;,
+&apos;MY&apos;,&apos;MYS&apos;,
+&apos;RS&apos;,&apos;SRB&apos;,
+&apos;BG&apos;,&apos;BGR&apos;,
+&apos;KZ&apos;,&apos;KAZ&apos;,
+&apos;BY&apos;,&apos;BLR&apos;,
+&apos;CL&apos;,&apos;CHL&apos;,
+&apos;PE&apos;,&apos;PER&apos;,
+&apos;CO&apos;,&apos;COL&apos;,
+&apos;IE&apos;,&apos;IRL&apos;,
+&apos;FF&apos;,&apos;FFM&apos;,
+&apos;TH&apos;,&apos;THA&apos;,
+BillingCountry)</formula>
+        <name>Billing Country</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CALDER_code_indexed_value</fullName>
+        <field>Calder_code_indexed__c</field>
+        <formula>LEFT(CALDER_Owner__c, 4)</formula>
+        <name>CALDER code indexed value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CRMv2Updatedataflowerror</fullName>
+        <field>Data_flow_error__c</field>
+        <literalValue>1</literalValue>
+        <name>CRMv2 - Update data flow error</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Code_Sub_Groupe_Update</fullName>
+        <field>Code_Sub_Group_Risk__c</field>
+        <formula>Code_Sub_Group_Risk_Hidden__c</formula>
+        <name>Code Sub Groupe Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Default_Situation_Checked</fullName>
+        <field>Default_Situation__c</field>
+        <literalValue>1</literalValue>
+        <name>Default Situation Checked</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Default_Situation_Unckecked</fullName>
+        <field>Default_Situation__c</field>
+        <literalValue>0</literalValue>
+        <name>Default Situation Unckecked</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Empty_Rejection_Cause_Account</fullName>
+        <field>Data_flow_Reject_Cause__c</field>
+        <name>Empty Rejection Cause_Account</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRAAccountRecordTypechangedfromPr</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>AccountFranceCustomer</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA - Account RecordType changed from Pr</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRADataflowerrorFlag2</fullName>
+        <field>Data_flow_error__c</field>
+        <literalValue>0</literalValue>
+        <name>FRA - Data flow error Flag 2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRAMakeReactivationDateAsBlank</fullName>
+        <description>Update Field Reactivated date to blank</description>
+        <field>ReactivationDate__c</field>
+        <name>FRA Make Reactivation Date As Blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRAUncheckReactivatedCustomerfield</fullName>
+        <description>Unchecked Reactivated Customer field</description>
+        <field>ReactivatedCustomer__c</field>
+        <literalValue>0</literalValue>
+        <name>FRA Uncheck Reactivated Customer field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRAUpdateAccountCustomerClassCode</fullName>
+        <field>Customer_Class_Code__c</field>
+        <formula>$User.Default_Category__c</formula>
+        <name>FRA - Update Account Customer Class Code</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRAUpdateReactivatedCustomer_checkb</fullName>
+        <description>Check field to true when account is &apos;Customer&apos; and status is changes to Active</description>
+        <field>ReactivatedCustomer__c</field>
+        <literalValue>1</literalValue>
+        <name>FRA Update Reactivated Customer checkb</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRAUpdateReactivationDate</fullName>
+        <description>Update Field Reactivated date when account status is &apos;Customer&apos; and account state changes from inactive to active.</description>
+        <field>ReactivationDate__c</field>
+        <formula>NOW()</formula>
+        <name>FRA Update Reactivation Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRAUpdateRegistrationNumber</fullName>
+        <field>Registration_Number__c</field>
+        <formula>Siren__c</formula>
+        <name>FRA - Update Registration Number</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_AccountProspectdescriptionPulat</fullName>
+        <description>Used to populate description account with description lead when lead is converted</description>
+        <field>Description</field>
+        <formula>Special_Clauses_Detail__c</formula>
+        <name>FRA_Account Prospect description Populat</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Account_Prospect_CSE_Agence_Update</fullName>
+        <field>Agency__c</field>
+        <literalValue>T514 - PSC PARTENAIRES</literalValue>
+        <name>FRA_ Account Prospect CSE Agence Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Account_Prospect_CSE_Group_Update</fullName>
+        <field>Group_Of_Sales_Assistant__c</field>
+        <literalValue>1</literalValue>
+        <name>FRA_Account Prospect CSE Group Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Guarantee_Uncheck</fullName>
+        <field>Guarantee__c</field>
+        <literalValue>0</literalValue>
+        <name>FRA - Guarantee Uncheck</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Identification_Criteria_Update_PC</fullName>
+        <field>Identification_Criteria__c</field>
+        <literalValue>PARCOURS</literalValue>
+        <name>FRA - Identification Criteria Update PC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_PA_RT_changed_to_PA_PC_Prospect</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Person_Account_France_Prospect_Parcours</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA - PA RT changed to PA PC Prospect</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_PC_Account_RT_changed_to_Customer</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Account_France_Customer_Parcours</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA - PC Account RT changed to Customer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Partner_Account_Owner_WL</fullName>
+        <field>OwnerId</field>
+        <lookupValue>psc.partenariats@partenaireslld.fr</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>FRA - Partner Account Owner WL</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_PersonAccountRecordTypeChanged</fullName>
+        <description>Chnage Record Type when Status of personAccount change from Prospect to Customer</description>
+        <field>RecordTypeId</field>
+        <lookupValue>PersonAccountFranceCustomer</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA - PersonAccount RecordType changed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_PersonBPRecordTypeChanged</fullName>
+        <description>Change Record Type when Status of person Business Partner change from Prospect to Customer</description>
+        <field>RecordTypeId</field>
+        <lookupValue>PersonAccountBusinessPartnerCustomer</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA - PersonBP  RecordType Changed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_PersonPC_RecordType_Changed</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Person_Account_France_Customer_Parcours</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA - PersonPC RecordType Changed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Person_Account_CSE_Agence_Update</fullName>
+        <description>Person Account CSE Agence Update</description>
+        <field>Agency__c</field>
+        <literalValue>T690 - TELESALES PSC</literalValue>
+        <name>FRA_Person Account CSE Agence Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Person_Account_CSE_Group_Update</fullName>
+        <description>Person Account CSE Group Update</description>
+        <field>Group_Of_Sales_Assistant__c</field>
+        <literalValue>1</literalValue>
+        <name>FRA_Person Account CSE Group Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Person_Account_Unicity_update</fullName>
+        <field>Unicity__c</field>
+        <formula>LastName &amp; FirstName &amp; TEXT(BirthDatePersoneAccount__c) &amp; TEXT(Identification_Criteria__c)</formula>
+        <name>FRA - Person Account Unicity update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Person_Account_documents_updated</fullName>
+        <field>PA_ScoringValidationDate__c</field>
+        <formula>NOW()</formula>
+        <name>FRA - Person Account documents updated</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_RCT_Sub_Group_Risk_Code_update</fullName>
+        <field>RCT_Sub_Group_Risk_Code__c</field>
+        <formula>RCT_Sub_Group_Risk_Code_Hidden__c</formula>
+        <name>FRA RCT Sub Group Risk Code update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Reported_Potentiel_Update</fullName>
+        <field>Potential_Fleet_This_Account__c</field>
+        <formula>Total_Fleet_Potential__c</formula>
+        <name>FRA_Reported_Potentiel_Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Subsidiary_Indicator_Update_ALD</fullName>
+        <field>Subsidiary_Indicator__c</field>
+        <literalValue>25001</literalValue>
+        <name>FRA - Subsidiary Indicator Update ALD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Subsidiary_Indicator_Update_PC</fullName>
+        <field>Subsidiary_Indicator__c</field>
+        <literalValue>25003</literalValue>
+        <name>FRA - Subsidiary Indicator Update PC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Subsidiary_Update_ALD</fullName>
+        <field>Subsidiary__c</field>
+        <literalValue>France</literalValue>
+        <name>FRA - Subsidiary Update ALD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Subsidiary_Update_PC</fullName>
+        <field>Subsidiary__c</field>
+        <literalValue>France Parcours</literalValue>
+        <name>FRA - Subsidiary Update PC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Sync_Account_Update_CodeNic</fullName>
+        <field>Code_NIC__c</field>
+        <formula>&quot;00000&quot;</formula>
+        <name>FRA - Sync Account Update CodeNic</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Update_Account_w_Broker</fullName>
+        <field>Regional_target__c</field>
+        <literalValue>1</literalValue>
+        <name>FRA - Update Account w/ Broker</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Update_Agency_LLD_VO</fullName>
+        <field>Agency__c</field>
+        <literalValue>T988 - LLD VO</literalValue>
+        <name>FRA - Update Agency LLD VO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Update_Data_Action_Date</fullName>
+        <description>Update Data Action date</description>
+        <field>Data_Action_Date__c</field>
+        <formula>DATETIMEVALUE(TEXT(Data_Flow_Update_Flag__c) &amp; TEXT(Data_Flow_Creation_Flag__c))</formula>
+        <name>FRA - Update Data Action Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Update_Guarantee_Check</fullName>
+        <description>Set Guarantee if type is filled</description>
+        <field>Guarantee__c</field>
+        <literalValue>1</literalValue>
+        <name>FRA - Update Guarantee Check</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_Update_RecordType_BP_Customer</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>France_Business_Partner_Customer</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>FRA - Update RecordType BP Customer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRAresetcreationflag</fullName>
+        <description>Reset data Flow Creation to null</description>
+        <field>Data_Flow_Creation_Flag__c</field>
+        <name>FRA - reset creation flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Reseau_Update</fullName>
+        <field>Identification_Criteria__c</field>
+        <literalValue>ALD</literalValue>
+        <name>FRA - Identification Criteria Update ALD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>France_Block_New_Order</fullName>
+        <field>New_Orders_Blocked__c</field>
+        <literalValue>1</literalValue>
+        <name>France Block New Order</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>France_Block_Reason</fullName>
+        <field>Reason_for_blocking__c</field>
+        <literalValue>Prospect</literalValue>
+        <name>France Block Reason</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>INT_Reset_Data_Flow_Update_Flag</fullName>
+        <field>Data_Flow_Update_Flag__c</field>
+        <name>INT - Reset Data Flow Update Flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MagisterupdatetoTRUE</fullName>
+        <description>Magister update to TRUE</description>
+        <field>Magister_update__c</field>
+        <literalValue>1</literalValue>
+        <name>Magister update to TRUE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Partner_Key_Update</fullName>
+        <field>PartnerKey__c</field>
+        <formula>TEXT(Identification_Criteria__c) &amp; &quot; - &quot; &amp; TEXT( Subsidiary_Indicator__c )</formula>
+        <name>Partner Key Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RCT_Group_Risk_Code_update_v2</fullName>
+        <field>RCT_Group_Risk_Code__c</field>
+        <formula>RCT_Group_Code__c</formula>
+        <name>RCT Group Risk Code update v2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Real_Time_Croatia_Bypass_Account</fullName>
+        <description>Make Boolean field False to by pass update operation</description>
+        <field>RealTime_Croatia_Bypass__c</field>
+        <literalValue>0</literalValue>
+        <name>Real Time Croatia Bypass - Account</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reseau_Field_Update</fullName>
+        <field>Identification_Criteria__c</field>
+        <literalValue>BREMANY</literalValue>
+        <name>FRA - Identification Criteria Update BP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Account_Anonymization_Bypass</fullName>
+        <description>This field update has been set up to reset the Anonymization_Bypass__c field to false once it has been set to true by the anonymization process.
+It prevents the record from bypassing VRs after having been anonymized.</description>
+        <field>Anonymization_Bypass__c</field>
+        <literalValue>0</literalValue>
+        <name>Reset Account Anonymization Bypass</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Sync_Count</fullName>
+        <field>Syncronize_Count__c</field>
+        <formula>0</formula>
+        <name>Reset Sync Count</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Risk_Group_Code_Update</fullName>
+        <field>Code_Group_Risk__c</field>
+        <formula>Top_Risk_Group__r.Code_Group_Risk__c</formula>
+        <name>Risk Group Code Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sale_Channel</fullName>
+        <field>Sales_Channel__c</field>
+        <literalValue>05- AUTRES</literalValue>
+        <name>Sale Channel</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sale_Channel_Group</fullName>
+        <field>Sales_Channel_Group__c</field>
+        <literalValue>AUTRES</literalValue>
+        <name>Sale Channel Group</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Customer_Class_Code_6</fullName>
+        <field>Customer_Class_Code__c</field>
+        <formula>6</formula>
+        <name>Set Customer Class Code 6</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_External_Key</fullName>
+        <description>Calculate and Set the Account External Key</description>
+        <field>ExternalId__c</field>
+        <formula>TEXT(Subsidiary_Indicator__c) + &apos;-001-&apos; + Local_CALDER_ID__c</formula>
+        <name>Set External Key</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Lead_Convert_to_Blank_Value</fullName>
+        <field>Lead_Convert__c</field>
+        <name>Set Lead Convert to Blank Value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Subsidiary_Indicator_indexed_value</fullName>
+        <field>Subsidiary_Indicator_indexed__c</field>
+        <formula>TEXT(Subsidiary_Indicator__c)</formula>
+        <name>Subsidiary Indicator indexed value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unchek_Apex_or_User_Update</fullName>
+        <field>Apex_or_User_Update__c</field>
+        <literalValue>0</literalValue>
+        <name>Unchek Apex or User Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Owner_Custom_field</fullName>
+        <description>Update Account_Owner (Custom field present in the Search Layout) when the Account Owner (Standard Field) is Updated</description>
+        <field>Account_Owner__c</field>
+        <formula>Owner.Full_Name__c</formula>
+        <name>Update Account Owner Custom field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Code_Group_Risk_null</fullName>
+        <field>Code_Group_Risk__c</field>
+        <formula>&apos;&apos;</formula>
+        <name>Update Code Group Risk null</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Code_Sub_Group_Risk_null</fullName>
+        <field>Code_Sub_Group_Risk__c</field>
+        <formula>&apos;&apos;</formula>
+        <name>Update Code Sub Group Risk null</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_RCT_Group_Risk_Code_null</fullName>
+        <field>RCT_Group_Risk_Code__c</field>
+        <formula>&apos;&apos;</formula>
+        <name>Update RCT Group Risk Code null</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_RCT_Sub_Group_Risk_Code_null</fullName>
+        <field>RCT_Sub_Group_Risk_Code__c</field>
+        <formula>&apos;&apos;</formula>
+        <name>Update RCT Sub Group Risk Code null</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Updatedataflowmodificationflag</fullName>
+        <description>CRMV2</description>
+        <field>Data_Flow_Update_Flag__c</field>
+        <formula>NOW()</formula>
+        <name>Update data flow modification flag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Virtual_Accounts_Unicity</fullName>
+        <field>Virtual_Account_Unicity__c</field>
+        <formula>Name</formula>
+        <name>Virtual Accounts Unicity</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>last_Revision_Date</fullName>
+        <field>Last_Revision_Date__c</field>
+        <formula>Credit_Acceptance_Date__c</formula>
+        <name>Last Revision Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>set_Is_Group_SG</fullName>
+        <field>Is_Group_SG_New__c</field>
+        <formula>1</formula>
+        <name>set Is Group SG</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_account_number_with_generated_val</fullName>
+        <field>AccountNumber</field>
+        <formula>Account_Number_Generated__c</formula>
+        <name>update account number with generated val</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_date_calculation</fullName>
+        <description>Mise à jour du champ last date calculation</description>
+        <field>Last_Calculation_Date__c</field>
+        <formula>Now()</formula>
+        <name>update date calculation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>updatedatestatus</fullName>
+        <description>Save the status modification date (From Prospect to Customer)</description>
+        <field>date_status__c</field>
+        <formula>Today()</formula>
+        <name>update date status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>%5BFR%5D Email alert on accounts with New Orders Blocked checked</fullName>
+        <actions>
+            <name>FR_Email_alert_on_accounts_with_New_Orders_Blocked_checked</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND (NOT($User.Bypass_Workflow__c),(RecordType.Name  =&apos;Account France Customer Parcours,Account France Customer&apos;),  New_Orders_Blocked__c =True )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>ALL - Update Account Owner Custom field when Standard Field is Updated</fullName>
+        <actions>
+            <name>Update_Account_Owner_Custom_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update Account_Owner (Custom field present in the Search Layout) when the Account Owner (Standard Field) is Updated</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c),ISCHANGED(OwnerId))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Account Sync Count Reset</fullName>
+        <actions>
+            <name>Reset_Sync_Count</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>IF(AND( NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR(ISBLANK(Data_Flow_Update_Flag__c), Syncronize_Count__c = null)),true,false)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Billing Country - Convert Iso2 to Iso</fullName>
+        <actions>
+            <name>Billing_Country</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>For All Countries - Convert Iso2 to Iso (3 chars)</description>
+        <formula>AND(  NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), NOT(ISBLANK(BillingCountry)), ISCHANGED(BillingCountry)  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Date Calculation Refresh</fullName>
+        <actions>
+            <name>update_date_calculation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c),OR(  ISCHANGED( Current_Orders__c ) , ISCHANGED(  Total_Fleet__c ) , ISCHANGED( Total_Fleet_This_Account__c ) , ISCHANGED( Current_Orders_This_Account__c ) , ISCHANGED( Returns_90_Days_This_Account__c ), ISCHANGED( Returns_90_Days__c )))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Default Situation Checked</fullName>
+        <actions>
+            <name>Default_Situation_Checked</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), ISCHANGED(Magister_Rating_Validity_Date__c), ISCHANGED(NTA_Validity_Date__c), ISCHANGED(Magister_Rating_Note__c), ISCHANGED(NTA_Rating_Note__c), OR(IF(BLANKVALUE(Magister_Rating_Validity_Date__c,DATE(1980,01,01)) &gt; BLANKVALUE(NTA_Validity_Date__c,DATE(1980,01,01)), Magister_Rating_Note__c , NTA_Rating_Note__c ) =&apos;8&apos;,   IF(BLANKVALUE(Magister_Rating_Validity_Date__c,DATE(1980,01,01)) &gt; BLANKVALUE(NTA_Validity_Date__c,DATE(1980,01,01)) ,  Magister_Rating_Note__c , NTA_Rating_Note__c ) =&apos;9&apos;,   IF(BLANKVALUE(Magister_Rating_Validity_Date__c,DATE(1980,01,01)) &gt; BLANKVALUE(NTA_Validity_Date__c,DATE(1980,01,01)) ,  Magister_Rating_Note__c , NTA_Rating_Note__c ) =&apos;10&apos;),  Default_Situation__c =False)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Default Situation Unchecked</fullName>
+        <actions>
+            <name>Default_Situation_Unckecked</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c),  NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), IF(BLANKVALUE(Magister_Rating_Validity_Date__c,DATE(1980,01,01)) &gt; BLANKVALUE(NTA_Validity_Date__c,DATE(1980,01,01)) ,  Magister_Rating_Note__c , NTA_Rating_Note__c ) &lt;&gt;&apos;8&apos;,   IF(BLANKVALUE(Magister_Rating_Validity_Date__c,DATE(1980,01,01)) &gt; BLANKVALUE(NTA_Validity_Date__c,DATE(1980,01,01)) ,  Magister_Rating_Note__c , NTA_Rating_Note__c ) &lt;&gt;&apos;9&apos;,   IF(BLANKVALUE(Magister_Rating_Validity_Date__c,DATE(1980,01,01)) &gt; BLANKVALUE(NTA_Validity_Date__c,DATE(1980,01,01)) ,  Magister_Rating_Note__c , NTA_Rating_Note__c ) &lt;&gt;&apos;10&apos;,  Default_Situation__c =True)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA %E2%80%93 Account Recordtype changed from Prospect to Customer BP</fullName>
+        <actions>
+            <name>FRA_Update_RecordType_BP_Customer</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>CRM V2 - created in order to automatically change the record type of an Account when its type is changed from Prospect to Customer</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName = &apos;France_Business_Partner_Prospect&apos;, NOT(ISBLANK(TEXT(Status__c))), ISPICKVAL(Status__c, &apos;Customer&apos;), ISCHANGED(Status__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Account France Populate CSE ODCR</fullName>
+        <actions>
+            <name>FRA_AccountProspectdescriptionPulat</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_Account_Prospect_CSE_Agence_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_Account_Prospect_CSE_Group_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Used for populate CSE / Agency account when Lead is converted by WS ODCR (webQuoter)</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c),  NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)),  ISBLANK(CSE__c), NOT(Group_Of_Sales_Assistant__c), RecordType.DeveloperName = &apos;AccountFranceProspect&apos;,  INCLUDES($User.bypass_appex_triggers__c, &apos;WS_ConvertLead&apos;),  NOT( OR( ISPICKVAL(Identification_Criteria__c, &apos;ALD&apos;), ISPICKVAL(Identification_Criteria__c, &apos;BREMANY&apos;), ISPICKVAL(Identification_Criteria__c, &apos;LYNK&amp;CO&apos;), ISPICKVAL(Identification_Criteria__c, &apos;SMART ML&apos;), ISPICKVAL(Identification_Criteria__c, &apos;LOTUS&apos;), ISPICKVAL(Identification_Criteria__c, &apos;POLESTAR&apos;), ISPICKVAL(Identification_Criteria__c, &apos;LEASEWAY&apos;))))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Account Populate Business Partner CSE ODCR</fullName>
+        <actions>
+            <name>FRA_AccountProspectdescriptionPulat</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_Account_Prospect_CSE_Group_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Used for populate CSE / Agency account when Lead is converted by WS ODCR (webQuoter)</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName = &apos;France_Business_Partner_Prospect&apos;, INCLUDES($User.bypass_appex_triggers__c, &apos;WS_ConvertLead&apos;), ISPICKVAL(Identification_Criteria__c, &apos;BREMANY&apos;))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Account Populate COURTIER CSE</fullName>
+        <actions>
+            <name>FRA_AccountProspectdescriptionPulat</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_Account_Prospect_CSE_Group_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Used for populate CSE / Agency account when Lead is converted by WS COURTIER</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), NOT(ISBLANK(TEXT(Agency__c))), RecordType.DeveloperName = &apos;AccountFranceProspect&apos;, INCLUDES($User.bypass_appex_triggers__c, &apos;WS_ConvertLead&apos;), OR( ISPICKVAL(Identification_Criteria__c, &apos;ALD&apos;), ISPICKVAL(Identification_Criteria__c, &apos;SMART ML&apos;), ISPICKVAL(Identification_Criteria__c, &apos;BYD&apos;), ISPICKVAL(Identification_Criteria__c, &apos;LOTUS&apos;), ISPICKVAL(Identification_Criteria__c, &apos;POLESTAR&apos;), ISPICKVAL(Identification_Criteria__c, &apos;LEASEWAY&apos;), ISPICKVAL(Identification_Criteria__c, &apos;OMODA JAECOO LEASE&apos;)))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Account Populate LYNKCO CSE</fullName>
+        <actions>
+            <name>FRA_Account_Prospect_CSE_Group_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_Person_Account_CSE_Agence_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Used for populate CSE / Agency account when Lead is converted by WS LYNK&amp;CO</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), INCLUDES($User.bypass_appex_triggers__c, &apos;WS_ConvertLead&apos;), RecordType.DeveloperName = &apos;AccountFranceProspect&apos;, OR(ISPICKVAL(Identification_Criteria__c, &apos;LYNK&amp;CO&apos;), ISPICKVAL(Identification_Criteria__c, &apos;POLESTAR&apos;), AND(ISPICKVAL(Identification_Criteria__c, &apos;ALD&apos;), ISBLANK(TEXT(Agency__c)))))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Account RecordType changed from Prospect to Customer</fullName>
+        <actions>
+            <name>FRAAccountRecordTypechangedfromPr</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>CRM V2 - created in order to automatically change the record type of an Account when its type is changed from Prospect to Customer</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName = &apos;AccountFranceProspect&apos;, ISPICKVAL(Status__c, &apos;Customer&apos;), ISCHANGED(Status__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Account block for Prospect</fullName>
+        <actions>
+            <name>France_Block_New_Order</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>France_Block_Reason</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR( ISPICKVAL(Subsidiary_Indicator__c, &apos;25001&apos;), ISPICKVAL(Subsidiary_Indicator__c, &apos;25002&apos;), ISPICKVAL(Subsidiary_Indicator__c, &apos;25003&apos;)), ISPICKVAL(Status__c, &apos;Prospect&apos;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Alert update address in back office</fullName>
+        <actions>
+            <name>Alertupdateaddressinbackoffice</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Display alert message when a modification is made in the address.</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR(RecordTypeId = &apos;01220000000Cm83&apos;,RecordTypeId = &apos;012200000008pQB&apos;,RecordTypeId = &apos;01220000000E0nr&apos;,RecordTypeId = &apos;01220000000E0nw&apos;,RecordType.DeveloperName=&apos;Account_France_Prospect_Parcours&apos;,RecordType.DeveloperName=&apos;Account_France_Customer_Parcours&apos;) &amp;&amp; (ISCHANGED(BillingCity) || ISCHANGED(BillingCountry) ||  ISCHANGED(BillingStreet) || ISCHANGED(BillingState) || ISCHANGED(BillingPostalCode)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Alert update address in back office OK</fullName>
+        <actions>
+            <name>AlertupdateaddressinbackofficeOK</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Do not display alert message when no modification in the address has been done</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR(RecordTypeId = &apos;01220000000Cm83&apos;,RecordTypeId = &apos;012200000008pQB&apos;,RecordTypeId = &apos;01220000000E0nr&apos;,RecordTypeId = &apos;01220000000E0nw&apos;,RecordType.DeveloperName=&apos;Account_France_Prospect_Parcours&apos;,RecordType.DeveloperName=&apos;Account_France_Customer_Parcours&apos;) &amp;&amp; NOT((ISCHANGED(BillingCity) || ISCHANGED(BillingCountry) || ISCHANGED(BillingStreet) || ISCHANGED(BillingState) || ISCHANGED(BillingPostalCode))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Automatic assignment for  Partner</fullName>
+        <actions>
+            <name>Account_Owner</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>FRA - Automatic assignment for Partner BP</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c),  NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName = &apos;Apporteur_d_affaire_Bremany&apos; )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Automatic assignment for White Label</fullName>
+        <actions>
+            <name>FRA_Partner_Account_Owner_WL</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName = &apos;AccountFranceApporteurdAffaires&apos;, NOT(ISBLANK(TEXT(Partner_Type__c))), ISPICKVAL(Partner_Type__c, &apos;Dealer&apos;) )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - BP Partner potential to ALD Potential</fullName>
+        <active>true</active>
+        <booleanFilter>2 AND 1</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>France Business Partner Customer,France Business Partner Prospect</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - BP Sale Channel</fullName>
+        <actions>
+            <name>Sale_Channel</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Sale_Channel_Group</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR( RecordType.DeveloperName = &apos;France_Business_Partner_Customer&apos;, RecordType.DeveloperName = &apos;France_Business_Partner_Prospect&apos;), OR(NOT(ISPICKVAL(Sales_Channel__c, &apos;05 - Autres&apos;)), NOT(ISPICKVAL(Sales_Channel_Group__c, &apos;Autres&apos;))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Data flow error Flag</fullName>
+        <actions>
+            <name>CRMv2Updatedataflowerror</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>CRMv2 - Check the checkbox &apos;Data flow error&apos; if an data flow error was detected</description>
+        <formula>AND( NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), NOT(ISBLANK(Data_flow_Reject_Cause__c)), ISCHANGED(Data_flow_Reject_Cause__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Data flow error Flag 2</fullName>
+        <actions>
+            <name>FRADataflowerrorFlag2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>CRMv2 - Uncheck the checkbox &apos;Data flow error&apos; if no data flow error was detected</description>
+        <formula>AND( NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), ISBLANK(Data_flow_Reject_Cause__c), ISCHANGED(Data_flow_Reject_Cause__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - France Status Account Broker Webservice</fullName>
+        <actions>
+            <name>FRA_Update_Account_w_Broker</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Check the checkbox Regional_Target__c (Account with no broker) for account created by webservice.</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), 	OR(RecordType.DeveloperName=&apos;AccountFranceProspect&apos;,RecordType.DeveloperName=&apos;AccountFranceCustomer&apos;,RecordType.DeveloperName=&apos;PersonAccountFranceProspect&apos;,RecordType.DeveloperName=&apos;PersonAccountFranceCustomer&apos;), 	ISPICKVAL(Subsidiary_Indicator__c, &apos;25001&apos;), 	OR( 		ISPICKVAL(Identification_Criteria__c, &apos;ALD&apos;), 		ISPICKVAL(Identification_Criteria__c, &apos;ORIGIN TEMSYS&apos;) 	), 	ISBLANK(Broker_2__c) )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Guarantee Check</fullName>
+        <actions>
+            <name>FRA_Update_Guarantee_Check</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>3 AND 1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Account.Guarantee_Type__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Guarantee__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Set Garantee to true if type is filled</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Guarantee UnCheck</fullName>
+        <actions>
+            <name>FRA_Guarantee_Uncheck</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>3 AND 1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Account.Guarantee_Type__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Guarantee__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Set Garantee to False if type is null</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Identification Criteria Field Update ALD</fullName>
+        <actions>
+            <name>Field_Reseau_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR(RecordTypeId = &apos;01220000000Cm83&apos;,RecordTypeId = &apos;012200000008pQB&apos;), ISPICKVAL(Identification_Criteria__c,&apos;&apos;), IF($Setup.User__c.Is_Partner__c,FALSE,TRUE))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Identification Criteria Field Update BP</fullName>
+        <actions>
+            <name>Reseau_Field_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR(RecordTypeId = &apos;01220000000E0nr&apos;,RecordTypeId = &apos;01220000000E0nw&apos;),  ISPICKVAL(Identification_Criteria__c ,&apos;&apos;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Identification Criteria Field Update Parcours</fullName>
+        <actions>
+            <name>FRA_Identification_Criteria_Update_PC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR(RecordType.DeveloperName=&apos;Account_France_Prospect_Parcours&apos;,RecordType.DeveloperName=&apos;Account_France_Customer_Parcours&apos;), ISPICKVAL(Identification_Criteria__c,&apos;&apos;), IF($Setup.User__c.Is_Partner__c,FALSE,TRUE))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Parcours Account RecordType changed from Prospect to Customer</fullName>
+        <actions>
+            <name>FRA_PC_Account_RT_changed_to_Customer</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName = &apos;Account_France_Prospect_Parcours&apos;, NOT(ISBLANK(TEXT(Status__c))), ISPICKVAL(Status__c, &apos;Customer&apos;), ISCHANGED(Status__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Person Account Complete documents</fullName>
+        <actions>
+            <name>FRA_Person_Account_documents_updated</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c),  NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), ISCHANGED(PA_ValidatedScoringDocuments__c),  PA_ValidatedScoringDocuments__c,      OR( RecordType.DeveloperName =&apos;PersonAccountFranceProspect&apos;,        RecordType.DeveloperName =&apos;PersonAccountFranceCustomer&apos;, RecordType.DeveloperName=&apos;PersonAccountBusinessPartnerProspect&apos;,      RecordType.DeveloperName=&apos;PersonAccountBusinessPartnerCustomer&apos;, RecordType.DeveloperName=&apos;Person_Account_France_Customer_Parcours&apos;,      RecordType.DeveloperName=&apos;Person_Account_France_Prospect_Parcours&apos;), NOT($User.Bypass_Workflow__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Person Account Unicity</fullName>
+        <actions>
+            <name>FRA_Person_Account_Unicity_update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>FRA - Person Account Unicity</description>
+        <formula>AND(
+	NOT($User.Bypass_Workflow__c), 
+	NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), 
+	OR( RecordType.DeveloperName = &apos;PersonAccountFranceCustomer&apos;, RecordType.DeveloperName = &apos;PersonAccountFranceProspect&apos;, RecordType.DeveloperName = &apos;PersonAccountBusinessPartnerCustomer&apos;, RecordType.DeveloperName = &apos;PersonAccountBusinessPartnerProspect&apos;, RecordType.DeveloperName = &apos;Person_Account_France_Prospect_Parcours&apos;, RecordType.DeveloperName = &apos;Person_Account_France_Customer_Parcours&apos; ), 
+	OR(ISCHANGED(FirstName), ISCHANGED(LastName), ISCHANGED(BirthDatePersoneAccount__c), ISCHANGED(Identification_Criteria__c), ISNEW())
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Person account CSE</fullName>
+        <actions>
+            <name>FRA_Person_Account_CSE_Agence_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_Person_Account_CSE_Group_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Person accounts CSE fields by default.</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), ISBLANK(CSE__c), NOT(Group_Of_Sales_Assistant__c), ISBLANK(TEXT(Agency__c)), OR( RecordType.DeveloperName = &apos;AccountFranceProspect&apos;, AND( RecordType.DeveloperName = &apos;Account_France_Prospect_Parcours&apos;, ISPICKVAL(Identification_Criteria__c, &apos;ORIGIN PARCOURS&apos;))))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - PersonAccount Recordtype changed to Person Account PC</fullName>
+        <actions>
+            <name>FRA_PA_RT_changed_to_PA_PC_Prospect</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>For the conversion when a profile works on multiple record types.</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName = &apos;PersonAccountFranceProspect&apos;, ISPICKVAL(Subsidiary__c, &apos;France Parcours&apos;), ISPICKVAL(Subsidiary_Indicator__c, &apos;25003&apos;) )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - PersonPC RecordType Changed from Prospect to Customer</fullName>
+        <actions>
+            <name>FRA_PersonPC_RecordType_Changed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName = &apos;Person_Account_France_Prospect_Parcours&apos;, NOT(ISBLANK(TEXT(Status__c))), ISPICKVAL(Status__c, &apos;Customer&apos;), ISCHANGED(Status__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Set Customer Class Code</fullName>
+        <actions>
+            <name>Set_Customer_Class_Code_6</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), ISPICKVAL(Subsidiary_Indicator__c, &apos;25001&apos;), ISPICKVAL(Identification_Criteria__c, &apos;TOYOTA GC&apos;), ISPICKVAL(Identification_Criteria__c, &apos;LEXUS GC&apos;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Status is Customer and State is Active</fullName>
+        <actions>
+            <name>FRAUpdateReactivatedCustomer_checkb</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRAUpdateReactivationDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Check Reactivated Customer field and update reactivated date when Status of Account is customer and state of account change from inactive to active</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR(ISPICKVAL( Subsidiary_Indicator__c , &apos;25001&apos;),ISPICKVAL( Subsidiary_Indicator__c , &apos;25002&apos;),ISPICKVAL(Subsidiary_Indicator__c,&apos;25003&apos;)),  ISCHANGED(Status__c), ISPICKVAL( Status__c , &apos;Customer&apos;) , ISCHANGED(State__c), ISPICKVAL( State__c , &apos;Active&apos;),  ISPICKVAL( PRIORVALUE(State__c ) , &apos;Inactive&apos;) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Status is Customer and State is Inactive</fullName>
+        <actions>
+            <name>FRAMakeReactivationDateAsBlank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRAUncheckReactivatedCustomerfield</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Unchecked Reactivated customer field and make reactivated date to blank when status of account is customer and state of account changes from inactive to active</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR( ISPICKVAL( Subsidiary_Indicator__c , &apos;25001&apos;),ISPICKVAL( Subsidiary_Indicator__c , &apos;25002&apos;),ISPICKVAL(Subsidiary_Indicator__c,&apos;25003&apos;)) ,  ISCHANGED(Status__c), ISPICKVAL( Status__c , &apos;Customer&apos;) , ISCHANGED(State__c), ISPICKVAL( State__c , &apos;Inactive&apos;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Subsidiary Field Updates ALD</fullName>
+        <actions>
+            <name>FRA_Subsidiary_Indicator_Update_ALD</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_Subsidiary_Update_ALD</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName = &apos;AccountFranceProspect&apos;, OR(NOT(ISPICKVAL(Identification_Criteria__c, &apos;BREMANY&apos;)), NOT(ISPICKVAL(Identification_Criteria__c, &apos;FFM&apos;)), NOT(ISPICKVAL(Identification_Criteria__c, &apos;LEASE&apos;)), NOT(ISPICKVAL(Identification_Criteria__c, &apos;ORIGIN PARCOURS&apos;)), NOT(ISPICKVAL(Identification_Criteria__c, &apos;PARCOURS&apos;))), OR( NOT(ISPICKVAL(Subsidiary__c, &apos;France&apos;)), NOT(ISPICKVAL(Subsidiary_Indicator__c, &apos;25001&apos;))))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Subsidiary Field Updates Parcours</fullName>
+        <actions>
+            <name>FRA_Subsidiary_Indicator_Update_PC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_Subsidiary_Update_PC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR(RecordType.DeveloperName = &apos;AccountFranceProspect&apos;, RecordType.DeveloperName = &apos;Account_France_Prospect_Parcours&apos;), OR((ISPICKVAL(Identification_Criteria__c, &apos;G-LEASE&apos;)), ISPICKVAL(Identification_Criteria__c, &apos;PARCOURS&apos;)), OR( NOT(ISPICKVAL(Subsidiary__c, &apos;France Parcours&apos;)), NOT(ISPICKVAL(Subsidiary_Indicator__c, &apos;25003&apos;))))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Sync Account update CodeNic Is Null</fullName>
+        <actions>
+            <name>FRA_Sync_Account_Update_CodeNic</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR(RecordType.DeveloperName = &apos;AccountFranceProspect&apos;, RecordType.DeveloperName = &apos;Account_France_Prospect_Parcours&apos;, RecordType.DeveloperName = &apos;Account_France_Customer_Parcours&apos;, RecordType.DeveloperName = &apos;AccountFranceCustomer&apos;, RecordType.DeveloperName = &apos;France_Business_Partner_Customer&apos;, RecordType.DeveloperName = &apos;France_Business_Partner_Prospect&apos;),	 NOT(ISBLANK(Registration_Number__c)), ISCHANGED(Registration_Number__c), ISBLANK(Code_NIC__c), ISCHANGED(Code_NIC__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Account Magister flag</fullName>
+        <actions>
+            <name>MagisterupdatetoTRUE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>JFF :25/10/2011 adding condition Risk_Reference__c ,
+CRM v2 : Update magister flag for risk reference accounts 
+30/04: created by JGV
+JGV 01/08 : only countries existing in Magister can be sent
+AEK 24/06/2010 : condition Prospect -&gt; Cutomer added</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR(Ispickval(Status__c,&quot;Customer&quot;), Ispickval(Status__c,&quot;Prospect&quot;)),  OR(Ispickval(Subsidiary_Indicator__c,&apos;25001&apos;), Ispickval(Subsidiary_Indicator__c,&apos;25002&apos;), Ispickval(Subsidiary_Indicator__c,&apos;25003&apos;), Ispickval(Subsidiary_Indicator__c,&apos;38001&apos;), Ispickval(Subsidiary_Indicator__c,&apos;4001_Neutralized&apos;), Ispickval(Subsidiary_Indicator__c,&apos;19101_Neutralized&apos;), Ispickval(Subsidiary_Indicator__c,&apos;19102_Neutralized&apos;), Ispickval(Subsidiary_Indicator__c,&apos;34801_Neutralized&apos;), Ispickval(Subsidiary_Indicator__c,&apos;64201_Neutralized&apos;), Ispickval(Subsidiary_Indicator__c,&apos;68801_Neutralized&apos;), Ispickval(Subsidiary_Indicator__c,&apos;68801_Neutralized&apos;), Ispickval(Subsidiary_Indicator__c,&apos;70301_Neutralized&apos;), Ispickval(Subsidiary_Indicator__c,&apos;70501_Neutralized&apos;), Ispickval(Subsidiary_Indicator__c,&apos;75601_Neutralized&apos;)), OR(AND(Risk_Reference__c ,OR(ISCHANGED( Local_CALDER_ID__c ),ISCHANGED( Name),ISCHANGED( Status__c ),  ISCHANGED( Is_SG_Client__c ), ISCHANGED(Activity_Sector_Code__c),  ISCHANGED( Account_Country_Code__c ),ISCHANGED( RecordTypeId ))),  AND(ISCHANGED(Risk_Reference__c ),NOT(Magister_Export_to_CRM__c))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Account has been modified</fullName>
+        <active>true</active>
+        <description>CRM V2 - if a modification occured when account has a flag then checkbox has_been_modified is set at true if needed.</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c),OR(  text(Data_Flow_Creation_Flag__c) &lt;&gt; &quot;&quot;,  text(Data_Flow_Update_Flag__c) &lt;&gt; &quot;&quot;  ),  OR(  ISCHANGED(OwnerId),  AND(  ISPICKVAL(Status__c, &quot;Prospect&quot;),  OR(ISCHANGED(Name),  ISCHANGED(Siren__c ),  ISCHANGED(Code_NIC__c),  ISCHANGED(Type_Of_Company__c )  )  ),  ISCHANGED(CSE__c),  ISCHANGED(VAT_Number__c),  ISCHANGED(ParentId),  ISCHANGED(Customer_Class_Code__c ),  ISCHANGED(Is_SG_Client__c) ,  ISCHANGED(NumberOfEmployees) ,  ISCHANGED(Turnover__c),  ISCHANGED(Activity_Sector_Code__c),  ISCHANGED(Sales_Channel_Group__c ),  ISCHANGED(Sales_Channel__c ),  ISCHANGED(BillingStreet),  ISCHANGED(BillingCity),  ISCHANGED(BillingPostalCode),  ISCHANGED(Cedex__c),  ISCHANGED(Account_Country_Code__c),  ISCHANGED(Phone),  ISCHANGED(Fax),  ISCHANGED(End_Of_Fiscal_Year__c),  ISCHANGED(Top_Risk_Group__c),  ISCHANGED(National_Bank_Rating__c),  ISCHANGED(RCT_Code__c),  ISCHANGED(RCT_Group_Code__c),  ISCHANGED(Magister_Rating_Note__c) ,  ISCHANGED(Magister_Rating_Validity_Date__c),  ISCHANGED(Default_Situation__c ),  ISCHANGED(Code_Group_Risk__c),  ISCHANGED(PCRU__c )  ),  OR(RecordTypeId = &apos;01220000000Cm83&apos;,RecordTypeId = &apos;012200000008pQB&apos;,RecordTypeId = &apos;01220000000E0nr&apos;,RecordTypeId = &apos;01220000000E0nw&apos;),  $Profile.Name &lt;&gt; &quot;API User 2&quot;  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Account modification flag - 2</fullName>
+        <actions>
+            <name>Empty_Rejection_Cause_Account</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Updatedataflowmodificationflag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>CRM V2 - used for data flows to detect account modification : the flag is filled with current date/time when CA* field is modified - 2nd formula</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), $User.Id &lt;&gt; &apos;00520000002jAYc&apos;,$User.Id &lt;&gt; &apos;00520000000pJKv&apos;,  NOT(AND(Is_Mass_Update__c,$Profile.Name =&apos;System Administrator&apos;))&amp;&amp;NOT($User.Bypass_Workflow__c) &amp;&amp; AND(  OwnerId &lt;&gt;&apos;00520000000pIct&apos;, 		OR( RecordTypeId = &quot;01220000000Cm83&quot;, RecordTypeId = &quot;012200000008pQB&quot;, RecordTypeId = &quot;01220000000E0nr&quot;, RecordTypeId = &quot;01220000000E0nw&quot;,RecordType.DeveloperName =&apos;PersonAccountFranceCustomer&apos;, 	RecordType.DeveloperName  =&apos;PersonAccountBusinessPartnerProspect&apos;,RecordType.DeveloperName =&apos;PersonAccountBusinessPartnerCustomer&apos;, RecordType.DeveloperName  =&apos;PersonAccountFranceProspect&apos;,RecordType.DeveloperName=&apos;Account_France_Prospect_Parcours&apos;,RecordType.DeveloperName=&apos;Account_France_Customer_Parcours&apos;,RecordType.DeveloperName=&apos;Person_Account_France_Prospect_Parcours&apos;,RecordType.DeveloperName=&apos;Person_Account_France_Customer_Parcours&apos;) ,  		TEXT(Data_Flow_Creation_Flag__c) = &quot;&quot;, 		TRIM(Local_CALDER_ID__c)&lt;&gt;&quot;&quot;, 		$Profile.Name &lt;&gt; &quot;API User 2&quot;,  		OR(   				ISCHANGED(CSE__c), 				ISCHANGED(VAT_Number__c), 				ISCHANGED( OwnerId ), 				ISCHANGED( Balanced_Authorized_Credit__c ), 				ISCHANGED( Exemption_Taxe_Professionnelle__c ), 				ISCHANGED( Estimated_Potential__c ),   				ISCHANGED( Fleet_Potential_Cars__c ),  	 				ISCHANGED( Fleet_Potential_Vans__c ),   				ISCHANGED( Fleet_Potential_VS__c ),   				ISCHANGED( Group_Of_Sales_Assistant__c ),   				ISCHANGED( Agency__c ),  				ISCHANGED( Invoicing_Blocked__c),   				ISCHANGED( New_Orders_Blocked__c),   				ISCHANGED( Guarantee__c ),   				ISCHANGED( Guarantee_Expiration_Date__c), 				ISCHANGED( Guarantee_Amount__c ),   				ISCHANGED( Guarantee_Type__c ), 				ISCHANGED( Last_Assessment_Date__c ),   				ISCHANGED( Last_Revision_Date__c ), 				ISCHANGED( Last_Validated_Credit__c ),   				ISCHANGED( Credit_Acceptance_Date__c), ISCHANGED(Broker_2__c), ISCHANGED(Identification_Criteria__c)  		),NOT(BEGINS(Local_CALDER_ID__c , &apos;L&apos;) )  ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Account reset creation flag</fullName>
+        <actions>
+            <name>FRAresetcreationflag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>CRM v2 - when a data flow error is detected and record has not been modified then creation flag is reset at null</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), 	ISCHANGED(Data_flow_error__c), 	Data_flow_error__c, 	TEXT(Data_Flow_Creation_Flag__c)&lt;&gt;&quot;&quot; )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Agency VOP</fullName>
+        <actions>
+            <name>FRA_Update_Agency_LLD_VO</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), CONTAINS($UserRole.Name, &apos;France VOP&apos;))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Code SG Risk Group</fullName>
+        <actions>
+            <name>Risk_Group_Code_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow will update the SG Risk Group Code on an account with the value on the related Risk Group Account. This workflow doesn&apos;t covers the Code update scenario on the Risk Group Account.</description>
+        <formula>IF(AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), ISCHANGED(Account_Risk_Type__c), NOT(ISPICKVAL(Account_Risk_Type__c,&apos;Non Group&apos;)), NOT(ISPICKVAL( Account_Risk_Type__c,&apos;Person&apos;)), NOT(ISPICKVAL(Account_Risk_Type__c ,&apos;Risk Group&apos;)), OR(RecordTypeId = &apos;01220000000Cm83&apos;,RecordTypeId = &apos;012200000008pQB&apos;,RecordTypeId = &apos;01220000000E0nr&apos;,RecordTypeId = &apos;01220000000E0nw&apos;, RecordType.DeveloperName=&apos;Account_France_Prospect_Parcours&apos;,RecordType.DeveloperName=&apos;Account_France_Customer_Parcours&apos;)),True,False)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Code SG Sub Risk Group</fullName>
+        <actions>
+            <name>Code_Sub_Groupe_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow will update the SG Sub Risk Group Code on an account with the value on the related Risk Group Account. This workflow doesn&apos;t covers the Code update scenario on the Risk Group Account.</description>
+        <formula>IF(AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), NOT(ISPICKVAL(Account_Risk_Type__c,&apos;Non Group&apos;)), NOT(ISPICKVAL( Account_Risk_Type__c,&apos;Person&apos;)), NOT(ISPICKVAL(Account_Risk_Type__c ,&apos;Sub Risk Group&apos;)), ISCHANGED(Account_Risk_Type__c), OR(RecordTypeId = &apos;01220000000Cm83&apos;,RecordTypeId = &apos;012200000008pQB&apos;,RecordTypeId = &apos;01220000000E0nr&apos;, RecordTypeId = &apos;01220000000E0nw&apos;, RecordType.DeveloperName =&apos;Account_France_Prospect_Parcours&apos;,  RecordType.DeveloperName =&apos;Account_France_Customer_Parcours&apos;)),True,False)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Customer Class Code</fullName>
+        <actions>
+            <name>FRAUpdateAccountCustomerClassCode</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>CRMV2 - Set Customer Class Code when converted from a lead</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR(RecordType.DeveloperName = &apos;AccountFranceProspect&apos;, RecordType.DeveloperName = &apos;Account_France_Prospect_Parcours&apos;, RecordType.DeveloperName = &apos;Account_France_Customer_Parcours&apos;, RecordType.DeveloperName = &apos;AccountFranceCustomer&apos;, RecordType.DeveloperName = &apos;France_Business_Partner_Customer&apos;, RecordType.DeveloperName = &apos;France_Business_Partner_Prospect&apos;),	 ISNULL(Customer_Class_Code__c))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Data Action Date</fullName>
+        <actions>
+            <name>FRA_Update_Data_Action_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Permet de tracer la date de dernière modification effectuée par le broker</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR( ISPICKVAL(Subsidiary_Indicator__c, &apos;25003&apos;), ISPICKVAL(Subsidiary_Indicator__c, &apos;25002&apos;), ISPICKVAL(Subsidiary_Indicator__c, &apos;25001&apos;)), OR( AND(NOT(ISBLANK(Data_Flow_Creation_Flag__c)), ISCHANGED(Data_Flow_Creation_Flag__c)), AND(NOT(ISBLANK(Data_Flow_Update_Flag__c)), ISCHANGED(Data_Flow_Creation_Flag__c))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Registration Number</fullName>
+        <actions>
+            <name>FRAUpdateRegistrationNumber</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>CRM V2 - Magister Link (JFF--&gt; Added Bremany 3/05/2011)
+CRM V2 - Magister Link (Added Parcours 24/04/2017)</description>
+        <formula>AND( 	NOT($User.Bypass_Workflow__c),  	NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)),  	OR(RecordType.DeveloperName = &apos;AccountFranceProspect&apos;, RecordType.DeveloperName = &apos;Account_France_Prospect_Parcours&apos;, RecordType.DeveloperName = &apos;Account_France_Customer_Parcours&apos;, RecordType.DeveloperName = &apos;AccountFranceCustomer&apos;, RecordType.DeveloperName = &apos;France_Business_Partner_Customer&apos;, RecordType.DeveloperName = &apos;France_Business_Partner_Prospect&apos;),	  	OR(ISNEW(), ISCHANGED(Siren__c)) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - update date status</fullName>
+        <actions>
+            <name>updatedatestatus</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Save the status modification date (From Prospect to Customer)</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), ISCHANGED(Status__c),  ISPICKVAL(Status__c , &quot;Customer&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA Non Group and Person Accounts Risk fields null</fullName>
+        <actions>
+            <name>Update_Code_Group_Risk_null</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Code_Sub_Group_Risk_null</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_RCT_Group_Risk_Code_null</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_RCT_Sub_Group_Risk_Code_null</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow will empty the risk fields for &apos;Non Group&apos; and &apos;Person&apos; accounts (except the lookup fields).</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), ISCHANGED(Account_Risk_Type__c), OR(ISPICKVAL(Account_Risk_Type__c,&apos;Non Group&apos;), ISPICKVAL( Account_Risk_Type__c,&apos;Person&apos;)), OR(RecordTypeId = &apos;01220000000Cm83&apos;,RecordTypeId = &apos;012200000008pQB&apos;,RecordTypeId = &apos;01220000000E0nr&apos;,RecordTypeId = &apos;01220000000E0nw&apos;, RecordType.DeveloperName=&apos;Account_France_Prospect_Parcours&apos;,RecordType.DeveloperName=&apos;Account_France_Customer_Parcours&apos;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA RCT Group Risk Code update v2</fullName>
+        <actions>
+            <name>RCT_Group_Risk_Code_update_v2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow will fill the field &apos;RCT Group Risk Code&apos; every time it is empty for a risk account with the field &apos;RCT Group Code&apos;.</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), ISCHANGED(Account_Risk_Type__c), NOT(ISPICKVAL(Account_Risk_Type__c,&apos;Non Group&apos;)), NOT(ISPICKVAL( Account_Risk_Type__c,&apos;Person&apos;)), OR(RecordTypeId = &apos;01220000000Cm83&apos;,RecordTypeId = &apos;012200000008pQB&apos;,RecordTypeId = &apos;01220000000E0nr&apos;,RecordTypeId = &apos;01220000000E0nw&apos;,  RecordType.DeveloperName =&apos;Account_France_Prospect_Parcours&apos;, RecordType.DeveloperName =&apos;Account_France_Customer_Parcours&apos;),  RCT_Group_Risk_Code__c = &apos;&apos;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA RCT Sub Group Risk Code update</fullName>
+        <actions>
+            <name>FRA_RCT_Sub_Group_Risk_Code_update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>It will fill the field &apos;RCT Sub Group Risk Code&apos; every time it is empty with the hidden field &apos;RCT Group Sub Risk Code Hidden&apos; it also corrects the field&apos;s vlaue if it isn&apos;t empty for a Risk Group account, or if it is wrong for a subsidiary account.</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), ISCHANGED(Account_Risk_Type__c), OR(AND(NOT(ISPICKVAL(Account_Risk_Type__c,&apos;Non Group&apos;)), NOT(ISPICKVAL( Account_Risk_Type__c,&apos;Person&apos;)), OR(RecordTypeId = &apos;01220000000Cm83&apos;,RecordTypeId = &apos;012200000008pQB&apos;,RecordTypeId = &apos;01220000000E0nr&apos;,RecordTypeId = &apos;01220000000E0nw&apos;), RCT_Sub_Group_Risk_Code__c = &apos;&apos;, NOT(ISPICKVAL(Account_Risk_Type__c ,&apos;Risk Group&apos;))),  AND(NOT(ISPICKVAL(Account_Risk_Type__c,&apos;Non Group&apos;)), NOT(ISPICKVAL( Account_Risk_Type__c,&apos;Person&apos;)), OR(RecordTypeId = &apos;01220000000Cm83&apos;,RecordTypeId = &apos;012200000008pQB&apos;,RecordTypeId = &apos;01220000000E0nr&apos;,RecordTypeId = &apos;01220000000E0nw&apos;), RCT_Sub_Group_Risk_Code__c &lt;&gt;&apos;&apos;,OR(ISPICKVAL(Account_Risk_Type__c ,&apos;Risk Group&apos;),ISPICKVAL(Account_Risk_Type__c ,&apos;Subsidiary&apos;)))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA_PersonAccount Recordtype changed from Prospect to Customer</fullName>
+        <actions>
+            <name>FRA_PersonAccountRecordTypeChanged</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>CRM PersonAccount change Prospect to Customer</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName = &apos;PersonAccountFranceProspect&apos;, NOT(ISBLANK(TEXT(Status__c))), ISPICKVAL(Status__c, &apos;Customer&apos;), ISCHANGED(Status__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA_PersonBP RecordType Changed from Prospect to Customer</fullName>
+        <actions>
+            <name>FRA_PersonBPRecordTypeChanged</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName = &apos;PersonAccountBusinessPartnerProspect&apos;, NOT(ISBLANK(TEXT(Status__c))), ISPICKVAL(Status__c, &apos;Customer&apos;), ISCHANGED(Status__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA_Potential_Update</fullName>
+        <actions>
+            <name>FRA_Reported_Potentiel_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), OR( RecordType.DeveloperName = &apos;AccountFranceProspect&apos;, RecordType.DeveloperName = &apos;Account_France_Prospect_Parcours&apos;, RecordType.DeveloperName = &apos;Account_France_Customer_Parcours&apos;, RecordType.DeveloperName = &apos;AccountFranceCustomer&apos;, RecordType.DeveloperName = &apos;France_Business_Partner_Customer&apos;, RecordType.DeveloperName = &apos;France_Business_Partner_Prospect&apos;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>INT - Reset Data Flow Modification Flag Magister</fullName>
+        <actions>
+            <name>INT_Reset_Data_Flow_Update_Flag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>to reset Data flow Flag set by Broker for others countries than france (waiting for correction from the broker)</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), NOT(ISBLANK(Data_Flow_Update_Flag__c)), OR( ISPICKVAL(Subsidiary_Indicator__c, &apos;25001&apos;), ISPICKVAL(Subsidiary_Indicator__c, &apos;25002&apos;), ISPICKVAL(Subsidiary_Indicator__c, &apos;25003&apos;)))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>INT Update Account Number</fullName>
+        <actions>
+            <name>update_account_number_with_generated_val</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName = &apos;AccountInternational&apos;, ISBLANK(AccountNumber))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Last Revision Date</fullName>
+        <actions>
+            <name>last_Revision_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>by default set to credit acceptance date</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), NOT(ISBLANK(Credit_Acceptance_Date__c)), ISBLANK(Last_Revision_Date__c))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PRT - Account Owner Change Direct%26IC</fullName>
+        <active>false</active>
+        <description>If initial account owner (who performs the transfer) is from the Direct Sales Channel or IC, users notified are:
+o	Deputy Sales Director Direct Channel – Telmo Nóbrega
+o	Key User / Administrator – Pilar Madeira</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c),OR($UserRole.DeveloperName  = $Label.PRT_Portugal_Corporate_DevName,$UserRole.DeveloperName  = $Label.PRT_Portugal_IC_DevName) , ISCHANGED( OwnerId ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PRT - Account Owner Change Indirect</fullName>
+        <active>false</active>
+        <description>If initial account owner (who performs the transfer) is from the Indirect Sales Channel, users notified are:
+o	Deputy Sales Director Indirect Channel – Miguel Barrela
+o	Key User / Administrator – Pilar Madeira</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c),  OR(  $UserRole.DeveloperName = $Label.PRT_Portugal_Indirect_Bank_Channel_DevName ,$UserRole.DeveloperName =  $Label.PRT_Portugal_Indirect_Partnerships_DevName ), ISCHANGED( OwnerId ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Parent Is Group SG</fullName>
+        <actions>
+            <name>set_Is_Group_SG</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), Parent_is_Group_SG__c = 1)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Partner Key</fullName>
+        <actions>
+            <name>Partner_Key_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)),  OR(CONTAINS( $Label.RealTime_Latam_country , TEXT(Subsidiary__c)),  CONTAINS(&apos;Brazil&apos;, TEXT(Subsidiary__c)), CONTAINS(&apos;Italy&apos;, TEXT(Subsidiary__c)), CONTAINS(&apos;Romania&apos;, TEXT(Subsidiary__c))), NOT(ISBLANK( TEXT(Identification_Criteria__c))),  NOT(ISBLANK(TEXT(Subsidiary_Indicator__c))), RecordTypeId=&apos;0123X000000eUns&apos;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>RT- Set Lead Convert to Blank</fullName>
+        <actions>
+            <name>Set_Lead_Convert_to_Blank_Value</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Set the lead convert field to Blank ,to differentiate the Account creation on lead Conversion and on manual account create/Update</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), NOT(ISBLANK(Lead_Convert__c)))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Real Time Croatia Bypass - Account</fullName>
+        <actions>
+            <name>Real_Time_Croatia_Bypass_Account</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), ISCHANGED(RealTime_Croatia_Bypass__c), RealTime_Croatia_Bypass__c  = True)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reset Account Anonymization Bypass</fullName>
+        <actions>
+            <name>Reset_Account_Anonymization_Bypass</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow &amp; field update has been set up to reset the Anonymization_Bypass__c field to false once it has been set to true by the anonymization process. 
+It prevents the record from bypassing VRs after having been anonymized.</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), ISCHANGED(Anonymization_Bypass__c), Anonymization_Bypass__c =True)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>SET %27Calder code indexed%27 %26 %27Subsidiary Indicator indexed%27</fullName>
+        <actions>
+            <name>CALDER_code_indexed_value</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Subsidiary_Indicator_indexed_value</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow will set the field &apos;Calder code indexed&apos; to the value of first four digit of &apos;CALDER Owner&apos; and set the field &apos;Subsidiary Indicator indexed&apos; to the value of the field &apos;Subsidiary Indicator&apos; on account.</description>
+        <formula>IF( ISNEW(),   AND( NOT($User.Bypass_Workflow__c),1=1),  AND( NOT($User.Bypass_Workflow__c),1=1, OR(ISCHANGED(CALDER_Owner__c), ISCHANGED(Subsidiary_Indicator__c)))  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set %27Apex or User Update%27 to False</fullName>
+        <actions>
+            <name>Unchek_Apex_or_User_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow will set the field &apos;Apex ou User Update&apos; to False after the apex unchecks Risk Reference on account</description>
+        <formula>AND(NOT($User.Bypass_Workflow__c), NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), Apex_or_User_Update__c = True)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Virtual Accounts Unicity</fullName>
+        <actions>
+            <name>Virtual_Accounts_Unicity</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(NOT($User.Bypass_Workflow__c),   NOT(CONTAINS($Label.CRM_BROKER_ALDML_ID, $User.Id)), RecordType.DeveloperName  = &apos;AccountInternational&apos;)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

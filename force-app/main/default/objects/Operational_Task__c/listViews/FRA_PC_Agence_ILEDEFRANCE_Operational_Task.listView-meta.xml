@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_PC_Agence_ILEDEFRANCE_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - PC Agence ILE DE FRANCE (OBSOLETE)</label>
+    <queue>FRA_PC_Agence_ILEDEFRANCE</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

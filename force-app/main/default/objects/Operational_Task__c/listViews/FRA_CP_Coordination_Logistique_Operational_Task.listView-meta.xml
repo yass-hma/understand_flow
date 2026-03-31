@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_CP_Coordination_Logistique_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - C&amp;P Coordination Logistique</label>
+    <queue>FRA_CP_Coordination_Logistique</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

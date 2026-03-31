@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_ServiceConducteursFournisseurs_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA – Service Conducteurs Fournisseurs</label>
+    <queue>FRA_ServiceConducteursFournisseurs</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

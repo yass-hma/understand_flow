@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IND_SUPPORT_BAJAJ_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>IND - SUPPORT BAJAJ</label>
+    <queue>IND_SUPPORT_BAJAJ</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

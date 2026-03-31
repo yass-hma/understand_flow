@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Sends Driver marketing notification based on the specified Booking request ids.</description>
+        <name>RMT_E2E_BRDriverConfirmedServiceDateTimeMinus24h</name>
+        <label>RMT_E2E_BRDriverConfirmedServiceDateTimeMinus24h</label>
+        <locationX>308</locationX>
+        <locationY>276</locationY>
+        <actionName>RMT_E2E_BRDriverConfirmedSDTMinus24h</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>bookingRequestIds</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>RMT_E2E_BRDriverConfirmedSDTMinus24h</nameSegment>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>&quot;Confirmed&quot; AND ServiceDateTime -/- 24h</description>
+    <environments>Default</environments>
+    <interviewLabel>RMT_E2E_BRDriver {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>RMT_E2E_BRDriverConfirmedServiceDateTimeMinus24h</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <filterFormula>AND(
+    {!$User.Bypass_Workflow__c}=false,
+    NOT(ISBLANK({!$Record.ServiceDateTime__c})),
+    IF(
+        NOT(ISNEW()),
+        OR(
+            ISCHANGED({!$Record.ServiceDateTime__c}),
+            ISCHANGED({!$Record.BookingStatus__c})
+        ),
+        true
+    ),
+    ISPICKVAL({!$Record.BookingStatus__c}, &apos;Confirmed&apos;),
+    (({!$Record.ServiceDateTime__c} - NOW()) * 24) &gt; 24
+)</filterFormula>
+        <object>BookingRequest__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>X24hBeforeTheServiceDatetime</name>
+            <connector>
+                <targetReference>RMT_E2E_BRDriverConfirmedServiceDateTimeMinus24h</targetReference>
+            </connector>
+            <label>24h Before The Service Datetime</label>
+            <offsetNumber>-24</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>ServiceDateTime__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

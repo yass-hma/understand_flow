@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRT_Seguros_Sinistros_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PRT - Seguros &amp; Sinistros</label>
+    <queue>PRT_Seguros_Sinistros</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

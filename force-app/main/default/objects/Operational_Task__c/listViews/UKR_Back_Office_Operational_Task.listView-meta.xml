@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UKR_Back_Office_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UKR - Back Office</label>
+    <queue>UKR_Back_Office</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIN_VEHICLE_OPERATIONS_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FIN - VEHICLE OPERATIONS</label>
+    <queue>FIN_VEHICLE_OPERATIONS</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

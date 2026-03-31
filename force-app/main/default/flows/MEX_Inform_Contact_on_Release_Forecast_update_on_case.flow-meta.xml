@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>MEX_Inform_Contact_on_Follow_up_date_Update_for_Case_alert</name>
+        <label>MEX - Inform Contact on Follow up date  Update for Case alert</label>
+        <locationX>532</locationX>
+        <locationY>507</locationY>
+        <actionName>Case.MEX_Inform_Contact_on_Follow_up_date_Update_for_Case</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.MEX_Inform_Contact_on_Follow_up_date_Update_for_Case</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>MEX_Inform_Contact_on_Release_Forecast_update_for_Case_alert</name>
+        <label>MEX - Inform Contact on Release Forecast update for Case alert</label>
+        <locationX>50</locationX>
+        <locationY>513</locationY>
+        <actionName>Case.MEX_Inform_Contact_on_Release_Forecast_update_for_Case</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.MEX_Inform_Contact_on_Release_Forecast_update_for_Case</nameSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_if_Release_Forecast_and_Follow_up_date_is_not_null</name>
+        <label>Check if Release Forecast and Follow up date is not null</label>
+        <locationX>278</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>MEX_Inform_Contact_on_Release_Forecast_update_for_Case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Release_Forecast__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MEX_Inform_Contact_on_Release_Forecast_update_for_Case_alert</targetReference>
+            </connector>
+            <label>MEX - Inform Contact on Release Forecast update for Case</label>
+        </rules>
+        <rules>
+            <name>MEX_Inform_Contact_on_Follow_up_date_Update_for_Case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Follow_up_date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MEX_Inform_Contact_on_Follow_up_date_Update_for_Case_alert</targetReference>
+            </connector>
+            <label>MEX - Inform Contact on Follow up date Update for Case</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>MEX - {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>MEX - Inform Contact on Release Forecast update and Follow up date on case</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>157</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Check_if_Release_Forecast_and_Follow_up_date_is_not_null</targetReference>
+        </connector>
+        <filterFormula>AND(
+NOT({!$User.Bypass_Workflow__c}),
+{!$Record.RecordType.DeveloperName} = &apos;Case_External_Mexico&apos;,
+OR(
+NOT(ISBLANK({!$Record.Release_Forecast__c})),
+NOT(ISBLANK({!$Record.Follow_up_date__c}))),
+OR(
+ISCHANGED({!$Record.Release_Forecast__c}),
+ISCHANGED({!$Record.Follow_up_date__c}))
+)</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

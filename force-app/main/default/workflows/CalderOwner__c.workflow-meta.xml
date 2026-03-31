@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Set_External_Key</fullName>
+        <description>Calculate and Set the Calder Owner External Key</description>
+        <field>ExternalId__c</field>
+        <formula>Subsidiary_code__c + &apos;-&apos; + Code__c</formula>
+        <name>Set External Key</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Build External Key</fullName>
+        <actions>
+            <name>Set_External_Key</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Build &amp; Set Calder Owner (Account Ownership Rule) External Key used for Back-Office Integration</description>
+        <formula>true</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>FRA_KIA_Flex_Send_Email_Accepted</name>
+        <label>FRA - KIA Flex Send Email Accepted</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <actionName>Credit_Check__c.FRA_Credit_Check_Accepted_Kia_Flex</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Credit_Check__c.FRA_Credit_Check_Accepted_Kia_Flex</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>FRA_KIA_Flex_Send_Email_Recalled</name>
+        <label>FRA - KIA Flex Send Email Recalled</label>
+        <locationX>578</locationX>
+        <locationY>539</locationY>
+        <actionName>Credit_Check__c.FRA_Credit_Check_Recalled_Kia_Flex</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Credit_Check__c.FRA_Credit_Check_Recalled_Kia_Flex</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>FRA_KIA_Flex_Send_Email_Rejected</name>
+        <label>FRA - KIA Flex Send Email Rejected</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <actionName>Credit_Check__c.FRA_Credit_Check_Rejected_KIA_Flex</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Credit_Check__c.FRA_Credit_Check_Rejected_KIA_Flex</nameSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>FRA_CC_Notifications_Check_IC</name>
+        <label>FRA - CC Notifications Check IC</label>
+        <locationX>776</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>FRA_CC_Notifications_KIA_Flex</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Identification_Criteria__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>KIA FLEX</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>FRA_CC_Notifications_KIA_Flex_CC_Status</targetReference>
+            </connector>
+            <label>FRA - CC Notifications KIA Flex</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>FRA_CC_Notifications_KIA_Flex_CC_Status</name>
+        <label>FRA - CC Notifications KIA Flex CC Status</label>
+        <locationX>446</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>FRA_CC_Notifications_KIA_Flex_Approved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Accepted</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>FRA_KIA_Flex_Send_Email_Accepted</targetReference>
+            </connector>
+            <label>FRA - CC Notifications KIA Flex Approved</label>
+        </rules>
+        <rules>
+            <name>FRA_CC_Notifications_KIA_Flex_Rejected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Rejected by Risk</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>FRA_KIA_Flex_Send_Email_Rejected</targetReference>
+            </connector>
+            <label>FRA - CC Notifications KIA Flex Rejected</label>
+        </rules>
+        <rules>
+            <name>FRA_CC_Notifications_KIA_Flex_Recalled</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Recheck Needed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>FRA_KIA_Flex_Send_Email_Recalled</targetReference>
+            </connector>
+            <label>FRA - CC Notifications KIA Flex Recalled</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>FRA - Credit Check Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FRA - Credit Check Notification</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>650</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>FRA_CC_Notifications_Check_IC</targetReference>
+        </connector>
+        <filterFormula>{!$User.Bypass_Workflow__c} = false &amp;&amp; ({!$Record.RecordType.DeveloperName} = &apos;CreditCheckFrance&apos; || {!$Record.RecordType.DeveloperName} = &apos;Credit_Check_After_Decision&apos;) &amp;&amp; ISCHANGED({!$Record.Status__c}) &amp;&amp; !ISNULL({!$Record.Account__c}) &amp;&amp; CONTAINS({!$Record.Account__r.RecordType.DeveloperName}, &apos;France&apos;)</filterFormula>
+        <object>Credit_Check__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

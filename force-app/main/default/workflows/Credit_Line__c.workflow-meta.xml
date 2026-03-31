@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Check_Modified_on_Credit_Line</fullName>
+        <field>Modified__c</field>
+        <literalValue>1</literalValue>
+        <name>Check Modified on Credit Line</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Credit_Line_Unicity_Update</fullName>
+        <field>Credit_Line_Unicity__c</field>
+        <formula>Account__r.Id&amp;Credit_Check__r.Name</formula>
+        <name>Credit Line Unicity Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_MontantDemand_CreditLine_Update</fullName>
+        <field>Requested_Credit_Amount__c</field>
+        <formula>Credit_Check__r.Group_current_exposure__c</formula>
+        <name>FRA_MontantDemand CreditLine Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FRA_MontantVehicule_CreditLine_Update</fullName>
+        <field>Requested_Credit_Vehicules__c</field>
+        <formula>Credit_Check__r.Total_Fleet_Potential_Modified__c</formula>
+        <name>FRA_MontantVehicule CreditLine Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Requested_Credit_Vehicle_to_1</fullName>
+        <field>Requested_Credit_Vehicules__c</field>
+        <formula>1</formula>
+        <name>Requested Credit Vehicle to 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>set_requested_credit_original_value</fullName>
+        <field>Requested_Credit_amount_original_value__c</field>
+        <formula>Requested_Credit_Amount__c</formula>
+        <name>set requested credit original value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>FRA - Set Requested Credit Original Value</fullName>
+        <actions>
+            <name>set_requested_credit_original_value</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Credit_Line__c.Requested_Credit_amount_original_value__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA - Update Montant LigneEncours</fullName>
+        <actions>
+            <name>FRA_MontantDemand_CreditLine_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>FRA_MontantVehicule_CreditLine_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <field>User.Bypass_Workflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.bypass_appex_triggers__c</field>
+            <operation>includes</operation>
+            <value>WS_CreatCreditCheck</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Line__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Credit Line France</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA-Credit Line Unicity on Accounts</fullName>
+        <actions>
+            <name>Credit_Line_Unicity_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR( ISNEW(),ISCHANGED( Account__c ), ISCHANGED( Credit_Check__c ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>FRA_Requested_credit_vehi_greater_than_0</fullName>
+        <actions>
+            <name>Requested_Credit_Vehicle_to_1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 2) AND(NOT (3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9 OR 10))</booleanFilter>
+        <criteriaItems>
+            <field>Credit_Line__c.Requested_Credit_Vehicules__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Line__c.Requested_Credit_Vehicules__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Check__c.Subsidiary_Indicator__c</field>
+            <operation>equals</operation>
+            <value>42801</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Check__c.Subsidiary_Indicator__c</field>
+            <operation>equals</operation>
+            <value>44001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Check__c.Subsidiary_Indicator__c</field>
+            <operation>equals</operation>
+            <value>64301</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Check__c.Subsidiary_Indicator__c</field>
+            <operation>equals</operation>
+            <value>70501</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Check__c.Subsidiary_Indicator__c</field>
+            <operation>equals</operation>
+            <value>64201</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Check__c.Subsidiary_Indicator__c</field>
+            <operation>equals</operation>
+            <value>10001</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Check__c.Subsidiary_Indicator__c</field>
+            <operation>equals</operation>
+            <value>79201</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Credit_Check__c.Subsidiary_Indicator__c</field>
+            <operation>equals</operation>
+            <value>30001</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Flag Modified Credit Line</fullName>
+        <actions>
+            <name>Check_Modified_on_Credit_Line</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>When credit line is updated, the checkbox &apos;Modified&apos; will be checked</description>
+        <formula>LastModifiedDate &lt;&gt; CreatedDate</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

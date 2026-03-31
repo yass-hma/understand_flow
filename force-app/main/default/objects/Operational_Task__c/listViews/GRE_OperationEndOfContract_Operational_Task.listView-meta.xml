@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GRE_OperationEndOfContract_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>GRE - Operation End of Contract</label>
+    <queue>GRE_OperationEndOfContract</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

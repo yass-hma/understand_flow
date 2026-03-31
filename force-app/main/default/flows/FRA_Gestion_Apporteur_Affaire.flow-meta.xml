@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <constants>
+        <name>User_FrenchUser</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>00520000000i7UT</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>User_FullWeb_ID</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>0050O0000079frx</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>FRA_Apporteur_Affaire_Business</name>
+        <label>FRA - Apporteur Affaire Business</label>
+        <locationX>314</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Leasing_Auto</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Buying_stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PRO/PRI</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Partner_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Financial</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>FRA_Update_Owner_Leasing_Auto</targetReference>
+            </connector>
+            <label>Leasing Auto</label>
+        </rules>
+        <rules>
+            <name>Core_Business</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Buying_stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ENT</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Buying_stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ALL</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Partner_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Financial</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>FRA_Update_Owner_French_User</targetReference>
+            </connector>
+            <label>Core Business</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>FRA - Gestion Apporteur Affaire {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FRA - Gestion Apporteur Affaire</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>FRA_Update_Owner_French_User</name>
+        <label>FRA - Update Owner French User</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>User_FrenchUser</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>FRA_Update_Owner_Leasing_Auto</name>
+        <label>FRA - Update Owner Leasing Auto</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>User_FullWeb_ID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>FRA_Apporteur_Affaire_Business</targetReference>
+        </connector>
+        <filterFormula>{!$User.Bypass_Workflow__c} = false &amp;&amp; {!$Record.RecordType.DeveloperName} = &apos;AccountFranceApporteurdAffaires&apos;</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

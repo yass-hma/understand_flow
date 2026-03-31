@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALG_Quality_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ALG - Quality</label>
+    <queue>ALG_Quality</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

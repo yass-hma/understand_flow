@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CHL_Syngenta_Operational_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>CHL - Syngenta</label>
+    <queue>CHL_Syngenta</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_if_the_queue_is_customer_care</name>
+        <label>Check if the queue is customer care</label>
+        <locationX>1568</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_the_queue_is_customer_care</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Get_customer_care_queue_Id.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_the_contact_type</targetReference>
+            </connector>
+            <label>If the queue is customer care</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_the_account_partner</name>
+        <label>Check the account partner</label>
+        <locationX>974</locationX>
+        <locationY>647</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Case_account_partner_is_equal_to_Belfius_auto_lease</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Partner__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Belfius Auto Lease</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_BEL_C_D_Benefit_queue_Id</targetReference>
+            </connector>
+            <label>Case account partner is equal to Belfius auto lease</label>
+        </rules>
+        <rules>
+            <name>Case_account_partner_not_equal_to_belfius_auto_lease</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Partner__r.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Belfius Auto Lease</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_the_customer_class_values</targetReference>
+            </connector>
+            <label>Case account partner not equal to belfius auto lease</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_the_contact_type</name>
+        <label>Check the contact type</label>
+        <locationX>974</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Contact_type_Driver</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contact.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>DRIVER</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_BEL_C_D_MyDriver_queue_Id</targetReference>
+            </connector>
+            <label>Contact type - Driver</label>
+        </rules>
+        <rules>
+            <name>Contact_type_Non_Driver</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contact.Type__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>DRIVER</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_the_account_partner</targetReference>
+            </connector>
+            <label>Contact type - Non Driver</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_the_customer_class_values</name>
+        <label>Check the customer class values</label>
+        <locationX>974</locationX>
+        <locationY>755</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_the_customer_class_is_Corporate_benefit</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Customer_Class__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Corporate Benefit</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_BEL_C_D_Benefit_queue</targetReference>
+            </connector>
+            <label>If the customer class is &apos;Corporate benefit&apos;</label>
+        </rules>
+        <rules>
+            <name>If_the_customer_class_is_corporate_value</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Customer_Class__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Corporate Value</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_BEL_C_D_Value_queue_Id</targetReference>
+            </connector>
+            <label>If the customer class is &apos;corporate value&apos;</label>
+        </rules>
+        <rules>
+            <name>If_the_customer_class_are_direct_retail</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Customer_Class__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Retail Direct B2B 10-24</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Customer_Class__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Retail Direct B2B 1-9</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Customer_Class__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Retail Indirect B2B</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Customer_Class__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Retail Indirect B2C</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Customer_Class__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Retail Direct B2C</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_BEL_C_D_SME_Private_queue_Id</targetReference>
+            </connector>
+            <label>If the customer class are direct retail</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>BEL - Update case owner customer care queue {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>BEL - Update case owner customer care queue</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_BEL_C_D_Benefit_queue</name>
+        <label>Get BEL - C&amp;D Benefit queue</label>
+        <locationX>578</locationX>
+        <locationY>863</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_case_owner_to_BEL_C_D_Benefit</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BEL - C&amp;D Benefit</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_BEL_C_D_Benefit_queue_Id</name>
+        <label>Get BEL - C&amp;D Benefit queue Id</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_owner_to_BEL_C_D_Benefit</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BEL - C&amp;D Benefit</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_BEL_C_D_MyDriver_queue_Id</name>
+        <label>Get BEL - C&amp;D  MyDriver queue Id</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_the_owner_to_BEL_C_D_MyDriver</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BEL - C&amp;D My Driver</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_BEL_C_D_SME_Private_queue_Id</name>
+        <label>Get BEL -  C&amp;D SME &amp; Private queue Id</label>
+        <locationX>1106</locationX>
+        <locationY>863</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_case_owner_to_BEL_C_D_SME_Private_queue</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BEL - C&amp;D SME &amp; Private</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_BEL_C_D_Value_queue_Id</name>
+        <label>Get BEL - C&amp;D Value queue Id</label>
+        <locationX>842</locationX>
+        <locationY>863</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_case_owner_to_BEL_C_D_Value_queue</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BEL - C&amp;D Value</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_customer_care_queue_Id</name>
+        <label>Get customer care queue Id</label>
+        <locationX>1568</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_if_the_queue_is_customer_care</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BEL - CustomerCare</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_case_owner_to_BEL_C_D_Benefit</name>
+        <label>Update case owner to BEL - C&amp;D Benefit</label>
+        <locationX>578</locationX>
+        <locationY>971</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_BEL_C_D_Benefit_queue.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_case_owner_to_BEL_C_D_SME_Private_queue</name>
+        <label>Update case owner to BEL -  C&amp;D SME &amp; Private queue</label>
+        <locationX>1106</locationX>
+        <locationY>971</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_BEL_C_D_SME_Private_queue_Id.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_case_owner_to_BEL_C_D_Value_queue</name>
+        <label>Update case owner to BEL - C&amp;D Value queue</label>
+        <locationX>842</locationX>
+        <locationY>971</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_BEL_C_D_Value_queue_Id.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_owner_to_BEL_C_D_Benefit</name>
+        <label>Update owner to BEL - C&amp;D Benefit</label>
+        <locationX>314</locationX>
+        <locationY>863</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_BEL_C_D_Benefit_queue_Id.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_the_owner_to_BEL_C_D_MyDriver</name>
+        <label>Update the owner to BEL - C&amp;D MyDriver</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_BEL_C_D_MyDriver_queue_Id.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>1442</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_customer_care_queue_Id</targetReference>
+        </connector>
+        <filterFormula>AND(
+NOT({!$User.Bypass_Workflow__c}),
+{!$Record.RecordType.DeveloperName}=&apos;Case_External_Belgium&apos;,
+OR(ISCHANGED({!$Record.OwnerId}),
+({!$Record.OwnerId} != {!$Record__Prior.OwnerId}))
+)</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
