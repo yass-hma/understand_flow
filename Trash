@@ -1,0 +1,10 @@
+# 1. Voir tous les Workflows configurés (par pays/type de Case)                                                                              
+  sf data query --query "SELECT Id, Name, Type__c, Category__c, Details__c, Subsidiary_Indicator__c, Business_Hours__c FROM Workflow__c ORDER    BY Subsidiary_Indicator__c, Type__c" --use-tooling-api false                                                                                 
+                                                                                                                                                 # 2. Voir toutes les Workflow_Tasks (tâches par défaut) avec leur SLA et ordre                                                               
+  sf data query --query "SELECT Id, Name, Task_Subject__c, Task_SLA__c, Is_First_Task__c, Must_be_closed_before_case_can_be_closed__c,         
+  Only_Available_For_Task_Owners__c, Reassign_Task_when_Case_owner_Change__c, Default_queue_ID__c, Parent_Workflow__r.Name,                    
+  Parent_Workflow__r.Type__c FROM Workflow_Task__c ORDER BY Parent_Workflow__r.Name, Is_First_Task__c DESC"
+
+  # 3. Voir les chaînes outcome → tâches suivantes
+  sf data query --query "SELECT Id, Name, Task_Outcome__r.Name, Workflow_Task__r.Task_Subject__c, Workflow_Task__r.Parent_Workflow__r.Name FROM
+   Outcome_to_WF_Tasks__c ORDER BY Task_Outcome__r.Name"
