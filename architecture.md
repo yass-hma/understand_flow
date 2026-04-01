@@ -528,12 +528,12 @@ sf data query \
 
 # Étape 3 : voir les outcomes et leurs enchaînements
 sf data query \
-  --query "SELECT Task_Outcome__r.Name,
+  --query "SELECT Outcome__r.Name,
                   Workflow_Task__r.Task_Subject__c,
                   Workflow_Task__r.Task_SLA__c
            FROM Outcome_to_WF_Tasks__c
            WHERE Workflow_Task__r.Parent_Workflow__c = '<ID_WORKFLOW>'
-           ORDER BY Task_Outcome__r.Name" \
+           ORDER BY Outcome__r.Name" \
   --target-org <alias>
 ```
 

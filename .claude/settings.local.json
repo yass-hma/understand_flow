@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(sort find:*)"
+      "Bash(sort find:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(find /c/Users/Administrateur/Desktop/understand_flow/force-app/main/default/objects -name Workflow_Task_Assignee* -o -name SubsidiarySettings* -o -name Queues__c*)"
     ]
   }
 }

@@ -386,12 +386,12 @@ sf data query \
 ```bash
 sf data query \
   --query "SELECT Id,
-                  Task_Outcome__r.Name,
+                  Outcome__r.Name,
                   Workflow_Task__r.Task_Subject__c,
                   Workflow_Task__r.Parent_Workflow__r.Name,
                   Workflow_Task__r.Task_SLA__c
            FROM Outcome_to_WF_Tasks__c
-           ORDER BY Task_Outcome__r.Name" \
+           ORDER BY Outcome__r.Name" \
   --target-org <alias>
 ```
 
@@ -399,7 +399,7 @@ sf data query \
 
 | Partie | Signification |
 |---|---|
-| `Task_Outcome__r.Name` | Nom de l'outcome déclencheur |
+| `Outcome__r.Name` | Nom de l'outcome déclencheur (le champ s'appelle `Outcome__c`, pas `Task_Outcome__c`) |
 | `Workflow_Task__r.Task_Subject__c` | Nom de la tâche qui sera créée après cet outcome |
 | `Workflow_Task__r.Parent_Workflow__r.Name` | Double traversée de relation : on remonte jusqu'au workflow parent |
 
