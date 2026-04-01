@@ -1,5 +1,103 @@
-INVALID_FIELD: 
-SELECT Task_Outcome__r.Name,
-       ^
-ERROR at Row:1:Column:8
-Didn't understand relationship 'Task_Outcome__r' in field path. If you are attempting to use a custom relationship, be sure to append the '__r' after the custom relationship name. Please reference your WSDL or the describe call for the appropriate names.
+Étape 0 — Vérifier les connexions aux deux orgs                                                                                                                                                                                                                                             
+  sf org list                                                                                                                                  
+  # Si pas encore connecté :
+  sf org login web --alias staging
+  sf org login web --alias sdb5
+
+  ---
+  Étape 1 — Export depuis staging (dans l'ordre parent → enfant)
+
+  # 1. Workflow__c
+  sf data export bulk \
+    --query "SELECT Id, Name, Type__c, Category__c, Details__c, Subsidiary__c, Subsidiary_Indicator__c, External_Id__c FROM Workflow__c" \     
+    --target-org staging \
+    --output-file export_workflow.csv \
+    --wait 10
+
+  # 2. Workflow_Task__c
+  sf data export bulk \
+    --query "SELECT Id, Name, Task_Subject__c, Task_Description__c, Task_SLA__c, Default_queue_ID__c, Is_First_Task__c,
+  Must_be_closed_before_case_can_be_closed__c, Only_Available_For_Task_Owners__c, Don_t_Restrict_Assignment__c,
+  Reassign_Task_when_Case_owner_Change__c, External_Id__c, Parent_Workflow__r.External_Id__c FROM Workflow_Task__c" \
+    --target-org staging \
+    --output-file export_workflow_task.csv \
+    --wait 10
+
+  # 3. Task_Outcome__c
+  sf data export bulk \
+    --query "SELECT Id, Name, Label__c, Order__c, Outcome_will_close_Case__c, Update_Case_Status__c, Update_Case_Reopening_Reason__c,
+  External_Id__c, From_Task__r.External_Id__c FROM Task_Outcome__c" \
+    --target-org staging \
+    --output-file export_task_outcome.csv \
+    --wait 10
+
+  # 4. Outcome_to_WF_Tasks__c
+  sf data export bulk \
+    --query "SELECT Id, Name, Outcome__r.External_Id__c, Workflow_Task__r.External_Id__c FROM Outcome_to_WF_Tasks__c" \
+    --target-org staging \
+    --output-file export_outcome_to_wf_tasks.csv \
+    --wait 10
+
+  ---
+  Étape 2 — Import dans sdb5 (dans le même ordre)
+
+  # 1. Workflow__c
+  sf data upsert bulk \
+    --sobject Workflow__c \
+    --file export_workflow.csv \
+    --external-id External_Id__c \
+    --target-org sdb5 \
+    --wait 10
+
+  # 2. Workflow_Task__c
+  sf data upsert bulk \
+    --sobject Workflow_Task__c \
+    --file export_workflow_task.csv \
+    --external-id External_Id__c \
+    --target-org sdb5 \
+    --wait 10
+
+  # 3. Task_Outcome__c
+  sf data upsert bulk \
+    --sobject Task_Outcome__c \
+    --file export_task_outcome.csv \
+    --external-id External_Id__c \
+    --target-org sdb5 \
+    --wait 10
+
+  # 4. Outcome_to_WF_Tasks__c
+  sf data upsert bulk \
+    --sobject Outcome_to_WF_Tasks__c \
+    --file export_outcome_to_wf_tasks.csv \
+    --external-id Name \
+    --target-org sdb5 \
+    --wait 10
+
+  ---
+  ⚠️ Points d'attention avant de lancer
+
+  1. Business_Hours__c sur Workflow__c
+  Ce champ est un lookup vers l'objet BusinessHours standard. L'ID des Business Hours est différent entre staging et sdb5. Je l'ai exclu de    
+  l'export — il faudra le renseigner manuellement après import en faisant une requête sur les deux orgs :
+
+  sf data query --query "SELECT Id, Name FROM BusinessHours" --target-org staging
+  sf data query --query "SELECT Id, Name FROM BusinessHours" --target-org sdb5
+
+  2. Default_queue_ID__c sur Workflow_Task__c
+  C'est un champ texte qui stocke l'ID d'une Queue. Les IDs de queues sont différents entre orgs. Même approche — mapper manuellement :        
+
+  sf data query --query "SELECT Id, Name FROM Group WHERE Type = 'Queue'" --target-org staging
+  sf data query --query "SELECT Id, Name FROM Group WHERE Type = 'Queue'" --target-org sdb5
+
+  3. Ordre impératif
+  Workflow__c  →  Workflow_Task__c  →  Task_Outcome__c  →  Outcome_to_WF_Tasks__c
+  Ne pas inverser, sinon les lookups parent ne seront pas trouvés lors de l'upsert.
+
+  4. External_Id__c doit être renseigné dans staging
+  Si certains enregistrements n'ont pas de External_Id__c, l'upsert va créer des doublons. Vérifie avant :
+
+  sf data query \
+    --query "SELECT COUNT() FROM Workflow__c WHERE External_Id__c = null" \
+    --target-org staging
+
+✻ Brewed for 40s      
