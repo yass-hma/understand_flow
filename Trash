@@ -58,3 +58,5 @@ Dans Salesforce Inspector → "Data Export"
   ▎ ⚠️ Pour Workflow_Task__c et Task_Outcome__c, les colonnes Parent_Workflow__c et From_Task__c contiennent des IDs Salesforce qui seront     
   différents entre staging et sdb5. Il faut les remplacer par les IDs correspondants dans sdb5 avant l'import — ou utiliser les colonnes       
   Parent_Workflow__r.External_Id__c si Salesforce Inspector supporte les relations externes.
+
+[Workflow__c]	a2DG500000OXf5xMAD	FRA - Complaint	Claim			France	25001	01m20000000LPYcAAO	25001WF3	Failed			INVALID_CROSS_REFERENCE_KEY: invalid cross reference id []
