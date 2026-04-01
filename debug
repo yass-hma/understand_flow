@@ -14,3 +14,34 @@
   Dis-moi :
   1. Quel est le RecordType.Name du Case créé ?
   2. Le champ Subsidiary_Indicator__c est-il renseigné sur le Case ?
+
+Vérification 1 — Le Custom Label autorise-t-il ce RecordType ?
+
+  SELECT Id, Name, Value
+  FROM ExternalString
+  WHERE Name = 'Task_Management_Enabled_Countries_RecordTypes'
+
+  ▎ Vérifie que "Case Externale France" (le RecordType.Name de ton Case) est bien dans la valeur du label. Si non → le flow ne se déclenche    
+  même pas.
+
+  ---
+  Vérification 2 — Le Workflow__c importé a-t-il le bon Type__c ?
+
+  SELECT Id, Name, Type__c, Category__c, Details__c, Subsidiary_Indicator__c
+  FROM Workflow__c
+  WHERE Subsidiary_Indicator__c = '25001'
+
+  ▎ Compare Type__c avec ce que tu as dans ton Case (Type = 'Claim', External_Case_Type__c = ?). Les deux doivent matcher exactement — sensible
+   à la casse et aux espaces.
+
+  ---
+  Vérification 3 — Les Workflow_Task__c ont-elles Is_First_Task__c = true ?
+
+  SELECT Id, Name, Task_Subject__c, Is_First_Task__c, Parent_Workflow__r.Name
+  FROM Workflow_Task__c
+  WHERE Parent_Workflow__r.Subsidiary_Indicator__c = '25001'
+
+  ▎ Si aucune tâche n'a Is_First_Task__c = true → le flow trouve le workflow mais ne crée rien.
+
+  ---
+  Dis-moi les résultats de ces 3 vérifications et on identifie exactement où ça bloque.
