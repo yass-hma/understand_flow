@@ -38,16 +38,18 @@ Le tableau de bord est un **Screen Flow** embarqué sur la page Case. Il affiche
 ```
 
 **Colonnes du datatable :**
-| Colonne | Champ API | Type |
-|---|---|---|
-| Task | `Task_Name__c` (lien cliquable) | customRichText |
-| Icône | `Status_Icon__c` (🟨/🟥/✅) | customRichText |
-| Status | `Status__c` | customRichText |
-| Start Date | `Start_Date__c` | customDateTime |
-| Due Date | `Due_Date__c` | customDateTime |
-| Owner | `Owner__c` | customRichText |
-| Completion Date | `Completion_Date__c` | customDateTime |
-| Task Outcome | `Task_Outcome__c` | text |
+| Header affiché | Champ API | `hasCustomHeaderLabel` | Source du label |
+|---|---|---|---|
+| "Task" | `Task_Name__c` | `true` → `"Task"` | Hardcodé dans le flow |
+| *(vide)* | `Status_Icon__c` | `true` → `""` | Pas de header |
+| "Status" | `Status__c` | `false` | Hardcodé `"Status"` dans le JSON |
+| "Start Date" | `Start_Date__c` | `false` | Hardcodé `"Start Date"` dans le JSON |
+| "Due Date" | `Due_Date__c` | `false` | Hardcodé `"Due Date"` dans le JSON |
+| "Owner" | `Owner__c` | `false` | Hardcodé `"Owner"` dans le JSON |
+| "Completion Date" | `Completion_Date__c` | `false` | Hardcodé `"Completion Date"` dans le JSON |
+| "Task Outcome" | `Task_Outcome__c` | `false` | Hardcodé `"Task Outcome"` dans le JSON |
+
+> ⚠️ **Toutes les colonnes sont en anglais fixe.** Même quand `hasCustomHeaderLabel: false`, le composant `flowruntime:datatable` utilise le champ `label` hardcodé dans le JSON du flow — il ne consulte pas les traductions du champ via Translation Workbench au runtime. Pour changer un label de colonne, il faut modifier le flow directement dans Flow Builder.
 
 > Le datatable est en **sélection unique** (`SINGLE_SELECT`). Les boutons d'action réagissent à la ligne sélectionnée (`firstSelectedRow`).
 

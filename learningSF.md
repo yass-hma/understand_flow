@@ -9,6 +9,7 @@
 3. [Documentation : Système Flow_Task_Management](#3-documentation--système-flow_task_management)
 4. [Carte des dépendances entre flows](#4-carte-des-dépendances-entre-flows)
 5. [Concepts avancés rencontrés](#5-concepts-avancés-rencontrés)
+6. [Traduction et multilingue dans les Flows](#6-traduction-et-multilingue-dans-les-flows)
 
 ---
 
@@ -472,3 +473,78 @@ Dans Salesforce, un utilisateur peut appartenir à une Queue :
 ---
 
 *Ce fichier est destiné à évoluer. Ajoute un nouveau chapitre à chaque concept Salesforce rencontré dans le projet.*
+
+---
+
+## 6. Traduction et multilingue dans les Flows
+
+### 📘 Concept : `hasCustomHeaderLabel` dans un datatable Flow
+
+Dans le composant `flowruntime:datatable`, chaque colonne est définie par un objet JSON avec deux propriétés liées au header :
+
+```json
+{
+  "apiName": "Start_Date__c",
+  "hasCustomHeaderLabel": false,
+  "customHeaderLabel": "",
+  "label": "Start Date"
+}
+```
+
+| Propriété | Valeur | Comportement |
+|---|---|---|
+| `hasCustomHeaderLabel: false` | label standard | Le composant utilise le champ `label` du JSON |
+| `hasCustomHeaderLabel: true` | label custom | Le composant utilise `customHeaderLabel` à la place de `label` |
+
+> ⚠️ **Dans les deux cas, le texte affiché est hardcodé en anglais** dans le JSON du flow — capturé au moment de la sauvegarde dans Flow Builder. La Translation Workbench ne s'applique pas ici.
+
+---
+
+### 📘 Concept : Pourquoi Translation Workbench ne suffit pas ici
+
+**Translation Workbench** traduit les **métadonnées** Salesforce : labels de champs, picklists, objets, boutons... Ces traductions sont appliquées dans les pages Lightning standard, les layouts, les reports.
+
+**Mais** le composant `flowruntime:datatable` dans un Flow Screen ne consulte pas ces métadonnées au runtime. Il lit le JSON hardcodé défini dans le flow. Résultat : même si `Start_Date__c.label = "Date de début"` est traduit en français dans Translation Workbench, le datatable continuera d'afficher `"Start Date"`.
+
+```
+Translation Workbench
+  → traduit : champ.label, objet.label, picklist.values...
+  → NE traduit PAS : les strings hardcodées dans les flows, les composants custom
+
+flowruntime:datatable
+  → lit : le JSON "columns" dans le flow XML  ← texte fixe
+  → NE lit PAS : les traductions du champ depuis les métadonnées
+```
+
+---
+
+### 📘 Comment accéder à Flow Builder pour modifier un flow
+
+```
+1. Ouvrir Setup (icône ⚙️ en haut à droite dans Salesforce)
+2. Dans la barre de recherche Quick Find → taper "Flows"
+3. Cliquer sur "Flows" dans les résultats
+4. Chercher le flow dans la liste (ex: Flow_Task_Management_Display_Progress)
+5. Cliquer sur le nom du flow
+6. Cliquer sur le bouton "Edit" en haut à droite
+7. Dans le canvas → cliquer sur l'élément "Screen"
+8. Dans l'écran → cliquer sur le composant datatable "DataTabeOperationalTasks"
+9. Dans le panel de droite → section "Columns"
+10. Modifier le label de chaque colonne
+11. Sauvegarder et activer la nouvelle version
+```
+
+> ⚠️ Modifier un flow crée une **nouvelle version**. L'ancienne version reste disponible en cas de rollback. Toujours tester dans un sandbox avant de déployer en production.
+
+---
+
+### 📘 Options pour afficher les colonnes selon la langue de l'utilisateur
+
+| Option | Description | Effort | Maintenabilité |
+|---|---|---|---|
+| **Anglais fixe** | Garder les labels en anglais | Aucun | ✅ Simple |
+| **Plusieurs flows** | Créer `Display_Progress_FR`, `_EN`, etc. et afficher le bon selon `$User.LanguageLocaleKey` | Élevé | ❌ Un flow par langue à maintenir |
+| **Custom Labels** | Salesforce Custom Labels sont traduisibles via Translation Workbench mais **non supportés** pour les headers du composant `flowruntime:datatable` | — | ❌ Non applicable ici |
+| **LWC custom** ✅ | Remplacer le datatable par un Lightning Web Component qui lit `$User.LanguageLocaleKey` et affiche les colonnes traduites dynamiquement | Élevé (dev) | ✅ Une seule source à maintenir |
+
+**La seule vraie solution multilingue** est un **LWC custom** qui gère lui-même la logique de traduction. C'est plus de développement mais c'est la seule façon d'avoir un datatable dynamiquement multilingue dans un Flow Screen.
