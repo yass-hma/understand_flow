@@ -1,0 +1,16 @@
+Étape 1 — Le flow se déclenche-t-il ?
+                                                                                                                                               
+  Le flow Flow_Task_Workflow_FirstTask_Creation a une condition d'entrée : le RecordType.Name du Case doit être dans le Custom Label
+  Task_Management_Enabled_Countries_RecordTypes.
+
+  Lance cette requête sur sdb5 avec ton Case créé :
+
+  SELECT Id, CaseNumber, Type, Status, RecordType.Name, RecordType.DeveloperName, Subsidiary_Indicator__c
+  FROM Case
+  WHERE Type = 'Claim'
+  ORDER BY CreatedDate DESC
+  LIMIT 5
+
+  Dis-moi :
+  1. Quel est le RecordType.Name du Case créé ?
+  2. Le champ Subsidiary_Indicator__c est-il renseigné sur le Case ?
