@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <!-- Champs custom + définition objet Case -->
+    <types>
+        <members>Case</members>
+        <name>CustomObject</name>
+    </types>
+
+    <!-- Toutes les validation rules du Case -->
+    <types>
+        <members>Case.*</members>
+        <name>ValidationRule</name>
+    </types>
+
+    <!-- Record Type -->
+    <types>
+        <members>Case.Case External France</members>
+        <name>RecordType</name>
+    </types>
+
+    <!-- Page Layouts -->
+    <types>
+        <members>Case-Case External Chatter Feed France - LEX</members>
+        <members>Case-Case External France no Mandatory - LEX</members>
+        <members>Case-Case External Chatter Feed France no Mandatory - LEX</members>
+        <members>Case-Case External France - LEX</members>
+        <name>Layout</name>
+    </types>
+
+    <!-- Lightning Record Pages -->
+    <types>
+        <members>France_Case_External_Chatter_Feed_France_LEX_Desktop</members>
+        <members>France_Case_External_Chatter_Feed_France_no_Mandatory_LEX</members>
+        <members>France_Case_External_France_LEX</members>
+        <members>France_Case_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+
+    <version>62.0</version>
+</Package>
