@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCM_CaseClose_Complaint_Justified</fullName>
+    <active>true</active>
+    <description>The field &quot;Complaint justified&quot; needs to be mandatory when the Case Type = Complaint or when the Type = Complaint.</description>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c),
+OR(
+    RecordType.Name = &quot;Case External Italy v2&quot;,
+    RecordType.Name = &quot;Case External Brazil&quot;,
+    RecordType.Name = &quot;Case External Austria&quot;,
+    RecordType.Name = &quot;Case External Switzerland&quot;
+  ),
+ISPICKVAL(Status, &apos;Closed&apos;),
+AND(NOT(ISBLANK(TEXT(Status))) ),
+OR(
+ISPICKVAL(Type,&quot;Complaint&quot;),
+ISPICKVAL(External_Case_Type__c,&quot;Complaint&quot;)
+),
+ISBLANK(TEXT(Complaint_justified__c))
+
+)</errorConditionFormula>
+    <errorDisplayField>Complaint_justified__c</errorDisplayField>
+    <errorMessage>Please populate the field &apos;Complaint justified&apos;</errorMessage>
+</ValidationRule>

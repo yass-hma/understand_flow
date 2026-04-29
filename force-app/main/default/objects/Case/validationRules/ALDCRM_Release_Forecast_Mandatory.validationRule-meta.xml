@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALDCRM_Release_Forecast_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT( $User.Bypass_Validation_Rules__c ),
+CONTAINS($Label.ALDCRM_Croatia_and_Slovenia_CaseRT,RecordTypeId),NOT(ISPICKVAL(Relief_vehicle_category__c,&quot;&quot;)),ISBLANK(Release_Forecast__c))</errorConditionFormula>
+    <errorMessage>The field &quot;Release forecast&quot; is  mandatory if there is a value on the field &quot;Relief vehicle category&quot;.</errorMessage>
+</ValidationRule>

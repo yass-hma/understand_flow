@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Date_Time_Objective_1__c</fullName>
+    <description>This Field is used to populate &quot;Close Date / Time Objective&quot; as we need to display this value by using Business Hrs. This is not used in any page layouts, its just a buffer field</description>
+    <label>Close Date / Time Objective-1</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

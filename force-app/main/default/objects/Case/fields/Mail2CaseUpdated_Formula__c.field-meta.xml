@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mail2CaseUpdated_Formula__c</fullName>
+    <description>Used to make field non editable for system admin</description>
+    <formula>Mail2CaseUpdated__c</formula>
+    <label>Mail2Case Updated</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

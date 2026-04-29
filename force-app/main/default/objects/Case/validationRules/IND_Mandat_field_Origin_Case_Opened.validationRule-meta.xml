@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IND_Mandat_field_Origin_Case_Opened</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+NOT($User.Bypass_Validation_Rules__c),
+ISNEW(), 
+ISPICKVAL(Origin,&apos;&apos;),
+RecordType.Name =&apos;Case External India&apos;
+)</errorConditionFormula>
+    <errorDisplayField>Origin</errorDisplayField>
+    <errorMessage>Case Origin should be mandatory</errorMessage>
+</ValidationRule>

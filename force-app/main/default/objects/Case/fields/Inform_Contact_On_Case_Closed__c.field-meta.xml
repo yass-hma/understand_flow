@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inform_Contact_On_Case_Closed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>JGV 16/12/2008: décoché par défaut suite réunion avec Gonzague, Yvonne et Pascal ce jour</description>
+    <label>Inform Contact On Case Closed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

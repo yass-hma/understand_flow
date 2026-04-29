@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_Workload__c</fullName>
+    <description>The workload estimate</description>
+    <label>Estimated Workload</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0h - 2h</fullName>
+                <default>false</default>
+                <label>0h - 2h</label>
+            </value>
+            <value>
+                <fullName>2h - 4h</fullName>
+                <default>false</default>
+                <label>2h - 4h</label>
+            </value>
+            <value>
+                <fullName>4h - 8h</fullName>
+                <default>false</default>
+                <label>4h - 8h</label>
+            </value>
+            <value>
+                <fullName>8h - 16h</fullName>
+                <default>false</default>
+                <label>8h - 16h</label>
+            </value>
+            <value>
+                <fullName>&gt;16h</fullName>
+                <default>false</default>
+                <label>&gt;16h</label>
+            </value>
+            <value>
+                <fullName>High</fullName>
+                <default>false</default>
+                <label>High</label>
+            </value>
+            <value>
+                <fullName>Medium</fullName>
+                <default>false</default>
+                <label>Medium</label>
+            </value>
+            <value>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <label>Low</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

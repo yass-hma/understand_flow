@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Service_ALD_Flex_dispatch_fait</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé</value>
+    </filters>
+    <filters>
+        <field>Emailtocasereceiver_FormulaField__c</field>
+        <operation>contains</operation>
+        <value>aldflex@,ayvensflex@</value>
+    </filters>
+    <filters>
+        <field>Followed_by__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>FRA - Service ALD Flex – dispatch fait</label>
+    <language>fr</language>
+    <sharedTo>
+        <group>FRA_Service_Mobilite_LMD</group>
+    </sharedTo>
+</ListView>

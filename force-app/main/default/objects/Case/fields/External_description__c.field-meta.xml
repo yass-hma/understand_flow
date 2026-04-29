@@ -1,0 +1,4352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_description__c</fullName>
+    <description>PLC 15/12/08 : Italy- v2</description>
+    <label>Case Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>External_Case_Detail__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>0800 Claims</fullName>
+                <default>false</default>
+                <label>0800 Claims</label>
+            </value>
+            <value>
+                <fullName>6 months period delivery</fullName>
+                <default>false</default>
+                <label>6 months period delivery</label>
+            </value>
+            <value>
+                <fullName>Accessori documenti non forniti</fullName>
+                <default>false</default>
+                <label>Accessori documenti non forniti</label>
+            </value>
+            <value>
+                <fullName>Accessories</fullName>
+                <default>false</default>
+                <label>Accessories</label>
+            </value>
+            <value>
+                <fullName>Accessories cost</fullName>
+                <default>false</default>
+                <label>Accessories cost</label>
+            </value>
+            <value>
+                <fullName>Accessorio after market</fullName>
+                <default>false</default>
+                <label>Accessorio after market</label>
+            </value>
+            <value>
+                <fullName>ACCIDENT</fullName>
+                <default>false</default>
+                <label>ACCIDENT</label>
+            </value>
+            <value>
+                <fullName>Accident management</fullName>
+                <default>false</default>
+                <label>Accident management</label>
+            </value>
+            <value>
+                <fullName>Accident report</fullName>
+                <default>false</default>
+                <label>Accident report</label>
+            </value>
+            <value>
+                <fullName>ACI refund</fullName>
+                <default>false</default>
+                <label>ACI refund</label>
+            </value>
+            <value>
+                <fullName>Activation direct debit</fullName>
+                <default>false</default>
+                <label>Activation direct debit</label>
+            </value>
+            <value>
+                <fullName>Active accident</fullName>
+                <default>false</default>
+                <label>Active accident</label>
+            </value>
+            <value>
+                <fullName>Add. Equipment</fullName>
+                <default>false</default>
+                <label>Add. Equipment</label>
+            </value>
+            <value>
+                <fullName>Addebiti da errori quotazioni</fullName>
+                <default>false</default>
+                <label>Addebiti da errori quotazioni</label>
+            </value>
+            <value>
+                <fullName>Addebiti extra per uso sostitutiva</fullName>
+                <default>false</default>
+                <label>Addebiti extra per uso sostitutiva</label>
+            </value>
+            <value>
+                <fullName>Addebiti extra per uso temporaneo</fullName>
+                <default>false</default>
+                <label>Addebiti extra per uso temporaneo</label>
+            </value>
+            <value>
+                <fullName>Addebito giorni eccedenti</fullName>
+                <default>false</default>
+                <label>Addebito giorni eccedenti</label>
+            </value>
+            <value>
+                <fullName>Addebito mora</fullName>
+                <default>false</default>
+                <label>Addebito mora</label>
+            </value>
+            <value>
+                <fullName>Addebito relief fuori ctr</fullName>
+                <default>false</default>
+                <label>Addebito relief fuori ctr</label>
+            </value>
+            <value>
+                <fullName>Addebito riparazione</fullName>
+                <default>false</default>
+                <label>Addebito riparazione</label>
+            </value>
+            <value>
+                <fullName>Adding cost</fullName>
+                <default>false</default>
+                <label>Adding cost</label>
+            </value>
+            <value>
+                <fullName>Adding installation</fullName>
+                <default>false</default>
+                <label>Adding installation</label>
+            </value>
+            <value>
+                <fullName>Ad Hoc Rental</fullName>
+                <default>false</default>
+                <label>Ad Hoc Rental</label>
+            </value>
+            <value>
+                <fullName>Adjustment Of Fuel Card Invoices</fullName>
+                <default>false</default>
+                <label>Adjustment Of Fuel Card Invoices</label>
+            </value>
+            <value>
+                <fullName>Administrative</fullName>
+                <default>false</default>
+                <label>Administrative</label>
+            </value>
+            <value>
+                <fullName>Administrative cost</fullName>
+                <default>false</default>
+                <label>Administrative cost</label>
+            </value>
+            <value>
+                <fullName>Administrative expenses</fullName>
+                <default>false</default>
+                <label>Administrative expenses</label>
+            </value>
+            <value>
+                <fullName>Administratives reasons</fullName>
+                <default>false</default>
+                <label>Administratives reasons</label>
+            </value>
+            <value>
+                <fullName>Advertising</fullName>
+                <default>false</default>
+                <label>Advertising</label>
+            </value>
+            <value>
+                <fullName>Aggancio RID non avvenuto</fullName>
+                <default>false</default>
+                <label>Aggancio RID non avvenuto</label>
+            </value>
+            <value>
+                <fullName>ALD DIRETTO</fullName>
+                <default>false</default>
+                <label>ALD DIRETTO</label>
+            </value>
+            <value>
+                <fullName>ALD INDIRETTO</fullName>
+                <default>false</default>
+                <label>ALD INDIRETTO</label>
+            </value>
+            <value>
+                <fullName>Altro</fullName>
+                <default>false</default>
+                <label>Altro</label>
+            </value>
+            <value>
+                <fullName>Amministrative</fullName>
+                <default>false</default>
+                <label>Amministrative</label>
+            </value>
+            <value>
+                <fullName>Amount deductibles</fullName>
+                <default>false</default>
+                <label>Amount deductibles</label>
+            </value>
+            <value>
+                <fullName>Anticipo</fullName>
+                <default>false</default>
+                <label>Anticipo</label>
+            </value>
+            <value>
+                <fullName>Antifurto satellitare</fullName>
+                <default>false</default>
+                <label>Antifurto satellitare</label>
+            </value>
+            <value>
+                <fullName>Appointment</fullName>
+                <default>false</default>
+                <label>Appointment</label>
+            </value>
+            <value>
+                <fullName>Assembly and defectiveness</fullName>
+                <default>false</default>
+                <label>Assembly and defectiveness</label>
+            </value>
+            <value>
+                <fullName>Assembly and defectiveness/check mark</fullName>
+                <default>false</default>
+                <label>Assembly and defectiveness/check mark</label>
+            </value>
+            <value>
+                <fullName>Assistance</fullName>
+                <default>false</default>
+                <label>Assistance</label>
+            </value>
+            <value>
+                <fullName>ASSISTANCE ON LOCATION</fullName>
+                <default>false</default>
+                <label>ASSISTANCE ON LOCATION</label>
+            </value>
+            <value>
+                <fullName>Assistenza all&apos;estero</fullName>
+                <default>false</default>
+                <label>Assistenza all&apos;estero</label>
+            </value>
+            <value>
+                <fullName>Assistenza assicurativa</fullName>
+                <default>false</default>
+                <label>Assistenza assicurativa</label>
+            </value>
+            <value>
+                <fullName>Attivazione Focus on Line</fullName>
+                <default>false</default>
+                <label>Attivazione Focus on Line</label>
+            </value>
+            <value>
+                <fullName>Auremento RCA</fullName>
+                <default>false</default>
+                <label>Auremento RCA</label>
+            </value>
+            <value>
+                <fullName>Aut. Storni e Rimborsi maintenance</fullName>
+                <default>false</default>
+                <label>Aut. Storni e Rimborsi maintenance</label>
+            </value>
+            <value>
+                <fullName>Authorization</fullName>
+                <default>false</default>
+                <label>Authorization</label>
+            </value>
+            <value>
+                <fullName>Authorization for tyre</fullName>
+                <default>false</default>
+                <label>Authorization for tyre</label>
+            </value>
+            <value>
+                <fullName>Authorization Forwritten Advertising</fullName>
+                <default>false</default>
+                <label>Authorization Forwritten Advertising</label>
+            </value>
+            <value>
+                <fullName>Authorization meccanic, bodyworks, crystals</fullName>
+                <default>false</default>
+                <label>Authorization meccanic, bodyworks, crystals</label>
+            </value>
+            <value>
+                <fullName>Authorization Mounting Accessories Charged To The Customer</fullName>
+                <default>false</default>
+                <label>Authorization Mounting Accessories Charged To The Customer</label>
+            </value>
+            <value>
+                <fullName>Authorization Release tires in storage</fullName>
+                <default>false</default>
+                <label>Authorization Release tires in storage</label>
+            </value>
+            <value>
+                <fullName>Authorization to send advertisement</fullName>
+                <default>false</default>
+                <label>Authorization to send advertisement</label>
+            </value>
+            <value>
+                <fullName>Authorized items</fullName>
+                <default>false</default>
+                <label>Authorized items</label>
+            </value>
+            <value>
+                <fullName>Autorizzazione cristallo</fullName>
+                <default>false</default>
+                <label>Autorizzazione cristallo</label>
+            </value>
+            <value>
+                <fullName>Autorizzazione Mecc/ Carr</fullName>
+                <default>false</default>
+                <label>Autorizzazione Mecc/ Carr</label>
+            </value>
+            <value>
+                <fullName>Autorizzazione pneumatico per sinistro</fullName>
+                <default>false</default>
+                <label>Autorizzazione pneumatico per sinistro</label>
+            </value>
+            <value>
+                <fullName>Backdated</fullName>
+                <default>false</default>
+                <label>Backdated</label>
+            </value>
+            <value>
+                <fullName>Billing</fullName>
+                <default>false</default>
+                <label>Billing</label>
+            </value>
+            <value>
+                <fullName>Billing extension</fullName>
+                <default>false</default>
+                <label>Billing extension</label>
+            </value>
+            <value>
+                <fullName>Billing for contract transfer (no rental)</fullName>
+                <default>false</default>
+                <label>Billing for contract transfer (no rental)</label>
+            </value>
+            <value>
+                <fullName>Black Management Customer</fullName>
+                <default>false</default>
+                <label>Black Management Customer</label>
+            </value>
+            <value>
+                <fullName>Block payments</fullName>
+                <default>false</default>
+                <label>Block payments</label>
+            </value>
+            <value>
+                <fullName>Body &amp; Paint repairs</fullName>
+                <default>false</default>
+                <label>Body &amp; Paint repairs</label>
+            </value>
+            <value>
+                <fullName>Body repair</fullName>
+                <default>false</default>
+                <label>Body repair</label>
+            </value>
+            <value>
+                <fullName>Bonifico/Assegno</fullName>
+                <default>false</default>
+                <label>Bonifico/Assegno</label>
+            </value>
+            <value>
+                <fullName>Booking</fullName>
+                <default>false</default>
+                <label>Booking</label>
+            </value>
+            <value>
+                <fullName>Booking/status</fullName>
+                <default>false</default>
+                <label>Booking/status</label>
+            </value>
+            <value>
+                <fullName>Bottom collision</fullName>
+                <default>false</default>
+                <label>Bottom collision</label>
+            </value>
+            <value>
+                <fullName>Branding verification</fullName>
+                <default>false</default>
+                <label>Branding verification</label>
+            </value>
+            <value>
+                <fullName>Breakdown</fullName>
+                <default>false</default>
+                <label>Breakdown</label>
+            </value>
+            <value>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+                <label>Call Center</label>
+            </value>
+            <value>
+                <fullName>Cambio Auto</fullName>
+                <default>false</default>
+                <label>Cambio Auto</label>
+            </value>
+            <value>
+                <fullName>Campaign renewals/modification</fullName>
+                <default>false</default>
+                <label>Campaign renewals/modification</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Cancellation RAC</fullName>
+                <default>false</default>
+                <label>Cancellation RAC</label>
+            </value>
+            <value>
+                <fullName>Cancel of LA (order)</fullName>
+                <default>false</default>
+                <label>Cancel of LA (order)</label>
+            </value>
+            <value>
+                <fullName>Carburante</fullName>
+                <default>false</default>
+                <label>Carburante</label>
+            </value>
+            <value>
+                <fullName>Car glass</fullName>
+                <default>false</default>
+                <label>Car glass</label>
+            </value>
+            <value>
+                <fullName>Carnet di manutenzione/manuale dell&apos;utilizzatore</fullName>
+                <default>false</default>
+                <label>Carnet di manutenzione/manuale dell&apos;utilizzatore</label>
+            </value>
+            <value>
+                <fullName>Carnet Garanzie</fullName>
+                <default>false</default>
+                <label>Carnet Garanzie</label>
+            </value>
+            <value>
+                <fullName>Car Ready</fullName>
+                <default>false</default>
+                <label>Car Ready</label>
+            </value>
+            <value>
+                <fullName>Car registration document</fullName>
+                <default>false</default>
+                <label>Car registration document</label>
+            </value>
+            <value>
+                <fullName>Carta carburante</fullName>
+                <default>false</default>
+                <label>Carta carburante</label>
+            </value>
+            <value>
+                <fullName>Car tax sticker</fullName>
+                <default>false</default>
+                <label>Car tax sticker</label>
+            </value>
+            <value>
+                <fullName>Casualty reason</fullName>
+                <default>false</default>
+                <label>Casualty reason</label>
+            </value>
+            <value>
+                <fullName>Casualty repair</fullName>
+                <default>false</default>
+                <label>Casualty repair</label>
+            </value>
+            <value>
+                <fullName>Catene neve</fullName>
+                <default>false</default>
+                <label>Catene neve</label>
+            </value>
+            <value>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+                <label>Certificate</label>
+            </value>
+            <value>
+                <fullName>Certificate Delivery</fullName>
+                <default>false</default>
+                <label>Certificate Delivery</label>
+            </value>
+            <value>
+                <fullName>Certified Copy</fullName>
+                <default>false</default>
+                <label>Certified Copy</label>
+            </value>
+            <value>
+                <fullName>Certified expatriate</fullName>
+                <default>false</default>
+                <label>Certified expatriate</label>
+            </value>
+            <value>
+                <fullName>Change driver</fullName>
+                <default>false</default>
+                <label>Change driver</label>
+            </value>
+            <value>
+                <fullName>Change in bank details</fullName>
+                <default>false</default>
+                <label>Change in bank details</label>
+            </value>
+            <value>
+                <fullName>Change leasepayment</fullName>
+                <default>false</default>
+                <label>Change leasepayment</label>
+            </value>
+            <value>
+                <fullName>Change name, Requisites</fullName>
+                <default>false</default>
+                <label>Change name, Requisites</label>
+            </value>
+            <value>
+                <fullName>Change of existing quotation</fullName>
+                <default>false</default>
+                <label>Change of existing quotation</label>
+            </value>
+            <value>
+                <fullName>Change of existing quotation Partnership</fullName>
+                <default>false</default>
+                <label>Change of existing quotation Partnership</label>
+            </value>
+            <value>
+                <fullName>Change of ownership</fullName>
+                <default>false</default>
+                <label>Change of ownership</label>
+            </value>
+            <value>
+                <fullName>Change personal data</fullName>
+                <default>false</default>
+                <label>Change personal data</label>
+            </value>
+            <value>
+                <fullName>Changes</fullName>
+                <default>false</default>
+                <label>Changes</label>
+            </value>
+            <value>
+                <fullName>changes/ratification</fullName>
+                <default>false</default>
+                <label>changes/ratification</label>
+            </value>
+            <value>
+                <fullName>Change vehicle</fullName>
+                <default>false</default>
+                <label>Change vehicle</label>
+            </value>
+            <value>
+                <fullName>Charge off relief ctr</fullName>
+                <default>false</default>
+                <label>Charge off relief ctr</label>
+            </value>
+            <value>
+                <fullName>Charge of penalty fee</fullName>
+                <default>false</default>
+                <label>Charge of penalty fee</label>
+            </value>
+            <value>
+                <fullName>Charge Payments</fullName>
+                <default>false</default>
+                <label>Charge Payments</label>
+            </value>
+            <value>
+                <fullName>Check permission for repairs</fullName>
+                <default>false</default>
+                <label>Check permission for repairs</label>
+            </value>
+            <value>
+                <fullName>Check repair</fullName>
+                <default>false</default>
+                <label>Check repair</label>
+            </value>
+            <value>
+                <fullName>Check user</fullName>
+                <default>false</default>
+                <label>Check user</label>
+            </value>
+            <value>
+                <fullName>CHEVROLET</fullName>
+                <default>false</default>
+                <label>CHEVROLET</label>
+            </value>
+            <value>
+                <fullName>Cliente moroso</fullName>
+                <default>false</default>
+                <label>Cliente moroso</label>
+            </value>
+            <value>
+                <fullName>Client Quotation</fullName>
+                <default>false</default>
+                <label>Client Quotation</label>
+            </value>
+            <value>
+                <fullName>Client request</fullName>
+                <default>false</default>
+                <label>Client request</label>
+            </value>
+            <value>
+                <fullName>Closure</fullName>
+                <default>false</default>
+                <label>Closure</label>
+            </value>
+            <value>
+                <fullName>Codice cliente</fullName>
+                <default>false</default>
+                <label>Codice cliente</label>
+            </value>
+            <value>
+                <fullName>Coefficiente km eccedente/rimborso</fullName>
+                <default>false</default>
+                <label>Coefficiente km eccedente/rimborso</label>
+            </value>
+            <value>
+                <fullName>Collection</fullName>
+                <default>false</default>
+                <label>Collection</label>
+            </value>
+            <value>
+                <fullName>Collision Left side</fullName>
+                <default>false</default>
+                <label>Collision Left side</label>
+            </value>
+            <value>
+                <fullName>Collision Right side</fullName>
+                <default>false</default>
+                <label>Collision Right side</label>
+            </value>
+            <value>
+                <fullName>Commercial allowance</fullName>
+                <default>false</default>
+                <label>Commercial allowance</label>
+            </value>
+            <value>
+                <fullName>Commercial information</fullName>
+                <default>false</default>
+                <label>Commercial information</label>
+            </value>
+            <value>
+                <fullName>Commercial Service</fullName>
+                <default>false</default>
+                <label>Commercial Service</label>
+            </value>
+            <value>
+                <fullName>Compesazione partite aperte</fullName>
+                <default>false</default>
+                <label>Compesazione partite aperte</label>
+            </value>
+            <value>
+                <fullName>Complaint w/out third party</fullName>
+                <default>false</default>
+                <label>Complaint w/out third party</label>
+            </value>
+            <value>
+                <fullName>Condition/status</fullName>
+                <default>false</default>
+                <label>Condition/status</label>
+            </value>
+            <value>
+                <fullName>Condizioni generali</fullName>
+                <default>false</default>
+                <label>Condizioni generali</label>
+            </value>
+            <value>
+                <fullName>Confirm</fullName>
+                <default>false</default>
+                <label>Confirm</label>
+            </value>
+            <value>
+                <fullName>Confirm Open Theft</fullName>
+                <default>false</default>
+                <label>Confirm Open Theft</label>
+            </value>
+            <value>
+                <fullName>Conguaglio Fuel</fullName>
+                <default>false</default>
+                <label>Conguaglio Fuel</label>
+            </value>
+            <value>
+                <fullName>Conguaglio Fuel card</fullName>
+                <default>false</default>
+                <label>Conguaglio Fuel card</label>
+            </value>
+            <value>
+                <fullName>Consolidated regional request</fullName>
+                <default>false</default>
+                <label>Consolidated regional request</label>
+            </value>
+            <value>
+                <fullName>Consulenza interna</fullName>
+                <default>false</default>
+                <label>Consulenza interna</label>
+            </value>
+            <value>
+                <fullName>Contract details</fullName>
+                <default>false</default>
+                <label>Contract details</label>
+            </value>
+            <value>
+                <fullName>Contract expired</fullName>
+                <default>false</default>
+                <label>Contract expired</label>
+            </value>
+            <value>
+                <fullName>Contract Modification</fullName>
+                <default>false</default>
+                <label>Contract Modification</label>
+            </value>
+            <value>
+                <fullName>Contract Transfer Request</fullName>
+                <default>false</default>
+                <label>Contract Transfer Request</label>
+            </value>
+            <value>
+                <fullName>Contractual waivers</fullName>
+                <default>false</default>
+                <label>Contractual waivers</label>
+            </value>
+            <value>
+                <fullName>Convention for tyre with service</fullName>
+                <default>false</default>
+                <label>Convention for tyre with service</label>
+            </value>
+            <value>
+                <fullName>Convenzionamento nuovo centro</fullName>
+                <default>false</default>
+                <label>Convenzionamento nuovo centro</label>
+            </value>
+            <value>
+                <fullName>Copie conformi</fullName>
+                <default>false</default>
+                <label>Copie conformi</label>
+            </value>
+            <value>
+                <fullName>Copie conformi (out)</fullName>
+                <default>false</default>
+                <label>Copie conformi (out)</label>
+            </value>
+            <value>
+                <fullName>Cost center</fullName>
+                <default>false</default>
+                <label>Cost center</label>
+            </value>
+            <value>
+                <fullName>Costi accessori</fullName>
+                <default>false</default>
+                <label>Costi accessori</label>
+            </value>
+            <value>
+                <fullName>Creation code</fullName>
+                <default>false</default>
+                <label>Creation code</label>
+            </value>
+            <value>
+                <fullName>Credit line renewal</fullName>
+                <default>false</default>
+                <label>Credit line renewal</label>
+            </value>
+            <value>
+                <fullName>Credit note</fullName>
+                <default>false</default>
+                <label>Credit note</label>
+            </value>
+            <value>
+                <fullName>Credito Sospeso</fullName>
+                <default>false</default>
+                <label>Credito Sospeso</label>
+            </value>
+            <value>
+                <fullName>Credit pending</fullName>
+                <default>false</default>
+                <label>Credit pending</label>
+            </value>
+            <value>
+                <fullName>Credit transfer</fullName>
+                <default>false</default>
+                <label>Credit transfer</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>Customer contract</fullName>
+                <default>false</default>
+                <label>Customer contract</label>
+            </value>
+            <value>
+                <fullName>Customer loyalty</fullName>
+                <default>false</default>
+                <label>Customer loyalty</label>
+            </value>
+            <value>
+                <fullName>D2D Service</fullName>
+                <default>false</default>
+                <label>D2D Service</label>
+            </value>
+            <value>
+                <fullName>damage : theft attempt</fullName>
+                <default>false</default>
+                <label>damage : theft attempt</label>
+            </value>
+            <value>
+                <fullName>Damage and accessory theft</fullName>
+                <default>false</default>
+                <label>Damage and accessory theft</label>
+            </value>
+            <value>
+                <fullName>damage and theft</fullName>
+                <default>false</default>
+                <label>damage and theft</label>
+            </value>
+            <value>
+                <fullName>Damage occurs</fullName>
+                <default>false</default>
+                <label>Damage occurs</label>
+            </value>
+            <value>
+                <fullName>Date/km</fullName>
+                <default>false</default>
+                <label>Date/km</label>
+            </value>
+            <value>
+                <fullName>Debit day exceeded</fullName>
+                <default>false</default>
+                <label>Debit day exceeded</label>
+            </value>
+            <value>
+                <fullName>Deductible</fullName>
+                <default>false</default>
+                <label>Deductible</label>
+            </value>
+            <value>
+                <fullName>Delays in deliveries</fullName>
+                <default>false</default>
+                <label>Delays in deliveries</label>
+            </value>
+            <value>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+                <label>Delivery</label>
+            </value>
+            <value>
+                <fullName>Delivery blocked</fullName>
+                <default>false</default>
+                <label>Delivery blocked</label>
+            </value>
+            <value>
+                <fullName>Delivery date</fullName>
+                <default>false</default>
+                <label>Delivery date</label>
+            </value>
+            <value>
+                <fullName>Delivery information</fullName>
+                <default>false</default>
+                <label>Delivery information</label>
+            </value>
+            <value>
+                <fullName>Delivery mode</fullName>
+                <default>false</default>
+                <label>Delivery mode</label>
+            </value>
+            <value>
+                <fullName>Delivery process</fullName>
+                <default>false</default>
+                <label>Delivery process</label>
+            </value>
+            <value>
+                <fullName>Deposition</fullName>
+                <default>false</default>
+                <label>Deposition</label>
+            </value>
+            <value>
+                <fullName>Deroghe non applicate</fullName>
+                <default>false</default>
+                <label>Deroghe non applicate</label>
+            </value>
+            <value>
+                <fullName>Dichiaraz. Intento e Iva</fullName>
+                <default>false</default>
+                <label>Dichiaraz. Intento e Iva</label>
+            </value>
+            <value>
+                <fullName>Direct feedback to the customer</fullName>
+                <default>false</default>
+                <label>Direct feedback to the customer</label>
+            </value>
+            <value>
+                <fullName>Discovery</fullName>
+                <default>false</default>
+                <label>Discovery</label>
+            </value>
+            <value>
+                <fullName>Discrepanza Prenotazione</fullName>
+                <default>false</default>
+                <label>Discrepanza Prenotazione</label>
+            </value>
+            <value>
+                <fullName>Diservice Service Point</fullName>
+                <default>false</default>
+                <label>Diservice Service Point</label>
+            </value>
+            <value>
+                <fullName>Dissequestro</fullName>
+                <default>false</default>
+                <label>Dissequestro</label>
+            </value>
+            <value>
+                <fullName>Disservice</fullName>
+                <default>false</default>
+                <label>Disservice</label>
+            </value>
+            <value>
+                <fullName>Disservizio</fullName>
+                <default>false</default>
+                <label>Disservizio</label>
+            </value>
+            <value>
+                <fullName>Documentation Request</fullName>
+                <default>false</default>
+                <label>Documentation Request</label>
+            </value>
+            <value>
+                <fullName>Document request</fullName>
+                <default>false</default>
+                <label>Document request</label>
+            </value>
+            <value>
+                <fullName>Documents</fullName>
+                <default>false</default>
+                <label>Documents</label>
+            </value>
+            <value>
+                <fullName>Door 2 Door /VIP Service</fullName>
+                <default>false</default>
+                <label>Door 2 Door /VIP Service</label>
+            </value>
+            <value>
+                <fullName>Dossier</fullName>
+                <default>false</default>
+                <label>Dossier</label>
+            </value>
+            <value>
+                <fullName>Driver care</fullName>
+                <default>false</default>
+                <label>Driver care</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Duplicate Axus card</fullName>
+                <default>false</default>
+                <label>Duplicate Axus card</label>
+            </value>
+            <value>
+                <fullName>Duplicate Book</fullName>
+                <default>false</default>
+                <label>Duplicate Book</label>
+            </value>
+            <value>
+                <fullName>Duplicate code</fullName>
+                <default>false</default>
+                <label>Duplicate code</label>
+            </value>
+            <value>
+                <fullName>Duplicato libretto</fullName>
+                <default>false</default>
+                <label>Duplicato libretto</label>
+            </value>
+            <value>
+                <fullName>Durata/km</fullName>
+                <default>false</default>
+                <label>Durata/km</label>
+            </value>
+            <value>
+                <fullName>Durc</fullName>
+                <default>false</default>
+                <label>Durc</label>
+            </value>
+            <value>
+                <fullName>Early termination</fullName>
+                <default>false</default>
+                <label>Early termination</label>
+            </value>
+            <value>
+                <fullName>Early termination Selling Price Difference</fullName>
+                <default>false</default>
+                <label>Early termination Selling Price Difference</label>
+            </value>
+            <value>
+                <fullName>Early termination with Fee</fullName>
+                <default>false</default>
+                <label>Early termination with Fee</label>
+            </value>
+            <value>
+                <fullName>Early termination without Fee</fullName>
+                <default>false</default>
+                <label>Early termination without Fee</label>
+            </value>
+            <value>
+                <fullName>EC Aperti e chiusi</fullName>
+                <default>false</default>
+                <label>EC Aperti e chiusi</label>
+            </value>
+            <value>
+                <fullName>EC RID</fullName>
+                <default>false</default>
+                <label>EC RID</label>
+            </value>
+            <value>
+                <fullName>EC RID (out)</fullName>
+                <default>false</default>
+                <label>EC RID (out)</label>
+            </value>
+            <value>
+                <fullName>Edit/ratification</fullName>
+                <default>false</default>
+                <label>Edit/ratification</label>
+            </value>
+            <value>
+                <fullName>Eletronic file</fullName>
+                <default>false</default>
+                <label>Eletronic file</label>
+            </value>
+            <value>
+                <fullName>End of contract</fullName>
+                <default>false</default>
+                <label>End of contract</label>
+            </value>
+            <value>
+                <fullName>End of contract &amp; Remarketing</fullName>
+                <default>false</default>
+                <label>End of contract &amp; Remarketing</label>
+            </value>
+            <value>
+                <fullName>Equaling opens</fullName>
+                <default>false</default>
+                <label>Equaling opens</label>
+            </value>
+            <value>
+                <fullName>Error on client number code (no contract transfer)</fullName>
+                <default>false</default>
+                <label>Error on client number code (no contract transfer)</label>
+            </value>
+            <value>
+                <fullName>Esito messa a disposizione</fullName>
+                <default>false</default>
+                <label>Esito messa a disposizione</label>
+            </value>
+            <value>
+                <fullName>Expatriation</fullName>
+                <default>false</default>
+                <label>Expatriation</label>
+            </value>
+            <value>
+                <fullName>Expired Contract</fullName>
+                <default>false</default>
+                <label>Expired Contract</label>
+            </value>
+            <value>
+                <fullName>Expired Management</fullName>
+                <default>false</default>
+                <label>Expired Management</label>
+            </value>
+            <value>
+                <fullName>Extension for renewal</fullName>
+                <default>false</default>
+                <label>Extension for renewal</label>
+            </value>
+            <value>
+                <fullName>Extension relief</fullName>
+                <default>false</default>
+                <label>Extension relief</label>
+            </value>
+            <value>
+                <fullName>External structure body</fullName>
+                <default>false</default>
+                <label>External structure body</label>
+            </value>
+            <value>
+                <fullName>Fattura Fuel card/ Anticipo/ Quota parte</fullName>
+                <default>false</default>
+                <label>Fattura Fuel card/ Anticipo/ Quota parte</label>
+            </value>
+            <value>
+                <fullName>Fatturazione</fullName>
+                <default>false</default>
+                <label>Fatturazione</label>
+            </value>
+            <value>
+                <fullName>Fatture fine contratto (km eccedenti;penale risoluzione anticipata,storno canone fine contratto)</fullName>
+                <default>false</default>
+                <label>Fatture fine contratto (km eccedenti;penale risoluzione anticipata,storno canone fine contratto)</label>
+            </value>
+            <value>
+                <fullName>Fatture x volture (non canone)</fullName>
+                <default>false</default>
+                <label>Fatture x volture (non canone)</label>
+            </value>
+            <value>
+                <fullName>FBP</fullName>
+                <default>false</default>
+                <label>FBP</label>
+            </value>
+            <value>
+                <fullName>Fidejussione</fullName>
+                <default>false</default>
+                <label>Fidejussione</label>
+            </value>
+            <value>
+                <fullName>File Acceptance</fullName>
+                <default>false</default>
+                <label>File Acceptance</label>
+            </value>
+            <value>
+                <fullName>File management billing</fullName>
+                <default>false</default>
+                <label>File management billing</label>
+            </value>
+            <value>
+                <fullName>Finance down payment</fullName>
+                <default>false</default>
+                <label>Finance down payment</label>
+            </value>
+            <value>
+                <fullName>Fines</fullName>
+                <default>false</default>
+                <label>Fines</label>
+            </value>
+            <value>
+                <fullName>FMT</fullName>
+                <default>false</default>
+                <label>FMT</label>
+            </value>
+            <value>
+                <fullName>FMTMS</fullName>
+                <default>false</default>
+                <label>FMTMS</label>
+            </value>
+            <value>
+                <fullName>Focus On Line</fullName>
+                <default>false</default>
+                <label>Focus On Line</label>
+            </value>
+            <value>
+                <fullName>Foreign Residence Permits</fullName>
+                <default>false</default>
+                <label>Foreign Residence Permits</label>
+            </value>
+            <value>
+                <fullName>Franchigia sinistri/Furto</fullName>
+                <default>false</default>
+                <label>Franchigia sinistri/Furto</label>
+            </value>
+            <value>
+                <fullName>Franchigia veicolo Sostitutivo/Pre-assegnazione</fullName>
+                <default>false</default>
+                <label>Franchigia veicolo Sostitutivo/Pre-assegnazione</label>
+            </value>
+            <value>
+                <fullName>Franchigie</fullName>
+                <default>false</default>
+                <label>Franchigie</label>
+            </value>
+            <value>
+                <fullName>Franchise</fullName>
+                <default>false</default>
+                <label>Franchise</label>
+            </value>
+            <value>
+                <fullName>Free bonus project</fullName>
+                <default>false</default>
+                <label>Free bonus project</label>
+            </value>
+            <value>
+                <fullName>Front collision</fullName>
+                <default>false</default>
+                <label>Front collision</label>
+            </value>
+            <value>
+                <fullName>Fuel Adjustment</fullName>
+                <default>false</default>
+                <label>Fuel Adjustment</label>
+            </value>
+            <value>
+                <fullName>Fuel Card</fullName>
+                <default>false</default>
+                <label>Fuel Card</label>
+            </value>
+            <value>
+                <fullName>Fuel card balance</fullName>
+                <default>false</default>
+                <label>Fuel card balance</label>
+            </value>
+            <value>
+                <fullName>Fuel card management</fullName>
+                <default>false</default>
+                <label>Fuel card management</label>
+            </value>
+            <value>
+                <fullName>Fuel cards</fullName>
+                <default>false</default>
+                <label>Fuel cards</label>
+            </value>
+            <value>
+                <fullName>Fuel invoices</fullName>
+                <default>false</default>
+                <label>Fuel invoices</label>
+            </value>
+            <value>
+                <fullName>Fuel management</fullName>
+                <default>false</default>
+                <label>Fuel management</label>
+            </value>
+            <value>
+                <fullName>Funzionamento conguaglio</fullName>
+                <default>false</default>
+                <label>Funzionamento conguaglio</label>
+            </value>
+            <value>
+                <fullName>Fuori orario</fullName>
+                <default>false</default>
+                <label>Fuori orario</label>
+            </value>
+            <value>
+                <fullName>Furniture contract</fullName>
+                <default>false</default>
+                <label>Furniture contract</label>
+            </value>
+            <value>
+                <fullName>Furto</fullName>
+                <default>false</default>
+                <label>Furto</label>
+            </value>
+            <value>
+                <fullName>Furto &amp; Ritrovamento</fullName>
+                <default>false</default>
+                <label>Furto &amp; Ritrovamento</label>
+            </value>
+            <value>
+                <fullName>Furto o Smarrimento Fuel Card</fullName>
+                <default>false</default>
+                <label>Furto o Smarrimento Fuel Card</label>
+            </value>
+            <value>
+                <fullName>Garage service quality</fullName>
+                <default>false</default>
+                <label>Garage service quality</label>
+            </value>
+            <value>
+                <fullName>General damage</fullName>
+                <default>false</default>
+                <label>General damage</label>
+            </value>
+            <value>
+                <fullName>General signs</fullName>
+                <default>false</default>
+                <label>General signs</label>
+            </value>
+            <value>
+                <fullName>Gestione scaduto</fullName>
+                <default>false</default>
+                <label>Gestione scaduto</label>
+            </value>
+            <value>
+                <fullName>Group inferior</fullName>
+                <default>false</default>
+                <label>Group inferior</label>
+            </value>
+            <value>
+                <fullName>Gruppo inferiore</fullName>
+                <default>false</default>
+                <label>Gruppo inferiore</label>
+            </value>
+            <value>
+                <fullName>Guarantee</fullName>
+                <default>false</default>
+                <label>Guarantee</label>
+            </value>
+            <value>
+                <fullName>Guasto ripetuto</fullName>
+                <default>false</default>
+                <label>Guasto ripetuto</label>
+            </value>
+            <value>
+                <fullName>hail</fullName>
+                <default>false</default>
+                <label>hail</label>
+            </value>
+            <value>
+                <fullName>Helpline</fullName>
+                <default>false</default>
+                <label>Helpline</label>
+            </value>
+            <value>
+                <fullName>HONDA</fullName>
+                <default>false</default>
+                <label>HONDA</label>
+            </value>
+            <value>
+                <fullName>Impounded</fullName>
+                <default>false</default>
+                <label>Impounded</label>
+            </value>
+            <value>
+                <fullName>Incorrect place of delivery charges</fullName>
+                <default>false</default>
+                <label>Incorrect place of delivery charges</label>
+            </value>
+            <value>
+                <fullName>Increase of insurance premium</fullName>
+                <default>false</default>
+                <label>Increase of insurance premium</label>
+            </value>
+            <value>
+                <fullName>Increase of the rental rate for insurance</fullName>
+                <default>false</default>
+                <label>Increase of the rental rate for insurance</label>
+            </value>
+            <value>
+                <fullName>Increasing RCA</fullName>
+                <default>false</default>
+                <label>Increasing RCA</label>
+            </value>
+            <value>
+                <fullName>info/duplicate</fullName>
+                <default>false</default>
+                <label>info/duplicate</label>
+            </value>
+            <value>
+                <fullName>Info MAD</fullName>
+                <default>false</default>
+                <label>Info MAD</label>
+            </value>
+            <value>
+                <fullName>Info on billing</fullName>
+                <default>false</default>
+                <label>Info on billing</label>
+            </value>
+            <value>
+                <fullName>Information</fullName>
+                <default>false</default>
+                <label>Information</label>
+            </value>
+            <value>
+                <fullName>Information adjustment</fullName>
+                <default>false</default>
+                <label>Information adjustment</label>
+            </value>
+            <value>
+                <fullName>Information on fee increased</fullName>
+                <default>false</default>
+                <label>Information on fee increased</label>
+            </value>
+            <value>
+                <fullName>Information on hire</fullName>
+                <default>false</default>
+                <label>Information on hire</label>
+            </value>
+            <value>
+                <fullName>Information on maintenance</fullName>
+                <default>false</default>
+                <label>Information on maintenance</label>
+            </value>
+            <value>
+                <fullName>Information request</fullName>
+                <default>false</default>
+                <label>Information request</label>
+            </value>
+            <value>
+                <fullName>Information service point</fullName>
+                <default>false</default>
+                <label>Information service point</label>
+            </value>
+            <value>
+                <fullName>Information user</fullName>
+                <default>false</default>
+                <label>Information user</label>
+            </value>
+            <value>
+                <fullName>Informazioni su contratto</fullName>
+                <default>false</default>
+                <label>Informazioni su contratto</label>
+            </value>
+            <value>
+                <fullName>Installazione accessori</fullName>
+                <default>false</default>
+                <label>Installazione accessori</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Insurance authorization</fullName>
+                <default>false</default>
+                <label>Insurance authorization</label>
+            </value>
+            <value>
+                <fullName>Insurance car</fullName>
+                <default>false</default>
+                <label>Insurance car</label>
+            </value>
+            <value>
+                <fullName>Insurance certificate</fullName>
+                <default>false</default>
+                <label>Insurance certificate</label>
+            </value>
+            <value>
+                <fullName>Insurance repair</fullName>
+                <default>false</default>
+                <label>Insurance repair</label>
+            </value>
+            <value>
+                <fullName>Insurance Statement</fullName>
+                <default>false</default>
+                <label>Insurance Statement</label>
+            </value>
+            <value>
+                <fullName>Intent declaration and Vat</fullName>
+                <default>false</default>
+                <label>Intent declaration and Vat</label>
+            </value>
+            <value>
+                <fullName>Intervento in garanzia</fullName>
+                <default>false</default>
+                <label>Intervento in garanzia</label>
+            </value>
+            <value>
+                <fullName>Invio denuncia CON controparte</fullName>
+                <default>false</default>
+                <label>Invio denuncia CON controparte</label>
+            </value>
+            <value>
+                <fullName>Invio denuncia SENZA controparte</fullName>
+                <default>false</default>
+                <label>Invio denuncia SENZA controparte</label>
+            </value>
+            <value>
+                <fullName>Invio modulo RID ALD</fullName>
+                <default>false</default>
+                <label>Invio modulo RID ALD</label>
+            </value>
+            <value>
+                <fullName>Invio modulo RID BP</fullName>
+                <default>false</default>
+                <label>Invio modulo RID BP</label>
+            </value>
+            <value>
+                <fullName>Invio modulo RID LRT</fullName>
+                <default>false</default>
+                <label>Invio modulo RID LRT</label>
+            </value>
+            <value>
+                <fullName>Invoice/Accounting</fullName>
+                <default>false</default>
+                <label>Invoice/Accounting</label>
+            </value>
+            <value>
+                <fullName>Invoice information</fullName>
+                <default>false</default>
+                <label>Invoice information</label>
+            </value>
+            <value>
+                <fullName>Invoicing</fullName>
+                <default>false</default>
+                <label>Invoicing</label>
+            </value>
+            <value>
+                <fullName>Invoicing for payment in advance</fullName>
+                <default>false</default>
+                <label>Invoicing for payment in advance</label>
+            </value>
+            <value>
+                <fullName>Key double / booklet</fullName>
+                <default>false</default>
+                <label>Key double / booklet</label>
+            </value>
+            <value>
+                <fullName>Km balance</fullName>
+                <default>false</default>
+                <label>Km balance</label>
+            </value>
+            <value>
+                <fullName>Km contract closure</fullName>
+                <default>false</default>
+                <label>Km contract closure</label>
+            </value>
+            <value>
+                <fullName>Km eccedenti</fullName>
+                <default>false</default>
+                <label>Km eccedenti</label>
+            </value>
+            <value>
+                <fullName>Lack of documentation on board</fullName>
+                <default>false</default>
+                <label>Lack of documentation on board</label>
+            </value>
+            <value>
+                <fullName>Lack of item in the vehicle</fullName>
+                <default>false</default>
+                <label>Lack of item in the vehicle</label>
+            </value>
+            <value>
+                <fullName>Lack or inconsistent accessories after market</fullName>
+                <default>false</default>
+                <label>Lack or inconsistent accessories after market</label>
+            </value>
+            <value>
+                <fullName>Lack or inconsistent accessories factory</fullName>
+                <default>false</default>
+                <label>Lack or inconsistent accessories factory</label>
+            </value>
+            <value>
+                <fullName>LA correction</fullName>
+                <default>false</default>
+                <label>LA correction</label>
+            </value>
+            <value>
+                <fullName>Layout</fullName>
+                <default>false</default>
+                <label>Layout</label>
+            </value>
+            <value>
+                <fullName>Leaseback</fullName>
+                <default>false</default>
+                <label>Leaseback</label>
+            </value>
+            <value>
+                <fullName>Left</fullName>
+                <default>false</default>
+                <label>Left</label>
+            </value>
+            <value>
+                <fullName>LEXUS</fullName>
+                <default>false</default>
+                <label>LEXUS</label>
+            </value>
+            <value>
+                <fullName>Limit on drive</fullName>
+                <default>false</default>
+                <label>Limit on drive</label>
+            </value>
+            <value>
+                <fullName>LOCAT</fullName>
+                <default>false</default>
+                <label>LOCAT</label>
+            </value>
+            <value>
+                <fullName>Logistic</fullName>
+                <default>false</default>
+                <label>Logistic</label>
+            </value>
+            <value>
+                <fullName>Loss of documents/keys/plate</fullName>
+                <default>false</default>
+                <label>Loss of documents/keys/plate</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>Maintenance &amp; Repair</fullName>
+                <default>false</default>
+                <label>Maintenance &amp; Repair</label>
+            </value>
+            <value>
+                <fullName>Maintenance Reimbursement</fullName>
+                <default>false</default>
+                <label>Maintenance Reimbursement</label>
+            </value>
+            <value>
+                <fullName>Management of seizures</fullName>
+                <default>false</default>
+                <label>Management of seizures</label>
+            </value>
+            <value>
+                <fullName>Mancanza ricambio</fullName>
+                <default>false</default>
+                <label>Mancanza ricambio</label>
+            </value>
+            <value>
+                <fullName>Mancata erogazione</fullName>
+                <default>false</default>
+                <label>Mancata erogazione</label>
+            </value>
+            <value>
+                <fullName>Manual Movement</fullName>
+                <default>false</default>
+                <label>Manual Movement</label>
+            </value>
+            <value>
+                <fullName>Manutenzione in generale</fullName>
+                <default>false</default>
+                <label>Manutenzione in generale</label>
+            </value>
+            <value>
+                <fullName>Marca</fullName>
+                <default>false</default>
+                <label>Marca</label>
+            </value>
+            <value>
+                <fullName>Massive Modification</fullName>
+                <default>false</default>
+                <label>Massive Modification</label>
+            </value>
+            <value>
+                <fullName>MAZDA</fullName>
+                <default>false</default>
+                <label>MAZDA</label>
+            </value>
+            <value>
+                <fullName>Mechanical failure</fullName>
+                <default>false</default>
+                <label>Mechanical failure</label>
+            </value>
+            <value>
+                <fullName>Mechanical repairs</fullName>
+                <default>false</default>
+                <label>Mechanical repairs</label>
+            </value>
+            <value>
+                <fullName>Mechanics</fullName>
+                <default>false</default>
+                <label>Mechanics</label>
+            </value>
+            <value>
+                <fullName>Meet deadlines</fullName>
+                <default>false</default>
+                <label>Meet deadlines</label>
+            </value>
+            <value>
+                <fullName>Mini-Rent</fullName>
+                <default>false</default>
+                <label>Mini-Rent</label>
+            </value>
+            <value>
+                <fullName>Minutes</fullName>
+                <default>false</default>
+                <label>Minutes</label>
+            </value>
+            <value>
+                <fullName>Misaligned contracts</fullName>
+                <default>false</default>
+                <label>Misaligned contracts</label>
+            </value>
+            <value>
+                <fullName>MLA</fullName>
+                <default>false</default>
+                <label>MLA</label>
+            </value>
+            <value>
+                <fullName>MLAMS</fullName>
+                <default>false</default>
+                <label>MLAMS</label>
+            </value>
+            <value>
+                <fullName>Modalità noleggio</fullName>
+                <default>false</default>
+                <label>Modalità noleggio</label>
+            </value>
+            <value>
+                <fullName>Modality</fullName>
+                <default>false</default>
+                <label>Modality</label>
+            </value>
+            <value>
+                <fullName>Modifica contrattuale</fullName>
+                <default>false</default>
+                <label>Modifica contrattuale</label>
+            </value>
+            <value>
+                <fullName>Modifica e/o inserimento</fullName>
+                <default>false</default>
+                <label>Modifica e/o inserimento</label>
+            </value>
+            <value>
+                <fullName>Modifica relief</fullName>
+                <default>false</default>
+                <label>Modifica relief</label>
+            </value>
+            <value>
+                <fullName>Modification</fullName>
+                <default>false</default>
+                <label>Modification</label>
+            </value>
+            <value>
+                <fullName>Modified start date</fullName>
+                <default>false</default>
+                <label>Modified start date</label>
+            </value>
+            <value>
+                <fullName>Monitoring</fullName>
+                <default>false</default>
+                <label>Monitoring</label>
+            </value>
+            <value>
+                <fullName>Montaggio e difettosità</fullName>
+                <default>false</default>
+                <label>Montaggio e difettosità</label>
+            </value>
+            <value>
+                <fullName>Monte gomme</fullName>
+                <default>false</default>
+                <label>Monte gomme</label>
+            </value>
+            <value>
+                <fullName>Monthly extension</fullName>
+                <default>false</default>
+                <label>Monthly extension</label>
+            </value>
+            <value>
+                <fullName>Motor</fullName>
+                <default>false</default>
+                <label>Motor</label>
+            </value>
+            <value>
+                <fullName>Mountain Rubbers</fullName>
+                <default>false</default>
+                <label>Mountain Rubbers</label>
+            </value>
+            <value>
+                <fullName>Multa</fullName>
+                <default>false</default>
+                <label>Multa</label>
+            </value>
+            <value>
+                <fullName>Multiple request</fullName>
+                <default>false</default>
+                <label>Multiple request</label>
+            </value>
+            <value>
+                <fullName>New order</fullName>
+                <default>false</default>
+                <label>New order</label>
+            </value>
+            <value>
+                <fullName>New quotation request</fullName>
+                <default>false</default>
+                <label>New quotation request</label>
+            </value>
+            <value>
+                <fullName>New quotation request Partnership</fullName>
+                <default>false</default>
+                <label>New quotation request Partnership</label>
+            </value>
+            <value>
+                <fullName>NISSAN</fullName>
+                <default>false</default>
+                <label>NISSAN</label>
+            </value>
+            <value>
+                <fullName>Non inseribile nel web</fullName>
+                <default>false</default>
+                <label>Non inseribile nel web</label>
+            </value>
+            <value>
+                <fullName>Notification/collection of document</fullName>
+                <default>false</default>
+                <label>Notification/collection of document</label>
+            </value>
+            <value>
+                <fullName>Not insertable web</fullName>
+                <default>false</default>
+                <label>Not insertable web</label>
+            </value>
+            <value>
+                <fullName>NTW 1 (Lomb,Tren,Friu,Vall,Sard,Ligu)</fullName>
+                <default>false</default>
+                <label>NTW 1 (Lomb,Tren,Friu,Vall,Sard,Ligu)</label>
+            </value>
+            <value>
+                <fullName>NTW 1 (Lombardia)</fullName>
+                <default>false</default>
+                <label>NTW 1 (Lombardia)</label>
+            </value>
+            <value>
+                <fullName>NTW 2 (Altre regioni)</fullName>
+                <default>false</default>
+                <label>NTW 2 (Altre regioni)</label>
+            </value>
+            <value>
+                <fullName>NTW 2 (Piem,Tosc,Cala,Vene,Emil)</fullName>
+                <default>false</default>
+                <label>NTW 2 (Piem,Tosc,Cala,Vene,Emil)</label>
+            </value>
+            <value>
+                <fullName>NTW 3 (Emilia Romagna, Liguria, Lazio)</fullName>
+                <default>false</default>
+                <label>NTW 3 (Emilia Romagna, Liguria, Lazio)</label>
+            </value>
+            <value>
+                <fullName>NTW 3 (Lazi,Marc,Umbr,Abru,Basi,Pugl,Camp,Moli,Sici)</fullName>
+                <default>false</default>
+                <label>NTW 3 (Lazi,Marc,Umbr,Abru,Basi,Pugl,Camp,Moli,Sici)</label>
+            </value>
+            <value>
+                <fullName>NTW 4 (Sud Italia)</fullName>
+                <default>false</default>
+                <label>NTW 4 (Sud Italia)</label>
+            </value>
+            <value>
+                <fullName>Nuova Richiesta</fullName>
+                <default>false</default>
+                <label>Nuova Richiesta</label>
+            </value>
+            <value>
+                <fullName>OPEL</fullName>
+                <default>false</default>
+                <label>OPEL</label>
+            </value>
+            <value>
+                <fullName>Operative</fullName>
+                <default>false</default>
+                <label>Operative</label>
+            </value>
+            <value>
+                <fullName>Optional in one amount</fullName>
+                <default>false</default>
+                <label>Optional in one amount</label>
+            </value>
+            <value>
+                <fullName>Options</fullName>
+                <default>false</default>
+                <label>Options</label>
+            </value>
+            <value>
+                <fullName>Options extension</fullName>
+                <default>false</default>
+                <label>Options extension</label>
+            </value>
+            <value>
+                <fullName>Order cancellation</fullName>
+                <default>false</default>
+                <label>Order cancellation</label>
+            </value>
+            <value>
+                <fullName>Ordering &amp; Delivery</fullName>
+                <default>false</default>
+                <label>Ordering &amp; Delivery</label>
+            </value>
+            <value>
+                <fullName>Ordering modified</fullName>
+                <default>false</default>
+                <label>Ordering modified</label>
+            </value>
+            <value>
+                <fullName>Order process</fullName>
+                <default>false</default>
+                <label>Order process</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Others_</fullName>
+                <default>false</default>
+                <label>Others_</label>
+            </value>
+            <value>
+                <fullName>Our bank information</fullName>
+                <default>false</default>
+                <label>Our bank information</label>
+            </value>
+            <value>
+                <fullName>PAI</fullName>
+                <default>false</default>
+                <label>PAI</label>
+            </value>
+            <value>
+                <fullName>Passive accident</fullName>
+                <default>false</default>
+                <label>Passive accident</label>
+            </value>
+            <value>
+                <fullName>Password</fullName>
+                <default>false</default>
+                <label>Password</label>
+            </value>
+            <value>
+                <fullName>Payment, re-notification</fullName>
+                <default>false</default>
+                <label>Payment, re-notification</label>
+            </value>
+            <value>
+                <fullName>Penale annullamento</fullName>
+                <default>false</default>
+                <label>Penale annullamento</label>
+            </value>
+            <value>
+                <fullName>Penale risoluzione anticipata</fullName>
+                <default>false</default>
+                <label>Penale risoluzione anticipata</label>
+            </value>
+            <value>
+                <fullName>Penalty</fullName>
+                <default>false</default>
+                <label>Penalty</label>
+            </value>
+            <value>
+                <fullName>Penalty clause</fullName>
+                <default>false</default>
+                <label>Penalty clause</label>
+            </value>
+            <value>
+                <fullName>Penalty on km and end of contract</fullName>
+                <default>false</default>
+                <label>Penalty on km and end of contract</label>
+            </value>
+            <value>
+                <fullName>Periodical technical inspection (ITP)</fullName>
+                <default>false</default>
+                <label>Periodical technical inspection (ITP)</label>
+            </value>
+            <value>
+                <fullName>Perizia danni</fullName>
+                <default>false</default>
+                <label>Perizia danni</label>
+            </value>
+            <value>
+                <fullName>Permessi espatrio (out)</fullName>
+                <default>false</default>
+                <label>Permessi espatrio (out)</label>
+            </value>
+            <value>
+                <fullName>Permessi ZTL (out)</fullName>
+                <default>false</default>
+                <label>Permessi ZTL (out)</label>
+            </value>
+            <value>
+                <fullName>Permesso di Espatrio</fullName>
+                <default>false</default>
+                <label>Permesso di Espatrio</label>
+            </value>
+            <value>
+                <fullName>Permesso ZTL</fullName>
+                <default>false</default>
+                <label>Permesso ZTL</label>
+            </value>
+            <value>
+                <fullName>Permits</fullName>
+                <default>false</default>
+                <label>Permits</label>
+            </value>
+            <value>
+                <fullName>Pick up availability</fullName>
+                <default>false</default>
+                <label>Pick up availability</label>
+            </value>
+            <value>
+                <fullName>Pneumatic availability</fullName>
+                <default>false</default>
+                <label>Pneumatic availability</label>
+            </value>
+            <value>
+                <fullName>Pneumatici in giacenza presso centro</fullName>
+                <default>false</default>
+                <label>Pneumatici in giacenza presso centro</label>
+            </value>
+            <value>
+                <fullName>Pneumatics</fullName>
+                <default>false</default>
+                <label>Pneumatics</label>
+            </value>
+            <value>
+                <fullName>Pneumatics transfer</fullName>
+                <default>false</default>
+                <label>Pneumatics transfer</label>
+            </value>
+            <value>
+                <fullName>Pneus diversi anteriore-posteriore</fullName>
+                <default>false</default>
+                <label>Pneus diversi anteriore-posteriore</label>
+            </value>
+            <value>
+                <fullName>Policy agreement</fullName>
+                <default>false</default>
+                <label>Policy agreement</label>
+            </value>
+            <value>
+                <fullName>Pool</fullName>
+                <default>false</default>
+                <label>Pool</label>
+            </value>
+            <value>
+                <fullName>Pool vehicule request</fullName>
+                <default>false</default>
+                <label>Pool vehicule request</label>
+            </value>
+            <value>
+                <fullName>Post vendita usato (fatture di vendita;doppie chiavi;libretto)</fullName>
+                <default>false</default>
+                <label>Post vendita usato (fatture di vendita;doppie chiavi;libretto)</label>
+            </value>
+            <value>
+                <fullName>Preassegnazione</fullName>
+                <default>false</default>
+                <label>Preassegnazione</label>
+            </value>
+            <value>
+                <fullName>Preleasing</fullName>
+                <default>false</default>
+                <label>Preleasing</label>
+            </value>
+            <value>
+                <fullName>Preleasing discount</fullName>
+                <default>false</default>
+                <label>Preleasing discount</label>
+            </value>
+            <value>
+                <fullName>Pre leasing vehicle (no rental)</fullName>
+                <default>false</default>
+                <label>Pre leasing vehicle (no rental)</label>
+            </value>
+            <value>
+                <fullName>Premises welcome</fullName>
+                <default>false</default>
+                <label>Premises welcome</label>
+            </value>
+            <value>
+                <fullName>Prenotazione Sostitutiva</fullName>
+                <default>false</default>
+                <label>Prenotazione Sostitutiva</label>
+            </value>
+            <value>
+                <fullName>Preorder</fullName>
+                <default>false</default>
+                <label>Preorder</label>
+            </value>
+            <value>
+                <fullName>Pre-Rent</fullName>
+                <default>false</default>
+                <label>Pre-Rent</label>
+            </value>
+            <value>
+                <fullName>Pre-runner / short term rental</fullName>
+                <default>false</default>
+                <label>Pre-runner / short term rental</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Price/model</fullName>
+                <default>false</default>
+                <label>Price/model</label>
+            </value>
+            <value>
+                <fullName>Problematiche accesso Focus Online</fullName>
+                <default>false</default>
+                <label>Problematiche accesso Focus Online</label>
+            </value>
+            <value>
+                <fullName>Problem on after mkt accessories</fullName>
+                <default>false</default>
+                <label>Problem on after mkt accessories</label>
+            </value>
+            <value>
+                <fullName>Problem on factory accessoies</fullName>
+                <default>false</default>
+                <label>Problem on factory accessoies</label>
+            </value>
+            <value>
+                <fullName>Problems of service delivery center</fullName>
+                <default>false</default>
+                <label>Problems of service delivery center</label>
+            </value>
+            <value>
+                <fullName>Problem With Withdrawal</fullName>
+                <default>false</default>
+                <label>Problem With Withdrawal</label>
+            </value>
+            <value>
+                <fullName>Professional advice</fullName>
+                <default>false</default>
+                <label>Professional advice</label>
+            </value>
+            <value>
+                <fullName>Progetto bonus canoni</fullName>
+                <default>false</default>
+                <label>Progetto bonus canoni</label>
+            </value>
+            <value>
+                <fullName>Prolongation option</fullName>
+                <default>false</default>
+                <label>Prolongation option</label>
+            </value>
+            <value>
+                <fullName>Prolonged relief</fullName>
+                <default>false</default>
+                <label>Prolonged relief</label>
+            </value>
+            <value>
+                <fullName>Prolungamento contrattuale</fullName>
+                <default>false</default>
+                <label>Prolungamento contrattuale</label>
+            </value>
+            <value>
+                <fullName>Prolungamento relief</fullName>
+                <default>false</default>
+                <label>Prolungamento relief</label>
+            </value>
+            <value>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+                <label>Prospect</label>
+            </value>
+            <value>
+                <fullName>Qualificazione conducente</fullName>
+                <default>false</default>
+                <label>Qualificazione conducente</label>
+            </value>
+            <value>
+                <fullName>Qualità</fullName>
+                <default>false</default>
+                <label>Qualità</label>
+            </value>
+            <value>
+                <fullName>Quantità franchigie</fullName>
+                <default>false</default>
+                <label>Quantità franchigie</label>
+            </value>
+            <value>
+                <fullName>Quick delivery research</fullName>
+                <default>false</default>
+                <label>Quick delivery research</label>
+            </value>
+            <value>
+                <fullName>Quota excluding extension</fullName>
+                <default>false</default>
+                <label>Quota excluding extension</label>
+            </value>
+            <value>
+                <fullName>Quota on extension</fullName>
+                <default>false</default>
+                <label>Quota on extension</label>
+            </value>
+            <value>
+                <fullName>Quota parte utilizzatore</fullName>
+                <default>false</default>
+                <label>Quota parte utilizzatore</label>
+            </value>
+            <value>
+                <fullName>Quota part no extension</fullName>
+                <default>false</default>
+                <label>Quota part no extension</label>
+            </value>
+            <value>
+                <fullName>Quotation</fullName>
+                <default>false</default>
+                <label>Quotation</label>
+            </value>
+            <value>
+                <fullName>Quotation used</fullName>
+                <default>false</default>
+                <label>Quotation used</label>
+            </value>
+            <value>
+                <fullName>RAT change</fullName>
+                <default>false</default>
+                <label>RAT change</label>
+            </value>
+            <value>
+                <fullName>Rate</fullName>
+                <default>false</default>
+                <label>Rate</label>
+            </value>
+            <value>
+                <fullName>Ratification of a contract</fullName>
+                <default>false</default>
+                <label>Ratification of a contract</label>
+            </value>
+            <value>
+                <fullName>Ratifications</fullName>
+                <default>false</default>
+                <label>Ratifications</label>
+            </value>
+            <value>
+                <fullName>RCA</fullName>
+                <default>false</default>
+                <label>RCA</label>
+            </value>
+            <value>
+                <fullName>RC campaign</fullName>
+                <default>false</default>
+                <label>RC campaign</label>
+            </value>
+            <value>
+                <fullName>Realse from theft</fullName>
+                <default>false</default>
+                <label>Realse from theft</label>
+            </value>
+            <value>
+                <fullName>Rear-end collision</fullName>
+                <default>false</default>
+                <label>Rear-end collision</label>
+            </value>
+            <value>
+                <fullName>Recovery transfer</fullName>
+                <default>false</default>
+                <label>Recovery transfer</label>
+            </value>
+            <value>
+                <fullName>Recupero</fullName>
+                <default>false</default>
+                <label>Recupero</label>
+            </value>
+            <value>
+                <fullName>Recupero PWD (out)</fullName>
+                <default>false</default>
+                <label>Recupero PWD (out)</label>
+            </value>
+            <value>
+                <fullName>Redemption car</fullName>
+                <default>false</default>
+                <label>Redemption car</label>
+            </value>
+            <value>
+                <fullName>re-entry vehicle</fullName>
+                <default>false</default>
+                <label>re-entry vehicle</label>
+            </value>
+            <value>
+                <fullName>Refund request</fullName>
+                <default>false</default>
+                <label>Refund request</label>
+            </value>
+            <value>
+                <fullName>Refunds Aci</fullName>
+                <default>false</default>
+                <label>Refunds Aci</label>
+            </value>
+            <value>
+                <fullName>Refusal of Client Support</fullName>
+                <default>false</default>
+                <label>Refusal of Client Support</label>
+            </value>
+            <value>
+                <fullName>Registration copy</fullName>
+                <default>false</default>
+                <label>Registration copy</label>
+            </value>
+            <value>
+                <fullName>Registry, activation</fullName>
+                <default>false</default>
+                <label>Registry, activation</label>
+            </value>
+            <value>
+                <fullName>Reimmatricolazione</fullName>
+                <default>false</default>
+                <label>Reimmatricolazione</label>
+            </value>
+            <value>
+                <fullName>Release from accident</fullName>
+                <default>false</default>
+                <label>Release from accident</label>
+            </value>
+            <value>
+                <fullName>Release From Seizure Incident</fullName>
+                <default>false</default>
+                <label>Release From Seizure Incident</label>
+            </value>
+            <value>
+                <fullName>Release From Seizure Theft</fullName>
+                <default>false</default>
+                <label>Release From Seizure Theft</label>
+            </value>
+            <value>
+                <fullName>Release from theft</fullName>
+                <default>false</default>
+                <label>Release from theft</label>
+            </value>
+            <value>
+                <fullName>Relief</fullName>
+                <default>false</default>
+                <label>Relief</label>
+            </value>
+            <value>
+                <fullName>Relief Car</fullName>
+                <default>false</default>
+                <label>Relief Car</label>
+            </value>
+            <value>
+                <fullName>Relief Modification</fullName>
+                <default>false</default>
+                <label>Relief Modification</label>
+            </value>
+            <value>
+                <fullName>Relief spot for prolonged failure</fullName>
+                <default>false</default>
+                <label>Relief spot for prolonged failure</label>
+            </value>
+            <value>
+                <fullName>Relitto</fullName>
+                <default>false</default>
+                <label>Relitto</label>
+            </value>
+            <value>
+                <fullName>Remarketing</fullName>
+                <default>false</default>
+                <label>Remarketing</label>
+            </value>
+            <value>
+                <fullName>RENAULT</fullName>
+                <default>false</default>
+                <label>RENAULT</label>
+            </value>
+            <value>
+                <fullName>Renewal for replacement</fullName>
+                <default>false</default>
+                <label>Renewal for replacement</label>
+            </value>
+            <value>
+                <fullName>Rental Certificate</fullName>
+                <default>false</default>
+                <label>Rental Certificate</label>
+            </value>
+            <value>
+                <fullName>Rental end transfer</fullName>
+                <default>false</default>
+                <label>Rental end transfer</label>
+            </value>
+            <value>
+                <fullName>Rental fee (contract suspended-validation-diff on rental)</fullName>
+                <default>false</default>
+                <label>Rental fee (contract suspended-validation-diff on rental)</label>
+            </value>
+            <value>
+                <fullName>Rental on the end of contract</fullName>
+                <default>false</default>
+                <label>Rental on the end of contract</label>
+            </value>
+            <value>
+                <fullName>Repair/Service duration</fullName>
+                <default>false</default>
+                <label>Repair/Service duration</label>
+            </value>
+            <value>
+                <fullName>Repair arrangement</fullName>
+                <default>false</default>
+                <label>Repair arrangement</label>
+            </value>
+            <value>
+                <fullName>Repair Charge</fullName>
+                <default>false</default>
+                <label>Repair Charge</label>
+            </value>
+            <value>
+                <fullName>Repairs/Maintenance</fullName>
+                <default>false</default>
+                <label>Repairs/Maintenance</label>
+            </value>
+            <value>
+                <fullName>Repair time</fullName>
+                <default>false</default>
+                <label>Repair time</label>
+            </value>
+            <value>
+                <fullName>Repair times without replacement</fullName>
+                <default>false</default>
+                <label>Repair times without replacement</label>
+            </value>
+            <value>
+                <fullName>Repayment damage Kasko</fullName>
+                <default>false</default>
+                <label>Repayment damage Kasko</label>
+            </value>
+            <value>
+                <fullName>Repayment user</fullName>
+                <default>false</default>
+                <label>Repayment user</label>
+            </value>
+            <value>
+                <fullName>Repeated failure</fullName>
+                <default>false</default>
+                <label>Repeated failure</label>
+            </value>
+            <value>
+                <fullName>Replacement</fullName>
+                <default>false</default>
+                <label>Replacement</label>
+            </value>
+            <value>
+                <fullName>Replacement &amp; short term</fullName>
+                <default>false</default>
+                <label>Replacement &amp; short term</label>
+            </value>
+            <value>
+                <fullName>Replacement vehicle</fullName>
+                <default>false</default>
+                <label>Replacement vehicle</label>
+            </value>
+            <value>
+                <fullName>Replacement vehicle/STRC</fullName>
+                <default>false</default>
+                <label>Replacement vehicle/STRC</label>
+            </value>
+            <value>
+                <fullName>Report quality</fullName>
+                <default>false</default>
+                <label>Report quality</label>
+            </value>
+            <value>
+                <fullName>Request delivery</fullName>
+                <default>false</default>
+                <label>Request delivery</label>
+            </value>
+            <value>
+                <fullName>Request for changing place of delivery</fullName>
+                <default>false</default>
+                <label>Request for changing place of delivery</label>
+            </value>
+            <value>
+                <fullName>Request for postponed delivery</fullName>
+                <default>false</default>
+                <label>Request for postponed delivery</label>
+            </value>
+            <value>
+                <fullName>Request info</fullName>
+                <default>false</default>
+                <label>Request info</label>
+            </value>
+            <value>
+                <fullName>Request information for 1 month expected delivery</fullName>
+                <default>false</default>
+                <label>Request information for 1 month expected delivery</label>
+            </value>
+            <value>
+                <fullName>Request information for 2 months expected delivery</fullName>
+                <default>false</default>
+                <label>Request information for 2 months expected delivery</label>
+            </value>
+            <value>
+                <fullName>Request information for 2 months expected delivery exceeded</fullName>
+                <default>false</default>
+                <label>Request information for 2 months expected delivery exceeded</label>
+            </value>
+            <value>
+                <fullName>Request information for expected delivery exceeded</fullName>
+                <default>false</default>
+                <label>Request information for expected delivery exceeded</label>
+            </value>
+            <value>
+                <fullName>Re-Registration</fullName>
+                <default>false</default>
+                <label>Re-Registration</label>
+            </value>
+            <value>
+                <fullName>Restituzione anticipo</fullName>
+                <default>false</default>
+                <label>Restituzione anticipo</label>
+            </value>
+            <value>
+                <fullName>Restituzione credito</fullName>
+                <default>false</default>
+                <label>Restituzione credito</label>
+            </value>
+            <value>
+                <fullName>Restituzione deposito cauzionale</fullName>
+                <default>false</default>
+                <label>Restituzione deposito cauzionale</label>
+            </value>
+            <value>
+                <fullName>Rete Assistenza</fullName>
+                <default>false</default>
+                <label>Rete Assistenza</label>
+            </value>
+            <value>
+                <fullName>Return key and docs</fullName>
+                <default>false</default>
+                <label>Return key and docs</label>
+            </value>
+            <value>
+                <fullName>Reversal / debit / repayment</fullName>
+                <default>false</default>
+                <label>Reversal / debit / repayment</label>
+            </value>
+            <value>
+                <fullName>Reversal of charge</fullName>
+                <default>false</default>
+                <label>Reversal of charge</label>
+            </value>
+            <value>
+                <fullName>Richiesta di voltura</fullName>
+                <default>false</default>
+                <label>Richiesta di voltura</label>
+            </value>
+            <value>
+                <fullName>Richiestadocum</fullName>
+                <default>false</default>
+                <label>Richiestadocum</label>
+            </value>
+            <value>
+                <fullName>Richiesta documenti sito ALD</fullName>
+                <default>false</default>
+                <label>Richiesta documenti sito ALD</label>
+            </value>
+            <value>
+                <fullName>Richiesta documenti sito BP</fullName>
+                <default>false</default>
+                <label>Richiesta documenti sito BP</label>
+            </value>
+            <value>
+                <fullName>Richiesta documenti sito LRT</fullName>
+                <default>false</default>
+                <label>Richiesta documenti sito LRT</label>
+            </value>
+            <value>
+                <fullName>Richiesta specifica su fattura emessa</fullName>
+                <default>false</default>
+                <label>Richiesta specifica su fattura emessa</label>
+            </value>
+            <value>
+                <fullName>Riconsegna</fullName>
+                <default>false</default>
+                <label>Riconsegna</label>
+            </value>
+            <value>
+                <fullName>Riconsegna per fine noleggio</fullName>
+                <default>false</default>
+                <label>Riconsegna per fine noleggio</label>
+            </value>
+            <value>
+                <fullName>Rimborso maintenance</fullName>
+                <default>false</default>
+                <label>Rimborso maintenance</label>
+            </value>
+            <value>
+                <fullName>Rimborso sinistro Kasko</fullName>
+                <default>false</default>
+                <label>Rimborso sinistro Kasko</label>
+            </value>
+            <value>
+                <fullName>Rimborso user</fullName>
+                <default>false</default>
+                <label>Rimborso user</label>
+            </value>
+            <value>
+                <fullName>Rinotifica verbali</fullName>
+                <default>false</default>
+                <label>Rinotifica verbali</label>
+            </value>
+            <value>
+                <fullName>Riparazione</fullName>
+                <default>false</default>
+                <label>Riparazione</label>
+            </value>
+            <value>
+                <fullName>Riparazione a seguito di sinistro</fullName>
+                <default>false</default>
+                <label>Riparazione a seguito di sinistro</label>
+            </value>
+            <value>
+                <fullName>Riscontro diretto al cliente</fullName>
+                <default>false</default>
+                <label>Riscontro diretto al cliente</label>
+            </value>
+            <value>
+                <fullName>Risk Certificate</fullName>
+                <default>false</default>
+                <label>Risk Certificate</label>
+            </value>
+            <value>
+                <fullName>Ritrovamento</fullName>
+                <default>false</default>
+                <label>Ritrovamento</label>
+            </value>
+            <value>
+                <fullName>Road assistance</fullName>
+                <default>false</default>
+                <label>Road assistance</label>
+            </value>
+            <value>
+                <fullName>Saldi</fullName>
+                <default>false</default>
+                <label>Saldi</label>
+            </value>
+            <value>
+                <fullName>Sale</fullName>
+                <default>false</default>
+                <label>Sale</label>
+            </value>
+            <value>
+                <fullName>Sales Invoicing</fullName>
+                <default>false</default>
+                <label>Sales Invoicing</label>
+            </value>
+            <value>
+                <fullName>Schedule delivery</fullName>
+                <default>false</default>
+                <label>Schedule delivery</label>
+            </value>
+            <value>
+                <fullName>Scheduled repair</fullName>
+                <default>false</default>
+                <label>Scheduled repair</label>
+            </value>
+            <value>
+                <fullName>Seggiolino baby</fullName>
+                <default>false</default>
+                <label>Seggiolino baby</label>
+            </value>
+            <value>
+                <fullName>Sending copies</fullName>
+                <default>false</default>
+                <label>Sending copies</label>
+            </value>
+            <value>
+                <fullName>Sent form</fullName>
+                <default>false</default>
+                <label>Sent form</label>
+            </value>
+            <value>
+                <fullName>Servizi Extra</fullName>
+                <default>false</default>
+                <label>Servizi Extra</label>
+            </value>
+            <value>
+                <fullName>Servizio offerto</fullName>
+                <default>false</default>
+                <label>Servizio offerto</label>
+            </value>
+            <value>
+                <fullName>Simple request</fullName>
+                <default>false</default>
+                <label>Simple request</label>
+            </value>
+            <value>
+                <fullName>Sinister</fullName>
+                <default>false</default>
+                <label>Sinister</label>
+            </value>
+            <value>
+                <fullName>Smarrimento contrassegno assicurativo</fullName>
+                <default>false</default>
+                <label>Smarrimento contrassegno assicurativo</label>
+            </value>
+            <value>
+                <fullName>Soccorso stradale</fullName>
+                <default>false</default>
+                <label>Soccorso stradale</label>
+            </value>
+            <value>
+                <fullName>Soft error</fullName>
+                <default>false</default>
+                <label>Soft error</label>
+            </value>
+            <value>
+                <fullName>Sostitutiva</fullName>
+                <default>false</default>
+                <label>Sostitutiva</label>
+            </value>
+            <value>
+                <fullName>Specific info request</fullName>
+                <default>false</default>
+                <label>Specific info request</label>
+            </value>
+            <value>
+                <fullName>Spiegazioni su E/C</fullName>
+                <default>false</default>
+                <label>Spiegazioni su E/C</label>
+            </value>
+            <value>
+                <fullName>Stamp copy</fullName>
+                <default>false</default>
+                <label>Stamp copy</label>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Start date adjustment</fullName>
+                <default>false</default>
+                <label>Start date adjustment</label>
+            </value>
+            <value>
+                <fullName>Starting up code</fullName>
+                <default>false</default>
+                <label>Starting up code</label>
+            </value>
+            <value>
+                <fullName>Statement Account</fullName>
+                <default>false</default>
+                <label>Statement Account</label>
+            </value>
+            <value>
+                <fullName>Statement Of Account</fullName>
+                <default>false</default>
+                <label>Statement Of Account</label>
+            </value>
+            <value>
+                <fullName>Statements of intent and VAT</fullName>
+                <default>false</default>
+                <label>Statements of intent and VAT</label>
+            </value>
+            <value>
+                <fullName>State of use</fullName>
+                <default>false</default>
+                <label>State of use</label>
+            </value>
+            <value>
+                <fullName>Statistics</fullName>
+                <default>false</default>
+                <label>Statistics</label>
+            </value>
+            <value>
+                <fullName>Stato d&apos;uso</fullName>
+                <default>false</default>
+                <label>Stato d&apos;uso</label>
+            </value>
+            <value>
+                <fullName>Stato Veicolo</fullName>
+                <default>false</default>
+                <label>Stato Veicolo</label>
+            </value>
+            <value>
+                <fullName>Stolen vehicle</fullName>
+                <default>false</default>
+                <label>Stolen vehicle</label>
+            </value>
+            <value>
+                <fullName>Storno addebito</fullName>
+                <default>false</default>
+                <label>Storno addebito</label>
+            </value>
+            <value>
+                <fullName>Storno canone quota relief</fullName>
+                <default>false</default>
+                <label>Storno canone quota relief</label>
+            </value>
+            <value>
+                <fullName>Storno canone start contratto</fullName>
+                <default>false</default>
+                <label>Storno canone start contratto</label>
+            </value>
+            <value>
+                <fullName>Sublease</fullName>
+                <default>false</default>
+                <label>Sublease</label>
+            </value>
+            <value>
+                <fullName>Supplier</fullName>
+                <default>false</default>
+                <label>Supplier</label>
+            </value>
+            <value>
+                <fullName>Tariffa applicata</fullName>
+                <default>false</default>
+                <label>Tariffa applicata</label>
+            </value>
+            <value>
+                <fullName>Tariffe &amp; Condizioni</fullName>
+                <default>false</default>
+                <label>Tariffe &amp; Condizioni</label>
+            </value>
+            <value>
+                <fullName>TCO analyse request</fullName>
+                <default>false</default>
+                <label>TCO analyse request</label>
+            </value>
+            <value>
+                <fullName>TECHNICAL BREAKDOWN</fullName>
+                <default>false</default>
+                <label>TECHNICAL BREAKDOWN</label>
+            </value>
+            <value>
+                <fullName>Telematics</fullName>
+                <default>false</default>
+                <label>Telematics</label>
+            </value>
+            <value>
+                <fullName>Tempi consegna vettura in riparazione senza sostitutiva</fullName>
+                <default>false</default>
+                <label>Tempi consegna vettura in riparazione senza sostitutiva</label>
+            </value>
+            <value>
+                <fullName>Tempi di consegna vettura in riparazione con sostitutiva</fullName>
+                <default>false</default>
+                <label>Tempi di consegna vettura in riparazione con sostitutiva</label>
+            </value>
+            <value>
+                <fullName>Tempi Riscontro</fullName>
+                <default>false</default>
+                <label>Tempi Riscontro</label>
+            </value>
+            <value>
+                <fullName>Temporary car</fullName>
+                <default>false</default>
+                <label>Temporary car</label>
+            </value>
+            <value>
+                <fullName>Tender</fullName>
+                <default>false</default>
+                <label>Tender</label>
+            </value>
+            <value>
+                <fullName>Tender request international</fullName>
+                <default>false</default>
+                <label>Tender request international</label>
+            </value>
+            <value>
+                <fullName>Tender request local</fullName>
+                <default>false</default>
+                <label>Tender request local</label>
+            </value>
+            <value>
+                <fullName>Terms And Conditions</fullName>
+                <default>false</default>
+                <label>Terms And Conditions</label>
+            </value>
+            <value>
+                <fullName>Theft</fullName>
+                <default>false</default>
+                <label>Theft</label>
+            </value>
+            <value>
+                <fullName>Theft attempt</fullName>
+                <default>false</default>
+                <label>Theft attempt</label>
+            </value>
+            <value>
+                <fullName>Theft information</fullName>
+                <default>false</default>
+                <label>Theft information</label>
+            </value>
+            <value>
+                <fullName>Time repair</fullName>
+                <default>false</default>
+                <label>Time repair</label>
+            </value>
+            <value>
+                <fullName>Time to authorization</fullName>
+                <default>false</default>
+                <label>Time to authorization</label>
+            </value>
+            <value>
+                <fullName>total lost by accident</fullName>
+                <default>false</default>
+                <label>total lost by accident</label>
+            </value>
+            <value>
+                <fullName>total lost by flood</fullName>
+                <default>false</default>
+                <label>total lost by flood</label>
+            </value>
+            <value>
+                <fullName>Tow</fullName>
+                <default>false</default>
+                <label>Tow</label>
+            </value>
+            <value>
+                <fullName>TOYOTA</fullName>
+                <default>false</default>
+                <label>TOYOTA</label>
+            </value>
+            <value>
+                <fullName>Traceability</fullName>
+                <default>false</default>
+                <label>Traceability</label>
+            </value>
+            <value>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+                <label>Transfer</label>
+            </value>
+            <value>
+                <fullName>Transfer code for Sales</fullName>
+                <default>false</default>
+                <label>Transfer code for Sales</label>
+            </value>
+            <value>
+                <fullName>Transfer fee relief</fullName>
+                <default>false</default>
+                <label>Transfer fee relief</label>
+            </value>
+            <value>
+                <fullName>Transfer For Change Driver</fullName>
+                <default>false</default>
+                <label>Transfer For Change Driver</label>
+            </value>
+            <value>
+                <fullName>Transfer of property</fullName>
+                <default>false</default>
+                <label>Transfer of property</label>
+            </value>
+            <value>
+                <fullName>TRANSPORT</fullName>
+                <default>false</default>
+                <label>TRANSPORT</label>
+            </value>
+            <value>
+                <fullName>Treasury deposit</fullName>
+                <default>false</default>
+                <label>Treasury deposit</label>
+            </value>
+            <value>
+                <fullName>Tyers management</fullName>
+                <default>false</default>
+                <label>Tyers management</label>
+            </value>
+            <value>
+                <fullName>Type of driver</fullName>
+                <default>false</default>
+                <label>Type of driver</label>
+            </value>
+            <value>
+                <fullName>Tyre</fullName>
+                <default>false</default>
+                <label>Tyre</label>
+            </value>
+            <value>
+                <fullName>Tyre authorization</fullName>
+                <default>false</default>
+                <label>Tyre authorization</label>
+            </value>
+            <value>
+                <fullName>Tyre Charges</fullName>
+                <default>false</default>
+                <label>Tyre Charges</label>
+            </value>
+            <value>
+                <fullName>Tyre Debit</fullName>
+                <default>false</default>
+                <label>Tyre Debit</label>
+            </value>
+            <value>
+                <fullName>Tyre delivery</fullName>
+                <default>false</default>
+                <label>Tyre delivery</label>
+            </value>
+            <value>
+                <fullName>Tyre payback authorization</fullName>
+                <default>false</default>
+                <label>Tyre payback authorization</label>
+            </value>
+            <value>
+                <fullName>Tyres management</fullName>
+                <default>false</default>
+                <label>Tyres management</label>
+            </value>
+            <value>
+                <fullName>Tyre transfer</fullName>
+                <default>false</default>
+                <label>Tyre transfer</label>
+            </value>
+            <value>
+                <fullName>UNICREDIT</fullName>
+                <default>false</default>
+                <label>UNICREDIT</label>
+            </value>
+            <value>
+                <fullName>Unlimited</fullName>
+                <default>false</default>
+                <label>Unlimited</label>
+            </value>
+            <value>
+                <fullName>Update bank information</fullName>
+                <default>false</default>
+                <label>Update bank information</label>
+            </value>
+            <value>
+                <fullName>Update data</fullName>
+                <default>false</default>
+                <label>Update data</label>
+            </value>
+            <value>
+                <fullName>Update data of customer</fullName>
+                <default>false</default>
+                <label>Update data of customer</label>
+            </value>
+            <value>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+                <label>Upgrade</label>
+            </value>
+            <value>
+                <fullName>Urgent request</fullName>
+                <default>false</default>
+                <label>Urgent request</label>
+            </value>
+            <value>
+                <fullName>Used car sale</fullName>
+                <default>false</default>
+                <label>Used car sale</label>
+            </value>
+            <value>
+                <fullName>Used car sale to client</fullName>
+                <default>false</default>
+                <label>Used car sale to client</label>
+            </value>
+            <value>
+                <fullName>Use information</fullName>
+                <default>false</default>
+                <label>Use information</label>
+            </value>
+            <value>
+                <fullName>User activation</fullName>
+                <default>false</default>
+                <label>User activation</label>
+            </value>
+            <value>
+                <fullName>Validazione contratto</fullName>
+                <default>false</default>
+                <label>Validazione contratto</label>
+            </value>
+            <value>
+                <fullName>Variations in ordering</fullName>
+                <default>false</default>
+                <label>Variations in ordering</label>
+            </value>
+            <value>
+                <fullName>Variazione recapito Focus on Line</fullName>
+                <default>false</default>
+                <label>Variazione recapito Focus on Line</label>
+            </value>
+            <value>
+                <fullName>Variazioni coordinate bancarie ALD</fullName>
+                <default>false</default>
+                <label>Variazioni coordinate bancarie ALD</label>
+            </value>
+            <value>
+                <fullName>Variazioni coordinate bancarie BP</fullName>
+                <default>false</default>
+                <label>Variazioni coordinate bancarie BP</label>
+            </value>
+            <value>
+                <fullName>various</fullName>
+                <default>false</default>
+                <label>various</label>
+            </value>
+            <value>
+                <fullName>Vehicle availability</fullName>
+                <default>false</default>
+                <label>Vehicle availability</label>
+            </value>
+            <value>
+                <fullName>Vehicle cleanup</fullName>
+                <default>false</default>
+                <label>Vehicle cleanup</label>
+            </value>
+            <value>
+                <fullName>Vehicle Documents</fullName>
+                <default>false</default>
+                <label>Vehicle Documents</label>
+            </value>
+            <value>
+                <fullName>vehicle flood</fullName>
+                <default>false</default>
+                <label>vehicle flood</label>
+            </value>
+            <value>
+                <fullName>Vehicle order to delivery</fullName>
+                <default>false</default>
+                <label>Vehicle order to delivery</label>
+            </value>
+            <value>
+                <fullName>Vehicle Return</fullName>
+                <default>false</default>
+                <label>Vehicle Return</label>
+            </value>
+            <value>
+                <fullName>vehicle steal</fullName>
+                <default>false</default>
+                <label>vehicle steal</label>
+            </value>
+            <value>
+                <fullName>vehicle stolen and localized</fullName>
+                <default>false</default>
+                <label>vehicle stolen and localized</label>
+            </value>
+            <value>
+                <fullName>Vehicle tranfer for delivery</fullName>
+                <default>false</default>
+                <label>Vehicle tranfer for delivery</label>
+            </value>
+            <value>
+                <fullName>Verbali</fullName>
+                <default>false</default>
+                <label>Verbali</label>
+            </value>
+            <value>
+                <fullName>Verbali (out)</fullName>
+                <default>false</default>
+                <label>Verbali (out)</label>
+            </value>
+            <value>
+                <fullName>Verifica accessori</fullName>
+                <default>false</default>
+                <label>Verifica accessori</label>
+            </value>
+            <value>
+                <fullName>Verifica anagrafica centri convenzionati</fullName>
+                <default>false</default>
+                <label>Verifica anagrafica centri convenzionati</label>
+            </value>
+            <value>
+                <fullName>Verifica marchio</fullName>
+                <default>false</default>
+                <label>Verifica marchio</label>
+            </value>
+            <value>
+                <fullName>Verifica stato</fullName>
+                <default>false</default>
+                <label>Verifica stato</label>
+            </value>
+            <value>
+                <fullName>Verify the convention center</fullName>
+                <default>false</default>
+                <label>Verify the convention center</label>
+            </value>
+            <value>
+                <fullName>Vettura non conforme</fullName>
+                <default>false</default>
+                <label>Vettura non conforme</label>
+            </value>
+            <value>
+                <fullName>Vettura pronta</fullName>
+                <default>false</default>
+                <label>Vettura pronta</label>
+            </value>
+            <value>
+                <fullName>VIP service</fullName>
+                <default>false</default>
+                <label>VIP service</label>
+            </value>
+            <value>
+                <fullName>Voltura</fullName>
+                <default>false</default>
+                <label>Voltura</label>
+            </value>
+            <value>
+                <fullName>Withdrawal rejected</fullName>
+                <default>false</default>
+                <label>Withdrawal rejected</label>
+            </value>
+            <value>
+                <fullName>wreck</fullName>
+                <default>false</default>
+                <label>wreck</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Breakdown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>Theft</controllingFieldValue>
+            <controllingFieldValue>Remarketing</controllingFieldValue>
+            <valueName>Documents</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Lack of item in the vehicle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>End of contract</controllingFieldValue>
+            <controllingFieldValue>Accident management</controllingFieldValue>
+            <controllingFieldValue>Remarketing</controllingFieldValue>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <controllingFieldValue>End of contract</controllingFieldValue>
+            <valueName>Tow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delivery</controllingFieldValue>
+            <valueName>Vehicle cleanup</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Risk</controllingFieldValue>
+            <valueName>Credit line renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registration detail</controllingFieldValue>
+            <valueName>Sent form</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Add accessories</controllingFieldValue>
+            <valueName>Consolidated regional request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End of contract</controllingFieldValue>
+            <valueName>Appointment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>End of contract</controllingFieldValue>
+            <controllingFieldValue>Accident management</controllingFieldValue>
+            <controllingFieldValue>Remarketing</controllingFieldValue>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Driver care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change of existing quotation</controllingFieldValue>
+            <controllingFieldValue>Change of existing contract</controllingFieldValue>
+            <controllingFieldValue>Change end contract date</controllingFieldValue>
+            <valueName>Information request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accident management</controllingFieldValue>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Authorized items</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accident management</controllingFieldValue>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Garage service quality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accident management</controllingFieldValue>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Repair/Service duration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accident management</controllingFieldValue>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Time to authorization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit request</controllingFieldValue>
+            <controllingFieldValue>New edition</controllingFieldValue>
+            <valueName>MLA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit request</controllingFieldValue>
+            <controllingFieldValue>New edition</controllingFieldValue>
+            <valueName>MLAMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Document request</controllingFieldValue>
+            <valueName>Insurance Statement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Document request</controllingFieldValue>
+            <valueName>Risk Certificate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quotation</controllingFieldValue>
+            <valueName>Change of existing quotation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quotation</controllingFieldValue>
+            <valueName>Change of existing quotation Partnership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quotation</controllingFieldValue>
+            <valueName>New quotation request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quotation</controllingFieldValue>
+            <valueName>New quotation request Partnership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quotation</controllingFieldValue>
+            <valueName>TCO analyse request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quotation</controllingFieldValue>
+            <valueName>Tender request international</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quotation</controllingFieldValue>
+            <valueName>Tender request local</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Accident management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Call Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Contract details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Contract Modification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>D2D Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>End of contract &amp; Remarketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Fuel invoices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Fuel management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Invoice/Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Repairs/Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <valueName>Replacement vehicle/STRC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>Internal organization</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Road assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Tyres management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Vehicle order to delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Vehicle return</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>VIP service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Status request</controllingFieldValue>
+            <valueName>Contractual waivers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Status request</controllingFieldValue>
+            <controllingFieldValue>Change of existing contract</controllingFieldValue>
+            <valueName>Date/km</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Status request</controllingFieldValue>
+            <valueName>Franchigie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Status request</controllingFieldValue>
+            <controllingFieldValue>Change of existing contract</controllingFieldValue>
+            <controllingFieldValue>Driver</controllingFieldValue>
+            <controllingFieldValue>Assistance provider</controllingFieldValue>
+            <valueName>Fuel Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Status request</controllingFieldValue>
+            <valueName>Loss of documents/keys/plate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Status request</controllingFieldValue>
+            <valueName>Pneumatic availability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Status request</controllingFieldValue>
+            <valueName>Relief</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Status request</controllingFieldValue>
+            <valueName>Soccorso stradale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Status request</controllingFieldValue>
+            <valueName>Type of driver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beginning of the contract</controllingFieldValue>
+            <valueName>Cost center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beginning of the contract</controllingFieldValue>
+            <valueName>Intent declaration and Vat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beginning of the contract</controllingFieldValue>
+            <valueName>Invoicing for payment in advance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beginning of the contract</controllingFieldValue>
+            <valueName>Optional in one amount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beginning of the contract</controllingFieldValue>
+            <valueName>Quota part no extension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beginning of the contract</controllingFieldValue>
+            <valueName>Rental fee (contract suspended-validation-diff on rental)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Beginning of the contract</controllingFieldValue>
+            <valueName>Start date adjustment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registration</controllingFieldValue>
+            <valueName>Duplicato libretto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registration</controllingFieldValue>
+            <controllingFieldValue>New study</controllingFieldValue>
+            <valueName>Reimmatricolazione</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>END OF THE CONTRACT</controllingFieldValue>
+            <valueName>Penalty on km and end of contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>END OF THE CONTRACT</controllingFieldValue>
+            <valueName>Quota on extension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>END OF THE CONTRACT</controllingFieldValue>
+            <valueName>Rental on the end of contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Theft</controllingFieldValue>
+            <valueName>Confirm Open Theft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Theft</controllingFieldValue>
+            <valueName>Franchise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total damage</controllingFieldValue>
+            <controllingFieldValue>Total sinister statement</controllingFieldValue>
+            <valueName>Active accident</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Total damage</controllingFieldValue>
+            <controllingFieldValue>Total sinister statement</controllingFieldValue>
+            <valueName>Passive accident</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New modification</controllingFieldValue>
+            <valueName>Add. Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New modification</controllingFieldValue>
+            <valueName>Change leasepayment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New modification</controllingFieldValue>
+            <valueName>LA correction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New modification</controllingFieldValue>
+            <valueName>RAT change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change of existing contract</controllingFieldValue>
+            <valueName>Durata/km</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change of existing contract</controllingFieldValue>
+            <valueName>Massive Modification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change of existing contract</controllingFieldValue>
+            <valueName>Mountain Rubbers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change of existing contract</controllingFieldValue>
+            <valueName>Ratification of a contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change of existing contract</controllingFieldValue>
+            <valueName>Relief Modification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relief supplier</controllingFieldValue>
+            <valueName>Condition/status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relief supplier</controllingFieldValue>
+            <valueName>Limit on drive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relief supplier</controllingFieldValue>
+            <valueName>Price/model</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relief vehicle request</controllingFieldValue>
+            <controllingFieldValue>Rented vehicle</controllingFieldValue>
+            <valueName>Relief Car</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relief vehicle request</controllingFieldValue>
+            <controllingFieldValue>Rented vehicle</controllingFieldValue>
+            <valueName>Temporary car</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Deductible pay-off</controllingFieldValue>
+            <controllingFieldValue>Debited transfer</controllingFieldValue>
+            <valueName>Codice cliente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Deductible pay-off</controllingFieldValue>
+            <controllingFieldValue>Debited transfer</controllingFieldValue>
+            <valueName>Riconsegna</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Deductible pay-off</controllingFieldValue>
+            <controllingFieldValue>Debited transfer</controllingFieldValue>
+            <valueName>Tariffa applicata</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delayed delivery</controllingFieldValue>
+            <valueName>Delivery date</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delayed delivery</controllingFieldValue>
+            <valueName>Request for postponed delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delayed delivery</controllingFieldValue>
+            <valueName>Request information for 1 month expected delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delayed delivery</controllingFieldValue>
+            <valueName>Request information for 2 months expected delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delayed delivery</controllingFieldValue>
+            <valueName>Request information for 2 months expected delivery exceeded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delayed delivery</controllingFieldValue>
+            <valueName>Request information for expected delivery exceeded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relief vehicle</controllingFieldValue>
+            <controllingFieldValue>Rented vehicle</controllingFieldValue>
+            <valueName>Booking/status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Relief vehicle</controllingFieldValue>
+            <controllingFieldValue>Rented vehicle</controllingFieldValue>
+            <valueName>Upgrade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance seasonal extension</controllingFieldValue>
+            <valueName>Accessori documenti non forniti</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ITP_</controllingFieldValue>
+            <valueName>Billing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ITP_</controllingFieldValue>
+            <valueName>Modality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documents request_</controllingFieldValue>
+            <valueName>Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documents request_</controllingFieldValue>
+            <valueName>Prospect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documents request_</controllingFieldValue>
+            <valueName>Supplier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ALD Net request</controllingFieldValue>
+            <valueName>Password</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ALD Net request</controllingFieldValue>
+            <valueName>Use information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ALD Net request</controllingFieldValue>
+            <valueName>User activation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal procedure</controllingFieldValue>
+            <valueName>Customer contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal procedure</controllingFieldValue>
+            <valueName>Furniture contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal procedure</controllingFieldValue>
+            <valueName>Management of seizures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal procedure</controllingFieldValue>
+            <valueName>Professional advice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fines</controllingFieldValue>
+            <valueName>Block payments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fines</controllingFieldValue>
+            <valueName>Credit note</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fines</controllingFieldValue>
+            <valueName>General signs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business discount</controllingFieldValue>
+            <valueName>Delays in deliveries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business discount</controllingFieldValue>
+            <valueName>Misaligned contracts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business discount</controllingFieldValue>
+            <valueName>Relief spot for prolonged failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business discount</controllingFieldValue>
+            <valueName>various</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vehicle history</controllingFieldValue>
+            <valueName>Carnet Garanzie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vehicle history</controllingFieldValue>
+            <valueName>Delivery information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vehicle history</controllingFieldValue>
+            <valueName>Info MAD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vehicle history</controllingFieldValue>
+            <valueName>Verifica accessori</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documents request</controllingFieldValue>
+            <valueName>Car Ready</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documents request</controllingFieldValue>
+            <valueName>Repair Charge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Green card</controllingFieldValue>
+            <valueName>Duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information statement</controllingFieldValue>
+            <valueName>Update data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tyres</controllingFieldValue>
+            <valueName>Authorization for tyre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tyres</controllingFieldValue>
+            <valueName>Convention for tyre with service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tyres</controllingFieldValue>
+            <valueName>Pneumatici in giacenza presso centro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tyres</controllingFieldValue>
+            <valueName>Tyre delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mileage request</controllingFieldValue>
+            <valueName>Backdated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mileage request</controllingFieldValue>
+            <valueName>Standard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>Internal organization</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Logistic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>Order / delivery</controllingFieldValue>
+            <controllingFieldValue>New damage file</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>Internal organization</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>Internal organization</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Remarketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>ALD professionalism</controllingFieldValue>
+            <controllingFieldValue>Late/Lack of response</controllingFieldValue>
+            <controllingFieldValue>ALD services</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; services</controllingFieldValue>
+            <controllingFieldValue>Internal organization</controllingFieldValue>
+            <controllingFieldValue>ALD Suppliers&apos; professionalism</controllingFieldValue>
+            <controllingFieldValue>Long repairs</controllingFieldValue>
+            <valueName>Soft error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Authorization meccanic, bodyworks, crystals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <controllingFieldValue>Maintenance card</controllingFieldValue>
+            <valueName>Check repair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Intervento in garanzia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Mancanza ricambio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Repair times without replacement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Repeated failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance card</controllingFieldValue>
+            <valueName>Guasto ripetuto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance card</controllingFieldValue>
+            <valueName>Tempi consegna vettura in riparazione senza sostitutiva</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Accident report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Complaint w/out third party</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Insurance car</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Policy agreement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <controllingFieldValue>Sinister follow-up</controllingFieldValue>
+            <valueName>Quotation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <controllingFieldValue>Total sinister statement</controllingFieldValue>
+            <valueName>Registration copy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Theft information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New edition</controllingFieldValue>
+            <valueName>Advertising</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New edition</controllingFieldValue>
+            <valueName>Change name, Requisites</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New edition</controllingFieldValue>
+            <valueName>Sublease</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New edition</controllingFieldValue>
+            <valueName>Telematics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New study</controllingFieldValue>
+            <valueName>Dissequestro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New study</controllingFieldValue>
+            <valueName>Recupero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repairs/maintenance agreement</controllingFieldValue>
+            <valueName>Carnet di manutenzione/manuale dell&apos;utilizzatore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repairs/maintenance agreement</controllingFieldValue>
+            <valueName>Check permission for repairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repairs/maintenance agreement</controllingFieldValue>
+            <valueName>Information on maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repairs/maintenance agreement</controllingFieldValue>
+            <valueName>Information service point</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repairs/maintenance agreement</controllingFieldValue>
+            <valueName>Information user</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repairs/maintenance agreement</controllingFieldValue>
+            <valueName>Periodical technical inspection (ITP)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non received payment</controllingFieldValue>
+            <valueName>Maintenance Reimbursement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non received payment</controllingFieldValue>
+            <valueName>Rimborso maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STRC supplier</controllingFieldValue>
+            <valueName>Check user</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STRC supplier</controllingFieldValue>
+            <valueName>Payment, re-notification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order / delivery</controllingFieldValue>
+            <valueName>Diservice Service Point</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order / delivery</controllingFieldValue>
+            <valueName>Duplicate Axus card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order / delivery</controllingFieldValue>
+            <valueName>Extension for renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order / delivery</controllingFieldValue>
+            <valueName>Lack of documentation on board</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order / delivery</controllingFieldValue>
+            <valueName>Problem on after mkt accessories</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order / delivery</controllingFieldValue>
+            <valueName>Problem on factory accessoies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order / delivery</controllingFieldValue>
+            <valueName>Request for changing place of delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order / delivery</controllingFieldValue>
+            <valueName>Update data of customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order / delivery</controllingFieldValue>
+            <valueName>Vehicle availability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order cancellation</controllingFieldValue>
+            <valueName>Order cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order cancellation</controllingFieldValue>
+            <valueName>Ordering modified</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order cancellation</controllingFieldValue>
+            <valueName>Variations in ordering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal information</controllingFieldValue>
+            <valueName>Activation direct debit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal information</controllingFieldValue>
+            <valueName>Change in bank details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New damage file</controllingFieldValue>
+            <valueName>Insurance repair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New damage file</controllingFieldValue>
+            <valueName>Notification/collection of document</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New damage file</controllingFieldValue>
+            <controllingFieldValue>damage refund c/o agreement supplier</controllingFieldValue>
+            <valueName>Refund request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New damage file</controllingFieldValue>
+            <valueName>Repair arrangement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoice</controllingFieldValue>
+            <valueName>Cancel of LA (order)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoice</controllingFieldValue>
+            <valueName>Early termination Selling Price Difference</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoice</controllingFieldValue>
+            <valueName>Early termination with Fee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoice</controllingFieldValue>
+            <valueName>Early termination without Fee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Road assistance</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>ACCIDENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Road assistance</controllingFieldValue>
+            <valueName>ACI refund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Road assistance</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>ASSISTANCE ON LOCATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Road assistance</controllingFieldValue>
+            <valueName>Duplicate Book</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Road assistance</controllingFieldValue>
+            <valueName>Impounded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Road assistance</controllingFieldValue>
+            <valueName>Release From Seizure Incident</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Road assistance</controllingFieldValue>
+            <valueName>Release From Seizure Theft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Road assistance</controllingFieldValue>
+            <valueName>Re-Registration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Road assistance</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>TECHNICAL BREAKDOWN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Road assistance</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>TRANSPORT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sinister follow-up</controllingFieldValue>
+            <valueName>PAI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sinister follow-up</controllingFieldValue>
+            <valueName>RCA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statistics</controllingFieldValue>
+            <valueName>Statistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Substitution</controllingFieldValue>
+            <valueName>Accessories</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Substitution</controllingFieldValue>
+            <controllingFieldValue>Assistance network</controllingFieldValue>
+            <valueName>Disservice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Substitution</controllingFieldValue>
+            <valueName>Not insertable web</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Substitution</controllingFieldValue>
+            <valueName>Pool</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Substitution</controllingFieldValue>
+            <valueName>Transfer fee relief</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registration transfer</controllingFieldValue>
+            <valueName>Credit transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Traffic tax</controllingFieldValue>
+            <valueName>info/duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Traffic tax</controllingFieldValue>
+            <valueName>Request info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tyre</controllingFieldValue>
+            <valueName>Assembly and defectiveness/check mark</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tyre</controllingFieldValue>
+            <valueName>Left</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tyre</controllingFieldValue>
+            <valueName>Reversal / debit / repayment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tyre</controllingFieldValue>
+            <valueName>Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tyre</controllingFieldValue>
+            <valueName>Tyre authorization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Address change</controllingFieldValue>
+            <valueName>FMT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Address change</controllingFieldValue>
+            <valueName>FMTMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Address change</controllingFieldValue>
+            <valueName>Leaseback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance provider</controllingFieldValue>
+            <valueName>Refunds Aci</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance provider</controllingFieldValue>
+            <valueName>Sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance provider</controllingFieldValue>
+            <valueName>Statement Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance network</controllingFieldValue>
+            <valueName>Mancata erogazione</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance network</controllingFieldValue>
+            <valueName>Servizio offerto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance network</controllingFieldValue>
+            <valueName>Verify the convention center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Authorization</controllingFieldValue>
+            <valueName>Amount deductibles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Authorization</controllingFieldValue>
+            <valueName>Repayment damage Kasko</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Authorization</controllingFieldValue>
+            <valueName>Repayment user</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Authorization</controllingFieldValue>
+            <valueName>Reversal of charge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User buying out</controllingFieldValue>
+            <valueName>Change of ownership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User buying out</controllingFieldValue>
+            <valueName>Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User buying out</controllingFieldValue>
+            <valueName>Sales Invoicing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocked delivery</controllingFieldValue>
+            <valueName>Delivery blocked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocked delivery</controllingFieldValue>
+            <valueName>Modified start date</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Car Replacement</controllingFieldValue>
+            <valueName>ALD DIRETTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Car Replacement</controllingFieldValue>
+            <valueName>ALD INDIRETTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change end contract date</controllingFieldValue>
+            <valueName>Multiple request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change end contract date</controllingFieldValue>
+            <valueName>Simple request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Child driving</controllingFieldValue>
+            <valueName>Document request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract termination cancellation</controllingFieldValue>
+            <valueName>Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract transfer</controllingFieldValue>
+            <valueName>Contract Transfer Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract transfer</controllingFieldValue>
+            <valueName>Richiesta di voltura</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract transfer</controllingFieldValue>
+            <valueName>Richiesta specifica su fattura emessa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract transfer</controllingFieldValue>
+            <valueName>Specific info request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Country exit</controllingFieldValue>
+            <valueName>Attivazione Focus on Line</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Country exit</controllingFieldValue>
+            <valueName>Validazione contratto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit return</controllingFieldValue>
+            <valueName>Compesazione partite aperte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit return</controllingFieldValue>
+            <valueName>Credito Sospeso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit return</controllingFieldValue>
+            <valueName>Credit pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit return</controllingFieldValue>
+            <valueName>Equaling opens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Damage expertise</controllingFieldValue>
+            <valueName>Damage occurs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Damage expertise</controllingFieldValue>
+            <valueName>Documentation Request</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

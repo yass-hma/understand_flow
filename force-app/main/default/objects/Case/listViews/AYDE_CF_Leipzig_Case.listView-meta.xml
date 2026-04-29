@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AYDE_CF_Leipzig_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>AYDE CF Leipzig</label>
+    <queue>AYDE_CF_Leipzig</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

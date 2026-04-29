@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Team_view_PSB</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Deleted</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>Arends,Marcotte,Donck,Schols,Dewulf,Rizovsky,Cami,Vanacker,Keuppens</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>Belcaid,Frere,Vanbiervliet,Beurts,Karthauser,Weemaels</value>
+    </filters>
+    <label>Team view PSB</label>
+    <sharedTo>
+        <group>BEL_Partnership_Belfius</group>
+    </sharedTo>
+</ListView>

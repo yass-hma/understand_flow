@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_FDL_AU_REEL</fullName>
+    <columns>Account_Environement__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>FDL AU REEL</value>
+    </filters>
+    <label>FRA - FDL AU REEL</label>
+    <queue>FRASimulFDL</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>France_DCSP_Centre_Services_Partages_Dir</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

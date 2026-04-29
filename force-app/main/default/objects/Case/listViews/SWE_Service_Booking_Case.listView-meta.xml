@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SWE_Service_Booking_Case</fullName>
+    <booleanFilter>(1 AND 4) OR (2 AND 3 AND 5)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.MILESTONE_TIMER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>SWE - Service Booking</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Booking</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Reopened</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Closed without action plan,Closed with action plan,Deleted</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>notEqual</operation>
+        <value>SWE - Trash</value>
+    </filters>
+    <label>SWE - Service Booking</label>
+    <sharedTo>
+        <group>SWE_Service_Booking</group>
+    </sharedTo>
+</ListView>

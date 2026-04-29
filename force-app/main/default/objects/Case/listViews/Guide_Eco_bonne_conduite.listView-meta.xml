@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Guide_Eco_bonne_conduite</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>guide</value>
+    </filters>
+    <filters>
+        <field>CASES.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>7/6/2012 12:00 AM</value>
+    </filters>
+    <label>Guide Eco bonne conduite</label>
+    <language>fr</language>
+    <sharedTo>
+        <role>FranceCM</role>
+    </sharedTo>
+</ListView>

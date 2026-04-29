@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CHL_Bonuses</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Deleted</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Finance</value>
+    </filters>
+    <filters>
+        <field>Subsidiary_Indicator__c</field>
+        <operation>equals</operation>
+        <value>15201</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>Bonus</value>
+    </filters>
+    <label>CHL - Bonuses (Open)</label>
+    <sharedTo>
+        <group>CHL_Comerciales</group>
+        <group>CHL_Commercial_Director</group>
+        <group>CHL_Country_Manager</group>
+        <group>CHL_Finanzas</group>
+    </sharedTo>
+</ListView>

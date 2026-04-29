@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDG_ACCOUNT_CASES_OPEN</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND (5 OR 6 OR 7 OR 8)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.MILESTONE_TIMER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Subsidiary_Indicator__c</field>
+        <operation>equals</operation>
+        <value>44201</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Deleted</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Sophie De Giorgi</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>LUX - TRASH</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>hmbu</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>TDina</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>LScho</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>SDegi</value>
+    </filters>
+    <label>SDG ACCOUNT CASES OPEN</label>
+</ListView>

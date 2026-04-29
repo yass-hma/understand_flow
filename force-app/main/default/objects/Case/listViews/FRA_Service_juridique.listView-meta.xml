@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Service_juridique</fullName>
+    <columns>Priority_Flag__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CONTACT.ACCOUNT</columns>
+    <columns>NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>FRA - Service juridique</label>
+    <language>en_US</language>
+    <queue>FRAServicejuridique</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>France_DJUR_Juridique_Dir</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

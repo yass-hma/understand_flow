@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AUT_Orders</fullName>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>AUT - Orders</value>
+    </filters>
+    <label>AUT - Orders</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>AustriaCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

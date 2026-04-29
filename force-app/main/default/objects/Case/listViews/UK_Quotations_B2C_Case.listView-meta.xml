@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UK_Quotations_B2C_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Email_Status__c</columns>
+    <filterScope>Queue</filterScope>
+    <label>UK - Quotations B2C</label>
+    <language>en_US</language>
+    <queue>UK_Quotations_B2C</queue>
+    <sharedTo>
+        <group>UK_Quotations_B2C</group>
+    </sharedTo>
+</ListView>

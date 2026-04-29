@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALDSAT_Case_Close_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT( $User.Bypass_Validation_Rules__c ),CONTAINS($Label.ALDSATRecordTypeIds,RecordType.DeveloperName),
+NOT(ISBLANK(TEXT(Maintenance_Status__c))),NOT(ISBLANK(ALD_Sat_Id__c)),ISPICKVAL(PRIORVALUE(Maintenance_Status__c),&apos;STATE_GARAGE_ARRIVAL_DATE&apos;),ISPICKVAL(Status, &apos;Closed&apos;))</errorConditionFormula>
+    <errorMessage>As this CASE is synced with ALD Sat and is awaiting updated from ALD Sat, Case cannot be CLOSED in Salesforce.</errorMessage>
+</ValidationRule>

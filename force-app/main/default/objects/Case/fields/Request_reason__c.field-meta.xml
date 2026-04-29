@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_reason__c</fullName>
+    <description>STRC</description>
+    <label>Request Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accident</fullName>
+                <default>false</default>
+                <label>Accident</label>
+            </value>
+            <value>
+                <fullName>Theft</fullName>
+                <default>false</default>
+                <label>Theft</label>
+            </value>
+            <value>
+                <fullName>Repairs</fullName>
+                <default>false</default>
+                <label>Repairs</label>
+            </value>
+            <value>
+                <fullName>Rebilled rental</fullName>
+                <default>false</default>
+                <label>Rebilled rental</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Weather condition</fullName>
+                <default>false</default>
+                <label>Weather condition</label>
+            </value>
+            <value>
+                <fullName>Regular maintenance</fullName>
+                <default>false</default>
+                <label>Regular maintenance</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>Tyres</fullName>
+                <default>false</default>
+                <label>Tyres</label>
+            </value>
+            <value>
+                <fullName>Accidents</fullName>
+                <default>false</default>
+                <label>Accidents</label>
+            </value>
+            <value>
+                <fullName>Documents request</fullName>
+                <default>false</default>
+                <label>Documents request</label>
+            </value>
+            <value>
+                <fullName>Lost car</fullName>
+                <default>false</default>
+                <label>Lost car</label>
+            </value>
+            <value>
+                <fullName>Raod Test</fullName>
+                <default>false</default>
+                <label>Raod Test</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Pre-runner</fullName>
+                <default>false</default>
+                <label>Pre-runner</label>
+            </value>
+            <value>
+                <fullName>Flat tyre</fullName>
+                <default>false</default>
+                <label>Flat tyre</label>
+            </value>
+            <value>
+                <fullName>Exhaustion</fullName>
+                <default>false</default>
+                <label>Exhaustion</label>
+            </value>
+            <value>
+                <fullName>Driver Negligence</fullName>
+                <default>false</default>
+                <label>Driver Negligence</label>
+            </value>
+            <value>
+                <fullName>Manutenção</fullName>
+                <default>false</default>
+                <label>Manutenção</label>
+            </value>
+            <value>
+                <fullName>Sinistro</fullName>
+                <default>false</default>
+                <label>Sinistro</label>
+            </value>
+            <value>
+                <fullName>Perda total do veículo titular</fullName>
+                <default>false</default>
+                <label>Perda total do veículo titular</label>
+            </value>
+            <value>
+                <fullName>Viagem</fullName>
+                <default>false</default>
+                <label>Viagem</label>
+            </value>
+            <value>
+                <fullName>Perda da placa</fullName>
+                <default>false</default>
+                <label>Perda da placa</label>
+            </value>
+            <value>
+                <fullName>Veículo provisório</fullName>
+                <default>false</default>
+                <label>Veículo provisório</label>
+            </value>
+            <value>
+                <fullName>Ação de relacionamento</fullName>
+                <default>false</default>
+                <label>Ação de relacionamento</label>
+            </value>
+            <value>
+                <fullName>Outro</fullName>
+                <default>false</default>
+                <label>Outro</label>
+            </value>
+            <value>
+                <fullName>Correctivo Siniestro</fullName>
+                <default>false</default>
+                <label>Correctivo Siniestro</label>
+            </value>
+            <value>
+                <fullName>Documentos</fullName>
+                <default>false</default>
+                <label>Documentos</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+            <value>
+                <fullName>Correctivo</fullName>
+                <default>false</default>
+                <label>Correctivo</label>
+            </value>
+            <value>
+                <fullName>Preventivo</fullName>
+                <default>false</default>
+                <label>Preventivo</label>
+            </value>
+            <value>
+                <fullName>Siniestro</fullName>
+                <default>false</default>
+                <label>Siniestro</label>
+            </value>
+            <value>
+                <fullName>Hurto total</fullName>
+                <default>false</default>
+                <label>Hurto total</label>
+            </value>
+            <value>
+                <fullName>Gesto comercial</fullName>
+                <default>false</default>
+                <label>Gesto comercial</label>
+            </value>
+            <value>
+                <fullName>Gesto proveedor</fullName>
+                <default>false</default>
+                <label>Gesto proveedor</label>
+            </value>
+            <value>
+                <fullName>Pre-entrega</fullName>
+                <default>false</default>
+                <label>Pre-entrega</label>
+            </value>
+            <value>
+                <fullName>Corrective Maintenance</fullName>
+                <default>false</default>
+                <label>Corrective Maintenance</label>
+            </value>
+            <value>
+                <fullName>Preventive Maintenance</fullName>
+                <default>false</default>
+                <label>Preventive Maintenance</label>
+            </value>
+            <value>
+                <fullName>Trip</fullName>
+                <default>false</default>
+                <label>Trip</label>
+            </value>
+            <value>
+                <fullName>Claim</fullName>
+                <default>false</default>
+                <label>Claim</label>
+            </value>
+            <value>
+                <fullName>Commercial gesture</fullName>
+                <default>false</default>
+                <label>Commercial gesture</label>
+            </value>
+            <value>
+                <fullName>Supplier gesture</fullName>
+                <default>false</default>
+                <label>Supplier gesture</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accident_Management_Sub_Status__c</fullName>
+    <description>To check for sub status in accident management section.</description>
+    <label>Accident Management Sub-Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Awaiting for driver’s documentation</fullName>
+                <default>false</default>
+                <label>Awaiting for driver’s documentation</label>
+            </value>
+            <value>
+                <fullName>Awaiting for vehicle stop/parking</fullName>
+                <default>false</default>
+                <label>Awaiting for vehicle stop/parking</label>
+            </value>
+            <value>
+                <fullName>Awaiting for budget submission</fullName>
+                <default>false</default>
+                <label>Awaiting for budget submission</label>
+            </value>
+            <value>
+                <fullName>Documentation in ALD Analysis</fullName>
+                <default>false</default>
+                <label>Documentation in ALD Analysis</label>
+            </value>
+            <value>
+                <fullName>Awaiting Regulation Inspection</fullName>
+                <default>false</default>
+                <label>Awaiting Regulation Inspection</label>
+            </value>
+            <value>
+                <fullName>Awaiting ALD Insurer Inspection</fullName>
+                <default>false</default>
+                <label>Awaiting ALD Insurer Inspection</label>
+            </value>
+            <value>
+                <fullName>Awaiting Customer Insurer Inspection</fullName>
+                <default>false</default>
+                <label>Awaiting Customer Insurer Inspection</label>
+            </value>
+            <value>
+                <fullName>Awaiting Third Party Insurer Inspection</fullName>
+                <default>false</default>
+                <label>Awaiting Third Party Insurer Inspection</label>
+            </value>
+            <value>
+                <fullName>Budget in ALD Analysis</fullName>
+                <default>false</default>
+                <label>Budget in ALD Analysis</label>
+            </value>
+            <value>
+                <fullName>Waiting for Submission of the Supplementary Budget</fullName>
+                <default>false</default>
+                <label>Waiting for Submission of the Supplementary Budget</label>
+            </value>
+            <value>
+                <fullName>Awaiting for Parts to Arrive</fullName>
+                <default>false</default>
+                <label>Awaiting for Parts to Arrive</label>
+            </value>
+            <value>
+                <fullName>Parts in B.O at the Assembler</fullName>
+                <default>false</default>
+                <label>Parts in B.O at the Assembler</label>
+            </value>
+            <value>
+                <fullName>Waiting for Customer to Call Insurance Company</fullName>
+                <default>false</default>
+                <label>Waiting for Customer to Call Insurance Company</label>
+            </value>
+            <value>
+                <fullName>Budget under negotiation with the Third Party</fullName>
+                <default>false</default>
+                <label>Budget under negotiation with the Third Party</label>
+            </value>
+            <value>
+                <fullName>Awaiting approval from ALD&apos;s insurer</fullName>
+                <default>false</default>
+                <label>Awaiting approval from ALD&apos;s insurer</label>
+            </value>
+            <value>
+                <fullName>Awaiting approval from the Customer&apos;s insurer</fullName>
+                <default>false</default>
+                <label>Awaiting approval from the Customer&apos;s insurer</label>
+            </value>
+            <value>
+                <fullName>Awaiting for approval from the third party&apos;s insurer</fullName>
+                <default>false</default>
+                <label>Awaiting for approval from the third party&apos;s insurer</label>
+            </value>
+            <value>
+                <fullName>Awaiting approval from the manager</fullName>
+                <default>false</default>
+                <label>Awaiting approval from the manager</label>
+            </value>
+            <value>
+                <fullName>Vehicle under repair in the ALD workshop</fullName>
+                <default>false</default>
+                <label>Vehicle under repair in the ALD workshop</label>
+            </value>
+            <value>
+                <fullName>Vehicle under repair in the third party&apos;s workshop</fullName>
+                <default>false</default>
+                <label>Vehicle under repair in the third party&apos;s workshop</label>
+            </value>
+            <value>
+                <fullName>Pending regularization of Documentation</fullName>
+                <default>false</default>
+                <label>Pending regularization of Documentation</label>
+            </value>
+            <value>
+                <fullName>Awaiting Quality Inspection</fullName>
+                <default>false</default>
+                <label>Awaiting Quality Inspection</label>
+            </value>
+            <value>
+                <fullName>Vehicle under repair and delivered</fullName>
+                <default>false</default>
+                <label>Vehicle under repair and delivered</label>
+            </value>
+            <value>
+                <fullName>Suspended service</fullName>
+                <default>false</default>
+                <label>Suspended service</label>
+            </value>
+            <value>
+                <fullName>Vehicle robbery</fullName>
+                <default>false</default>
+                <label>Vehicle robbery</label>
+            </value>
+            <value>
+                <fullName>Vehicle theft</fullName>
+                <default>false</default>
+                <label>Vehicle theft</label>
+            </value>
+            <value>
+                <fullName>Vehicle Decreed Total Loss</fullName>
+                <default>false</default>
+                <label>Vehicle Decreed Total Loss</label>
+            </value>
+            <value>
+                <fullName>Awaiting further information</fullName>
+                <default>false</default>
+                <label>Awaiting further information</label>
+            </value>
+            <value>
+                <fullName>Agreement between Individuals​</fullName>
+                <default>false</default>
+                <label>Agreement between Individuals​</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

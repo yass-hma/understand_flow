@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_z_backlog_DU_e_libretto</fullName>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>Calder_Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notContain</operation>
+        <value>chiuso</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>documento unico,libretto circolazione</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>mail,front,ita outsourcing</value>
+    </filters>
+    <label>ITA- z backlog DU e libretto</label>
+    <language>it</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ItalyBackOffice</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Back_Office_Operator</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Backoffice</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Business_Administrator</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_Manual_Priority_Date_is_required</fullName>
+    <active>true</active>
+    <description>ITA :
+ If case status is Pending - Internal, Pending - Customer or Pending - External then manual priority date is mandatory.</description>
+    <errorConditionFormula>AND(
+ NOT( $User.Bypass_Validation_Rules__c ),
+ RecordTypeId=&quot;012200000009CuR&quot;,
+ OR( ISPICKVAL(Status,&quot;Pending - Internal&quot;), 
+ ISPICKVAL(Status,&quot;Pending - Customer&quot;),
+ ISPICKVAL(Status,&quot;Pending - External&quot;)),
+ ISNULL(Manual_Priority_Date__c)
+ )</errorConditionFormula>
+    <errorDisplayField>Manual_Priority_Date__c</errorDisplayField>
+    <errorMessage>Manual priority date is required if case status is Pending - Internal, Pending - Customer or Pending - External.</errorMessage>
+</ValidationRule>

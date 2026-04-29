@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_MailToCase_VFM_TEST</fullName>
+    <booleanFilter>(3 AND 1 AND 2) or (6 AND 1 AND 2) or ((4 or 5) AND 1 AND 2)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notContain</operation>
+        <value>ITA - DELETED CASES</value>
+    </filters>
+    <filters>
+        <field>Emailtocasereceiver__c</field>
+        <operation>contains</operation>
+        <value>vfm@aldautomotive.com,cs.accenture@aldautomotive.com</value>
+    </filters>
+    <filters>
+        <field>Emailtocasereceiver__c</field>
+        <operation>equals</operation>
+        <value>servizio.clienti@aldautomotive.com</value>
+    </filters>
+    <filters>
+        <field>Email_to_Case_Sender_formula__c</field>
+        <operation>contains</operation>
+        <value>@accenture,@sifigroup.com,@waters.com,@TAINSTRUMENTS.COM</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>contains</operation>
+        <value>accenture,s.i.f.i.,waters</value>
+    </filters>
+    <label>VFM+ACCENTURE</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ItalyCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCM_Block_ClosureConfirmationStatus_Upd</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($User.Bypass_Validation_Rules__c),
+CONTAINS($Label.CCCM_Closure_Confmn_Status_RTdevName, RecordType.DeveloperName),
+NOT(ISBLANK(TEXT(Closure_confirmation_status__c))),
+ISCHANGED(Closure_confirmation_status__c),
+
+OR(
+NOT(
+OR(
+ISPICKVAL(Closure_confirmation_status__c, &quot;N/A&quot;),
+ISPICKVAL(Closure_confirmation_status__c, &quot;Send email to customer&quot;),
+ISPICKVAL(Closure_confirmation_status__c, &quot;Service request opening&quot;)
+)
+),
+
+AND(
+ISPICKVAL(Closure_confirmation_status__c, &quot;Send email to customer&quot;),
+NOT(
+OR(
+ISPICKVAL(PRIORVALUE(Closure_confirmation_status__c), &quot;&quot;),
+ISPICKVAL(PRIORVALUE(Closure_confirmation_status__c), &quot;N/A&quot;),
+ISPICKVAL(PRIORVALUE(Closure_confirmation_status__c), &quot;Closure rejected by customer&quot;)
+)
+)
+),
+
+AND(
+ISPICKVAL(Closure_confirmation_status__c, &quot;N/A&quot;),
+NOT(ISBLANK(PRIORVALUE(Closure_confirmation_status__c)))
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Closure_confirmation_status__c</errorDisplayField>
+    <errorMessage>You are not allowed to update any value other than &apos;N/A&apos; , &apos;Send email to customer&apos; and &apos;Service request opening&apos; / You are allowed to update N/A&apos; only if the previous value was empty</errorMessage>
+</ValidationRule>

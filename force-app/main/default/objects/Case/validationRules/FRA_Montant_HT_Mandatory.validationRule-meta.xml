@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Montant_HT_Mandatory</fullName>
+    <active>true</active>
+    <description>Modified for - 170416</description>
+    <errorConditionFormula>AND(RecordTypeId = &apos;0122000000005ov&apos; ,
+NOT( $User.Bypass_Validation_Rules__c ), AND(OR(ISPICKVAL(External_Case_Detail__c, &apos;Business discount&apos;),ISPICKVAL(External_Case_Detail__c,&apos;Advance restitution&apos;)), ISNULL(Montant_HT__c)))</errorConditionFormula>
+    <errorDisplayField>Montant_HT__c</errorDisplayField>
+    <errorMessage>Field &quot;Montant HT&quot; must be filled in when value from Case Detail &quot;Business discount&quot; or &quot;Advance restitution&quot; is filled in&quot;.</errorMessage>
+</ValidationRule>

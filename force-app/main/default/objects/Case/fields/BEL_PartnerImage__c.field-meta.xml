@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BEL_PartnerImage__c</fullName>
+    <description>Image(&quot;https://sfdc123.files.wordpress.com/2014/09/&quot;+Account.IdentificationCriteriawithoutSpace__c+&quot;.jpg&quot;, &apos;&apos; ,100,100)  ,71, 471</description>
+    <externalId>false</externalId>
+    <formula>IF(
+ ISBLANK( Account.Id )  ||   ISPICKVAL(Account.Identification_Criteria__c,&apos;&apos;),&quot;&quot;,
+    
+    If(
+        (ISPICKVAL(Account.Identification_Criteria__c,&apos;300057&apos;)),
+        
+        Image(&quot;https://docs.mobility.belfius.be/img/sfdc_template_prod/&quot;+ Text(Account.Identification_Criteria__c)+&quot;.png&quot;, &apos;&apos; ,65,-1),
+              
+        
+
+IF( CONTAINS( $Label.PatnerImage_values_Case , TEXT(Account.Identification_Criteria__c)  ) 
+
+, Image(&quot;http://img.axus.be/logos/Ayvens-group.png&quot;, &apos;&apos; ,65,-1),  IMAGE(&quot;http://img.aldautomotive.be/sfdc_template_uat/&quot;+ Text(Account.Identification_Criteria__c)+&quot;.png&quot;, &apos;&apos; ,65,-1))  
+
+
+             
+     )         
+                   
+   )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>BEL-PartnerImage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LUX_Team_Finance_AP_AR_Cases_Open</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.MILESTONE_TIMER</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FIRST_NAME</field>
+        <operation>equals</operation>
+        <value>HASSANI,HAIAL,LUTSYK,GLODEANU,CRACIUN</value>
+    </filters>
+    <label>LUX - Team  Finance AP-AR Cases Open</label>
+    <sharedTo>
+        <group>LUX_Finance_APAR</group>
+        <group>LUX_Finance_AP_AR_RO</group>
+        <roleAndSubordinates>LuxembourgCM</roleAndSubordinates>
+    </sharedTo>
+</ListView>

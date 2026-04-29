@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_type__c</fullName>
+    <label>Budget type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Small amount</fullName>
+                <default>false</default>
+                <label>Small amount</label>
+            </value>
+            <value>
+                <fullName>Medium amount​</fullName>
+                <default>false</default>
+                <label>Medium amount​</label>
+            </value>
+            <value>
+                <fullName>Large amount​</fullName>
+                <default>false</default>
+                <label>Large amount​</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_RPA_ROU_non_trait_es_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <label>FRA - RPA ROU non traitées</label>
+    <language>en_US</language>
+    <queue>FRA_RPA_ROU_non_trait_es</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>France_DCSP_CSF_SAOC_Resp</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

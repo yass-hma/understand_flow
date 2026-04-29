@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copie_de_FRA_Grandes_Distribs_PSC</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>EM_Addresses__c</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <label>FRA - Grandes Distribs PSC</label>
+    <queue>FRA_Grandes_Distribs_PSC</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>France_DREP_Retail_Partnerships_Resp_Transverse</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

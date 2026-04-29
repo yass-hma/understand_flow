@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_AFTER_SALES_TECHNICAL_SAFO1</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>Followed_by__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>Account_Qualification__c</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Car_Make__c</columns>
+    <columns>Invoice_Nbr__c</columns>
+    <columns>Email_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>after sales technical,soccorso stradale</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>contains</operation>
+        <value>Repair reminder,Management of authority request</value>
+    </filters>
+    <filters>
+        <field>Invoice_Nbr__c</field>
+        <operation>contains</operation>
+        <value>SAFO</value>
+    </filters>
+    <label>ITA AFTER SALES TECHNICAL SAFO</label>
+    <language>it</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ItalyBackOffice</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>ItalyCM</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Back_Office_Operator</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Backoffice</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Business_Administrator</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

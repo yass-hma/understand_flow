@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Validation_Action_Plan</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   NOT($User.Bypass_Validation_Rules__c ),
+   NOT( CONTAINS($Label.Global_Complaint_Excluded_Subsidairy,
+    RecordType.DeveloperName)),
+  
+OR(
+   ISPICKVAL(Type,&quot;Complaint&quot;),
+   ISPICKVAL(External_Case_Type__c,&quot;Complaint&quot;)
+  ),
+   ISPICKVAL( Complaint_reason__c , &quot;Non-Conformity&quot;),
+   ISBLANK( ComplaintActionPlan__c )
+)</errorConditionFormula>
+    <errorDisplayField>ComplaintActionPlan__c</errorDisplayField>
+    <errorMessage>If the value « Non-Conformity » is picked in the field &quot;Complaint reason&quot;, an Action Plan needs to be created</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_CASE_OWNER_CHANGE</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	NOT( $User.Bypass_Validation_Rules__c ),
+	ISCHANGED(OwnerId),
+	 OwnerId =   $Label.FRA_CONCILIAN_QUEUE_ID ,
+	Litigation_Manager__c &lt;&gt; &apos;1A-1M&apos;,
+	Litigation_Manager__c &lt;&gt; &apos;4A-4M&apos;
+)</errorConditionFormula>
+    <errorMessage>This Case cannot be transferred to an external agent.</errorMessage>
+</ValidationRule>

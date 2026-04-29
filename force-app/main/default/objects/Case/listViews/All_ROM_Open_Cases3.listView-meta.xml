@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_ROM_Open_Cases3</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>External_description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>notContain</operation>
+        <value>sales,accident management</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notContain</operation>
+        <value>trash</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Case_External_Romania</value>
+    </filters>
+    <label>ROM - All Open Cases</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>RomaniaCM</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>RomaniaCallCenter</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>RomaniaCallCenterFrontOffice</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

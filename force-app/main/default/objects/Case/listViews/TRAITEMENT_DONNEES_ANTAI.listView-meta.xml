@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TRAITEMENT_DONNEES_ANTAI</fullName>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>données manquantes pour la désignation d&apos;une infraction</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>contains</operation>
+        <value>MICROSOFT</value>
+    </filters>
+    <label>TRAITEMENT DONNEES ANTAI</label>
+    <sharedTo>
+        <group>FRA_TFO_Team</group>
+    </sharedTo>
+</ListView>

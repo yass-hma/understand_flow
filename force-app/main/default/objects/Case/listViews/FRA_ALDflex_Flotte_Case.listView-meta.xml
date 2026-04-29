@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_ALDflex_Flotte_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>External_Case_Type__c</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <label>FRA - ALD flex Flotte</label>
+    <queue>FRA_ALDflex_Flotte</queue>
+    <sharedTo>
+        <group>FRA_Service_Mobilite_LMD</group>
+        <roleAndSubordinatesInternal>France_DRMC_Service_Flotte_Flex_Resp</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

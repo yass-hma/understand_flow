@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk_risk_taxonomy__c</fullName>
+    <label>Risk (risk taxonomy)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Specific risks related to operating leasing activities</fullName>
+                <default>false</default>
+                <label>Specific risks related to operating leasing activities</label>
+            </value>
+            <value>
+                <fullName>Specific risks related to insurance activities</fullName>
+                <default>false</default>
+                <label>Specific risks related to insurance activities</label>
+            </value>
+            <value>
+                <fullName>Settlement and delivery risk</fullName>
+                <default>false</default>
+                <label>Settlement and delivery risk</label>
+            </value>
+            <value>
+                <fullName>Operational Risk</fullName>
+                <default>false</default>
+                <label>Operational Risk</label>
+            </value>
+            <value>
+                <fullName>Business risks</fullName>
+                <default>false</default>
+                <label>Business risks</label>
+            </value>
+            <value>
+                <fullName>Debtor Risk</fullName>
+                <default>false</default>
+                <label>Debtor Risk</label>
+            </value>
+            <value>
+                <fullName>Compliance &amp; Legal Risks</fullName>
+                <default>false</default>
+                <label>Compliance &amp; Legal Risks</label>
+            </value>
+            <value>
+                <fullName>Reputational Risk</fullName>
+                <default>false</default>
+                <label>Reputational Risk</label>
+            </value>
+            <value>
+                <fullName>CCP Clearing Member risk</fullName>
+                <default>false</default>
+                <label>CCP Clearing Member risk</label>
+            </value>
+            <value>
+                <fullName>Counterparty Credit Risk (CCR)</fullName>
+                <default>false</default>
+                <label>Counterparty Credit Risk (CCR)</label>
+            </value>
+            <value>
+                <fullName>Digital risk (o/w AI)</fullName>
+                <default>false</default>
+                <label>Digital risk (o/w AI)</label>
+            </value>
+            <value>
+                <fullName>ESG Risk</fullName>
+                <default>false</default>
+                <label>ESG Risk</label>
+            </value>
+            <value>
+                <fullName>Geopolitical and Country Risk</fullName>
+                <default>false</default>
+                <label>Geopolitical and Country Risk</label>
+            </value>
+            <value>
+                <fullName>Liquidity and funding risks</fullName>
+                <default>false</default>
+                <label>Liquidity and funding risks</label>
+            </value>
+            <value>
+                <fullName>Market risk</fullName>
+                <default>false</default>
+                <label>Market risk</label>
+            </value>
+            <value>
+                <fullName>Market risk on Banking Book</fullName>
+                <default>false</default>
+                <label>Market risk on Banking Book</label>
+            </value>
+            <value>
+                <fullName>Model risk</fullName>
+                <default>false</default>
+                <label>Model risk</label>
+            </value>
+            <value>
+                <fullName>Own real estate risk</fullName>
+                <default>false</default>
+                <label>Own real estate risk</label>
+            </value>
+            <value>
+                <fullName>Participation risk</fullName>
+                <default>false</default>
+                <label>Participation risk</label>
+            </value>
+            <value>
+                <fullName>Risk Factor</fullName>
+                <default>false</default>
+                <label>Risk Factor</label>
+            </value>
+            <value>
+                <fullName>Risk on employee benefits</fullName>
+                <default>false</default>
+                <label>Risk on employee benefits</label>
+            </value>
+            <value>
+                <fullName>Strategy risk</fullName>
+                <default>false</default>
+                <label>Strategy risk</label>
+            </value>
+            <value>
+                <fullName>Underwriting risk</fullName>
+                <default>false</default>
+                <label>Underwriting risk</label>
+            </value>
+            <value>
+                <fullName>Country Risk</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Country Risk</label>
+            </value>
+            <value>
+                <fullName>Investment risk</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investment risk</label>
+            </value>
+            <value>
+                <fullName>Risks related to insurance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Risks related to insurance</label>
+            </value>
+            <value>
+                <fullName>Risks related to operating leasing activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Risks related to operating leasing activities</label>
+            </value>
+            <value>
+                <fullName>Step-in risk</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Step-in risk</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRV_MY_in_progress_cases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Case_Related__c</columns>
+    <columns>NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>In Progress</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Case_External_Croatia</value>
+    </filters>
+    <label>HRV - MY in progress cases</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>HRV_SVN</group>
+        <group>HRVallcasesusers</group>
+        <role>CroatiaCM</role>
+        <role>CroatiaCallCenterBackOffice</role>
+    </sharedTo>
+</ListView>

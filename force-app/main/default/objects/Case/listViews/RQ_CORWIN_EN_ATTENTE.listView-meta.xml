@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RQ_CORWIN_EN_ATTENTE</fullName>
+    <booleanFilter>1 AND 4 AND (2 OR 3 OR 5)</booleanFilter>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Followed_by__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Open,A faire,New,In Progress,En cours,Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>contains</operation>
+        <value>5395286,5221145,5033549,5394398,5427097,5463483,5466844,5395074,5403998,5434934,5396094,5402821,5404049,5395282,5394603,5418576,5151094,5421284,5393905,5412891</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>contains</operation>
+        <value>cook,enterprise services,dxc,elis,MAJ,REGIONALE DE LOCATION,LES LAVANDIERES,AD3,ELIS PREVENTION,PIERRETTE,PRO SERVICES ENVI,BLANCHISSERIE,THIMEAU,ENERCON,ENERGIZER,HP CDS,atlantique amballage,O-I,Signify</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>CORWIN FALFUS,outsourcing</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>cook,enterprise services,dxc,elis,MAJ,REGIONALE DE LOCATION,LES LAVANDIERES,AD3,ELIS PREVENTION,PIERRETTE,PRO SERVICES ENVI,BLANCHISSERIE,THIMEAU,ENERCON,ENERGIZER,HP CDS,atlantique amballage,O-I,Signify,corwin</value>
+    </filters>
+    <label>RQ CORWIN EN ATTENTE</label>
+    <sharedTo>
+        <group>FRA_TFO_Team</group>
+    </sharedTo>
+</ListView>

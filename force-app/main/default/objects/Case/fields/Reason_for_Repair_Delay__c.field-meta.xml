@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Repair_Delay__c</fullName>
+    <description>Created as part of the BR-6053</description>
+    <label>Reason for Repair Delay</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OEM - Spare parts delay</fullName>
+                <default>false</default>
+                <label>OEM - Spare parts delay</label>
+            </value>
+            <value>
+                <fullName>OEM - Warranty capacity</fullName>
+                <default>false</default>
+                <label>OEM - Warranty capacity</label>
+            </value>
+            <value>
+                <fullName>OEM - Warranty dispute</fullName>
+                <default>false</default>
+                <label>OEM - Warranty dispute</label>
+            </value>
+            <value>
+                <fullName>Supplier - Spare parts delay</fullName>
+                <default>false</default>
+                <label>Supplier - Spare parts delay</label>
+            </value>
+            <value>
+                <fullName>Supplier - Fail to adhere to SLA</fullName>
+                <default>false</default>
+                <label>Supplier - Fail to adhere to SLA</label>
+            </value>
+            <value>
+                <fullName>Supplier - Availability</fullName>
+                <default>false</default>
+                <label>Supplier - Availability</label>
+            </value>
+            <value>
+                <fullName>Supplier - Tow availability</fullName>
+                <default>false</default>
+                <label>Supplier - Tow availability</label>
+            </value>
+            <value>
+                <fullName>Supplier - Recover company fail to attend</fullName>
+                <default>false</default>
+                <label>Supplier - Recover company fail to attend</label>
+            </value>
+            <value>
+                <fullName>Supplier - Multiple repairs discovered by supplier</fullName>
+                <default>false</default>
+                <label>Supplier - Multiple repairs discovered by supplier</label>
+            </value>
+            <value>
+                <fullName>Supplier - Major or complex repairs</fullName>
+                <default>false</default>
+                <label>Supplier - Major or complex repairs</label>
+            </value>
+            <value>
+                <fullName>Supplier - GEOTAB device issue</fullName>
+                <default>false</default>
+                <label>Supplier - GEOTAB device issue</label>
+            </value>
+            <value>
+                <fullName>Supplier - GEFCO delays (upfit parts)</fullName>
+                <default>false</default>
+                <label>Supplier - GEFCO delays (upfit parts)</label>
+            </value>
+            <value>
+                <fullName>DSP - Approval delay</fullName>
+                <default>false</default>
+                <label>DSP - Approval delay</label>
+            </value>
+            <value>
+                <fullName>DSP - Pick-up delay</fullName>
+                <default>false</default>
+                <label>DSP - Pick-up delay</label>
+            </value>
+            <value>
+                <fullName>DSP - Missing documents/keys</fullName>
+                <default>false</default>
+                <label>DSP - Missing documents/keys</label>
+            </value>
+            <value>
+                <fullName>DSP - Delay in opening claim</fullName>
+                <default>false</default>
+                <label>DSP - Delay in opening claim</label>
+            </value>
+            <value>
+                <fullName>3rd Party - Body damage appraisal delay from 3rd party</fullName>
+                <default>false</default>
+                <label>3rd Party - Body damage appraisal delay from 3rd party</label>
+            </value>
+            <value>
+                <fullName>3rd Party - Body damage appraisal delay from Ayvens</fullName>
+                <default>false</default>
+                <label>3rd Party - Body damage appraisal delay from Ayvens</label>
+            </value>
+            <value>
+                <fullName>3rd Party - Insurance approval delays from 3rd party</fullName>
+                <default>false</default>
+                <label>3rd Party - Insurance approval delays from 3rd party</label>
+            </value>
+            <value>
+                <fullName>3rd Party - Insurance approval delays from Ayvens</fullName>
+                <default>false</default>
+                <label>3rd Party - Insurance approval delays from Ayvens</label>
+            </value>
+            <value>
+                <fullName>Ayvens approval</fullName>
+                <default>false</default>
+                <label>Ayvens approval</label>
+            </value>
+            <value>
+                <fullName>Ayvens failure to follow-up</fullName>
+                <default>false</default>
+                <label>Ayvens failure to follow-up</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

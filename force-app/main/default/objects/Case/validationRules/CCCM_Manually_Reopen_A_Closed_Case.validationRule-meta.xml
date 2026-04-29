@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCM_Manually_Reopen_A_Closed_Case</fullName>
+    <active>true</active>
+    <description>User can only reopen manually a closed case.
+User will need to select “Case not solved” in Reopening reason to resume their work.</description>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c),
+CONTAINS($Label.CCCMRetrieveRecordTypeIds, RecordType.DeveloperName),
+ISCHANGED(Status),
+NOT(ISBLANK(TEXT(Status))),
+NOT(ISPICKVAL(PRIORVALUE(Status), &apos;Closed&apos;)),
+ISPICKVAL(Status, &apos;Reopened&apos;)
+)</errorConditionFormula>
+    <errorMessage>You can’t reopen a case that was not closed previously</errorMessage>
+</ValidationRule>

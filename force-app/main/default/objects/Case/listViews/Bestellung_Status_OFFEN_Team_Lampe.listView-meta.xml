@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bestellung_Status_OFFEN_Team_Lampe</fullName>
+    <booleanFilter>(1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7) OR (1 AND 2 AND 3  AND 8)</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>NAME</columns>
+    <columns>Email_Sender__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CASES.MILESTONE_TIMER</columns>
+    <columns>Email_Status__c</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Deleted</value>
+    </filters>
+    <filters>
+        <field>Subsidiary_Indicator__c</field>
+        <operation>equals</operation>
+        <value>27604</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>233,413,582,396,225,613,232,385,640,491,257,400,579,684,475,689,648,654,306</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Order</value>
+    </filters>
+    <filters>
+        <field>VIPContact__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>notEqual</operation>
+        <value>Delivery,Registration</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>notContain</operation>
+        <value>enthält nicht DECPM – Vertragsmanagement,DECPM – Schaden &amp; Versicherung,DECPM – Logistik &amp; Mobilitätsservice,DECPM – Abrechnung / Buchhaltung,DECPM – KB FL,DECPM – NB FL,DECPM - CaseToAssign</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>DECPM – Bestellung</value>
+    </filters>
+    <label>DECPM - Fleet Supply Team Lampe</label>
+    <sharedTo>
+        <group>DECPM_Customer_Care</group>
+    </sharedTo>
+</ListView>

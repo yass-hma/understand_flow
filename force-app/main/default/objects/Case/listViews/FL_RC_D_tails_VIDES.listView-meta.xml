@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FL_RC_D_tails_VIDES</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>NAME</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>FL - RC - Qualif à faire par Strasbourg</label>
+    <language>fr</language>
+    <queue>FL_FORD_LEASE_PSC</queue>
+    <sharedTo>
+        <group>BP_relations_Clients</group>
+        <roleAndSubordinatesInternal>France_DREP_Retail_Partnerships_Dir</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

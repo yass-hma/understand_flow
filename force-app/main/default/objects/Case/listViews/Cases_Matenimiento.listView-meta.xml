@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cases_Matenimiento</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>NAME</columns>
+    <columns>Appointment_date_time__c</columns>
+    <columns>Reception_date__c</columns>
+    <columns>Release_Date__c</columns>
+    <columns>Maintenance_Status__c</columns>
+    <columns>PAL_Report__c</columns>
+    <columns>Supplier_Contact__c</columns>
+    <columns>Supplier_Point_of_service__c</columns>
+    <columns>Last_Comment_Date_Time__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>contains</operation>
+        <value>Auto sustituto,Auxílio vial,Cambio,Mantenimiento Correctivo,Mantenimiento Preventivo,Reparación,Traslados,Verificación vehicular</value>
+    </filters>
+    <label>Cases - Matenimiento</label>
+    <sharedTo>
+        <group>MEX_Case_to_assign_FM</group>
+    </sharedTo>
+</ListView>

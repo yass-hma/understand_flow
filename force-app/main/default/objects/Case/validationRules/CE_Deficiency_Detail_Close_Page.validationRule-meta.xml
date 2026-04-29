@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CE_Deficiency_Detail_Close_Page</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT( $User.Bypass_Validation_Rules__c ),NOT(CONTAINS($Label.ALDSATRecordTypeIds,RecordType.DeveloperName)),
+OR(
+$RecordType.Id =&apos;01220000000MDhj&apos;, 
+$RecordType.Id =&apos;01220000000MFwy&apos;,
+$RecordType.Id =&apos;01220000000MG1A&apos;
+),
+ISBLANK(Detailed_Deficiency__c),
+OR(
+ISPICKVAL(Status, &apos;Closed with action plan&apos;),
+ISPICKVAL(Status, &apos;Closed without action plan&apos;),
+ISPICKVAL(Status, &apos;Closed&apos;)
+),
+(TEXT( External_Case_Category__c )= &apos;Quality Management&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Detailed_Deficiency__c</errorDisplayField>
+    <errorMessage>This field is mandatory. Please explain why there was a deficiency.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRA_CaseToAssign</fullName>
+    <columns>CASES.ORIGIN</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>Copy_of_contract_name__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Deleted,In Progress</value>
+    </filters>
+    <label>BRA - CaseToAssign</label>
+    <language>en_US</language>
+    <queue>BRA_CaseToAssign</queue>
+    <sharedTo>
+        <group>BRA_GOC</group>
+    </sharedTo>
+</ListView>

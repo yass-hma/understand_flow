@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_SERVICE_EXPERTISE_VO_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Followed_by__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.ORIGIN</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <columns>EM_Addresses__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>FRA service expertise VO</value>
+    </filters>
+    <label>FRA - Service Expertise VO</label>
+    <sharedTo>
+        <role>France_DRMC_Logistique</role>
+        <roleAndSubordinatesInternal>France_DRMC_Restitution_Cons</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DRMC_Restitution_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_Expert_VO</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_Resp_VOR</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

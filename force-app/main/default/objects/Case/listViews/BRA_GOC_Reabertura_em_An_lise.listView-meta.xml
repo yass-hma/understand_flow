@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRA_GOC_Reabertura_em_An_lise</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>Customer_Service_Account_Owner__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Reopened</value>
+    </filters>
+    <filters>
+        <field>CASES.CASE_NUMBER</field>
+        <operation>notContain</operation>
+        <value>,20180516-8466311,20190108-9789891,20200731-13148765</value>
+    </filters>
+    <filters>
+        <field>CASES.CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>12/31/2020 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>notContain</operation>
+        <value>MERCK SHARP</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>notContain</operation>
+        <value>PFIZER,ORGANON,ALLFLEX</value>
+    </filters>
+    <label>BRA - GOC (Reabertura em Análise)</label>
+    <language>pt_BR</language>
+    <sharedTo>
+        <group>BRA_GOC</group>
+    </sharedTo>
+</ListView>

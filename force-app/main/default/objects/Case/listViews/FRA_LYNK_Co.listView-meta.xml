@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_LYNK_Co</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Email_to_Case_Sender_formula__c</field>
+        <operation>contains</operation>
+        <value>@lynkco.com,@lynkco.fr</value>
+    </filters>
+    <label>FRA - LYNK&amp;Co</label>
+    <language>fr</language>
+    <sharedTo>
+        <role>France_DREP_Retail_Partnerships_Resp_Transverse</role>
+        <role>France_DREP_Telesales_Indirect_Ventes</role>
+        <role>France_DREP_Telesales_Indirect_Ventes_Resp</role>
+    </sharedTo>
+</ListView>

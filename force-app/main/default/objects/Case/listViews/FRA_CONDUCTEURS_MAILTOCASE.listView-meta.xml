@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_CONDUCTEURS_MAILTOCASE</fullName>
+    <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <columns>Contract__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>External_Case_Detail__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>FRA - Zone Mail2case</value>
+    </filters>
+    <filters>
+        <field>Emailtocasereceiver_FormulaField__c</field>
+        <operation>contains</operation>
+        <value>service.conducteurs@</value>
+    </filters>
+    <filters>
+        <field>Emailtocasereceiver_FormulaField__c</field>
+        <operation>contains</operation>
+        <value>noreply.serviceconducteurs@</value>
+    </filters>
+    <label>FRA - CONDUCTEURS MAILTOCASE</label>
+    <queue>FRAZoneMail2case</queue>
+    <sharedTo>
+        <role>France_CSFF_TL</role>
+        <role>France_DCSP_CSF</role>
+        <role>France_DCSP_CSF_SAOC</role>
+        <role>France_DCSP_CSF_SAOC_Resp</role>
+        <role>France_DCSP_Centre_Services_Partages_Dir</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_1</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_2</role>
+        <role>France_DSOP_Services_Clients_Dir</role>
+        <roleAndSubordinatesInternal>France_DSOP_Rel_Client_Niv_2_GRP_1_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DSOP_Rel_Client_Niv_2_GRP_2_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DSOP_Rel_Client_Niv_2_GRP_3</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DSOP_Rel_Client_Niv_2_GRP_3_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DSOP_Rel_Client_Niv_2_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

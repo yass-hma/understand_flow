@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_LMD_P_le_CD_VHR</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>Emailtocasereceiver_FormulaField__c</field>
+        <operation>equals</operation>
+        <value>relation.conducteurs@service-mobilite.fr</value>
+    </filters>
+    <label>FRA - LMD (Pôle CD&amp;VHR)</label>
+    <queue>FRA_SERVICE_RELATION_CONDUCTEURS</queue>
+    <sharedTo>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_1</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_2</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_3</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_3_Resp</role>
+        <role>France_DSOP_Services_Clients_Dir</role>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

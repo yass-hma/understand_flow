@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MEX_Total_Loss_Substatus_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c),
+$RecordType.Id =&apos;01220000000MEPK&apos; ,
+OR(ISPICKVAL(Total_Loss_status__c,&apos;Repair​&apos;),ISPICKVAL( Total_Loss_status__c ,&apos;Legal&apos;)),
+ISBLANK(TEXT(Total_Loss_Substatus__c)))</errorConditionFormula>
+    <errorDisplayField>Total_Loss_Substatus__c</errorDisplayField>
+    <errorMessage>Please select &apos;Total Loss Substatus&apos; value</errorMessage>
+</ValidationRule>

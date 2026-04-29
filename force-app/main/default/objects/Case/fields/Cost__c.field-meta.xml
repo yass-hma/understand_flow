@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost__c</fullName>
+    <description>This is the time spent taking care of the case.</description>
+    <label>Cost</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>30 min</fullName>
+                <default>false</default>
+                <label>30 min</label>
+            </value>
+            <value>
+                <fullName>60 min</fullName>
+                <default>false</default>
+                <label>60 min</label>
+            </value>
+            <value>
+                <fullName>90 min</fullName>
+                <default>false</default>
+                <label>90 min</label>
+            </value>
+            <value>
+                <fullName>120 min</fullName>
+                <default>false</default>
+                <label>120 min</label>
+            </value>
+            <value>
+                <fullName>150 min</fullName>
+                <default>false</default>
+                <label>150 min</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

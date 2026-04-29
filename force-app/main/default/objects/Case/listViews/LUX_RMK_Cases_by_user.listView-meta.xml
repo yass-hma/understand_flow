@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LUX_RMK_Cases_by_user</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.MILESTONE_TIMER</columns>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Subsidiary_Indicator__c</field>
+        <operation>equals</operation>
+        <value>44201</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>mbert,aielp,siegel,zaghou,EBuze</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>LUX - RMK Cases by user</label>
+</ListView>

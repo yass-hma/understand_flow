@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_SAV_Equipe_Cl_ment_Cigolari</fullName>
+    <booleanFilter>1 AND (2 OR 4) AND 3</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,A faire,In Progress,En cours,Pending</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>fouche,azevedo,andrade,floridor,chupin,cigolari,deandrade</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.CaseExternalFrance</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>banderso,kdesi,mhette,mraji,nsanchez</value>
+    </filters>
+    <label>FRA - SAV Equipe Clément CIGOLARI</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>France_DSOP_Maintenance_LLD_Grp_1_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DSOP_Maintenance_LLD_Grp_2_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DSOP_Maintenance_LLD_Grp_3_Resp</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

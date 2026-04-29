@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IDF_Requ_tes_des_commerciaux</fullName>
+    <booleanFilter>(1 OR 2 OR 3 OR 6) AND 4 AND 5</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>baliq,batail,boschat,boulanger,cau,clavier,contet,darriere,deretz,villepee,eloy</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>feugas,garrouste,guerinel,ithier,karamaoui,konate,lebras,leclair,lecomte,machado</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>madelin,marinelli,phulpin,poggi,ponsonnet,ribeiro,ricard,saeidi,sallandrouze</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,In Progress,Pending</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>RIJER,MABE</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>jd&apos;ur</value>
+    </filters>
+    <label>IDF - Requêtes des commerciaux</label>
+    <sharedTo>
+        <role>France_DCOI_LARGE_Dir</role>
+        <role>France_DCOI_LARGE_IKA1_Ventes_Resp</role>
+        <role>France_DCOI_Small_IDF_Conq_Ventes_Resp</role>
+        <role>France_DCOI_Small_IDF_Large_SME_Ventes_Resp</role>
+        <role>France_DCOI_Small_IDF_Small_Corp_Ventes_Resp</role>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

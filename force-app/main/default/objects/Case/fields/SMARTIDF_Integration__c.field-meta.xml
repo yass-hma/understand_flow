@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SMARTIDF_Integration__c</fullName>
+    <formula>IF(
+AND (
+CONTAINS($Label.SMARTIDFRecordTypeIds,RecordType.DeveloperName),
+ISPICKVAL(Origin,&quot;SMART&quot;),
+/*NOT(ISBLANK( TEXT(External_Case_Category__c))),*/
+/*NOT(ISBLANK( TEXT(External_Case_Detail__c))),*/
+/*NOT(ISBLANK(Subsidiary_Indicator_Stored__c)),*/
+NOT(ISBLANK(Subsidiary_Indicator__c)),
+NOT(ISBLANK( TEXT(Origin))),
+/*NOT(ISBLANK(TEXT(Service_Provider__c))),*/
+NOT(ISBLANK(TEXT(Sales_Channel__c))),
+NOT(ISBLANK(TEXT(Status))),
+/*NOT(ISBLANK(Last_description__c)),*/
+/*NOT(ISBLANK(Partner_CaseId__c)),*/
+NOT(ISBLANK(Order_Id__c)),
+AND (
+OR(ISPICKVAL(Status,&quot;Pending - External&quot;),ISPICKVAL(Status,&quot;Closed&quot;)))),True,False)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SMARTIDF Integration</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

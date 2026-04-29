@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_for_ALD_Sat_Integration__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(ISPICKVAL( Status , &apos;Open&apos;),ISPICKVAL( Status , &apos;In Progress&apos;),ISPICKVAL( Status , &apos;New&apos;)) ,
+LEFT(&quot;Only Applicable for ALD Sat Integration. Following fields needs to be populated to initiate the integration: &quot;
+&amp; IF( ISBLANK(Subject ) , &quot;Subject, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( Contract__c ) , &quot;Contract, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( Subsidiary_Indicator__c ) , &quot;Subsidiary Indicator, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( TEXT(External_Case_Category__c )) , &quot;Case Category, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( TEXT(External_Case_Detail__c)) , &quot;Case Detail, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( ContactId ) , &quot;Contact Name, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( Contact.Email ) , &quot;Contact Email, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( Contact.Phone ) , &quot;Contact Phone, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( Mileage__c) , &quot;Mileage, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( Appointment_Date_Time_Option1__c) , &quot;Appointment Date &amp; Time (option 1), &quot;, &quot;&quot;)
+,LEN(&quot;Only Applicable for Maintenance/Preventive Maintenance. Following fields needs to be populated to initiate the inegration: &quot;
+&amp; IF( ISBLANK(Subject ) , &quot;Subject, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( Contract__c ) , &quot;Contract, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( Subsidiary_Indicator__c ) , &quot;Subsidiary Indicator, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( ContactId ) , &quot;Contact Name, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( Contact.Email ) , &quot;Contact Email, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( Contact.Phone ) , &quot;Contact Phone, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( Mileage__c) , &quot;Mileage, &quot;, &quot;&quot;) &amp;
+IF( ISBLANK( Appointment_Date_Time_Option1__c) , &quot;Appointment Date &amp; Time (option 1), &quot;, &quot;&quot;))-2),
+&quot;This Case can be Integrated to ALD Sat&quot;)</formula>
+    <label>Validation for ALD Sat Integration</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

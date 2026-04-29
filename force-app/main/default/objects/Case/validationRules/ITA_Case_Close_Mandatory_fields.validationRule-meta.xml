@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_Case_Close_Mandatory_fields</fullName>
+    <active>false</active>
+    <description>** Deactivate because Italy is live on CCCM and this scope is covered by CCCM validation rules **</description>
+    <errorConditionFormula>AND(
+NOT( $User.Bypass_Validation_Rules__c ),
+RecordTypeId = &apos;012200000009CuR&apos;, NOT(CONTAINS($Label.ALDSATRecordTypeIds,RecordType.DeveloperName)),
+ISPICKVAL( External_Case_Type__c ,&apos;Complaint&apos;),
+ISPICKVAL( Status ,&apos;Closed&apos;),
+OR(
+ISPICKVAL( Complaint_type__c ,&apos;&apos;),
+ISPICKVAL( Complaint_reason__c,&apos;&apos;),
+ISPICKVAL( Financial_impact__c,&apos;&apos;),
+ISBLANK( Internal_Comments__c),
+ISPICKVAL( Solution__c,&apos;&apos;),
+ISBLANK( Detail_ActionPlan__c),
+ISPICKVAL( Commercial_Gesture__c,&apos;&apos;),
+ISBLANK( Commercial_Gesture_Amount__c)
+)
+)</errorConditionFormula>
+    <errorMessage>please fill in all the  fields</errorMessage>
+</ValidationRule>

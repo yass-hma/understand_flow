@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closure_Date_YYYYMM__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(MONTH(DATEVALUE(ClosedDate))&lt;10, 
+TEXT(YEAR(DATEVALUE(ClosedDate))) &amp; &quot;-&quot; &amp; &quot;0&quot; &amp; TEXT(MONTH(DATEVALUE(ClosedDate))), 
+TEXT(YEAR(DATEVALUE(ClosedDate))) &amp; &quot;-&quot; &amp; TEXT(MONTH(DATEVALUE(ClosedDate))) 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Closure Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

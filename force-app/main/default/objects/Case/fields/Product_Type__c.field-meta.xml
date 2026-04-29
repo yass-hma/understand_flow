@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( INCLUDES ( Account.Product_Type__c , &quot;ALDclear&quot; ), &quot;ALDclear; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;ALDessentiel&quot; ), &quot;ALDessentiel; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;ALDfirst&quot; ), &quot;ALDfirst; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;ALDflex&quot; ), &quot;ALDflex; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;ALDglobal&quot; ), &quot;ALDglobal; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;ALD Move&quot; ), &quot;ALD Move; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Balil Credit with services&quot; ), &quot;Balil Credit with services; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Chevrolet LLD&quot; ), &quot;Chevrolet LLD; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Chevrolet LLD Carrossier&quot; ), &quot;Chevrolet LLD Carrossier; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Crédit Bail&quot; ), &quot;Crédit Bail; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;DAE&quot; ), &quot;DAE; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Fixe&quot; ), &quot;Fixe; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Flex&quot; ), &quot;Flex; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Ford Lease Fleet&quot; ), &quot;Ford Lease Fleet; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Ford Lease LLD&quot; ), &quot;Ford Lease LLD; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Jaguar Lease&quot; ), &quot;Jaguar Lease; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Land Rover Lease&quot; ), &quot;Land Rover Lease; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Lexus Lease&quot; ), &quot;Lexus Lease; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Lexus Lease GC&quot; ), &quot;Lexus Lease GC; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;LLD ALD Essentiel&quot; ), &quot;LLD ALD Essentiel; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;LLD VO&quot; ), &quot;LLD VO; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;LMD&quot; ), &quot;LMD; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;LMD ALD flex&quot; ), &quot;LMD ALD flex; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Mitsubishi Lease&quot; ), &quot;Mitsubishi Lease; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;OBS&quot; ), &quot;OBS; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;OBS Carrossier&quot; ), &quot;OBS Carrossier; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;OBS Opti&quot; ), &quot;OBS Opti; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;OBS Prima&quot; ), &quot;OBS Prima; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;OBS Taxi/VSL&quot; ), &quot;OBS Taxi/VSL; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;SGP2/UGAP&quot; ), &quot;SGP2/UGAP; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;SGP3/UGAP&quot; ), &quot;SGP3/UGAP; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;SGP4/DAE&quot; ), &quot;SGP4/DAE; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;SGPE/Fleet&quot; ), &quot;SGPE/Fleet; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;SGPU/UGAP&quot; ), &quot;SGPU/UGAP; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Suzuki Lease&quot; ), &quot;Suzuki Lease; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Suzuki Lease Carrossier&quot; ), &quot;Suzuki Lease Carrossier; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Toyota Lease GC&quot; ), &quot;Toyota Lease GC; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;UGAP&quot; ), &quot;UGAP; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Volvo AFS&quot; ), &quot;Volvo AFS; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Volvo Business&quot; ), &quot;Volvo Business; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Volvo Easy&quot; ), &quot;Volvo Easy; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Yamaha Lease Pro&quot; ), &quot;Yamaha Lease Pro; &quot;,null ) &amp;
+IF ( INCLUDES ( Account.Product_Type__c , &quot;Outsourcing&quot; ), &quot;Outsourcing; &quot;,null )</formula>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Support_Client_DGEA</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Followed_by__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>FRA_Omnichannel_Level_1_Is_Flex__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>Agency__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>Account_Environement__c</field>
+        <operation>contains</operation>
+        <value>ALD,Parcours</value>
+    </filters>
+    <filters>
+        <field>Agency__c</field>
+        <operation>contains</operation>
+        <value>GC</value>
+    </filters>
+    <filters>
+        <field>FRA_Omnichannel_Level_1_Is_Flex__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>FRA - Support Client DGEA</label>
+    <queue>FRA_Support_Clients</queue>
+    <sharedTo>
+        <role>France_DCSP_CSF_SAOC</role>
+        <role>France_DCSP_CSF_SAOC_Resp</role>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

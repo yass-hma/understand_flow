@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SWE_Team_Mia</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 4)</booleanFilter>
+    <columns>CASES.PRIORITY</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Reopen_Date__c</columns>
+    <columns>External_Case_Type__c</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Closed without action plan,Closed with action plan</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>jennifer siljensköld,Arash Kicia,Joel Weldeamanuel,Daniel Tezaris,Emma Söderlund,Selma Tommasin</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>Martin Cardona,Ida Thelberg,Sara Lundberg,Mia Lundholm</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>Isak Bergens,Andre Irpola,Eric Rosca,Philip Nassali,Rasmus Petrini,Jenny Kanura,Sam Svärd,Lucas Waltgard</value>
+    </filters>
+    <label>SWE - Driver Care Team</label>
+    <sharedTo>
+        <group>SWE_Customer_Care_Team</group>
+    </sharedTo>
+</ListView>

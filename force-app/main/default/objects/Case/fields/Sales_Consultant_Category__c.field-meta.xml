@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Consultant_Category__c</fullName>
+    <label>Sales Consultant Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CAPTIVE</fullName>
+                <default>false</default>
+                <label>CAPTIVE</label>
+            </value>
+            <value>
+                <fullName>DEALER SERVICE</fullName>
+                <default>false</default>
+                <label>DEALER SERVICE</label>
+            </value>
+            <value>
+                <fullName>FBP</fullName>
+                <default>false</default>
+                <label>FBP</label>
+            </value>
+            <value>
+                <fullName>OVERLAP CODE</fullName>
+                <default>false</default>
+                <label>OVERLAP CODE</label>
+            </value>
+            <value>
+                <fullName>CONSULTANT PA</fullName>
+                <default>false</default>
+                <label>CONSULTANT PA</label>
+            </value>
+            <value>
+                <fullName>CONSULTANT ROMA SMALL</fullName>
+                <default>false</default>
+                <label>CONSULTANT ROMA SMALL</label>
+            </value>
+            <value>
+                <fullName>CONSULTANT ROMA LARGE</fullName>
+                <default>false</default>
+                <label>CONSULTANT ROMA LARGE</label>
+            </value>
+            <value>
+                <fullName>PARTNER CONSULTANT</fullName>
+                <default>false</default>
+                <label>PARTNER CONSULTANT</label>
+            </value>
+            <value>
+                <fullName>AGENT CONSULTANT</fullName>
+                <default>false</default>
+                <label>AGENT CONSULTANT</label>
+            </value>
+            <value>
+                <fullName>SALES CONSULTANT CHANGE</fullName>
+                <default>false</default>
+                <label>SALES CONSULTANT CHANGE</label>
+            </value>
+            <value>
+                <fullName>Fornitore</fullName>
+                <default>false</default>
+                <label>Fornitore</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

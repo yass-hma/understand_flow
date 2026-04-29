@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COL_Contract_Modification</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>New_Email__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Last_Received_Email__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>equals</operation>
+        <value>Contract Modification,Administración de contratos</value>
+    </filters>
+    <filters>
+        <field>Subsidiary_Indicator__c</field>
+        <operation>equals</operation>
+        <value>17001</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>jrian,ssaou,nloza,drodr,mverg</value>
+    </filters>
+    <label>COL - Contract Modification</label>
+    <sharedTo>
+        <role>Colombia_CM</role>
+        <role>Colombia_Credit_Check_Finance</role>
+        <role>Colombia_Customer_Care</role>
+        <role>Colombia_Procurement</role>
+        <role>Colombia_Sales</role>
+    </sharedTo>
+</ListView>

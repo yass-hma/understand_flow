@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parts__c</fullName>
+    <label>Parts</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Mechanical_Family__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A/C SYSTEM CLEANING</fullName>
+                <default>false</default>
+                <label>A/C SYSTEM CLEANING</label>
+            </value>
+            <value>
+                <fullName>CHANGE A/C FILTER</fullName>
+                <default>false</default>
+                <label>CHANGE A/C FILTER</label>
+            </value>
+            <value>
+                <fullName>GAS A/C CHARGE</fullName>
+                <default>false</default>
+                <label>GAS A/C CHARGE</label>
+            </value>
+            <value>
+                <fullName>A/C HOSE</fullName>
+                <default>false</default>
+                <label>A/C HOSE</label>
+            </value>
+            <value>
+                <fullName>A/C COMPRESSOR</fullName>
+                <default>false</default>
+                <label>A/C COMPRESSOR</label>
+            </value>
+            <value>
+                <fullName>A/C CONDENSER</fullName>
+                <default>false</default>
+                <label>A/C CONDENSER</label>
+            </value>
+            <value>
+                <fullName>A/C CONTROL</fullName>
+                <default>false</default>
+                <label>A/C CONTROL</label>
+            </value>
+            <value>
+                <fullName>CYLINDERS DOOR LOCK</fullName>
+                <default>false</default>
+                <label>CYLINDERS DOOR LOCK</label>
+            </value>
+            <value>
+                <fullName>DUSTER</fullName>
+                <default>false</default>
+                <label>DUSTER</label>
+            </value>
+            <value>
+                <fullName>WINDSCREEN WIPER RUBBERS</fullName>
+                <default>false</default>
+                <label>WINDSCREEN WIPER RUBBERS</label>
+            </value>
+            <value>
+                <fullName>REAR VIEW MIRROR</fullName>
+                <default>false</default>
+                <label>REAR VIEW MIRROR</label>
+            </value>
+            <value>
+                <fullName>FIRE EXTINGUISHER REFILL</fullName>
+                <default>false</default>
+                <label>FIRE EXTINGUISHER REFILL</label>
+            </value>
+            <value>
+                <fullName>INSTRUMENT PANEL</fullName>
+                <default>false</default>
+                <label>INSTRUMENT PANEL</label>
+            </value>
+            <value>
+                <fullName>INTERIOR GRAB HANDLE</fullName>
+                <default>false</default>
+                <label>INTERIOR GRAB HANDLE</label>
+            </value>
+            <value>
+                <fullName>DOOR HINGE</fullName>
+                <default>false</default>
+                <label>DOOR HINGE</label>
+            </value>
+            <value>
+                <fullName>GLASS LIFT</fullName>
+                <default>false</default>
+                <label>GLASS LIFT</label>
+            </value>
+            <value>
+                <fullName>DOOR SLIDE</fullName>
+                <default>false</default>
+                <label>DOOR SLIDE</label>
+            </value>
+            <value>
+                <fullName>DOOR LOCK</fullName>
+                <default>false</default>
+                <label>DOOR LOCK</label>
+            </value>
+            <value>
+                <fullName>BOOT LID DAMPER</fullName>
+                <default>false</default>
+                <label>BOOT LID DAMPER</label>
+            </value>
+            <value>
+                <fullName>DOOR PLATE</fullName>
+                <default>false</default>
+                <label>DOOR PLATE</label>
+            </value>
+            <value>
+                <fullName>BRAKE CALIPER OR CALIPER CLAMP</fullName>
+                <default>false</default>
+                <label>BRAKE CALIPER OR CALIPER CLAMP</label>
+            </value>
+            <value>
+                <fullName>ABS SENSOR</fullName>
+                <default>false</default>
+                <label>ABS SENSOR</label>
+            </value>
+            <value>
+                <fullName>PARKING BRAKE LEVER</fullName>
+                <default>false</default>
+                <label>PARKING BRAKE LEVER</label>
+            </value>
+            <value>
+                <fullName>BRAKE CYLINDER</fullName>
+                <default>false</default>
+                <label>BRAKE CYLINDER</label>
+            </value>
+            <value>
+                <fullName>BRAKE DISCS</fullName>
+                <default>false</default>
+                <label>BRAKE DISCS</label>
+            </value>
+            <value>
+                <fullName>BRAKE PIPE</fullName>
+                <default>false</default>
+                <label>BRAKE PIPE</label>
+            </value>
+            <value>
+                <fullName>BRAKE FLUID RESERVOIR</fullName>
+                <default>false</default>
+                <label>BRAKE FLUID RESERVOIR</label>
+            </value>
+            <value>
+                <fullName>MASTER CYLINDER</fullName>
+                <default>false</default>
+                <label>MASTER CYLINDER</label>
+            </value>
+            <value>
+                <fullName>FRONT BRAKE PADS</fullName>
+                <default>false</default>
+                <label>FRONT BRAKE PADS</label>
+            </value>
+            <value>
+                <fullName>REAR BRAKE PADS</fullName>
+                <default>false</default>
+                <label>REAR BRAKE PADS</label>
+            </value>
+            <value>
+                <fullName>HANDBRAKE HANDLE</fullName>
+                <default>false</default>
+                <label>HANDBRAKE HANDLE</label>
+            </value>
+            <value>
+                <fullName>GENERAL BRAKE PADS</fullName>
+                <default>false</default>
+                <label>GENERAL BRAKE PADS</label>
+            </value>
+            <value>
+                <fullName>WHEEL HANDLE</fullName>
+                <default>false</default>
+                <label>WHEEL HANDLE</label>
+            </value>
+            <value>
+                <fullName>FRONT BEARINGS</fullName>
+                <default>false</default>
+                <label>FRONT BEARINGS</label>
+            </value>
+            <value>
+                <fullName>REAR BEARINGS</fullName>
+                <default>false</default>
+                <label>REAR BEARINGS</label>
+            </value>
+            <value>
+                <fullName>BOOSTER</fullName>
+                <default>false</default>
+                <label>BOOSTER</label>
+            </value>
+            <value>
+                <fullName>CLUTCH KIT (DISC/PLATE/COLLAR)</fullName>
+                <default>false</default>
+                <label>CLUTCH KIT (DISC/PLATE/COLLAR)</label>
+            </value>
+            <value>
+                <fullName>CLUTCH COLLAR</fullName>
+                <default>false</default>
+                <label>CLUTCH COLLAR</label>
+            </value>
+            <value>
+                <fullName>CLUTCH PUMP OR CLUTCH</fullName>
+                <default>false</default>
+                <label>CLUTCH PUMP OR CLUTCH</label>
+            </value>
+            <value>
+                <fullName>FAN CLUTCH</fullName>
+                <default>false</default>
+                <label>FAN CLUTCH</label>
+            </value>
+            <value>
+                <fullName>RADIATOR CAP</fullName>
+                <default>false</default>
+                <label>RADIATOR CAP</label>
+            </value>
+            <value>
+                <fullName>THERMOSTAT</fullName>
+                <default>false</default>
+                <label>THERMOSTAT</label>
+            </value>
+            <value>
+                <fullName>WATER PUMP</fullName>
+                <default>false</default>
+                <label>WATER PUMP</label>
+            </value>
+            <value>
+                <fullName>RADIATOR</fullName>
+                <default>false</default>
+                <label>RADIATOR</label>
+            </value>
+            <value>
+                <fullName>RADIATOR HOSE</fullName>
+                <default>false</default>
+                <label>RADIATOR HOSE</label>
+            </value>
+            <value>
+                <fullName>FAN</fullName>
+                <default>false</default>
+                <label>FAN</label>
+            </value>
+            <value>
+                <fullName>ANTIFREEZE TANK</fullName>
+                <default>false</default>
+                <label>ANTIFREEZE TANK</label>
+            </value>
+            <value>
+                <fullName>TEMPERATURE SENSOR</fullName>
+                <default>false</default>
+                <label>TEMPERATURE SENSOR</label>
+            </value>
+            <value>
+                <fullName>KEY CODE</fullName>
+                <default>false</default>
+                <label>KEY CODE</label>
+            </value>
+            <value>
+                <fullName>ENGINE SERVO</fullName>
+                <default>false</default>
+                <label>ENGINE SERVO</label>
+            </value>
+            <value>
+                <fullName>ABS MODULE</fullName>
+                <default>false</default>
+                <label>ABS MODULE</label>
+            </value>
+            <value>
+                <fullName>AIRBAG MODULE</fullName>
+                <default>false</default>
+                <label>AIRBAG MODULE</label>
+            </value>
+            <value>
+                <fullName>ECM ELECTRONIC CONTROL MODULE</fullName>
+                <default>false</default>
+                <label>ECM ELECTRONIC CONTROL MODULE</label>
+            </value>
+            <value>
+                <fullName>TRANSMISSION MODULE</fullName>
+                <default>false</default>
+                <label>TRANSMISSION MODULE</label>
+            </value>
+            <value>
+                <fullName>RADIO</fullName>
+                <default>false</default>
+                <label>RADIO</label>
+            </value>
+            <value>
+                <fullName>WHEEL PRESSURE SENSOR</fullName>
+                <default>false</default>
+                <label>WHEEL PRESSURE SENSOR</label>
+            </value>
+            <value>
+                <fullName>GPS</fullName>
+                <default>false</default>
+                <label>GPS</label>
+            </value>
+            <value>
+                <fullName>IGNITION SWITCH</fullName>
+                <default>false</default>
+                <label>IGNITION SWITCH</label>
+            </value>
+            <value>
+                <fullName>COIL</fullName>
+                <default>false</default>
+                <label>COIL</label>
+            </value>
+            <value>
+                <fullName>BATTERY</fullName>
+                <default>false</default>
+                <label>BATTERY</label>
+            </value>
+            <value>
+                <fullName>ALTERNATOR</fullName>
+                <default>false</default>
+                <label>ALTERNATOR</label>
+            </value>
+            <value>
+                <fullName>FUSE BOX</fullName>
+                <default>false</default>
+                <label>FUSE BOX</label>
+            </value>
+            <value>
+                <fullName>LIGHTS</fullName>
+                <default>false</default>
+                <label>LIGHTS</label>
+            </value>
+            <value>
+                <fullName>START</fullName>
+                <default>false</default>
+                <label>START</label>
+            </value>
+            <value>
+                <fullName>ELECTRIC LOCK ACTUATOR</fullName>
+                <default>false</default>
+                <label>ELECTRIC LOCK ACTUATOR</label>
+            </value>
+            <value>
+                <fullName>BURNER</fullName>
+                <default>false</default>
+                <label>BURNER</label>
+            </value>
+            <value>
+                <fullName>REPAIR OF ELECTRICAL INSTALLATION</fullName>
+                <default>false</default>
+                <label>REPAIR OF ELECTRICAL INSTALLATION</label>
+            </value>
+            <value>
+                <fullName>3/4 ENGINE</fullName>
+                <default>false</default>
+                <label>3/4 ENGINE</label>
+            </value>
+            <value>
+                <fullName>DISTRIBUTION KIT</fullName>
+                <default>false</default>
+                <label>DISTRIBUTION KIT</label>
+            </value>
+            <value>
+                <fullName>ACCESSORY BELT</fullName>
+                <default>false</default>
+                <label>ACCESSORY BELT</label>
+            </value>
+            <value>
+                <fullName>TENSIONER</fullName>
+                <default>false</default>
+                <label>TENSIONER</label>
+            </value>
+            <value>
+                <fullName>ENGINE HINGES</fullName>
+                <default>false</default>
+                <label>ENGINE HINGES</label>
+            </value>
+            <value>
+                <fullName>CRANKSHAFT SEAL</fullName>
+                <default>false</default>
+                <label>CRANKSHAFT SEAL</label>
+            </value>
+            <value>
+                <fullName>TURBOCHARGER</fullName>
+                <default>false</default>
+                <label>TURBOCHARGER</label>
+            </value>
+            <value>
+                <fullName>EXHAUST MANIFOLD</fullName>
+                <default>false</default>
+                <label>EXHAUST MANIFOLD</label>
+            </value>
+            <value>
+                <fullName>CATALYZER</fullName>
+                <default>false</default>
+                <label>CATALYZER</label>
+            </value>
+            <value>
+                <fullName>SILENCER</fullName>
+                <default>false</default>
+                <label>SILENCER</label>
+            </value>
+            <value>
+                <fullName>ENGINE CRANKCASE GASKET</fullName>
+                <default>false</default>
+                <label>ENGINE CRANKCASE GASKET</label>
+            </value>
+            <value>
+                <fullName>ENGINE COVER</fullName>
+                <default>false</default>
+                <label>ENGINE COVER</label>
+            </value>
+            <value>
+                <fullName>ENGINE HEAD</fullName>
+                <default>false</default>
+                <label>ENGINE HEAD</label>
+            </value>
+            <value>
+                <fullName>ENGINE REPAIR</fullName>
+                <default>false</default>
+                <label>ENGINE REPAIR</label>
+            </value>
+            <value>
+                <fullName>ENGINE MOUNT</fullName>
+                <default>false</default>
+                <label>ENGINE MOUNT</label>
+            </value>
+            <value>
+                <fullName>AIR FILTER PIPE</fullName>
+                <default>false</default>
+                <label>AIR FILTER PIPE</label>
+            </value>
+            <value>
+                <fullName>FUEL PUMP</fullName>
+                <default>false</default>
+                <label>FUEL PUMP</label>
+            </value>
+            <value>
+                <fullName>HIGH PRESSURE PUMP</fullName>
+                <default>false</default>
+                <label>HIGH PRESSURE PUMP</label>
+            </value>
+            <value>
+                <fullName>CANISTER</fullName>
+                <default>false</default>
+                <label>CANISTER</label>
+            </value>
+            <value>
+                <fullName>INJECTOR</fullName>
+                <default>false</default>
+                <label>INJECTOR</label>
+            </value>
+            <value>
+                <fullName>FUEL TANK</fullName>
+                <default>false</default>
+                <label>FUEL TANK</label>
+            </value>
+            <value>
+                <fullName>SPRING</fullName>
+                <default>false</default>
+                <label>SPRING</label>
+            </value>
+            <value>
+                <fullName>FORK</fullName>
+                <default>false</default>
+                <label>FORK</label>
+            </value>
+            <value>
+                <fullName>REAR SHOCK ABSORBER</fullName>
+                <default>false</default>
+                <label>REAR SHOCK ABSORBER</label>
+            </value>
+            <value>
+                <fullName>FRONT SHOCK ABSORBER</fullName>
+                <default>false</default>
+                <label>FRONT SHOCK ABSORBER</label>
+            </value>
+            <value>
+                <fullName>ANTI-ROLL BAR</fullName>
+                <default>false</default>
+                <label>ANTI-ROLL BAR</label>
+            </value>
+            <value>
+                <fullName>FRONT AXLE REPAIR</fullName>
+                <default>false</default>
+                <label>FRONT AXLE REPAIR</label>
+            </value>
+            <value>
+                <fullName>CARDAN</fullName>
+                <default>false</default>
+                <label>CARDAN</label>
+            </value>
+            <value>
+                <fullName>REAR AXLE</fullName>
+                <default>false</default>
+                <label>REAR AXLE</label>
+            </value>
+            <value>
+                <fullName>ANTI-ROLL BAR BOLTS</fullName>
+                <default>false</default>
+                <label>ANTI-ROLL BAR BOLTS</label>
+            </value>
+            <value>
+                <fullName>FRONT AXLE</fullName>
+                <default>false</default>
+                <label>FRONT AXLE</label>
+            </value>
+            <value>
+                <fullName>FRONT SHOCK ABSORBER BASE</fullName>
+                <default>false</default>
+                <label>FRONT SHOCK ABSORBER BASE</label>
+            </value>
+            <value>
+                <fullName>REAR SHOCK ABSORBER BASE</fullName>
+                <default>false</default>
+                <label>REAR SHOCK ABSORBER BASE</label>
+            </value>
+            <value>
+                <fullName>REPAIR SUSPENSION BRIDGE</fullName>
+                <default>false</default>
+                <label>REPAIR SUSPENSION BRIDGE</label>
+            </value>
+            <value>
+                <fullName>STEERING PUMP</fullName>
+                <default>false</default>
+                <label>STEERING PUMP</label>
+            </value>
+            <value>
+                <fullName>STEERING LINKAGE</fullName>
+                <default>false</default>
+                <label>STEERING LINKAGE</label>
+            </value>
+            <value>
+                <fullName>STEERING RACK</fullName>
+                <default>false</default>
+                <label>STEERING RACK</label>
+            </value>
+            <value>
+                <fullName>HOMOKINETIC SHAFT</fullName>
+                <default>false</default>
+                <label>HOMOKINETIC SHAFT</label>
+            </value>
+            <value>
+                <fullName>STEERING BOX</fullName>
+                <default>false</default>
+                <label>STEERING BOX</label>
+            </value>
+            <value>
+                <fullName>STEERING COLUMN</fullName>
+                <default>false</default>
+                <label>STEERING COLUMN</label>
+            </value>
+            <value>
+                <fullName>TRANSMISSION REPAIR</fullName>
+                <default>false</default>
+                <label>TRANSMISSION REPAIR</label>
+            </value>
+            <value>
+                <fullName>VALVE BODY</fullName>
+                <default>false</default>
+                <label>VALVE BODY</label>
+            </value>
+            <value>
+                <fullName>TRANSMISSION OIL SEAL</fullName>
+                <default>false</default>
+                <label>TRANSMISSION OIL SEAL</label>
+            </value>
+            <value>
+                <fullName>GEARBOX</fullName>
+                <default>false</default>
+                <label>GEARBOX</label>
+            </value>
+            <value>
+                <fullName>GEAR SELECTOR</fullName>
+                <default>false</default>
+                <label>GEAR SELECTOR</label>
+            </value>
+            <value>
+                <fullName>GEARBOX LEVER</fullName>
+                <default>false</default>
+                <label>GEARBOX LEVER</label>
+            </value>
+            <value>
+                <fullName>DIFFERENTIAL</fullName>
+                <default>false</default>
+                <label>DIFFERENTIAL</label>
+            </value>
+            <value>
+                <fullName>UNIVERSAL JOINT BEARING</fullName>
+                <default>false</default>
+                <label>UNIVERSAL JOINT BEARING</label>
+            </value>
+            <value>
+                <fullName>GEARBOX BRACKET</fullName>
+                <default>false</default>
+                <label>GEARBOX BRACKET</label>
+            </value>
+            <value>
+                <fullName>WHEELS</fullName>
+                <default>false</default>
+                <label>WHEELS</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>DIRECTION</controllingFieldValue>
+            <valueName>STEERING PUMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIRECTION</controllingFieldValue>
+            <valueName>STEERING LINKAGE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIRECTION</controllingFieldValue>
+            <valueName>STEERING RACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIRECTION</controllingFieldValue>
+            <valueName>HOMOKINETIC SHAFT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIRECTION</controllingFieldValue>
+            <valueName>STEERING BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DIRECTION</controllingFieldValue>
+            <valueName>STEERING COLUMN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>TRANSMISSION REPAIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>VALVE BODY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>TRANSMISSION OIL SEAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>GEARBOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>GEAR SELECTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>GEARBOX LEVER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>DIFFERENTIAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>UNIVERSAL JOINT BEARING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>GEARBOX BRACKET</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TYRES</controllingFieldValue>
+            <controllingFieldValue>ELECTRONICS</controllingFieldValue>
+            <valueName>WHEEL PRESSURE SENSOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TYRES</controllingFieldValue>
+            <valueName>WHEELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>A/C SYSTEM CLEANING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>CHANGE A/C FILTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>GAS A/C CHARGE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>A/C HOSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>A/C COMPRESSOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>A/C CONDENSER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>A/C CONTROL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>CYLINDERS DOOR LOCK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>DUSTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>WINDSCREEN WIPER RUBBERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>REAR VIEW MIRROR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>FIRE EXTINGUISHER REFILL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>INSTRUMENT PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>INTERIOR GRAB HANDLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>DOOR HINGE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>GLASS LIFT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>DOOR SLIDE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>DOOR LOCK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>BOOT LID DAMPER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODYWORK</controllingFieldValue>
+            <valueName>DOOR PLATE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>BRAKE CALIPER OR CALIPER CLAMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>ABS SENSOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>PARKING BRAKE LEVER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>BRAKE CYLINDER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>BRAKE DISCS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>BRAKE PIPE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>BRAKE FLUID RESERVOIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>MASTER CYLINDER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>FRONT BRAKE PADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>REAR BRAKE PADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>HANDBRAKE HANDLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>GENERAL BRAKE PADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>WHEEL HANDLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>FRONT BEARINGS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>REAR BEARINGS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BRAKES</controllingFieldValue>
+            <valueName>BOOSTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLUTCH</controllingFieldValue>
+            <valueName>CLUTCH KIT (DISC/PLATE/COLLAR)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLUTCH</controllingFieldValue>
+            <valueName>CLUTCH COLLAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLUTCH</controllingFieldValue>
+            <valueName>CLUTCH PUMP OR CLUTCH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COOLING SYSTEM</controllingFieldValue>
+            <valueName>FAN CLUTCH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COOLING SYSTEM</controllingFieldValue>
+            <valueName>RADIATOR CAP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COOLING SYSTEM</controllingFieldValue>
+            <valueName>THERMOSTAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COOLING SYSTEM</controllingFieldValue>
+            <valueName>WATER PUMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COOLING SYSTEM</controllingFieldValue>
+            <valueName>RADIATOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COOLING SYSTEM</controllingFieldValue>
+            <valueName>RADIATOR HOSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COOLING SYSTEM</controllingFieldValue>
+            <valueName>FAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COOLING SYSTEM</controllingFieldValue>
+            <valueName>ANTIFREEZE TANK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRONICS</controllingFieldValue>
+            <valueName>TEMPERATURE SENSOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRONICS</controllingFieldValue>
+            <valueName>KEY CODE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRONICS</controllingFieldValue>
+            <valueName>ENGINE SERVO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRONICS</controllingFieldValue>
+            <valueName>ABS MODULE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRONICS</controllingFieldValue>
+            <valueName>AIRBAG MODULE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRONICS</controllingFieldValue>
+            <valueName>ECM ELECTRONIC CONTROL MODULE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRONICS</controllingFieldValue>
+            <valueName>TRANSMISSION MODULE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRONICS</controllingFieldValue>
+            <valueName>RADIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRONICS</controllingFieldValue>
+            <valueName>GPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>IGNITION SWITCH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>COIL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>BATTERY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ALTERNATOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>FUSE BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>START</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ELECTRIC LOCK ACTUATOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>BURNER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>REPAIR OF ELECTRICAL INSTALLATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>3/4 ENGINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>DISTRIBUTION KIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ACCESSORY BELT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>TENSIONER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE HINGES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>CRANKSHAFT SEAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>TURBOCHARGER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>EXHAUST MANIFOLD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>CATALYZER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>SILENCER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE CRANKCASE GASKET</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE COVER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE HEAD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE REPAIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE MOUNT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>AIR FILTER PIPE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FUEL</controllingFieldValue>
+            <valueName>FUEL PUMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FUEL</controllingFieldValue>
+            <valueName>HIGH PRESSURE PUMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FUEL</controllingFieldValue>
+            <valueName>CANISTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FUEL</controllingFieldValue>
+            <valueName>INJECTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FUEL</controllingFieldValue>
+            <valueName>FUEL TANK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>SPRING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>FORK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>REAR SHOCK ABSORBER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>FRONT SHOCK ABSORBER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>ANTI-ROLL BAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>FRONT AXLE REPAIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>CARDAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>REAR AXLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>ANTI-ROLL BAR BOLTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>FRONT AXLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>FRONT SHOCK ABSORBER BASE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>REAR SHOCK ABSORBER BASE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SUSPENSION</controllingFieldValue>
+            <valueName>REPAIR SUSPENSION BRIDGE</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

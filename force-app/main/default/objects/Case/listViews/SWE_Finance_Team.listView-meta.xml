@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SWE_Finance_Team</fullName>
+    <booleanFilter>(1 AND 2) OR (1 AND 3)</booleanFilter>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Reopen_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Closed without action plan,Closed with action plan</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>cplan,asärn,geric,nrose,lnord</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>Jenni Harving,Christina Yavuz,Moa Ostman,Parisa Tahbaz,Denitsa Chaneva,Saira Siddique,Gun Ring,Viktor Medic,Marina Karlsson,Valeria Stalesen</value>
+    </filters>
+    <label>SWE - Finance Team</label>
+    <sharedTo>
+        <group>SWE_Finance_Team</group>
+    </sharedTo>
+</ListView>

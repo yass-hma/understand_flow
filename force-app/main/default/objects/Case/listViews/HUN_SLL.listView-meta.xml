@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HUN_SLL</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Case_Follower__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>SLL</value>
+    </filters>
+    <filters>
+        <field>Subsidiary_Indicator__c</field>
+        <operation>equals</operation>
+        <value>34801</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Closed without action plan,Closed with action plan</value>
+    </filters>
+    <label>HUN - SLL</label>
+    <sharedTo>
+        <group>HUN_Customer_Care</group>
+        <group>HUN_Pool</group>
+        <group>HUN_Pricing_and_reporting</group>
+        <group>HUN_Used_car</group>
+    </sharedTo>
+</ListView>

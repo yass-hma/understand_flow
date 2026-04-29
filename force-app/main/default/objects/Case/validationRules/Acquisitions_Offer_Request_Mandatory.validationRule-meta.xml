@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acquisitions_Offer_Request_Mandatory</fullName>
+    <active>true</active>
+    <description>ROMANIA - We need to make mandatory all fields under &quot;Acquisitions Offer Request&quot; when Case record has Case Category = Order and deliveries AND Case Detail = Offer. This update should apply to all profiles who manage that section.</description>
+    <errorConditionFormula>AND(NOT( $User.Bypass_Validation_Rules__c ),
+RecordTypeId==&apos;01220000000E0aO&apos;,
+ISPICKVAL( External_Case_Category__c ,&apos;Order and deliveries&apos;),
+ISPICKVAL( External_Case_Detail__c ,&apos;Offer&apos;),
+OR(
+ISBLANK( Model__c ),ISBLANK( Trim_level__c ), ISBLANK( Engine_size_cm3__c ), ISBLANK( Body_Type__c ), ISBLANK( Seats__c ),
+ISBLANK( Ext_Color__c ), ISBLANK( Int_Color__c ), ISBLANK( Qty__c ), ISBLANK( Customer_fleet_size__c ),
+/*ISBLANK( Additional_info__c ),*/LEN (Options__c) = 0, ISPICKVAL( Make__c , &quot;&quot;), ISPICKVAL( Fuel_type__c , &quot;&quot;), ISPICKVAL( Offer_Request_Type__c , &quot;&quot;),
+ISPICKVAL( Doors__c , &quot;&quot;), ISPICKVAL( Transmission_type__c , &quot;&quot;),ISPICKVAL( AWD_4WD__c , &quot;&quot;)
+)
+)</errorConditionFormula>
+    <errorMessage>Please make sure you have filled in ALL fields in the Acquisitions Offer Request section.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dispute1__c</fullName>
+    <label>Dispute</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Process related</fullName>
+                <default>false</default>
+                <label>Process related</label>
+            </value>
+            <value>
+                <fullName>IT process related</fullName>
+                <default>false</default>
+                <label>IT process related</label>
+            </value>
+            <value>
+                <fullName>Human failure</fullName>
+                <default>false</default>
+                <label>Human failure</label>
+            </value>
+            <value>
+                <fullName>HR related</fullName>
+                <default>false</default>
+                <label>HR related</label>
+            </value>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROM_Vehicle</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ROM - Vehicle upload</label>
+    <language>en_US</language>
+    <queue>ROM_Vehicle_upload</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>RomaniaCM</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>RomaniaCallCenter</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>RomaniaCallCenterFrontOffice</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

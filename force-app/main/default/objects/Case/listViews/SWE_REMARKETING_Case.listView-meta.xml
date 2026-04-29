@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SWE_REMARKETING_Case</fullName>
+    <columns>Customer_Service_Account_Owner__c</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Last_Received_Email__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>Reopen_Date__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Complaint__c</columns>
+    <columns>Vehicle_No__c</columns>
+    <filterScope>Queue</filterScope>
+    <label>SWE - Carmarket</label>
+    <language>en_US</language>
+    <queue>SWE_REMARKETING</queue>
+    <sharedTo>
+        <group>SWE_REMARKETING</group>
+    </sharedTo>
+</ListView>

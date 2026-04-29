@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POL_Close_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(CONTAINS($Label.ALDSATRecordTypeIds,RecordType.DeveloperName)),NOT( $User.Bypass_Validation_Rules__c ),
+NOT( $User.Bypass_Validation_Rules__c ), 
+ISNEW(),
+TEXT(Status)= &quot;Closed&quot;
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Can&apos;t Create a Case with Status Closed.</errorMessage>
+</ValidationRule>

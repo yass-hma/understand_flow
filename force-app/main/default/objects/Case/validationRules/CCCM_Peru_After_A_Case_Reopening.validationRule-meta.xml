@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCM_Peru_After_A_Case_Reopening</fullName>
+    <active>true</active>
+    <description>User cannot manually change the Estimated Workload field on case detail page</description>
+    <errorConditionFormula>AND (NOT($User.Bypass_Validation_Rules__c),RecordType.DeveloperName =&apos;Case_External_Peru&apos;,
+OR(
+ISPICKVAL(Status, &apos;Reopened&apos;),ISPICKVAL(Status, &apos;Closed&apos;),NOT(ISBLANK(TEXT(Reopening_Reason__c)))
+),
+OR (
+AND(NOT(ISBLANK(TEXT(Estimated_Workload__c))), ISCHANGED(Estimated_Workload__c))
+)
+)</errorConditionFormula>
+    <errorMessage>Impossible to change this information if the case is already closed or reopened.</errorMessage>
+</ValidationRule>

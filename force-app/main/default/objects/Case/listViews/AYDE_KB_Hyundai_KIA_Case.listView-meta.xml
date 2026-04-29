@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AYDE_KB_Hyundai_KIA_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>AYDE KB Hyundai &amp; KIA</label>
+    <queue>AYDE_KB_Hyundai_KIA</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

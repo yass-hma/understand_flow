@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complaint_type__c</fullName>
+    <inlineHelpText>Insert a value based on the analysis of the complaint</inlineHelpText>
+    <label>Complaint Origin</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Complaint_reason__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Improper business practices or lack of quality of services/products (provider/supplier)</fullName>
+                <default>false</default>
+                <label>Improper business practices or lack of quality of services/products (provider/supplier)</label>
+            </value>
+            <value>
+                <fullName>Price of products/Services</fullName>
+                <default>false</default>
+                <label>Price of products/Services</label>
+            </value>
+            <value>
+                <fullName>Account or service closure</fullName>
+                <default>false</default>
+                <label>Account or service closure</label>
+            </value>
+            <value>
+                <fullName>Behaviour towards the customer</fullName>
+                <default>false</default>
+                <label>Behaviour towards the customer</label>
+            </value>
+            <value>
+                <fullName>File management</fullName>
+                <default>false</default>
+                <label>File management</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Information/advice</fullName>
+                <default>false</default>
+                <label>Information/advice</label>
+            </value>
+            <value>
+                <fullName>Malfunction of the product or service</fullName>
+                <default>false</default>
+                <label>Malfunction of the product or service</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Setting up/refusal to grant products or services / withdrawal</fullName>
+                <default>false</default>
+                <label>Setting up/refusal to grant products or services / withdrawal</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>Actions or decisions</fullName>
+                <default>false</default>
+                <label>Actions or decisions</label>
+            </value>
+            <value>
+                <fullName>Inaction or delay</fullName>
+                <default>false</default>
+                <label>Inaction or delay</label>
+            </value>
+            <value>
+                <fullName>Policy and processes</fullName>
+                <default>false</default>
+                <label>Policy and processes</label>
+            </value>
+            <value>
+                <fullName>Quality of the offer</fullName>
+                <default>false</default>
+                <label>Quality of the offer</label>
+            </value>
+            <value>
+                <fullName>Improper business practices or lack of quality of services/products (ALD)</fullName>
+                <default>false</default>
+                <label>Improper business practices or lack of quality of services/products (ALD)</label>
+            </value>
+            <value>
+                <fullName>Improper business practices (ALD)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Improper business practices (ALD)</label>
+            </value>
+            <value>
+                <fullName>Improper business practices (provider)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Improper business practices (provider)</label>
+            </value>
+            <value>
+                <fullName>Lack of quality of products/services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lack of quality of products/services</label>
+            </value>
+            <value>
+                <fullName>administrative</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>administrative</label>
+            </value>
+            <value>
+                <fullName>commercial</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>commercial</label>
+            </value>
+            <value>
+                <fullName>operational</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>operational</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Digital tools / technical problems</controllingFieldValue>
+            <controllingFieldValue>Lack of customer services (inLife)</controllingFieldValue>
+            <controllingFieldValue>Lack of sales service (before contract signature or renewal)</controllingFieldValue>
+            <controllingFieldValue>Loss of data</controllingFieldValue>
+            <controllingFieldValue>Customer overreacts</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Execution error</controllingFieldValue>
+            <controllingFieldValue>Incorrect execution of contractual clauses</controllingFieldValue>
+            <controllingFieldValue>Breach of consumer regulatory requirements</controllingFieldValue>
+            <controllingFieldValue>Breach of other legal or regulatory requirements</controllingFieldValue>
+            <controllingFieldValue>Pricing mistake</controllingFieldValue>
+            <controllingFieldValue>Payments issue</controllingFieldValue>
+            <controllingFieldValue>Lack of procedures/organisation</controllingFieldValue>
+            <valueName>Improper business practices or lack of quality of services/products (provider/supplier)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital tools / technical problems</controllingFieldValue>
+            <controllingFieldValue>Lack of customer services (inLife)</controllingFieldValue>
+            <controllingFieldValue>Lack of sales service (before contract signature or renewal)</controllingFieldValue>
+            <controllingFieldValue>Loss of data</controllingFieldValue>
+            <controllingFieldValue>Customer overreacts</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Execution error</controllingFieldValue>
+            <controllingFieldValue>Incorrect execution of contractual clauses</controllingFieldValue>
+            <controllingFieldValue>Breach of consumer regulatory requirements</controllingFieldValue>
+            <controllingFieldValue>Breach of other legal or regulatory requirements</controllingFieldValue>
+            <controllingFieldValue>Pricing mistake</controllingFieldValue>
+            <controllingFieldValue>Payments issue</controllingFieldValue>
+            <controllingFieldValue>Lack of procedures/organisation</controllingFieldValue>
+            <valueName>Improper business practices or lack of quality of services/products (ALD)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agreement breach</controllingFieldValue>
+            <controllingFieldValue>Defect</controllingFieldValue>
+            <controllingFieldValue>Incorrect/Missing Mileage recording</controllingFieldValue>
+            <controllingFieldValue>Incorrect Service Fulfillment</controllingFieldValue>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <controllingFieldValue>Pricing system &amp; TAEG</controllingFieldValue>
+            <controllingFieldValue>Service not provided</controllingFieldValue>
+            <controllingFieldValue>Supplier Network service quality</controllingFieldValue>
+            <valueName>Malfunction of the product or service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract Coverage</controllingFieldValue>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <controllingFieldValue>Service Coverage</controllingFieldValue>
+            <controllingFieldValue>Supplier Network coverage</controllingFieldValue>
+            <valueName>Quality of the offer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cost Invoice amount disagreement</controllingFieldValue>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <controllingFieldValue>Reimbursement amount disagreement</controllingFieldValue>
+            <controllingFieldValue>Settlement amount disagreement</controllingFieldValue>
+            <controllingFieldValue>Unclear price</controllingFieldValue>
+            <controllingFieldValue>Unfair price</controllingFieldValue>
+            <valueName>Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit worthiness</controllingFieldValue>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <controllingFieldValue>Refusal / Withdrawal</controllingFieldValue>
+            <valueName>Setting up/refusal to grant products or services / withdrawal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delays in response</controllingFieldValue>
+            <controllingFieldValue>Lack of communication</controllingFieldValue>
+            <controllingFieldValue>Lack of follow-up</controllingFieldValue>
+            <controllingFieldValue>Lack of response</controllingFieldValue>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <controllingFieldValue>Poor Accessibility</controllingFieldValue>
+            <controllingFieldValue>Service fulfillment delays</controllingFieldValue>
+            <controllingFieldValue>Unclear information</controllingFieldValue>
+            <controllingFieldValue>Unsatisfactory response</controllingFieldValue>
+            <valueName>Information/advice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disagreement with Ayvens Policy</controllingFieldValue>
+            <controllingFieldValue>Disagreement with Ayvens Process</controllingFieldValue>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <controllingFieldValue>Special request/condition breach</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>External Fraud</controllingFieldValue>
+            <controllingFieldValue>Internal Fraud</controllingFieldValue>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <valueName>Fraud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incomplete data</controllingFieldValue>
+            <controllingFieldValue>Incorrect/Inaccurate data</controllingFieldValue>
+            <controllingFieldValue>Lack of data</controllingFieldValue>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <valueName>File management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect account closure</controllingFieldValue>
+            <controllingFieldValue>Incorrect service closure</controllingFieldValue>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <valueName>Account or service closure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lack of politeness</controllingFieldValue>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <controllingFieldValue>Poor communication</controllingFieldValue>
+            <controllingFieldValue>Unfair treatment</controllingFieldValue>
+            <valueName>Behaviour towards the customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <valueName>Price of products/Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <valueName>Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <valueName>Actions or decisions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <valueName>Inaction or delay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Conformity</controllingFieldValue>
+            <valueName>Policy and processes</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

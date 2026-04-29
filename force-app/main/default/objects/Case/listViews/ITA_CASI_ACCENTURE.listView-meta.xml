@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_CASI_ACCENTURE</fullName>
+    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>40429302,40498935,40498995,40526939,41457391,42550414,41979885,41979904,41979908,41979921</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>42549622,42559466,40009586,700545898,42550493,42549611,42558388,42552249,700309799</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,chiuso,Deleted,Closed without action plan</value>
+    </filters>
+    <label>ITA - CASI ACCENTURE</label>
+    <sharedTo>
+        <role>ItalyBackOffice</role>
+        <role>Italy_Back_Office_Operator</role>
+        <role>Italy_Business_Administrator</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALD_SF_IDF_SMART_Case_Synchronization</fullName>
+    <active>true</active>
+    <description>This VR used for ALD SF - IDF - SMART Integration CASE for synchronization</description>
+    <errorConditionFormula>IF(
+	AND(NOT($User.Bypass_Validation_Rules__c),
+	$Permission.FLD_ALDSF_IDF_SMART_Synchronization_Critical,
+	CONTAINS($Label.SMARTIDFCaseSubsidaryIndicator,Subsidiary_Indicator__c),
+	OR(ISPICKVAL(Status,&quot;Pending - External&quot;),ISPICKVAL(Status,&quot;Closed&quot;)),
+	CreatedById =$Label.SmartIDFCreatedbyId,
+	AND(NOT(ISBLANK(TEXT(Origin))),ISPICKVAL(Origin, &apos;SMART&apos;),
+	OR(ISBLANK(TEXT(Service_Provider__c)),
+	ISBLANK(TEXT(Sales_Channel__c)),
+	ISBLANK(Last_description__c),
+        ISBLANK(TEXT(Responsibility_of_communication__c)),
+	ISBLANK(Order_Id__c),
+	ISBLANK(TEXT(Partner__c))))),
+true,false)</errorConditionFormula>
+    <errorMessage>Please fill out all the mandatory fields under &apos;Smart Communication Details&apos; section to synchronize with SMART.
+Last Description | Partner | Order ID | Sales Channel | Service Provider | Responsibility of communication</errorMessage>
+</ValidationRule>

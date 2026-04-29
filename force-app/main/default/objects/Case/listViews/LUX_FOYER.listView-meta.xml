@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LUX_FOYER</fullName>
+    <booleanFilter>2 AND (1 OR 3 OR 4 OR 5)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.MILESTONE_TIMER</columns>
+    <columns>Email_Status__c</columns>
+    <columns>New_Email__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>Email_Sender__c</field>
+        <operation>equals</operation>
+        <value>leasing@foyer.lu</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>Email_Sender__c</field>
+        <operation>equals</operation>
+        <value>sofiane.chergui@foyer.lu</value>
+    </filters>
+    <filters>
+        <field>Email_Sender__c</field>
+        <operation>equals</operation>
+        <value>alexandre.fus@foyer.lu</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>Foyer</value>
+    </filters>
+    <label>LUX - FOYER</label>
+    <queue>LUX_Sales_Partnership</queue>
+</ListView>

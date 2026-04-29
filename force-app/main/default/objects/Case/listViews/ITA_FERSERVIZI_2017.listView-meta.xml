@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_FERSERVIZI_2017</fullName>
+    <booleanFilter>(1 AND 2 and (3 or 4) AND 5) or ((6 OR 8) and 1 and 2) or 7</booleanFilter>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>Manual_Priority_Date__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Invoice_Nbr__c</columns>
+    <columns>Repair_Locality__c</columns>
+    <columns>Account_Qualification__c</columns>
+    <columns>Vehicle_No__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notContain</operation>
+        <value>DELETED</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>startsWith</operation>
+        <value>FERSERVIZI,TRENITALIA,ITALFERR,RFI SPA,RFI CODICE BASE,BUSITALIA</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>startsWith</operation>
+        <value>GALLERIA DI BASE DEL BRENNERO,FERROVIE,MERCITALIA,FSE</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>startsWith</operation>
+        <value>ita</value>
+    </filters>
+    <filters>
+        <field>Email_to_Case_Sender_formula__c</field>
+        <operation>contains</operation>
+        <value>@Trenitalia.it,@ferservizi.it,@italferr.it,@rfi.it,@fsbusitaliaveneto.it</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>ferservizi</value>
+    </filters>
+    <filters>
+        <field>Email_to_Case_Sender_formula__c</field>
+        <operation>contains</operation>
+        <value>@fsbusitalia.it,@bbt-se.com,@metropark.it</value>
+    </filters>
+    <label>ITA - FERSERVIZI</label>
+    <language>it</language>
+    <sharedTo>
+        <role>Italy_Back_Office_Operator</role>
+    </sharedTo>
+</ListView>

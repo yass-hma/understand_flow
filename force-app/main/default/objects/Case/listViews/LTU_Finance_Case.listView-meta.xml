@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LTU_Finance_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>LTU - Finance</label>
+    <language>en_US</language>
+    <queue>LTU_Finance</queue>
+    <sharedTo>
+        <group>LTU_Finance</group>
+    </sharedTo>
+</ListView>

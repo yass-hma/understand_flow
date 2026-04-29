@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COL_Casos_x_gestor</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Email_Status__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>JHONATAN RINCON</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>COL - Casos x gestor</label>
+    <sharedTo>
+        <role>Colombia_CM</role>
+        <role>Colombia_Credit_Check_Finance</role>
+        <role>Colombia_Customer_Care</role>
+        <role>Colombia_Procurement</role>
+        <role>Colombia_Sales</role>
+    </sharedTo>
+</ListView>

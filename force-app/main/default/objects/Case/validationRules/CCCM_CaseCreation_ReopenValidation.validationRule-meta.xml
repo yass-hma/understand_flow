@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCM_CaseCreation_ReopenValidation</fullName>
+    <active>true</active>
+    <description>On case creation ,Reopen reason is not required.</description>
+    <errorConditionFormula>AND (NOT($User.Bypass_Validation_Rules__c),CONTAINS($Label.CCCMRetrieveRecordTypeIds,
+RecordType.DeveloperName),ISNEW(),NOT(ISBLANK(Text(Reopening_Reason__c)))
+)</errorConditionFormula>
+    <errorMessage>Please enter the Reopening Reason only if the case is Reopened.</errorMessage>
+</ValidationRule>

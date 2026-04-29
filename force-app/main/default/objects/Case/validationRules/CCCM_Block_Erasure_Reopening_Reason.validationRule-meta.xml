@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCM_Block_Erasure_Reopening_Reason</fullName>
+    <active>true</active>
+    <description>Values in Reopening reason cannot be erased manually.</description>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c),
+CONTAINS($Label.CCCMRetrieveRecordTypeIds, RecordType.DeveloperName),
+NOT(ISBLANK(TEXT(Status))),
+ISCHANGED(Reopening_Reason__c),
+ISPICKVAL(PRIORVALUE(Reopening_Reason__c), &apos;Case Not Solved&apos;),
+ISBLANK(TEXT(Reopening_Reason__c)))</errorConditionFormula>
+    <errorMessage>You can’t erase value in Reopening reason field, please create a child case if it is a new request</errorMessage>
+</ValidationRule>

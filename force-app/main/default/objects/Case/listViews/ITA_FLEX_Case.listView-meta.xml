@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_FLEX_Case</fullName>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Invoice_Nbr__c</columns>
+    <columns>Followed_by__c</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>Additional_info__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,chiuso</value>
+    </filters>
+    <label>ITA - FLEX</label>
+    <queue>ITA_FLEX</queue>
+    <sharedTo>
+        <roleAndSubordinates>ItalyAssistanceMgmt186711</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBUInternational</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBUVan</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBackOffice</roleAndSubordinates>
+        <roleAndSubordinates>Italy_ALD_Default_User</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Back_Office_Operator</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Backoffice</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Business_Administrator</roleAndSubordinates>
+        <roleAndSubordinatesInternal>ItalyAssistanceMgmt186711</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>ItalyBUInternational</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>ItalyBUVan</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>ItalyBackOffice</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_ALD_Default_User</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Back_Office_Operator</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Backoffice</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Business_Administrator</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

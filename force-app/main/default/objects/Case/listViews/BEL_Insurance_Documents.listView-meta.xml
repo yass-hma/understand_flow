@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BEL_Insurance_Documents</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Deleted</value>
+    </filters>
+    <filters>
+        <field>Keyword__c</field>
+        <operation>contains</operation>
+        <value>attestation b/m,attestation bonus malus,bonus malus,ongevalvrij,schadevrij attest,schadevrij rijden,carte verte,carte vertes</value>
+    </filters>
+    <filters>
+        <field>Keyword__c</field>
+        <operation>contains</operation>
+        <value>green card,green cards,groene kaart,groene kaarten,insurance certificate,verzekeringsbewijs,schadeverleden,sinistralité,accident history,damage history,schadeattest</value>
+    </filters>
+    <label>BEL - Insurance Documents</label>
+    <queue>BEL_InsuranceRisk</queue>
+    <sharedTo>
+        <group>BEL_InsuranceClaims</group>
+        <group>BEL_InsuranceRisk</group>
+    </sharedTo>
+</ListView>

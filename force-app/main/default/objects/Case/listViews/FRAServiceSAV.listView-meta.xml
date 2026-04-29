@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRAServiceSAV</fullName>
+    <columns>Priority_Flag__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CONTACT.ACCOUNT</columns>
+    <columns>NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Followed_by__c</columns>
+    <columns>Total_Time_Remaining__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,A faire,In Progress,En cours,Pending</value>
+    </filters>
+    <label>FRA – Service SAV</label>
+    <queue>FRAServiceSAV</queue>
+    <sharedTo>
+        <role>France_DSOP_Animation_Reseau_Resp</role>
+        <role>France_DSOP_Maintenance_Fleet_Resp</role>
+        <role>France_DSOP_Maintenance_LLD_Grp_1</role>
+        <role>France_DSOP_Maintenance_LLD_Grp_1_Resp</role>
+        <role>France_DSOP_Maintenance_LLD_Grp_2</role>
+        <role>France_DSOP_Maintenance_LLD_Grp_2_Resp</role>
+        <role>France_DSOP_Maintenance_LLD_Grp_3</role>
+        <role>France_DSOP_Maintenance_LLD_Grp_3_Resp</role>
+        <role>France_DSOP_Maintenance_LLD_Man</role>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

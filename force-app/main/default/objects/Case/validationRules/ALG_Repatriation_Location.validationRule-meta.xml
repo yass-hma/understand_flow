@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALG_Repatriation_Location</fullName>
+    <active>false</active>
+    <description>If drop down list options &quot; immobile &quot; selected and the &quot;repatriation location&quot; description field is empty an error message is raised  to the &quot;inspector&quot;</description>
+    <errorConditionFormula>AND( 
+NOT( $User.Bypass_Validation_Rules__c ),
+NOT(ISPICKVAL(Origin, &apos;Email&apos;) ),
+ISPICKVAL(Vehicle__c, &apos;Immobile&apos;),
+ISBLANK(RepatriationLocation__c),
+$RecordType.Id =&apos;01220000000MKGP&apos;
+)</errorConditionFormula>
+    <errorDisplayField>RepatriationLocation__c</errorDisplayField>
+    <errorMessage>A repatriation request has been made, therefore the destination of repatriation must be fulfilled before saving.</errorMessage>
+</ValidationRule>

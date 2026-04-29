@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRAPARTTECHRelationsClients</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Followed_by__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>lessOrEqual</operation>
+        <value>Temsys,idée,ALD</value>
+    </filters>
+    <label>FRA - PART TECH – Relations Clients</label>
+    <language>fr</language>
+    <queue>FRA_PART_TECH_Relations_Clients</queue>
+    <sharedTo>
+        <role>FranceCM</role>
+        <role>France_DREP_Retail_Partnerships_PSC</role>
+        <roleAndSubordinatesInternal>France_DREP_Retail_Partnerships_Resp_Transverse</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DSOP_Rel_Client_Niv_2_Resp</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

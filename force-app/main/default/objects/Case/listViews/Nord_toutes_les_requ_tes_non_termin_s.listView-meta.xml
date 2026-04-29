@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nord_toutes_les_requ_tes_non_termin_s</fullName>
+    <booleanFilter>(1 OR 2 OR 6 ) AND 3 AND 4 AND 5</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CASES.ORIGIN</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>nord,lill</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>six,delplanque,walter,duquesnoy,mollet,dartois,mariette,lambert,destobe,vanderly</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.CaseExternalFrance</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notContain</operation>
+        <value>cmari</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>cherkaoui</value>
+    </filters>
+    <label>FRA Nord - requêtes non terminées</label>
+    <sharedTo>
+        <roleAndSubordinates>France_DCOI_Small_Region_NORD_DR</roleAndSubordinates>
+        <roleAndSubordinates>France_DCOI_Small_Region_NORD_PSC</roleAndSubordinates>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

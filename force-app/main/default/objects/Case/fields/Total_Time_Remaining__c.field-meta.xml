@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Time_Remaining__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(AND(IsSaveAndClosed__c,NOT(ISBLANK(Treatment_Time_Objective__c ))) ,(Treatment_Time_Objective__c -1),
+	if(AND(NOT(ISBLANK(Treatment_Time_Objective__c )),Treatment_Time_Objective__c &lt;= Value(Parameters__r.Time_Remaining_in_Hrs__c)),Treatment_Time_Objective__c - 1, Value(Parameters__r.Time_Remaining_in_Hrs__c)))
+
+
+/*
+ IF((Close_Date_Time_Objective__c  - NOW()) * 24&gt;0,(Close_Date_Time_Objective__c  - NOW()) * 24,0) *VALUE(LEFT( Time_Remaining_in_Hrs__c ,(FIND(&quot;:&quot;, Time_Remaining_in_Hrs__c)-1))) 
+
+*/
+
+/*IF(NOT(ISNULL(Value(Parameters__r.Time_Remaining_in_Hrs__c))),Value(Parameters__r.Time_Remaining_in_Hrs__c), Treatment_Time_Objective__c )*/
+
+/*
+Commenting as part of ticket #pm-002360
+Value(Parameters__r.Time_Remaining_in_Hrs__c)*/
+
+/*
+if(AND(IsSaveAndClosed__c,NOT(ISBLANK(Treatment_Time_Objective__c ))) ,(Treatment_Time_Objective__c -1),Value(Parameters__r.Time_Remaining_in_Hrs__c))
+*/</formula>
+    <inlineHelpText>Updated Hourly. Negative when SLA breached.</inlineHelpText>
+    <label>Time Remaining in Hrs</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

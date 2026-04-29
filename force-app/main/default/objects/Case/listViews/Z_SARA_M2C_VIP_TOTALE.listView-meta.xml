@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Z_SARA_M2C_VIP_TOTALE</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Account_Qualification__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>Account_Qualification__c</field>
+        <operation>equals</operation>
+        <value>Vip</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>ITA - DELETED CASES</value>
+    </filters>
+    <label>ITA - MailToCase CLIENTI VIP</label>
+    <language>it</language>
+    <queue>ITAMailToCase</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ItalyCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

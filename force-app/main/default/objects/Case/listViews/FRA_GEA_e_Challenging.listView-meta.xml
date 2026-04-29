@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_GEA_e_Challenging</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Email_to_Case_Sender_formula__c</field>
+        <operation>contains</operation>
+        <value>traxall</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.CaseExternalFrance</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé</value>
+    </filters>
+    <filters>
+        <field>Emailtocasereceiver_FormulaField__c</field>
+        <operation>contains</operation>
+        <value>grandscomptes.ald@,GRANDSCOMPTES@</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>grid</value>
+    </filters>
+    <label>FRA - GEA e-Challenging</label>
+    <language>fr</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>France_DCOI_BIG_PSC_B_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DCOI_BIG_PSC_D_Resp</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_CUSTOMER_FINANCE</fullName>
+    <columns>Priority_Date__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Local_ID__c</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Deleted</value>
+    </filters>
+    <label>ITA - CUSTOMER FINANCE</label>
+    <language>it</language>
+    <queue>ITACUSTOMERFINANCE</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ItalyCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MEX_RMKT_casos_abiertos_venta_usuario</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>Latest_Email_Description__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>equals</operation>
+        <value>Sale to driver,Venta usuario</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>Email_From_Address__c</field>
+        <operation>contains</operation>
+        <value>ingrid.hernandez</value>
+    </filters>
+    <label>MEX RMKT -casos abiertos &quot;venta usuario&quot;</label>
+    <queue>Mex_Remarketing</queue>
+</ListView>

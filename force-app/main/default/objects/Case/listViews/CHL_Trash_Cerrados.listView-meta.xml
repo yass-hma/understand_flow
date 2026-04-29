@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CHL_Trash_Cerrados</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.CLOSED_DATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Closed</value>
+    </filters>
+    <label>CHL - Trash Cerrados</label>
+    <language>en_US</language>
+    <queue>CHL_Trash</queue>
+    <sharedTo>
+        <roleAndSubordinates>Chile_CM</roleAndSubordinates>
+        <roleAndSubordinates>Chile_Customer_Care</roleAndSubordinates>
+        <roleAndSubordinates>Chile_Sales</roleAndSubordinates>
+    </sharedTo>
+</ListView>

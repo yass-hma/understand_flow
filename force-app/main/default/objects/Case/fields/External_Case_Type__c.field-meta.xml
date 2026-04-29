@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Case_Type__c</fullName>
+    <label>Case Type</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AIDE AU CHOIX LIEU INTERVENTION</fullName>
+                <default>false</default>
+                <label>AIDE AU CHOIX LIEU INTERVENTION</label>
+            </value>
+            <value>
+                <fullName>AJOUT / RETRAIT PRESTA</fullName>
+                <default>false</default>
+                <label>AJOUT / RETRAIT PRESTA</label>
+            </value>
+            <value>
+                <fullName>AJOUT EN URGENCE</fullName>
+                <default>false</default>
+                <label>AJOUT EN URGENCE</label>
+            </value>
+            <value>
+                <fullName>ALDCAR</fullName>
+                <default>false</default>
+                <label>ALDCAR</label>
+            </value>
+            <value>
+                <fullName>ALDNET</fullName>
+                <default>false</default>
+                <label>ALDNET</label>
+            </value>
+            <value>
+                <fullName>ANALYSE DE CONSOMMATION POUR 1 CARTE</fullName>
+                <default>false</default>
+                <label>ANALYSE DE CONSOMMATION POUR 1 CARTE</label>
+            </value>
+            <value>
+                <fullName>ANALYSE DE CONSOMMATION POUR 1 PARC</fullName>
+                <default>false</default>
+                <label>ANALYSE DE CONSOMMATION POUR 1 PARC</label>
+            </value>
+            <value>
+                <fullName>AND</fullName>
+                <default>false</default>
+                <label>AND</label>
+            </value>
+            <value>
+                <fullName>ANNULATION</fullName>
+                <default>false</default>
+                <label>ANNULATION</label>
+            </value>
+            <value>
+                <fullName>AO CLIENT</fullName>
+                <default>false</default>
+                <label>AO CLIENT</label>
+            </value>
+            <value>
+                <fullName>ATTENTE D&apos;UN AVOIR OU GESTE COMMERCIAL</fullName>
+                <default>false</default>
+                <label>ATTENTE D&apos;UN AVOIR OU GESTE COMMERCIAL</label>
+            </value>
+            <value>
+                <fullName>AUTRE</fullName>
+                <default>false</default>
+                <label>AUTRE</label>
+            </value>
+            <value>
+                <fullName>AVANTAGES EN NATURE</fullName>
+                <default>false</default>
+                <label>AVANTAGES EN NATURE</label>
+            </value>
+            <value>
+                <fullName>BELTOISE PREVENTION</fullName>
+                <default>false</default>
+                <label>BELTOISE PREVENTION</label>
+            </value>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+            <value>
+                <fullName>Request</fullName>
+                <default>false</default>
+                <label>Request</label>
+            </value>
+            <value>
+                <fullName>Cancelation</fullName>
+                <default>false</default>
+                <label>Cancelation</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>CARBURANT</fullName>
+                <default>false</default>
+                <label>CARBURANT</label>
+            </value>
+            <value>
+                <fullName>CARTE GRISE</fullName>
+                <default>false</default>
+                <label>CARTE GRISE</label>
+            </value>
+            <value>
+                <fullName>CARTE VERTE</fullName>
+                <default>false</default>
+                <label>CARTE VERTE</label>
+            </value>
+            <value>
+                <fullName>CATALOGUE OU GRILLE</fullName>
+                <default>false</default>
+                <label>CATALOGUE OU GRILLE</label>
+            </value>
+            <value>
+                <fullName>Change</fullName>
+                <default>false</default>
+                <label>Change</label>
+            </value>
+            <value>
+                <fullName>Claim</fullName>
+                <default>false</default>
+                <label>Claim</label>
+            </value>
+            <value>
+                <fullName>COMMANDE</fullName>
+                <default>false</default>
+                <label>COMMANDE</label>
+            </value>
+            <value>
+                <fullName>Compliment</fullName>
+                <default>false</default>
+                <label>Compliment</label>
+            </value>
+            <value>
+                <fullName>CONDUCTEURS</fullName>
+                <default>false</default>
+                <label>CONDUCTEURS</label>
+            </value>
+            <value>
+                <fullName>COORDONNEES</fullName>
+                <default>false</default>
+                <label>COORDONNEES</label>
+            </value>
+            <value>
+                <fullName>DEMANDE DE DELAI</fullName>
+                <default>false</default>
+                <label>DEMANDE DE DELAI</label>
+            </value>
+            <value>
+                <fullName>DEMANDE DE RDV</fullName>
+                <default>false</default>
+                <label>DEMANDE DE RDV</label>
+            </value>
+            <value>
+                <fullName>DEMANDE DE TARIFS LCD</fullName>
+                <default>false</default>
+                <label>DEMANDE DE TARIFS LCD</label>
+            </value>
+            <value>
+                <fullName>DEMANDE D’INFORMATION</fullName>
+                <default>false</default>
+                <label>DEMANDE D’INFORMATION</label>
+            </value>
+            <value>
+                <fullName>DEPRECIATION COMPLEMENTAIRE</fullName>
+                <default>false</default>
+                <label>DEPRECIATION COMPLEMENTAIRE</label>
+            </value>
+            <value>
+                <fullName>DUPLICATA</fullName>
+                <default>false</default>
+                <label>DUPLICATA</label>
+            </value>
+            <value>
+                <fullName>DUREE KM</fullName>
+                <default>false</default>
+                <label>DUREE KM</label>
+            </value>
+            <value>
+                <fullName>ENQUETES</fullName>
+                <default>false</default>
+                <label>ENQUETES</label>
+            </value>
+            <value>
+                <fullName>ENVOI FICHE DE GARANTIE</fullName>
+                <default>false</default>
+                <label>ENVOI FICHE DE GARANTIE</label>
+            </value>
+            <value>
+                <fullName>ETAT DE PARC</fullName>
+                <default>false</default>
+                <label>ETAT DE PARC</label>
+            </value>
+            <value>
+                <fullName>ETUDE</fullName>
+                <default>false</default>
+                <label>ETUDE</label>
+            </value>
+            <value>
+                <fullName>ETUDE ANALYSE</fullName>
+                <default>false</default>
+                <label>ETUDE ANALYSE</label>
+            </value>
+            <value>
+                <fullName>EXPLICATION FRAIS</fullName>
+                <default>false</default>
+                <label>EXPLICATION FRAIS</label>
+            </value>
+            <value>
+                <fullName>EXPLICATION SUR DEVIS</fullName>
+                <default>false</default>
+                <label>EXPLICATION SUR DEVIS</label>
+            </value>
+            <value>
+                <fullName>Extension</fullName>
+                <default>false</default>
+                <label>Extension</label>
+            </value>
+            <value>
+                <fullName>External Case Type</fullName>
+                <default>false</default>
+                <label>External Case Type</label>
+            </value>
+            <value>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+                <label>Feature Request</label>
+            </value>
+            <value>
+                <fullName>FICHES PRODUITS/TECHNIQUES</fullName>
+                <default>false</default>
+                <label>FICHES PRODUITS/TECHNIQUES</label>
+            </value>
+            <value>
+                <fullName>FICHIERS ELECTRONIQUES</fullName>
+                <default>false</default>
+                <label>FICHIERS ELECTRONIQUES</label>
+            </value>
+            <value>
+                <fullName>FIN DE LOCATION</fullName>
+                <default>false</default>
+                <label>FIN DE LOCATION</label>
+            </value>
+            <value>
+                <fullName>FIN DE LOC SGP</fullName>
+                <default>false</default>
+                <label>FIN DE LOC SGP</label>
+            </value>
+            <value>
+                <fullName>GESTION DE LA PRESTATION (AJOUT, RETRAIT, MODIF)</fullName>
+                <default>false</default>
+                <label>GESTION DE LA PRESTATION (AJOUT, RETRAIT, MODIF)</label>
+            </value>
+            <value>
+                <fullName>GESTION DES CP</fullName>
+                <default>false</default>
+                <label>GESTION DES CP</label>
+            </value>
+            <value>
+                <fullName>GUIDES TVS</fullName>
+                <default>false</default>
+                <label>GUIDES TVS</label>
+            </value>
+            <value>
+                <fullName>Inclusion</fullName>
+                <default>false</default>
+                <label>Inclusion</label>
+            </value>
+            <value>
+                <fullName>Inform</fullName>
+                <default>false</default>
+                <label>Inform</label>
+            </value>
+            <value>
+                <fullName>Information</fullName>
+                <default>false</default>
+                <label>Information</label>
+            </value>
+            <value>
+                <fullName>INFORMATION GENERALE SUR LES CONTRATS</fullName>
+                <default>false</default>
+                <label>INFORMATION GENERALE SUR LES CONTRATS</label>
+            </value>
+            <value>
+                <fullName>INFORMATIONS SUR LA PRESTATION</fullName>
+                <default>false</default>
+                <label>INFORMATIONS SUR LA PRESTATION</label>
+            </value>
+            <value>
+                <fullName>INFORMATIONS SUR PNEUS RESTANTS POUR 1 PARC</fullName>
+                <default>false</default>
+                <label>INFORMATIONS SUR PNEUS RESTANTS POUR 1 PARC</label>
+            </value>
+            <value>
+                <fullName>INFORMATIONS SUR PNEUS RESTANTS POUR 1 VEH</fullName>
+                <default>false</default>
+                <label>INFORMATIONS SUR PNEUS RESTANTS POUR 1 VEH</label>
+            </value>
+            <value>
+                <fullName>INFORMATIONS SUR RESEAU PARTENAIRES</fullName>
+                <default>false</default>
+                <label>INFORMATIONS SUR RESEAU PARTENAIRES</label>
+            </value>
+            <value>
+                <fullName>INFORMATION SUR COMMANDE</fullName>
+                <default>false</default>
+                <label>INFORMATION SUR COMMANDE</label>
+            </value>
+            <value>
+                <fullName>INFOS GENERALES</fullName>
+                <default>false</default>
+                <label>INFOS GENERALES</label>
+            </value>
+            <value>
+                <fullName>INFOS SINISTRE</fullName>
+                <default>false</default>
+                <label>INFOS SINISTRE</label>
+            </value>
+            <value>
+                <fullName>INTERVENTIONS DÉJÀ EFFECTUEES</fullName>
+                <default>false</default>
+                <label>INTERVENTIONS DÉJÀ EFFECTUEES</label>
+            </value>
+            <value>
+                <fullName>INTERVENTIONS PRISES EN CHARGE</fullName>
+                <default>false</default>
+                <label>INTERVENTIONS PRISES EN CHARGE</label>
+            </value>
+            <value>
+                <fullName>LEASE BACK</fullName>
+                <default>false</default>
+                <label>LEASE BACK</label>
+            </value>
+            <value>
+                <fullName>LES POINTS SUR</fullName>
+                <default>false</default>
+                <label>LES POINTS SUR</label>
+            </value>
+            <value>
+                <fullName>LIEU DE RESTIT</fullName>
+                <default>false</default>
+                <label>LIEU DE RESTIT</label>
+            </value>
+            <value>
+                <fullName>LITIGE/VEH NON FIABLE/PANNE RECURENTE</fullName>
+                <default>false</default>
+                <label>LITIGE/VEH NON FIABLE/PANNE RECURENTE</label>
+            </value>
+            <value>
+                <fullName>LIVRAISONS EN WW</fullName>
+                <default>false</default>
+                <label>LIVRAISONS EN WW</label>
+            </value>
+            <value>
+                <fullName>LOYERS</fullName>
+                <default>false</default>
+                <label>LOYERS</label>
+            </value>
+            <value>
+                <fullName>MECONTENTEMENT</fullName>
+                <default>false</default>
+                <label>MECONTENTEMENT</label>
+            </value>
+            <value>
+                <fullName>MECONTENTEMENT/EXONERATION</fullName>
+                <default>false</default>
+                <label>MECONTENTEMENT/EXONERATION</label>
+            </value>
+            <value>
+                <fullName>MECONTENTEMENT COMMERCIAL</fullName>
+                <default>false</default>
+                <label>MECONTENTEMENT COMMERCIAL</label>
+            </value>
+            <value>
+                <fullName>MECONTENTEMENT VEHICULE</fullName>
+                <default>false</default>
+                <label>MECONTENTEMENT VEHICULE</label>
+            </value>
+            <value>
+                <fullName>MISE EN FOURRIERE/GARDE JURIDIQUE</fullName>
+                <default>false</default>
+                <label>MISE EN FOURRIERE/GARDE JURIDIQUE</label>
+            </value>
+            <value>
+                <fullName>MODIF DEVIS EXISTANT</fullName>
+                <default>false</default>
+                <label>MODIF DEVIS EXISTANT</label>
+            </value>
+            <value>
+                <fullName>Modification</fullName>
+                <default>false</default>
+                <label>Modification</label>
+            </value>
+            <value>
+                <fullName>New request</fullName>
+                <default>false</default>
+                <label>New request</label>
+            </value>
+            <value>
+                <fullName>New Request_MOR</fullName>
+                <default>false</default>
+                <label>New Request_MOR</label>
+            </value>
+            <value>
+                <fullName>NEWSLETTER</fullName>
+                <default>false</default>
+                <label>NEWSLETTER</label>
+            </value>
+            <value>
+                <fullName>NOUVELLE DEMANDE</fullName>
+                <default>false</default>
+                <label>NOUVELLE DEMANDE</label>
+            </value>
+            <value>
+                <fullName>OPPO DUPLI</fullName>
+                <default>false</default>
+                <label>OPPO DUPLI</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>PARAMETRAGE</fullName>
+                <default>false</default>
+                <label>PARAMETRAGE</label>
+            </value>
+            <value>
+                <fullName>PARAMETRAGE CARTE ACTYS</fullName>
+                <default>false</default>
+                <label>PARAMETRAGE CARTE ACTYS</label>
+            </value>
+            <value>
+                <fullName>PARKING RESIDENTIEL</fullName>
+                <default>false</default>
+                <label>PARKING RESIDENTIEL</label>
+            </value>
+            <value>
+                <fullName>PRESENTATION ALD</fullName>
+                <default>false</default>
+                <label>PRESENTATION ALD</label>
+            </value>
+            <value>
+                <fullName>Problem</fullName>
+                <default>false</default>
+                <label>Problem</label>
+            </value>
+            <value>
+                <fullName>PRODIGO</fullName>
+                <default>false</default>
+                <label>PRODIGO</label>
+            </value>
+            <value>
+                <fullName>PV RESTIT / PROCEDURE</fullName>
+                <default>false</default>
+                <label>PV RESTIT / PROCEDURE</label>
+            </value>
+            <value>
+                <fullName>Question</fullName>
+                <default>false</default>
+                <label>Question</label>
+            </value>
+            <value>
+                <fullName>RACHAT UTILISATEUR</fullName>
+                <default>false</default>
+                <label>RACHAT UTILISATEUR</label>
+            </value>
+            <value>
+                <fullName>RECLAMATION</fullName>
+                <default>false</default>
+                <label>RECLAMATION</label>
+            </value>
+            <value>
+                <fullName>REEDITION CODE</fullName>
+                <default>false</default>
+                <label>REEDITION CODE</label>
+            </value>
+            <value>
+                <fullName>REFACTURATION</fullName>
+                <default>false</default>
+                <label>REFACTURATION</label>
+            </value>
+            <value>
+                <fullName>REFERENCES CLIENTS</fullName>
+                <default>false</default>
+                <label>REFERENCES CLIENTS</label>
+            </value>
+            <value>
+                <fullName>RELEVE D&apos;INFORMATIONS</fullName>
+                <default>false</default>
+                <label>RELEVE D&apos;INFORMATIONS</label>
+            </value>
+            <value>
+                <fullName>RENOUVELLEMENT</fullName>
+                <default>false</default>
+                <label>RENOUVELLEMENT</label>
+            </value>
+            <value>
+                <fullName>REPONSE A AO</fullName>
+                <default>false</default>
+                <label>REPONSE A AO</label>
+            </value>
+            <value>
+                <fullName>Report</fullName>
+                <default>false</default>
+                <label>Report</label>
+            </value>
+            <value>
+                <fullName>Request for Change</fullName>
+                <default>false</default>
+                <label>Request for Change</label>
+            </value>
+            <value>
+                <fullName>Request for information</fullName>
+                <default>false</default>
+                <label>Request for information</label>
+            </value>
+            <value>
+                <fullName>Request for service</fullName>
+                <default>false</default>
+                <label>Request for service</label>
+            </value>
+            <value>
+                <fullName>RESERVATION LCD / MOYENNE DUREE</fullName>
+                <default>false</default>
+                <label>RESERVATION LCD / MOYENNE DUREE</label>
+            </value>
+            <value>
+                <fullName>RIB - COORD.BANCAIRES</fullName>
+                <default>false</default>
+                <label>RIB - COORD.BANCAIRES</label>
+            </value>
+            <value>
+                <fullName>SERVICE PLUS</fullName>
+                <default>false</default>
+                <label>SERVICE PLUS</label>
+            </value>
+            <value>
+                <fullName>SIMULATION FIN DE LOC</fullName>
+                <default>false</default>
+                <label>SIMULATION FIN DE LOC</label>
+            </value>
+            <value>
+                <fullName>SORTIE DE TERRITOIRE</fullName>
+                <default>false</default>
+                <label>SORTIE DE TERRITOIRE</label>
+            </value>
+            <value>
+                <fullName>STATS</fullName>
+                <default>false</default>
+                <label>STATS</label>
+            </value>
+            <value>
+                <fullName>STRUCTURES</fullName>
+                <default>false</default>
+                <label>STRUCTURES</label>
+            </value>
+            <value>
+                <fullName>Suggestion</fullName>
+                <default>false</default>
+                <label>Suggestion</label>
+            </value>
+            <value>
+                <fullName>TAXE PRO</fullName>
+                <default>false</default>
+                <label>TAXE PRO</label>
+            </value>
+            <value>
+                <fullName>TELEPEAGE</fullName>
+                <default>false</default>
+                <label>TELEPEAGE</label>
+            </value>
+            <value>
+                <fullName>TRANSFERT</fullName>
+                <default>false</default>
+                <label>TRANSFERT</label>
+            </value>
+            <value>
+                <fullName>TRANSPORT</fullName>
+                <default>false</default>
+                <label>TRANSPORT</label>
+            </value>
+            <value>
+                <fullName>TVS</fullName>
+                <default>false</default>
+                <label>TVS</label>
+            </value>
+            <value>
+                <fullName>VEHICULE SANS PERMIS</fullName>
+                <default>false</default>
+                <label>VEHICULE SANS PERMIS</label>
+            </value>
+            <value>
+                <fullName>VIP</fullName>
+                <default>false</default>
+                <label>VIP</label>
+            </value>
+            <value>
+                <fullName>New Business</fullName>
+                <default>false</default>
+                <label>New Business</label>
+            </value>
+            <value>
+                <fullName>Customer Relationship Management</fullName>
+                <default>false</default>
+                <label>Customer Relationship Management</label>
+            </value>
+            <value>
+                <fullName>Business partner</fullName>
+                <default>false</default>
+                <label>Business partner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

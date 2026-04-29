@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Door_To_Door__c</fullName>
+    <label>Door To Door</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>External_Case_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>B - D2D - On demand</fullName>
+                <default>false</default>
+                <label>B - D2D - On demand</label>
+            </value>
+            <value>
+                <fullName>B - D2D - Regular maintenance</fullName>
+                <default>false</default>
+                <label>B - D2D - Regular maintenance</label>
+            </value>
+            <value>
+                <fullName>B - D2D - Seasonal tyre change</fullName>
+                <default>false</default>
+                <label>B - D2D - Seasonal tyre change</label>
+            </value>
+            <value>
+                <fullName>B - D2D - Yearly technical inspection</fullName>
+                <default>false</default>
+                <label>B - D2D - Yearly technical inspection</label>
+            </value>
+            <value>
+                <fullName>Ex - D2D - Damage repairs</fullName>
+                <default>false</default>
+                <label>Ex - D2D - Damage repairs</label>
+            </value>
+            <value>
+                <fullName>Ex - D2D - Maintenance and repairs</fullName>
+                <default>false</default>
+                <label>Ex - D2D - Maintenance and repairs</label>
+            </value>
+            <value>
+                <fullName>Ex - D2D - On demand</fullName>
+                <default>false</default>
+                <label>Ex - D2D - On demand</label>
+            </value>
+            <value>
+                <fullName>Ex - D2D - Opening of the damage file</fullName>
+                <default>false</default>
+                <label>Ex - D2D - Opening of the damage file</label>
+            </value>
+            <value>
+                <fullName>Ex - D2D - Replacement vehicle delivery</fullName>
+                <default>false</default>
+                <label>Ex - D2D - Replacement vehicle delivery</label>
+            </value>
+            <value>
+                <fullName>Ex - D2D - Seasonal tyre change</fullName>
+                <default>false</default>
+                <label>Ex - D2D - Seasonal tyre change</label>
+            </value>
+            <value>
+                <fullName>Ex - D2D - Vehicle return at end of contract</fullName>
+                <default>false</default>
+                <label>Ex - D2D - Vehicle return at end of contract</label>
+            </value>
+            <value>
+                <fullName>Ex - D2D - Yearly technical inspection</fullName>
+                <default>false</default>
+                <label>Ex - D2D - Yearly technical inspection</label>
+            </value>
+            <value>
+                <fullName>Basic</fullName>
+                <default>false</default>
+                <label>Basic</label>
+            </value>
+            <value>
+                <fullName>Extended</fullName>
+                <default>false</default>
+                <label>Extended</label>
+            </value>
+            <value>
+                <fullName>Basic FOC</fullName>
+                <default>false</default>
+                <label>Basic FOC</label>
+            </value>
+            <value>
+                <fullName>V.I.P</fullName>
+                <default>false</default>
+                <label>V.I.P</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>B - D2D - On demand</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>B - D2D - Regular maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>B - D2D - Seasonal tyre change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>B - D2D - Yearly technical inspection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>Ex - D2D - Damage repairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>Ex - D2D - Maintenance and repairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>Ex - D2D - On demand</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>Ex - D2D - Opening of the damage file</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>Ex - D2D - Replacement vehicle delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>Ex - D2D - Seasonal tyre change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>Ex - D2D - Vehicle return at end of contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>Ex - D2D - Yearly technical inspection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>Basic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>Extended</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>Basic FOC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Door To Door</controllingFieldValue>
+            <valueName>V.I.P</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

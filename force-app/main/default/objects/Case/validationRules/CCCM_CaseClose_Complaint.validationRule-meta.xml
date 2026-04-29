@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCM_CaseClose_Complaint</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c),
+OR(
+    RecordType.Name = &quot;Case External Italy v2&quot;,
+    RecordType.Name = &quot;Case External Brazil&quot;,
+    RecordType.Name = &quot;Case External Austria&quot;,
+    RecordType.Name = &quot;Case External Switzerland&quot;
+  ),
+ISPICKVAL(Status, &apos;Closed&apos;),ISPICKVAL(Complaint_justified__c,&quot;Yes&quot;),
+AND(NOT(ISBLANK(TEXT(Status))) ),
+OR(AND(NOT(ISNULL(TEXT(Reopening_Reason__c))),NOT(ISCHANGED(Reopening_Reason__c))),AND(ISCHANGED(Reopening_Reason__c),
+NOT(ISPICKVAL(Reopening_Reason__c, &apos;New Request&apos;)),
+NOT(ISPICKVAL(Reopening_Reason__c, &apos;Sender Acknowledgement&apos;)),
+ISPICKVAL(Reopening_Reason__c, &apos;Case Not Solved&apos;))),
+AND(ISPICKVAL(Type, &apos;Complaint&apos;),OR(ISBLANK(Financial_impact__c),ISBLANK(TEXT(Complaint_type__c)),
+ISBLANK(TEXT(Complaint_reason__c)),ISBLANK(TEXT(Solution__c)),ISBLANK(Detail_ActionPlan__c)))
+)</errorConditionFormula>
+    <errorMessage>You must fill in all fields in the “Complaints” section</errorMessage>
+</ValidationRule>

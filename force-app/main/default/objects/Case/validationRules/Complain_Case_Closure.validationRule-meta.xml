@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complain_Case_Closure</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($User.Bypass_Validation_Rules__c ),
+NOT(
+CONTAINS(
+$Label.Global_Complaint_Excluded_Subsidairy,
+RecordType.DeveloperName )
+),
+
+NOT(ISBLANK(TEXT(Status))),
+OR(
+ISPICKVAL(Type,&quot;Complaint&quot;),
+ISPICKVAL(External_Case_Type__c,&quot;Complaint&quot;),
+ISPICKVAL(External_Case_Type__c,&quot;Claim&quot;)
+),
+
+
+AND(
+ISCHANGED(Status ) ,
+ISPICKVAL(Status , &apos;Closed&apos;)
+),
+
+
+
+OR(
+AND(NOT(ISNULL(TEXT(Reopening_Reason__c))),
+NOT(ISCHANGED(Reopening_Reason__c))
+),
+AND(ISCHANGED(Reopening_Reason__c),
+NOT(ISPICKVAL(Reopening_Reason__c, &apos;New Request&apos;)),
+NOT(ISPICKVAL(Reopening_Reason__c, &apos;Sender Acknowledgement&apos;)),
+ISPICKVAL(Reopening_Reason__c, &apos;Case Not Solved&apos;))
+),
+
+
+OR(
+
+
+AND( INCLUDES( Financial_Impact_type__c ,&apos;Operational loss&apos;) , ISBLANK(
+Actual_Operational_loss_amount__c ) ),
+AND( INCLUDES( Financial_Impact_type__c ,&apos;Commercial gesture&apos;) , ISBLANK(
+Actual_Commercial_gesture_amount__c ) ),
+AND( INCLUDES( Financial_Impact_type__c ,&apos;Vehicle allocation&apos;) , ISBLANK(
+Actual_Vehicle_Buffer_Amount__c ) ),
+
+
+ISBLANK(TEXT(Complaint_reason__c)),
+ISBLANK(TEXT(Complaint_type__c)),
+ISBLANK(TEXT(RiskSeverity__c )),
+ISBLANK(TEXT(Solution__c)),
+ISBLANK(TEXT(Complaint_recurrency__c)),
+ISBLANK(TEXT(Complaint_Closure_type__c)),
+ISBLANK(TEXT(Risk_risk_taxonomy__c)),
+ISBLANK(Recovered_Amount__c)
+
+
+)
+
+
+)</errorConditionFormula>
+    <errorMessage>Complaint Reason, Closure type, Internal Corrective action, Risk severity and taxonomy are mandatory at closure. If Impact Type is Financial, populate the amount for each Financial Impact type and the Recovered amount</errorMessage>
+</ValidationRule>

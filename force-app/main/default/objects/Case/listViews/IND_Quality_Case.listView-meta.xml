@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IND_Quality_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>IND - Quality</label>
+    <language>en_US</language>
+    <queue>IND_Quality</queue>
+    <sharedTo>
+        <group>IND_Quality</group>
+    </sharedTo>
+</ListView>

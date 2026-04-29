@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_BIG</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+    <columns>Priority_Flag__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CONTACT.ACCOUNT</columns>
+    <columns>NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Followed_by__c</columns>
+    <columns>Total_Time_Remaining__c</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>Case_Origin__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>EM_Addresses__c</field>
+        <operation>notContain</operation>
+        <value>agc2.lld@,agc1.lld@</value>
+    </filters>
+    <filters>
+        <field>EM_Addresses__c</field>
+        <operation>notContain</operation>
+        <value>bm.lld@,berner@</value>
+    </filters>
+    <filters>
+        <field>EM_Addresses__c</field>
+        <operation>notContain</operation>
+        <value>danone@</value>
+    </filters>
+    <filters>
+        <field>Email_Sender__c</field>
+        <operation>notEqual</operation>
+        <value>noreply@salesforce.com</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>FRA - BIG Mail2Case,Spie Mail2case,EDF mail2case,Airbus Mail2case</value>
+    </filters>
+    <label>FRA - BIG Mail2Case</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>France_DOC_Perf_Commerciale_Resp</role>
+        <roleAndSubordinatesInternal>France_DCOI_BIG_Dir</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DCSP_CSF_SAOC_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

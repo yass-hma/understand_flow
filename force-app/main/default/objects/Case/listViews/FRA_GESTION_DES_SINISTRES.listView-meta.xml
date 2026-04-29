@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_GESTION_DES_SINISTRES</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>Agency__c</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled,Treaty in the absence of</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>gestion des sinistres</value>
+    </filters>
+    <filters>
+        <field>CASES.CREATED_DATE_DATE_ONLY</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2024 12:00 AM</value>
+    </filters>
+    <label>FRA - GESTION DES SINISTRES</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>France_DCSP_CSF_SAOC_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DSOP_Rel_Client_Niv_2_GRP_1_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DSOP_Rel_Client_Niv_2_GRP_3_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DSOP_Rel_Conduc_Grp1_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DSOP_Rel_Conduc_Grp2_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DSOP_Rel_Conduc_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

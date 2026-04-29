@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALDCRM_Commercial_Gesture_Amount</fullName>
+    <active>true</active>
+    <description>[AUT,CHE,HRV,HUN,SRB,SVN]: Restriction the user to Commercial_Gesture_Amount__c value when the field Commercial_Gesture__c value is yes.</description>
+    <errorConditionFormula>AND
+(
+         NOT($User.Bypass_Validation_Rules__c),
+          ISPICKVAL(Commercial_Gesture__c,&quot;Yes&quot;),
+          ISBLANK(Commercial_Gesture_Amount__c),
+          CONTAINS(
+     $Label.ALDCRM_Commercial_Gesture_Amount_Record_Types,
+ RecordTypeId )
+)</errorConditionFormula>
+    <errorDisplayField>Commercial_Gesture_Amount__c</errorDisplayField>
+    <errorMessage>The amount of the commercial gesture has to be entered.</errorMessage>
+</ValidationRule>

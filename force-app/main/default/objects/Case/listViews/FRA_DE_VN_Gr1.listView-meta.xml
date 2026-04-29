@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_DE_VN_Gr1</fullName>
+    <booleanFilter>(1 OR 2) AND 3 AND 4</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>coimbra,cordier,dietlin,haouam,houlleb,legal,losy,cousin,lucet,velayo,peiffer</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>cottet</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.CaseExternalFrance</value>
+    </filters>
+    <label>FRA - DE VN Gr1</label>
+    <sharedTo>
+        <role>FranceCM</role>
+        <role>France_DFI_Assurance_Resp</role>
+        <role>France_DSOP_Cmd_Liv_Resp</role>
+        <role>France_DSOP_Cmd_Liv_Specific_Grp1</role>
+        <role>France_DSOP_Cmd_Liv_Specific_Grp1_Resp</role>
+        <role>France_DSOP_Cmd_Liv_Specific_Grp2</role>
+        <role>France_DSOP_Cmd_Liv_Specific_Grp2_Resp</role>
+        <role>France_DSOP_Cmd_Liv_Standard_Grp1</role>
+        <role>France_DSOP_Cmd_Liv_Standard_Grp1_Resp</role>
+        <role>France_DSOP_Cmd_Liv_Standard_Grp2</role>
+        <role>France_DSOP_Cmd_Liv_Standard_Grp2_Resp</role>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

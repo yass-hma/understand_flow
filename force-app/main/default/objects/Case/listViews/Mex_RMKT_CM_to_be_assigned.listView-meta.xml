@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mex_RMKT_CM_to_be_assigned</fullName>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>Latest_Email_Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>Case_Owner__c</field>
+        <operation>contains</operation>
+        <value>nancy.ortiz</value>
+    </filters>
+    <label>Mex - RMKT RETURN to be assigned</label>
+    <sharedTo>
+        <roleAndSubordinates>MexicoCM</roleAndSubordinates>
+    </sharedTo>
+</ListView>

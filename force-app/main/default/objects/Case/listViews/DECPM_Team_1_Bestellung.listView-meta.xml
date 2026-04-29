@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DECPM_Team_1_Bestellung</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.MILESTONE_TIMER</columns>
+    <columns>Email_Status__c</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Deleted</value>
+    </filters>
+    <filters>
+        <field>Subsidiary_Indicator__c</field>
+        <operation>equals</operation>
+        <value>27604</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>6,402,290,297,470,639,550,546,584,561,323,345,583,347,632,398,634,394</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Order</value>
+    </filters>
+    <label>DECPM - Team E.ON Bestellung</label>
+    <sharedTo>
+        <group>DECPM_EON</group>
+    </sharedTo>
+</ListView>

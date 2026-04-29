@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALDI</fullName>
+    <fields>CaseNumber</fields>
+    <fields>OwnerId</fields>
+    <fields>External_Case_Category__c</fields>
+    <fields>External_Case_Detail__c</fields>
+    <label>ALDI</label>
+</CompactLayout>

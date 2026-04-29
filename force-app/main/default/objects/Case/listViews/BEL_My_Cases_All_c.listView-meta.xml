@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BEL_My_Cases_All_c</fullName>
+    <columns>Priority_Flag__c</columns>
+    <columns>Close_Date_Time_Objective__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Complaint__c</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Email_Status__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>PARENT.CASE_NUMBER</columns>
+    <columns>Total_Time_Remaining__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Cases &apos;All&apos;</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>BelgiumCM</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>BelgiumDirect</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>BelgiumIndirect</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>BelgiumRemarketing</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Belgium_Customer_Service</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Belgium_Customer_Service_TL</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Belgium_ILC_BUSDEV</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Belgium_ILC_Key_Small_Accounts</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Belgium_ILC_MAJOR_ACCOUNTS</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Belgium_ILC_VAN</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Belgium_LC_BUSDEV</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Belgium_LC_Key_Small_Accounts</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Belgium_LC_MAJOR_ACCOUNTS</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Belgium_LC_VAN</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

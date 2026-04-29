@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complaint_close_case_Manager_Baltics</fullName>
+    <active>true</active>
+    <description>Complaint cases - can be closed only by specific Managers.
+This VR grant complaint case closure to the specific managers and deny case closure to the non-specific manager or other users. Applicable for Luxembourg as well.</description>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c),
+CONTAINS($Label.ComplaintCloseCaseManagerBaltics,RecordType.DeveloperName),
+AND(NOT(ISBLANK(TEXT(Status))),ISPICKVAL(Status,&apos;Closed&apos;)),
+OR(
+    AND(
+        NOT(ISBLANK(TEXT(External_Case_Type__c))),
+        ISPICKVAL(External_Case_Type__c,&apos;Complaint&apos;)
+    ),
+    AND(
+        NOT(ISBLANK(TEXT(Type))),
+        ISPICKVAL(Type,&apos;Complaint&apos;)
+    )
+    ),
+
+AND(NOT(ISBLANK(TEXT(Complaint_justified__c)))),
+NOT($Permission.Complaint_close_case_Manager))</errorConditionFormula>
+    <errorMessage>You are not allowed to close this case. Contact your managers</errorMessage>
+</ValidationRule>

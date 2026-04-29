@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AUT_bersicht_open_tasks_ALL_BO</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notContain</operation>
+        <value>closed</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>notContain</operation>
+        <value>Support Contract Modification,Contract Modification,New Quote,Placement</value>
+    </filters>
+    <filters>
+        <field>Subsidiary_Indicator__c</field>
+        <operation>equals</operation>
+        <value>4001</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>Ali Rasan,Sarah Brich,Lisa Drabeck,Anita Samuel,Tamara Griebaum,Maja Slezacek,Illza Ujkani,Maida Pestalic,AUT - Backoffice,AUT - Quotation,AUT - Orders</value>
+    </filters>
+    <filters>
+        <field>CASES.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2024 12:00 AM</value>
+    </filters>
+    <label>AUT - Übersicht open tasks ALL BO</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>AustriaCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

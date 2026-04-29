@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Object_Information__c</fullName>
+    <description>The object the user is referring to.</description>
+    <label>Object Information</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account</fullName>
+                <default>false</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>Activity</fullName>
+                <default>false</default>
+                <label>Activity</label>
+            </value>
+            <value>
+                <fullName>Contact</fullName>
+                <default>false</default>
+                <label>Contact</label>
+            </value>
+            <value>
+                <fullName>Lead</fullName>
+                <default>false</default>
+                <label>Lead</label>
+            </value>
+            <value>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+                <label>Opportunity</label>
+            </value>
+            <value>
+                <fullName>Contract/Vehicle</fullName>
+                <default>false</default>
+                <label>Contract/Vehicle</label>
+            </value>
+            <value>
+                <fullName>User</fullName>
+                <default>false</default>
+                <label>User</label>
+            </value>
+            <value>
+                <fullName>Sharing Rules</fullName>
+                <default>false</default>
+                <label>Sharing Rules</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

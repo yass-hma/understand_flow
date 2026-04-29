@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LUX_Private_Indirect_Partners_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>LUX - Private Indirect Partners</label>
+    <queue>LUX_Private_Indirect_Partners</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

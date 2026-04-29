@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Loss_Substatus__c</fullName>
+    <label>Total Loss Substatus</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Total_Loss_status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pending client documents​</fullName>
+                <default>false</default>
+                <label>Pending client documents​</label>
+            </value>
+            <value>
+                <fullName>Pending documents external insurer​</fullName>
+                <default>false</default>
+                <label>Pending documents external insurer​</label>
+            </value>
+            <value>
+                <fullName>Pending documents from internal insurer​</fullName>
+                <default>false</default>
+                <label>Pending documents from internal insurer​</label>
+            </value>
+            <value>
+                <fullName>Validation of documentation by AYVENS​</fullName>
+                <default>false</default>
+                <label>Validation of documentation by AYVENS​</label>
+            </value>
+            <value>
+                <fullName>Pending FM approval​</fullName>
+                <default>false</default>
+                <label>Pending FM approval​</label>
+            </value>
+            <value>
+                <fullName>In process of payment of deductible​</fullName>
+                <default>false</default>
+                <label>In process of payment of deductible​</label>
+            </value>
+            <value>
+                <fullName>Plate cancellation​</fullName>
+                <default>false</default>
+                <label>Plate cancellation​</label>
+            </value>
+            <value>
+                <fullName>Cancellation of plates by customer​</fullName>
+                <default>false</default>
+                <label>Cancellation of plates by customer​</label>
+            </value>
+            <value>
+                <fullName>Pending invoicing</fullName>
+                <default>false</default>
+                <label>Pending invoicing</label>
+            </value>
+            <value>
+                <fullName>Validation of documents with internal insurer​</fullName>
+                <default>false</default>
+                <label>Validation of documents with internal insurer​</label>
+            </value>
+            <value>
+                <fullName>Validation of documents with external insurer​</fullName>
+                <default>false</default>
+                <label>Validation of documents with external insurer​</label>
+            </value>
+            <value>
+                <fullName>Pending payment​</fullName>
+                <default>false</default>
+                <label>Pending payment​</label>
+            </value>
+            <value>
+                <fullName>Awaiting opinions​</fullName>
+                <default>false</default>
+                <label>Awaiting opinions​</label>
+            </value>
+            <value>
+                <fullName>Awaiting release of documents​</fullName>
+                <default>false</default>
+                <label>Awaiting release of documents​</label>
+            </value>
+            <value>
+                <fullName>Awaiting budget​</fullName>
+                <default>false</default>
+                <label>Awaiting budget​</label>
+            </value>
+            <value>
+                <fullName>Awaiting FM authorisation​</fullName>
+                <default>false</default>
+                <label>Awaiting FM authorisation​</label>
+            </value>
+            <value>
+                <fullName>Awaiting appointment with the authority</fullName>
+                <default>false</default>
+                <label>Awaiting appointment with the authority</label>
+            </value>
+            <value>
+                <fullName>Requesting information from client​</fullName>
+                <default>false</default>
+                <label>Requesting information from client​</label>
+            </value>
+            <value>
+                <fullName>Assignment of legal representative​</fullName>
+                <default>false</default>
+                <label>Assignment of legal representative​</label>
+            </value>
+            <value>
+                <fullName>Accreditation of ownership​</fullName>
+                <default>false</default>
+                <label>Accreditation of ownership​</label>
+            </value>
+            <value>
+                <fullName>Awaiting expertise​</fullName>
+                <default>false</default>
+                <label>Awaiting expertise​</label>
+            </value>
+            <value>
+                <fullName>Awaiting official release of the vehicle​</fullName>
+                <default>false</default>
+                <label>Awaiting official release of the vehicle​</label>
+            </value>
+            <value>
+                <fullName>Awaiting transfer of the unit by the insurance company​</fullName>
+                <default>false</default>
+                <label>Awaiting transfer of the unit by the insurance company​</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Release agreement</fullName>
+                <default>false</default>
+                <label>Release agreement</label>
+            </value>
+            <value>
+                <fullName>Awaiting for driver’s documentation</fullName>
+                <default>false</default>
+                <label>Awaiting for driver’s documentation</label>
+            </value>
+            <value>
+                <fullName>Awaiting for vehicle stop/parking</fullName>
+                <default>false</default>
+                <label>Awaiting for vehicle stop/parking</label>
+            </value>
+            <value>
+                <fullName>Awaiting for budget submission</fullName>
+                <default>false</default>
+                <label>Awaiting for budget submission</label>
+            </value>
+            <value>
+                <fullName>Documentation in ALD Analysis</fullName>
+                <default>false</default>
+                <label>Documentation in ALD Analysis</label>
+            </value>
+            <value>
+                <fullName>Awaiting Regulation Inspection</fullName>
+                <default>false</default>
+                <label>Awaiting Regulation Inspection</label>
+            </value>
+            <value>
+                <fullName>Awaiting ALD Insurer Inspection</fullName>
+                <default>false</default>
+                <label>Awaiting ALD Insurer Inspection</label>
+            </value>
+            <value>
+                <fullName>Awaiting Customer Insurer Inspection</fullName>
+                <default>false</default>
+                <label>Awaiting Customer Insurer Inspection</label>
+            </value>
+            <value>
+                <fullName>Awaiting Third Party Insurer</fullName>
+                <default>false</default>
+                <label>Awaiting Third Party Insurer</label>
+            </value>
+            <value>
+                <fullName>Budget in ALD Analysis</fullName>
+                <default>false</default>
+                <label>Budget in ALD Analysis</label>
+            </value>
+            <value>
+                <fullName>Waiting for Submission of the Supplementary Budget</fullName>
+                <default>false</default>
+                <label>Waiting for Submission of the Supplementary Budget</label>
+            </value>
+            <value>
+                <fullName>Awaiting for Parts to Arrive</fullName>
+                <default>false</default>
+                <label>Awaiting for Parts to Arrive</label>
+            </value>
+            <value>
+                <fullName>Parts in B.O at the Assembler</fullName>
+                <default>false</default>
+                <label>Parts in B.O at the Assembler</label>
+            </value>
+            <value>
+                <fullName>Waiting for Customer to Call Insurance Company</fullName>
+                <default>false</default>
+                <label>Waiting for Customer to Call Insurance Company</label>
+            </value>
+            <value>
+                <fullName>Budget under negotiation with the Third Party</fullName>
+                <default>false</default>
+                <label>Budget under negotiation with the Third Party</label>
+            </value>
+            <value>
+                <fullName>Awaiting approval from ALD&apos;s insurer</fullName>
+                <default>false</default>
+                <label>Awaiting approval from ALD&apos;s insurer</label>
+            </value>
+            <value>
+                <fullName>Awaiting approval from the Customer&apos;s insurer</fullName>
+                <default>false</default>
+                <label>Awaiting approval from the Customer&apos;s insurer</label>
+            </value>
+            <value>
+                <fullName>Awaiting approval from the third party&apos;s insurer</fullName>
+                <default>false</default>
+                <label>Awaiting approval from the third party&apos;s insurer</label>
+            </value>
+            <value>
+                <fullName>Awaiting approval from the manager</fullName>
+                <default>false</default>
+                <label>Awaiting approval from the manager</label>
+            </value>
+            <value>
+                <fullName>Vehicle under repair in the ALD workshop</fullName>
+                <default>false</default>
+                <label>Vehicle under repair in the ALD workshop</label>
+            </value>
+            <value>
+                <fullName>Vehicle under repair in the third party&apos;s workshop</fullName>
+                <default>false</default>
+                <label>Vehicle under repair in the third party&apos;s workshop</label>
+            </value>
+            <value>
+                <fullName>Pending regularization of Documentation</fullName>
+                <default>false</default>
+                <label>Pending regularization of Documentation</label>
+            </value>
+            <value>
+                <fullName>Awaiting Quality Inspection</fullName>
+                <default>false</default>
+                <label>Awaiting Quality Inspection</label>
+            </value>
+            <value>
+                <fullName>Vehicle under repair and delivered</fullName>
+                <default>false</default>
+                <label>Vehicle under repair and delivered</label>
+            </value>
+            <value>
+                <fullName>Suspended service</fullName>
+                <default>false</default>
+                <label>Suspended service</label>
+            </value>
+            <value>
+                <fullName>Vehicle robbery</fullName>
+                <default>false</default>
+                <label>Vehicle robbery</label>
+            </value>
+            <value>
+                <fullName>Vehicle theft</fullName>
+                <default>false</default>
+                <label>Vehicle theft</label>
+            </value>
+            <value>
+                <fullName>Vehicle Decreed Total Loss</fullName>
+                <default>false</default>
+                <label>Vehicle Decreed Total Loss</label>
+            </value>
+            <value>
+                <fullName>Awaiting further information</fullName>
+                <default>false</default>
+                <label>Awaiting further information</label>
+            </value>
+            <value>
+                <fullName>Agreement between Individuals​</fullName>
+                <default>false</default>
+                <label>Agreement between Individuals​</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>Pending client documents​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>Pending documents external insurer​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>Pending documents from internal insurer​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>Validation of documentation by AYVENS​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>Pending FM approval​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>In process of payment of deductible​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>Plate cancellation​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>Cancellation of plates by customer​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>Pending invoicing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>Validation of documents with internal insurer​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>Validation of documents with external insurer​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>Pending payment​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In process of total loss​</controllingFieldValue>
+            <controllingFieldValue>Claim under investigation</controllingFieldValue>
+            <controllingFieldValue>Expired claim</controllingFieldValue>
+            <controllingFieldValue>In the process of being reported and accredited​</controllingFieldValue>
+            <controllingFieldValue>Unit recovered after theft​</controllingFieldValue>
+            <controllingFieldValue>Unit indemnified by customer​</controllingFieldValue>
+            <valueName>Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting for driver’s documentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting for vehicle stop/parking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting for budget submission</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Documentation in ALD Analysis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting Regulation Inspection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting ALD Insurer Inspection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting Customer Insurer Inspection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting Third Party Insurer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Budget in ALD Analysis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Waiting for Submission of the Supplementary Budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting for Parts to Arrive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Parts in B.O at the Assembler</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Waiting for Customer to Call Insurance Company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Budget under negotiation with the Third Party</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting approval from ALD&apos;s insurer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting approval from the Customer&apos;s insurer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting approval from the third party&apos;s insurer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting approval from the manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Vehicle under repair in the ALD workshop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Vehicle under repair in the third party&apos;s workshop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Pending regularization of Documentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting Quality Inspection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Vehicle under repair and delivered</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Suspended service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Vehicle robbery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Vehicle theft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Vehicle Decreed Total Loss</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Awaiting further information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair​</controllingFieldValue>
+            <valueName>Agreement between Individuals​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Awaiting opinions​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Awaiting release of documents​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Awaiting budget​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Awaiting FM authorisation​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Awaiting appointment with the authority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Requesting information from client​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Assignment of legal representative​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Accreditation of ownership​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Awaiting expertise​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Awaiting official release of the vehicle​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Awaiting transfer of the unit by the insurance company​</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Release agreement</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

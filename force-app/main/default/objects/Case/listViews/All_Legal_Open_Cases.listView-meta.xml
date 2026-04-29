@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Legal_Open_Cases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Close_Date_Time_Objective__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>Total_Time_Remaining__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Case_External_Legal</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>notEqual</operation>
+        <value>INT - ALDi - Legal</value>
+    </filters>
+    <label>All Legal Open Cases</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>INT_ALDi_Legal</group>
+    </sharedTo>
+</ListView>

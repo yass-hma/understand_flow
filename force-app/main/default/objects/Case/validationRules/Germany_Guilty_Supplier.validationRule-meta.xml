@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Germany_Guilty_Supplier</fullName>
+    <active>true</active>
+    <description>This rule requires user to fill in the Repair Supplier field for Germany when the Complaint Guilty Party is a supplier</description>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c),
+RecordType.DeveloperName =&apos;Case_External_Germany_Ayvens&apos;,
+OR(ISPICKVAL(External_Case_Category__c,&apos;Maintenance&apos;),ISPICKVAL(External_Case_Category__c,&apos;Damage&apos;)),
+ISPICKVAL(Type, &apos;Complaint&apos;),
+ISPICKVAL(Complaint_Guilty_Party__c, &apos;Supplier&apos;),      
+ISBLANK(ROM_Repair_supplier__c))</errorConditionFormula>
+    <errorMessage>Since the Complaint Guilty Party is a Supplier, Please fill in the Repair Supplier field</errorMessage>
+</ValidationRule>

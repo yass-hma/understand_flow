@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SWE_Micro_SME_Case</fullName>
+    <booleanFilter>(4 AND 2) OR (1 AND 3 AND 4) OR (4 AND 5)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>NAME</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Last_Status_Change__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Calder_Owner__c</field>
+        <operation>equals</operation>
+        <value>Anders Hedström1,Julia Fant,Ines Imamovic,Fatima Jaber,Jasmin Valenzuela</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>,SWE - Micro SME,SWE - Digital Retail,Anders Hedström (SME),Julia Fant,Ines Imamovic,Fatima Jaber,Lucas Henningson,Aleks Bogdanovs</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>SWE - Car Advisors</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Closed without action plan,Closed with action plan</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>Hugo Selin</value>
+    </filters>
+    <label>SWE - Digital Retail</label>
+    <sharedTo>
+        <group>SWE_Micro_SME</group>
+        <roleAndSubordinatesInternal>SwedenCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

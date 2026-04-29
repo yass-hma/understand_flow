@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_Premium_Talk</fullName>
+    <booleanFilter>(1 OR 2 OR 3 OR 4) AND 5 AND 6</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Account_Local_ID__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.MILESTONE_TIMER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>463119,42357787,463135,42474814,42672610,42338590,443303,42535572,42272528,463145,463137,463144,40030484,463035,42424431,42258156,42188172,42191700,42402125,42112040,420429,42321432,42453344,463134,681550,42404003,42414277,42333812</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>42490975,42402125,42474814,42273362,420429,42323291,463134,463044,42689164,599437,42188172,306293,42797234,42780211,463129,42395178,326247,42272528,463126,42424431,463123,42712073,42691425,463039,42440929,42319933</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>42781291,701603620,42781337,42766826,701505720,42781246,701601008,700687417,42798981,42691425,42357787,463145,42112085,463144,42191700,463140,42469730,463138,42333812,463137,42306387,496897,42301281,463135,42440929,42321432,42816011</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>700301256,701326520,701326719,701326616,701326573,701326560,701326704,701326712,700905222,701326580,701326729,701702071,701481256,701326695,313227138,276791,356618,597448,352996,40010225,41341171,576229,40367114,352990,701326541,42781286</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,chiuso</value>
+    </filters>
+    <filters>
+        <field>Invoice_Nbr__c</field>
+        <operation>contains</operation>
+        <value>ptp</value>
+    </filters>
+    <label>ITA - Premium Talk</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ItalyCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

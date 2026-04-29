@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROM_Sales</fullName>
+    <filterScope>Queue</filterScope>
+    <label>ROM - Sales</label>
+    <language>en_US</language>
+    <queue>ROM_Sales</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>RomaniaCM</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>RomaniaCallCenter</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>RomaniaCallCenterFrontOffice</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

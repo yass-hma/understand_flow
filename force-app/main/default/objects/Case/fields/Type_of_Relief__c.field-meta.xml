@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Relief__c</fullName>
+    <label>Type of Relief</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Given by Service Point</fullName>
+                <default>false</default>
+                <label>Given by Service Point</label>
+            </value>
+            <value>
+                <fullName>Rent</fullName>
+                <default>false</default>
+                <label>Rent</label>
+            </value>
+            <value>
+                <fullName>ALD&apos;s Pool</fullName>
+                <default>false</default>
+                <label>ALD&apos;s Pool</label>
+            </value>
+            <value>
+                <fullName>Manufacturer</fullName>
+                <default>false</default>
+                <label>Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Limited reservations</fullName>
+                <default>false</default>
+                <label>Limited reservations</label>
+            </value>
+            <value>
+                <fullName>Monthly tarif</fullName>
+                <default>false</default>
+                <label>Monthly tarif</label>
+            </value>
+            <value>
+                <fullName>Rebill</fullName>
+                <default>false</default>
+                <label>Rebill</label>
+            </value>
+            <value>
+                <fullName>Unlimited reservations</fullName>
+                <default>false</default>
+                <label>Unlimited reservations</label>
+            </value>
+            <value>
+                <fullName>Diárias contratadas</fullName>
+                <default>false</default>
+                <label>Diárias contratadas</label>
+            </value>
+            <value>
+                <fullName>Diárias ilimitadas</fullName>
+                <default>false</default>
+                <label>Diárias ilimitadas</label>
+            </value>
+            <value>
+                <fullName>Tarifa mensal - Rebill</fullName>
+                <default>false</default>
+                <label>Tarifa mensal - Rebill</label>
+            </value>
+            <value>
+                <fullName>Tarifa mensal - Custo ALD</fullName>
+                <default>false</default>
+                <label>Tarifa mensal - Custo ALD</label>
+            </value>
+            <value>
+                <fullName>ALD Cost</fullName>
+                <default>false</default>
+                <label>ALD Cost</label>
+            </value>
+            <value>
+                <fullName>Dia contratado</fullName>
+                <default>false</default>
+                <label>Dia contratado</label>
+            </value>
+            <value>
+                <fullName>Bolsa de sustitutos</fullName>
+                <default>false</default>
+                <label>Bolsa de sustitutos</label>
+            </value>
+            <value>
+                <fullName>Costo ALD</fullName>
+                <default>false</default>
+                <label>Costo ALD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

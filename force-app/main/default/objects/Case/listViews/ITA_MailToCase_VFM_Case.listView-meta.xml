@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_MailToCase_VFM_Case</fullName>
+    <columns>Email_Status__c</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>Overhead__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Vehicle_No__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>ITA - MailToCase VFM</label>
+    <language>en_US</language>
+    <queue>ITA_MailToCase_VFM</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ItalyCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Support_Client_ALDFLEX</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Followed_by__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>FRA_Omnichannel_Level_1_Is_Flex__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>FRA_Omnichannel_Level_1_Is_Flex__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>FRA - Support Client ALDFLEX</label>
+    <queue>FRA_Support_Clients</queue>
+    <sharedTo>
+        <role>France_CSFF_TL</role>
+        <role>France_DCSP_CSF</role>
+        <role>France_DCSP_CSF_SAOC</role>
+        <role>France_DCSP_Centre_Services_Partages_Dir</role>
+        <role>France_DREP_Implement_Commerciale_Ventes</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_1_Resp</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_2_Resp</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_3_Resp</role>
+        <role>France_DSOP_Rel_Client_Niv_2_Resp</role>
+        <role>France_DSOP_Services_Clients_Dir</role>
+        <roleAndSubordinatesInternal>France_DCSP_CSF_SAOC_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

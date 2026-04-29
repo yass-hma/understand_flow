@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_LEXUS_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <label>FRA - LEXUS</label>
+    <language>en_US</language>
+    <queue>FRA_LEXUS</queue>
+    <sharedTo>
+        <role>France_DREP_Implement_Commerciale_Ventes</role>
+        <role>France_DREP_Kia_Ventes</role>
+        <role>France_DREP_Retail_Partnerships_PSC</role>
+        <role>France_DREP_Retail_Partnerships_Resp_Transverse</role>
+        <role>France_DREP_Volvo_Ventes</role>
+        <roleAndSubordinatesInternal>France_DSOP_Rel_Client_Niv_2_Resp</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

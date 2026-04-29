@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_Mandatory_Repair_Locality</fullName>
+    <active>true</active>
+    <description>#181987
+PM-001852
+Repair Localty mandatory when ( CaseCategory=Maintenanace AND ( CaseDetail=Recurrent technical problem))</description>
+    <errorConditionFormula>AND( 
+NOT( $User.Bypass_Validation_Rules__c ),
+ RecordTypeId = &apos;012200000009CuR&apos;,
+ ISBLANK( Repair_Locality__c ),
+ ISPICKVAL( External_Case_Category__c ,&apos;Maintenance&apos;), 
+NOT( ISPICKVAL( Origin ,&apos;Email&apos; ) ),
+ ISPICKVAL (External_Case_Detail__c,&apos;Recurrent technical problem&apos;)
+ )</errorConditionFormula>
+    <errorDisplayField>Repair_Locality__c</errorDisplayField>
+    <errorMessage>Field Repair Locality must be filled in.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_MailtoCase_BO_INVOICING_Case</fullName>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <label>ITA - MailtoCase BO INVOICING</label>
+    <queue>ITA_MailtoCase_BO_INVOICING</queue>
+    <sharedTo>
+        <group>ITA_MailtoCase_BO_INVOICING</group>
+        <role>SystemAdministrator</role>
+        <roleAndSubordinates>ItalyAssistanceMgmt186711</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBUInternational</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBUVan</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBackOffice</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Back_Office_Operator</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Backoffice</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Business_Administrator</roleAndSubordinates>
+    </sharedTo>
+</ListView>

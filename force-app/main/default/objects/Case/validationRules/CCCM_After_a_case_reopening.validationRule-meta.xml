@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCM_After_a_case_reopening</fullName>
+    <active>true</active>
+    <description>After a case reopening, user cannot change key information on the case.</description>
+    <errorConditionFormula>AND (NOT($User.Bypass_Validation_Rules__c),CONTAINS($Label.CCCMRetrieveRecordTypeIds,
+RecordType.DeveloperName),
+OR(
+ISPICKVAL(PRIORVALUE(Status), &apos;Reopened&apos;)
+),
+OR (
+ISBLANK(TEXT(Reopening_Reason__c))
+),
+OR(
+AND(NOT(ISBLANK(TEXT(Status))), ISCHANGED(Status))
+ )
+)</errorConditionFormula>
+    <errorMessage>Please indicate the Reopening Reason.</errorMessage>
+</ValidationRule>

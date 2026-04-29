@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SWE_Cost_Control_Fuel</fullName>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>Last_Received_Email__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Reopen_Date__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Vehicle_No__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Closed without action plan,Closed with action plan</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Fuel</value>
+    </filters>
+    <label>SWE - Cost Control Fuel</label>
+    <queue>SWE_OPERATION_SUPPORT</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>SwedenCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

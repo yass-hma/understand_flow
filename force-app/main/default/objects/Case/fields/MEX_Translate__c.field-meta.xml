@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MEX_Translate__c</fullName>
+    <description>This field used for Mexico OCSM translate</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(External_Case_Category__c,&apos;Choose Mobility&apos;),&quot;Cotización&quot;,
+	IF(ISPICKVAL(External_Case_Category__c,&apos;Contract management&apos;),&quot;Gestión de clientes&quot;,
+		IF(ISPICKVAL(External_Case_Category__c,&apos;End of contract&apos;),&quot;Devolución de vehiculos&quot;,
+			IF(ISPICKVAL(External_Case_Category__c,&apos;Finance&apos;),&quot;Facturación&quot;,
+				IF(ISPICKVAL(External_Case_Category__c,&apos;Insurance&apos;),&quot;Seguros y Siniestros&quot;,
+					IF(ISPICKVAL(External_Case_Category__c,&apos;Maintenance&apos;),&quot;Mantenimiento&quot;,
+						IF(ISPICKVAL(External_Case_Category__c,&apos;Management Services&apos;),&quot;Gestión vehicular&quot;,
+							IF(ISPICKVAL(External_Case_Category__c,&apos;Mobility Services&apos;),&quot;Movilidad&quot;,
+								IF(ISPICKVAL(External_Case_Category__c,&apos;Order &amp; Delivery&apos;),&quot;Compras y Entregas&quot;,
+									IF(ISPICKVAL(External_Case_Category__c,&apos;Reporting&apos;),&quot;Reportes&quot;,
+										IF(ISPICKVAL(External_Case_Category__c,&apos;Roadside &amp; Call Centre&apos;),&quot;Asistencia&quot;,IF(ISPICKVAL(External_Case_Category__c,&apos;Tires&apos;),&quot;Llantas&quot;,&apos; &apos;))))))))))))</formula>
+    <label>MEX Translate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

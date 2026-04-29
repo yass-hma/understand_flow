@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auclid</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Auclid</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/AUCLIDv2?id={!Case.Id}&amp;recordtypeID={!Case.RecordTypeId}&amp;acc=1&amp;accString={!Case.Account}&amp;con=1&amp;conString={!Case.Contact}&amp;cont=1&amp;contString={!Case.Contract__c}</url>
+</WebLink>

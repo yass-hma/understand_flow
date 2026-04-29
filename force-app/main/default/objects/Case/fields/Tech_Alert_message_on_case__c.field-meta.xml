@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_Alert_message_on_case__c</fullName>
+    <description>This formula field is a technical field, used as criteria on Lightning page to display non blocking error message when the account of the case is different than the account of contact &amp; contract related to this case.</description>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(ContactId)) &amp;&amp; Account.Id &lt;&gt; Contact.AccountId &amp;&amp; ( Account.Id = Contract__r.AccountId || ISBLANK(Contract__c)),&quot;Contact&quot;,
+IF(NOT(ISBLANK(Contract__c)) &amp;&amp; Account.Id &lt;&gt; Contract__r.AccountId &amp;&amp; ( Account.Id = Contact.AccountId || ISBLANK( ContactId )), &quot;Contract&quot;,
+IF(NOT(ISBLANK(ContactId) &amp;&amp; (Account.Id &lt;&gt; Contact.AccountId)) &amp;&amp; (Account.Id &lt;&gt; Contract__r.AccountId &amp;&amp; NOT(ISBLANK(Contract__c))), &quot;Contract Contact&quot;, &quot;None&quot;) ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tech_Alert message on case</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

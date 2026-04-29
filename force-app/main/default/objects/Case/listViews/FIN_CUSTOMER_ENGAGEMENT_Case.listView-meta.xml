@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FIN_CUSTOMER_ENGAGEMENT_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CSE__c</columns>
+    <columns>Email_Status__c</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_Sender__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.TYPE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notContain</operation>
+        <value>Closed</value>
+    </filters>
+    <label>FIN - CUSTOMER ENGAGEMENT</label>
+    <language>en_US</language>
+    <queue>FIN_CUSTOMER_ENGAGEMENT</queue>
+    <sharedTo>
+        <group>FIN_CUSTOMER_ENGAGEMENT</group>
+    </sharedTo>
+</ListView>

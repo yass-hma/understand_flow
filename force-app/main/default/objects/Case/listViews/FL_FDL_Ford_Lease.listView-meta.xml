@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FL_FDL_Ford_Lease</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé</value>
+    </filters>
+    <label>FL - FDL (Ford Lease)</label>
+    <queue>FLFDL</queue>
+    <sharedTo>
+        <role>France_DRMC_Logistique</role>
+        <roleAndSubordinatesInternal>France_DCSP_Gestion_Dossiers_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DRMC_Restitution_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_Resp_Expert_VO</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

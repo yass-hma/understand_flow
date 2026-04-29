@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BEL_Reopen_Case__c</fullName>
+    <formula>AND( Time_Remaining_Boolean__c = TRUE,
+     NOT( ISBLANK(Case_Closed_By__c) ) ,
+
+CONTAINS(Status_Old_Value__c,&quot;Closed&quot;) ,
+NOT(ISPICKVAL(Status, &apos;Closed&apos;)) )</formula>
+    <label>BEL Reopen Case</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

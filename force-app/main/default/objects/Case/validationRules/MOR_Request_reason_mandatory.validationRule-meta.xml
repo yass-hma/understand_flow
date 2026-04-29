@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MOR_Request_reason_mandatory</fullName>
+    <active>true</active>
+    <description>Request reason field is mandatory to Save the Case</description>
+    <errorConditionFormula>AND(NOT( $User.Bypass_Validation_Rules__c ),
+RecordType.Id =&apos;01220000000V2lN&apos;,
+ ISPICKVAL(External_Case_Category__c, &apos;Door to Door&apos;),
+ ISPICKVAL( Request_reason__c , &quot;&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Request_reason__c</errorDisplayField>
+    <errorMessage>Please enter a value for Request Reason to save the case</errorMessage>
+</ValidationRule>

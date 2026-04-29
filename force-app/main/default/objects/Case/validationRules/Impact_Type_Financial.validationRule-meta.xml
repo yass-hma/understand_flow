@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Impact_Type_Financial</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($User.Bypass_Validation_Rules__c),
+NOT(CONTAINS($Label.Global_Complaint_Excluded_Subsidairy, RecordType.DeveloperName)),
+OR(
+ISPICKVAL(Type,&quot;Complaint&quot;),
+ISPICKVAL(External_Case_Type__c,&quot;Complaint&quot;)
+),
+OR(
+  AND(
+     INCLUDES(Financial_impact__c, &apos;Financial&apos;),
+     ISBLANK(Financial_Impact_type__c)
+   ),
+   AND(
+      NOT(INCLUDES(Financial_impact__c,&apos;Financial&apos;)),
+      NOT(ISBLANK(Financial_Impact_type__c))
+     )
+   )
+
+)</errorConditionFormula>
+    <errorDisplayField>Financial_Impact_type__c</errorDisplayField>
+    <errorMessage>If Impact Type &apos;Financial&apos; is selected, please fill in the Financial Impact type. Otherwise leave it blank.</errorMessage>
+</ValidationRule>

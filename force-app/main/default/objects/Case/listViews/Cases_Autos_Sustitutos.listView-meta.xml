@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cases_Autos_Sustitutos</fullName>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>Locality__c</columns>
+    <columns>Federal_district__c</columns>
+    <columns>Reception_date1__c</columns>
+    <columns>Release_Date__c</columns>
+    <columns>PAL_Report__c</columns>
+    <columns>Supplier_Contact__c</columns>
+    <columns>Damage_file_number__c</columns>
+    <columns>Cost__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>equals</operation>
+        <value>Replacement car,Auto sustituto</value>
+    </filters>
+    <label>Cases - Autos Sustitutos</label>
+    <sharedTo>
+        <group>MEX_Case_to_assign_FM</group>
+    </sharedTo>
+</ListView>

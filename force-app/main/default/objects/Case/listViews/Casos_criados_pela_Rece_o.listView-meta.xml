@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Casos_criados_pela_Rece_o</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATEDBY_USER.ALIAS</field>
+        <operation>equals</operation>
+        <value>slous,emora</value>
+    </filters>
+    <label>PRT - Casos criados pela Receção</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>PRT_Apoio_Cliente</group>
+        <group>PRT_Apoio_Condutor</group>
+        <group>PRT_Apoio_Neg_cio</group>
+        <group>PRT_Canal_Auto</group>
+        <group>PRT_Canal_banc_rio</group>
+        <group>PRT_Cobran_as</group>
+        <group>PRT_Compras</group>
+        <group>PRT_Contabilidade</group>
+        <group>PRT_Credito</group>
+        <group>PRT_Encomendas_Entregas</group>
+        <group>PRT_Gest_o_de_Contratos</group>
+        <group>PRT_Juridico</group>
+        <group>PRT_Logistica</group>
+        <group>PRT_Manuten_o_e_Pneus</group>
+        <group>PRT_Private_Lease</group>
+        <group>PRT_Qualidade</group>
+        <group>PRT_Remarketing</group>
+        <group>PRT_Seguros_Sinistros</group>
+        <group>PRT_Termina_es</group>
+    </sharedTo>
+</ListView>

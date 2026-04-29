@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCM_CaseClose_Mandatory_fields_On_Case</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT( $User.Bypass_Validation_Rules__c ),
+OR(
+    RecordType.Name = &quot;Case External Italy v2&quot;,
+    RecordType.Name = &quot;Case External Brazil&quot;,
+    RecordType.Name = &quot;Case External Austria&quot;,
+    RecordType.Name = &quot;Case External Switzerland&quot;
+  ),
+ISPICKVAL(Status,&quot;Closed&quot;) , 
+ISPICKVAL(Type,&quot;Complaint&quot;),
+INCLUDES(Financial_impact__c,&quot;Financial&quot;),
+ISBLANK(Text(Commercial_Gesture_Amount__c)))</errorConditionFormula>
+    <errorMessage>Please populate the Financial Correction Approved Amount.</errorMessage>
+</ValidationRule>

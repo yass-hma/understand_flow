@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bel_Marketing_Line_2__c</fullName>
+    <description>Belgium Customer Care - requirement from the word doc</description>
+    <externalId>false</externalId>
+    <formula>IF( Text(Contact.Language__c)=&apos;fre&apos; &amp;&amp; TEXT(Account.Identification_Criteria__c) = &apos;300002&apos;, $Label.BEL_Sentence2_French , 
+IF(Text(Contact.Language__c)=&apos;dut&apos; &amp;&amp; TEXT(Account.Identification_Criteria__c) = &apos;300002&apos;, $Label.BEL_Sentence2_Dutch , 
+IF(Text(Contact.Language__c)=&apos;eng&apos;&amp;&amp; TEXT(Account.Identification_Criteria__c) = &apos;300002&apos;, $Label.BEL_Sentence2_English , &apos;&apos;) 
+) 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Bel-Marketing Line 2</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

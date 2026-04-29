@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCM_Block_Manually_Reopen_Closed_Case</fullName>
+    <active>true</active>
+    <description>validation on case to block the case re-opening manually based on Closure Confirmation Status</description>
+    <errorConditionFormula>AND(
+NOT($User.Bypass_Validation_Rules__c),
+CONTAINS($Label.CCCM_Closure_Confmn_Status_RTdevName, RecordType.DeveloperName),
+ISCHANGED(Status),
+NOT(ISBLANK(TEXT(Status))),
+NOT(ISPICKVAL(PRIORVALUE(Status), &apos;Closed&apos;)),
+ISPICKVAL(Status, &apos;Reopened&apos;),
+OR(
+ISPICKVAL(Closure_confirmation_status__c, &apos;Closure confirmed by customer&apos;),
+ISPICKVAL(Closure_confirmation_status__c, &apos;No reply from customer&apos;)))</errorConditionFormula>
+    <errorMessage>You can’t reopen the case, please create a new case using New request button.</errorMessage>
+</ValidationRule>

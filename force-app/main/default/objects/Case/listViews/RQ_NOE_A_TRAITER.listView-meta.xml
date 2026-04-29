@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RQ_NOE_A_TRAITER</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Followed_by__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>Rabenakanbanarivo</value>
+    </filters>
+    <label>RQ NOE A TRAITER</label>
+    <sharedTo>
+        <group>FRA_TFO_Team</group>
+    </sharedTo>
+</ListView>

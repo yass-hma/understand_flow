@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AYDE_Beschwerde_RMT_Unfallschaden_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>AYDE Beschwerde RMT Unfallschaden</label>
+    <queue>AYDE_Beschwerde_RMT_Unfallschaden</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

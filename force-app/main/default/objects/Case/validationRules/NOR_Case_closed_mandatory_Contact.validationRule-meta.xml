@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NOR_Case_closed_mandatory_Contact</fullName>
+    <active>true</active>
+    <description>NOR &amp; SWE</description>
+    <errorConditionFormula>AND(NOT( $User.Bypass_Validation_Rules__c ),
+OR (RecordTypeId  = &apos;01220000000Uo97&apos;,RecordTypeId=&apos;01220000000V39B&apos;),NOT(CONTAINS($Label.ALDSATRecordTypeIds,RecordType.DeveloperName)),
+ISBLANK( Contact.Id ),
+ISPICKVAL(Status,&apos;Closed&apos;)
+)</errorConditionFormula>
+    <errorMessage>Please Fill Contact Name</errorMessage>
+</ValidationRule>

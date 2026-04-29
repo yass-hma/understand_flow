@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALDCRM_Sphere_of_influence_should_be_fil</fullName>
+    <active>false</active>
+    <description>[AUT,CHE,HRV,HUN,SVN,SRB]: Restriction for Sphere_of_Influence__c value when the case catagory is &quot;Quality      management&quot; and Extternal_Case_Detail__c is &quot; ALD clients  services&quot;</description>
+    <errorConditionFormula>AND
+(
+     NOT($User.Bypass_Validation_Rules__c ),
+     ISPICKVAL(
+External_Case_Category__c,&quot;Quality management&quot;),
+     ISPICKVAL(
+External_Case_Detail__c,&quot;ALD clients services&quot;),
+     ISBLANK(TEXT(Sphere_of_Influence__c)),
+    CONTAINS(
+       $Label.ALDCRM_Commercial_Gesture_Amount_Record_Types,     
+        RecordTypeId )
+)</errorConditionFormula>
+    <errorMessage>Please choose an option from the picklist &quot;Sphere of Influence&quot; after having selected &quot;ALD clients services&quot;</errorMessage>
+</ValidationRule>

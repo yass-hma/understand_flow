@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LAT_Sales_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>LAT - Sales</label>
+    <language>en_US</language>
+    <queue>LAT_Sales</queue>
+    <sharedTo>
+        <group>LAT_Sales</group>
+    </sharedTo>
+</ListView>

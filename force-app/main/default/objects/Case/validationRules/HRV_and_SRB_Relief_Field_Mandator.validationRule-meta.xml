@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRV_and_SRB_Relief_Field_Mandator</fullName>
+    <active>true</active>
+    <description>Modified for Serbia also during CC Release Jan 2012</description>
+    <errorConditionFormula>AND( 
+ISPICKVAL(External_Case_Category__c,&apos;Relief&apos;), 
+ISPICKVAL( External_Case_Detail__c ,&apos;Relief vehicle request&apos;), 
+OR( 
+$RecordType.Id = &apos;01220000000MDhj&apos;, 
+$RecordType.Id = &apos;01220000000MFwy&apos;), 
+OR(ISNULL( Service_Request_Date__c),ISNULL( Number_of_days__c)) 
+)</errorConditionFormula>
+    <errorDisplayField>Service_Request_Date__c</errorDisplayField>
+    <errorMessage>Following fields &quot;Service request date&quot; and &quot;Number of days&quot; must be filled in</errorMessage>
+</ValidationRule>

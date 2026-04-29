@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROM_Insurer__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Label updated to be used for all countries (08/2017)
+ROMANIA ACCIDENT MANAGEMENT
+
+Replacing Asigurator</description>
+    <label>Insurer Supplier</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR 3 OR 4</booleanFilter>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Supplier</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Subsidiary_Indicator__c</field>
+            <operation>equals</operation>
+            <valueField>$User.Subsidiary_Indicator__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$User.Id</field>
+            <operation>equals</operation>
+            <value>005200000018tXs</value>
+        </filterItems>
+        <filterItems>
+            <field>$Profile.Name</field>
+            <operation>equals</operation>
+            <value>API User 2</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Cases (Asigurator)</relationshipLabel>
+    <relationshipName>Cases1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

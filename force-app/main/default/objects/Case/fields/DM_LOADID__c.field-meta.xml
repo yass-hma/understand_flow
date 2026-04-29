@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DM_LOADID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>BR-6425 - Unique identifier to manage the integration data from LP SF and ALD SF</description>
+    <externalId>true</externalId>
+    <label>DM LOADID</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ADV_Surveillance_permanente_carburant</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>equals</operation>
+        <value>CARTE PERDUE,CARTE VOLEE</value>
+    </filters>
+    <filters>
+        <field>CASES.CREATED_DATE_DATE_ONLY</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2011 12:00 AM</value>
+    </filters>
+    <label>ADV - Surveillance permanente carburant</label>
+    <sharedTo>
+        <role>FranceCM</role>
+        <role>France_DSOP_Administration_Veh_Resp</role>
+        <role>France_DSOP_Commandes_et_Livraisons_Dir</role>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRV_Unassigned_cases</fullName>
+    <columns>External_Case_Category__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Case_Related__c</columns>
+    <columns>Adriatic_Contract__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>External_description__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Case_External_Croatia</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>startsWith</operation>
+        <value>HRV</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FIRST_NAME</field>
+        <operation>notEqual</operation>
+        <value>Hrvoje</value>
+    </filters>
+    <label>HRV - Unassigned cases</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>HRV_SVN</group>
+        <role>CroatiaCM</role>
+        <role>CroatiaCallCenterBackOffice</role>
+        <role>SystemAdministrator</role>
+    </sharedTo>
+</ListView>

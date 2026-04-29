@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Problem_Class__c</fullName>
+    <description>Class of problem request.</description>
+    <label>Problem Class</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Anomaly</fullName>
+                <default>false</default>
+                <label>Anomaly</label>
+            </value>
+            <value>
+                <fullName>Assistance</fullName>
+                <default>true</default>
+                <label>Assistance</label>
+            </value>
+            <value>
+                <fullName>Evolution - Internal</fullName>
+                <default>false</default>
+                <label>Evolution - Internal</label>
+            </value>
+            <value>
+                <fullName>Evolution - Salesforce.com</fullName>
+                <default>false</default>
+                <label>Evolution - Salesforce.com</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

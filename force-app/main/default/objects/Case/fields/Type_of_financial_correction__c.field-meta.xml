@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_financial_correction__c</fullName>
+    <label>Type of financial correction</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Commercial gesture</fullName>
+                <default>false</default>
+                <label>Commercial gesture</label>
+            </value>
+            <value>
+                <fullName>Operational loss​</fullName>
+                <default>false</default>
+                <label>Operational loss​</label>
+            </value>
+            <value>
+                <fullName>Contract exceptions</fullName>
+                <default>false</default>
+                <label>Contract exceptions</label>
+            </value>
+            <value>
+                <fullName>Disputed invoice</fullName>
+                <default>false</default>
+                <label>Disputed invoice</label>
+            </value>
+            <value>
+                <fullName>EIIE scheme</fullName>
+                <default>false</default>
+                <label>EIIE scheme</label>
+            </value>
+            <value>
+                <fullName>Fx invoices</fullName>
+                <default>false</default>
+                <label>Fx invoices</label>
+            </value>
+            <value>
+                <fullName>Invoicing/Storno</fullName>
+                <default>false</default>
+                <label>Invoicing/Storno</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Penalties invoice</fullName>
+                <default>false</default>
+                <label>Penalties invoice</label>
+            </value>
+            <value>
+                <fullName>Pricing exceptions</fullName>
+                <default>false</default>
+                <label>Pricing exceptions</label>
+            </value>
+            <value>
+                <fullName>Special  payment</fullName>
+                <default>false</default>
+                <label>Special  payment</label>
+            </value>
+            <value>
+                <fullName>Special resale</fullName>
+                <default>false</default>
+                <label>Special resale</label>
+            </value>
+            <value>
+                <fullName>Special resale - intern</fullName>
+                <default>false</default>
+                <label>Special resale - intern</label>
+            </value>
+            <value>
+                <fullName>No Bonus, Yes BNR</fullName>
+                <default>false</default>
+                <label>No Bonus, Yes BNR</label>
+            </value>
+            <value>
+                <fullName>Yes Bonus, No BNR</fullName>
+                <default>false</default>
+                <label>Yes Bonus, No BNR</label>
+            </value>
+            <value>
+                <fullName>No Bonus, No BNR</fullName>
+                <default>false</default>
+                <label>No Bonus, No BNR</label>
+            </value>
+            <value>
+                <fullName>R&amp;B and Fx exception - NO Bonus, NO curs BNR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>R&amp;B and Fx exception - NO Bonus, NO curs BNR</label>
+            </value>
+            <value>
+                <fullName>R&amp;B and Fx exception - NO Bonus, YES curs BNR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>R&amp;B and Fx exception - NO Bonus, YES curs BNR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

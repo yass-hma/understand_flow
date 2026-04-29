@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_MailtoCase_STRATEGIC2</fullName>
+    <booleanFilter>2 and 1 and 3</booleanFilter>
+    <columns>Email_Status__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>Overhead__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Account_Qualification__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Qualification__c</field>
+        <operation>contains</operation>
+        <value>strategic</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>ITA - MailToCase</value>
+    </filters>
+    <label>ITA - MailtoCase STRATEGIC</label>
+    <language>it</language>
+    <sharedTo>
+        <role>ItalyBUInternational</role>
+        <role>ItalyBUVan</role>
+        <role>ItalyBackOffice</role>
+        <role>ItalyCM</role>
+        <role>Italy_Back_Office_Operator</role>
+        <role>Italy_Sales_Ret_BACK_OFFICE</role>
+        <role>Italyinactive</role>
+    </sharedTo>
+</ListView>

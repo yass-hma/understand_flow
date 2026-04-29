@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dispute__c</fullName>
+    <label>Dispute</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>External_Case_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Process related</fullName>
+                <default>false</default>
+                <label>Process related</label>
+            </value>
+            <value>
+                <fullName>IT System related</fullName>
+                <default>false</default>
+                <label>IT System related</label>
+            </value>
+            <value>
+                <fullName>Human failure</fullName>
+                <default>false</default>
+                <label>Human failure</label>
+            </value>
+            <value>
+                <fullName>HR related</fullName>
+                <default>false</default>
+                <label>HR related</label>
+            </value>
+            <value>
+                <fullName>Human error</fullName>
+                <default>false</default>
+                <label>Human error</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Quality Management</controllingFieldValue>
+            <valueName>Process related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quality Management</controllingFieldValue>
+            <valueName>IT System related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quality Management</controllingFieldValue>
+            <valueName>HR related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quality Management</controllingFieldValue>
+            <valueName>Human error</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

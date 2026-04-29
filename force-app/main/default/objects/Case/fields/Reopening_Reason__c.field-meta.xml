@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reopening_Reason__c</fullName>
+    <inlineHelpText>Only if a case is reopened.</inlineHelpText>
+    <label>Reopening Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Case Not Solved</fullName>
+                <default>false</default>
+                <label>Case Not Solved</label>
+            </value>
+            <value>
+                <fullName>New Request</fullName>
+                <default>false</default>
+                <label>New Request</label>
+            </value>
+            <value>
+                <fullName>Sender Acknowledgement</fullName>
+                <default>false</default>
+                <label>Sender Acknowledgement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

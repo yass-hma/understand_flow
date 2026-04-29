@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EST_Remarketing_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>EST - Remarketing</label>
+    <language>en_US</language>
+    <queue>EST_Remarketing</queue>
+    <sharedTo>
+        <group>EST_Remarketing</group>
+    </sharedTo>
+</ListView>

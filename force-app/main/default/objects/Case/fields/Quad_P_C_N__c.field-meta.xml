@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quad_P_C_N__c</fullName>
+    <description>Shows if the case date opened belongs to the previous, current or next quad compared to the current quad (today).</description>
+    <externalId>false</externalId>
+    <formula>CASE ( Quad_1_2_3__c , 
+1,(IF( AND ( MONTH ( TODAY () ) &gt; 0 , MONTH ( TODAY () ) &lt; 5 ) ,&apos;Current&apos;, 
+if( AND(	 MONTH ( TODAY () ) &gt; 4 , MONTH ( TODAY () ) &lt; 9 ) ,&apos;Previous&apos;, &apos;Next&apos;))), 
+2,(IF( AND ( MONTH ( TODAY () ) &gt; 0 , MONTH ( TODAY () ) &lt; 5 ) ,&apos;Next&apos;, 
+if( AND(	 MONTH ( TODAY () ) &gt; 4 , MONTH ( TODAY () ) &lt; 9 ) ,&apos;Current&apos;, &apos;Previous&apos;))), 
+3,(IF( AND ( MONTH ( TODAY () ) &gt; 0 , MONTH ( TODAY () ) &lt; 5 ) ,&apos;Previous&apos;, 
+if( AND(	 MONTH ( TODAY () ) &gt; 4 , MONTH ( TODAY () ) &lt; 9 ) ,&apos;Next&apos;, &apos;Current&apos;))) 
+,NUll )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Previous, current or next quad depending on case opening date compared to today.</inlineHelpText>
+    <label>Quad (P/C/N)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

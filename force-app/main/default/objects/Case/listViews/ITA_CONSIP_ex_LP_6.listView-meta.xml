@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_CONSIP_ex_LP_6</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 4)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Account_ParentId__c</columns>
+    <columns>Account_Parent_Local_Code__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Local_ID__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,chiuso</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>701075940,701083109,700791098,700787513,700828345,701615655,700845440,700841039,700879736,701596665,700901015,701226909,700950430,700951394,701022418,701024470,701035530,701037485,701065291,701062861</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>701105074,701370883,701490694,701603248,701135985,701398819,701505507,701639125,701155002,701409235,701481001,701648810,701202523,701409310,701610454,701663423,701215816,701735471,701542445,701679682</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>701245493,701440933,701532058,701699269,701298902,701450498,701585520,701717453,701325502,701463745,701597371,701727254,701478444,701611490,701744430</value>
+    </filters>
+    <label>ITA CONSIP ex LP 6</label>
+    <queue>ITA_CS_SECONDO_LIVELLO</queue>
+    <sharedTo>
+        <roleAndSubordinates>ItalyAssistanceMgmt186711</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBUInternational</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBUVan</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBackOffice</roleAndSubordinates>
+        <roleAndSubordinates>Italy_ALD_Default_User</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Back_Office_Operator</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Backoffice</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Business_Administrator</roleAndSubordinates>
+    </sharedTo>
+</ListView>

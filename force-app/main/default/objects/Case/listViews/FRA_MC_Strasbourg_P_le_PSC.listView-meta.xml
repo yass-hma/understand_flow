@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_MC_Strasbourg_P_le_PSC</fullName>
+    <booleanFilter>(1 OR 4 OR 5) AND 2 AND 3 AND 6</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CONTACT.ACCOUNT</columns>
+    <columns>Priority_Flag__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Account_Environement__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>SANCHEZ,ANCEL,LEGROS,ATTAL,DEMESY,GARNIER,PARAIZAL,RENARD,CLEMENT,KINTZ,GELB</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>notContain</operation>
+        <value>aline,asap</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>FRA - Ag STRASBOURG – Pôle PSC</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>HEIM,KLEINKLAUS ROYAUX,BIEHLER,VALENTIN,BOONEN,LOMBARD,SCHOENNENBERGER</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.CaseExternalFrance</value>
+    </filters>
+    <label>FRA - MC Strasbourg - Pôle PSC</label>
+    <sharedTo>
+        <role>France_DCOI_Small_Region_EST_DR</role>
+        <role>France_DCOI_Small_Region_EST_PSC</role>
+        <role>France_DCOI_Small_Region_EST_PSC_Resp</role>
+        <role>France_DCOI_Small_Region_EST_Strasbourg_Ventes</role>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

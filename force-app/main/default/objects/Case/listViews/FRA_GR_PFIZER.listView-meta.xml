@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_GR_PFIZER</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 4 OR 5 OR 6)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <columns>EM_Addresses__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>EM_Addresses__c</field>
+        <operation>contains</operation>
+        <value>pfizer</value>
+    </filters>
+    <filters>
+        <field>Emailtocasereceiver_FormulaField__c</field>
+        <operation>contains</operation>
+        <value>pfizer</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>contains</operation>
+        <value>pfizer</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>pfizer</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>contains</operation>
+        <value>5415671,5141360</value>
+    </filters>
+    <label>FRA - GR PFIZER</label>
+    <queue>FRA_TOTAL_FLEET_OUTSOURCING</queue>
+    <sharedTo>
+        <group>FRA_TFO_Team</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALDSAT_Maintenance_Status_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT( $User.Bypass_Validation_Rules__c ),CONTAINS($Label.ALDSATRecordTypeIds,RecordType.DeveloperName),
+NOT(ISBLANK(TEXT(Maintenance_Status__c))),NOT(ISBLANK(ALD_Sat_Id__c)),OR(AND(
+NOT(ISPICKVAL(Maintenance_Status__c, &apos;STATE_NEW&apos;)),
+OR(ISCHANGED(Subject),
+ISCHANGED(External_Case_Category__c),
+ISCHANGED(Vehicle_No__c),
+ISCHANGED(Vin_No_Contract__c),
+ISCHANGED(Appointment_Date_Time_Option1__c),
+ISCHANGED(Appointment_Date_Time_Option2__c),
+ISCHANGED(Appointment_Date_Time_Option3__c),
+ISCHANGED(Preferred_Supplier__c),
+ISCHANGED(Mileage__c))),
+AND (ISPICKVAL(Maintenance_Status__c, &apos;STATE_CLOSED&apos;),OR(ISCHANGED(External_Case_Category__c),ISCHANGED(External_Case_Detail__c)))))</errorConditionFormula>
+    <errorMessage>Case is synced and is awaiting update from ALD Sat. Hence, below values cannot be updated after the appointment is confirmed.
+Case Category,Subject, Contract Information, Appointment Date/Time (Option 1,2,3),Preferred Supplier, Mileage</errorMessage>
+</ValidationRule>

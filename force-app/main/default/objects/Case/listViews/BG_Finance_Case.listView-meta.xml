@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BG_Finance_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>BGR - Finance</label>
+    <language>en_US</language>
+    <queue>BG_Finance</queue>
+    <sharedTo>
+        <group>BG_Finance</group>
+    </sharedTo>
+</ListView>

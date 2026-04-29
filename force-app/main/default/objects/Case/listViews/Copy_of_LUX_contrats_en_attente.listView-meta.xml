@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_LUX_contrats_en_attente</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>Attend</value>
+    </filters>
+    <label>Copy of LUX - contrats en attente</label>
+    <queue>LUX_Sales_Partnership</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>LuxembourgCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

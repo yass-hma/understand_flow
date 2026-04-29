@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_ALD_Demat</fullName>
+    <columns>Priority_Flag__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CONTACT.ACCOUNT</columns>
+    <columns>NAME</columns>
+    <columns>Total_Time_Remaining__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>equals</operation>
+        <value>ALD demat</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>FACTURATION,Billing,Invoicing</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.CaseExternalFrance</value>
+    </filters>
+    <label>FRA - Ald Demat|case détail = ALD demat</label>
+    <sharedTo>
+        <group>FRA_Ald_Demat</group>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

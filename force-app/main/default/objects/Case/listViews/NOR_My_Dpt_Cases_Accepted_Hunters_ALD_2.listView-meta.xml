@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NOR_My_Dpt_Cases_Accepted_Hunters_ALD_2</fullName>
+    <booleanFilter>(1 OR 2 OR 3 OR 4 OR 5) AND 6</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Total_Time_Remaining__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Account_Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>JORGENSEN,Marianne</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>HOLSTAD,Ana Karina</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>HOLTER,Stian</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>LARSEN,Kjetil</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>IVARSSON,Jens</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Case_External_Norway</value>
+    </filters>
+    <label>NOR - My Dpt Cases Accepted Hunters ALD</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>NOR_My_Dpt_Cases_Accepted_Hunters_ALD</group>
+    </sharedTo>
+</ListView>

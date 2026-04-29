@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BAL_QUALITY</fullName>
+    <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>PartnerImage__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Email_Status__c</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>QLTY</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Deleted</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>MIG</value>
+    </filters>
+    <label>BAL - QUALITY</label>
+    <language>en_US</language>
+    <queue>BEL_Sales_Belfius</queue>
+    <sharedTo>
+        <group>BEL_Partnership_Belfius</group>
+    </sharedTo>
+</ListView>

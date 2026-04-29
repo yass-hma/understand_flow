@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IND_Feedback</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Emailtocasereceiver_FormulaField__c</field>
+        <operation>equals</operation>
+        <value>india.feedback@ayvens.com</value>
+    </filters>
+    <label>IND - Feedback</label>
+    <sharedTo>
+        <group>IND_Feedback</group>
+        <role>IndiaCM</role>
+        <role>IndiaNBALCV</role>
+        <role>IndiaNHNBALCV</role>
+        <role>IndiaNHPartnerships</role>
+        <role>IndiaNorth</role>
+        <role>IndiaNorthPartnerships</role>
+        <role>IndiaRAMNorth</role>
+        <role>IndiaRAMSouth</role>
+        <role>IndiaRAMWest</role>
+        <role>IndiaSouth</role>
+        <role>IndiaSouthPartnerships</role>
+        <role>IndiaWest</role>
+        <role>India_CH_Sales_and_Marketing</role>
+        <role>India_Credit_Risk_analyst</role>
+        <role>India_Customer_Care_External</role>
+        <role>India_Customer_Care_Internal</role>
+        <role>India_Manager_Mrkt_IC</role>
+        <role>India_NH_Operations</role>
+        <role>India_Operations</role>
+        <role>India_Procurement</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRV_Escalation</fullName>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Case_Related__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Close_Date_Time_Objective__c</columns>
+    <columns>Adriatic_Contract__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.ESCALATION_STATE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>HRV - Escalation</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>HRVUserAdoption</group>
+        <group>HRV_SVN</group>
+        <group>HRVallcasesusers</group>
+    </sharedTo>
+</ListView>

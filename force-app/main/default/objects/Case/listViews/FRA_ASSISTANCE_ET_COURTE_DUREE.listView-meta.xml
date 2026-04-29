@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_ASSISTANCE_ET_COURTE_DUREE</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>Followed_by__c</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>Agency__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,A faire,In Progress,En cours,Pending</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>notContain</operation>
+        <value>PRISE DE RENDEZ VOUS,$Test Homologation$ $TEST $TEST Suite,booking,rendez,prise de rdv</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>notContain</operation>
+        <value>PRISE DE RENDEZ VOUS</value>
+    </filters>
+    <label>FRA - SERVICE RELATION CONDUCTEURS</label>
+    <queue>FRA_SERVICE_RELATION_CONDUCTEURS</queue>
+    <sharedTo>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_1</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_1_Resp</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_2</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_2_Resp</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_3</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_3_Resp</role>
+        <role>France_DSOP_Rel_Conduc_Grp1_Resp</role>
+        <role>France_DSOP_Rel_Conduc_Grp2_Resp</role>
+        <role>France_DSOP_Services_Clients_Dir</role>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

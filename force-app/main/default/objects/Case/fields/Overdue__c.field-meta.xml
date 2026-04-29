@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overdue__c</fullName>
+    <description>Calculate value according to service level. Is used to make reporting on cases and measure Service Level</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Status, &quot;Closed&quot;), IF(( ClosedDate -Close_Date_Time_Objective__c)* 24 &lt;= 0,&quot;Service Level Agreements&quot;,IF(AND((ClosedDate -Close_Date_Time_Objective__c) * 24 &gt; 0,(ClosedDate -Close_Date_Time_Objective__c) * 24 &lt;=48),&quot;48H After The Deadline&quot;,&quot;Level Of Service Alert&quot;)), IF((NOW()-Close_Date_Time_Objective__c)* 24 &lt;= 0,&quot;Service Level Agreements&quot;,IF(AND((NOW()-Close_Date_Time_Objective__c) * 24 &gt; 0,(NOW()-Close_Date_Time_Objective__c) * 24 &lt;=48),&quot;48H After The Deadline&quot;,&quot;Level Of Service Alert&quot;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Overdue</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

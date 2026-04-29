@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inform_Case_owner_on_close__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Comment: Reviewed in October 2020</description>
+    <label>Inform Case owner on close</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

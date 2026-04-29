@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brazil_CaseClose_Complaint</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c),RecordType.Name = &quot;Case External Brazil&quot;,ISPICKVAL(Status, &apos;Closed&apos;),NOT(ISPICKVAL(Complaint_justified__c,&apos;&apos;)),
+ISPICKVAL(Type, &apos;Complaint&apos;),ISBLANK(Complaint_Key_Word__c))</errorConditionFormula>
+    <errorMessage>As this case is a complaint, the field &apos;Complaint Key Word&apos; is mandatory.</errorMessage>
+</ValidationRule>

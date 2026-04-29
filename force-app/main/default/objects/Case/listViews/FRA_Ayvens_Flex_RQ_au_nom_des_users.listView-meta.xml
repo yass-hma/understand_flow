@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Ayvens_Flex_RQ_au_nom_des_users</fullName>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>gougelin,venketasam,jully-maire,pichenot,mampouya,mbuyu,saidi,mandounou,capitao,camara,ravelomana,fall samba,danton raja,boudier,telidja,patenet,grib amina,rube ludo,vermeerschi,ktenge,mbimbe,badaoui</value>
+    </filters>
+    <label>FRA - Ayvens Flex RQ au nom des users</label>
+    <sharedTo>
+        <group>FRA_Service_Mobilite_LMD</group>
+        <role>France_DRMC_Services_Operations_Flex_Resp</role>
+    </sharedTo>
+</ListView>

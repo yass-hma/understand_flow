@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>List_Views_Team_11</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>Amcovic,Belma Barmbrock,Jonas Drasky,Bettina Fischer,Jenne Grabe,Julia Hayn,Celina Jahnel,Ingo Jarmers,Karola Lucke,Carsten Maschmann,Moritz Mispelbaum,Jeremy Pinzel,Janina Schmidt,Carsten Sopha,Pascale Wagner,Jana</value>
+    </filters>
+    <label>List Views - Team 1</label>
+    <sharedTo>
+        <group>DECPM_EON</group>
+    </sharedTo>
+</ListView>

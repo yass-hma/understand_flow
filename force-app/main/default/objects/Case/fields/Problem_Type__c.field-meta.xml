@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Problem_Type__c</fullName>
+    <description>Type of problem encoutered by the end user.</description>
+    <label>Problem Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Problem_Class__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Bug</fullName>
+                <default>false</default>
+                <label>Bug</label>
+            </value>
+            <value>
+                <fullName>Business Question</fullName>
+                <default>false</default>
+                <label>Business Question</label>
+            </value>
+            <value>
+                <fullName>Dashboards</fullName>
+                <default>false</default>
+                <label>Dashboards</label>
+            </value>
+            <value>
+                <fullName>Documents</fullName>
+                <default>false</default>
+                <label>Documents</label>
+            </value>
+            <value>
+                <fullName>Error Message</fullName>
+                <default>false</default>
+                <label>Error Message</label>
+            </value>
+            <value>
+                <fullName>Future Version</fullName>
+                <default>false</default>
+                <label>Future Version</label>
+            </value>
+            <value>
+                <fullName>Future Version - New Module</fullName>
+                <default>false</default>
+                <label>Future Version - New Module</label>
+            </value>
+            <value>
+                <fullName>Incorrect Data</fullName>
+                <default>false</default>
+                <label>Incorrect Data</label>
+            </value>
+            <value>
+                <fullName>Incorrect Functionality</fullName>
+                <default>false</default>
+                <label>Incorrect Functionality</label>
+            </value>
+            <value>
+                <fullName>IP Address</fullName>
+                <default>false</default>
+                <label>IP Address</label>
+            </value>
+            <value>
+                <fullName>Missing Data</fullName>
+                <default>false</default>
+                <label>Missing Data</label>
+            </value>
+            <value>
+                <fullName>Missing Functionality</fullName>
+                <default>false</default>
+                <label>Missing Functionality</label>
+            </value>
+            <value>
+                <fullName>Network Connection</fullName>
+                <default>false</default>
+                <label>Network Connection</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Password Problem</fullName>
+                <default>false</default>
+                <label>Password Problem</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>User Adoption</fullName>
+                <default>false</default>
+                <label>User Adoption</label>
+            </value>
+            <value>
+                <fullName>User Management</fullName>
+                <default>false</default>
+                <label>User Management</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Anomaly</controllingFieldValue>
+            <valueName>Bug</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anomaly</controllingFieldValue>
+            <valueName>Incorrect Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anomaly</controllingFieldValue>
+            <valueName>Incorrect Functionality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anomaly</controllingFieldValue>
+            <valueName>Missing Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anomaly</controllingFieldValue>
+            <controllingFieldValue>Evolution - Internal</controllingFieldValue>
+            <controllingFieldValue>Evolution - Salesforce.com</controllingFieldValue>
+            <controllingFieldValue>Assistance</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Evolution - Internal</controllingFieldValue>
+            <controllingFieldValue>Evolution - Salesforce.com</controllingFieldValue>
+            <valueName>Dashboards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Evolution - Internal</controllingFieldValue>
+            <controllingFieldValue>Evolution - Salesforce.com</controllingFieldValue>
+            <valueName>Documents</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Evolution - Internal</controllingFieldValue>
+            <valueName>Future Version</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Evolution - Internal</controllingFieldValue>
+            <valueName>Future Version - New Module</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Evolution - Internal</controllingFieldValue>
+            <controllingFieldValue>Evolution - Salesforce.com</controllingFieldValue>
+            <valueName>Missing Functionality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Evolution - Internal</controllingFieldValue>
+            <controllingFieldValue>Evolution - Salesforce.com</controllingFieldValue>
+            <valueName>Reports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance</controllingFieldValue>
+            <valueName>Business Question</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance</controllingFieldValue>
+            <valueName>Error Message</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance</controllingFieldValue>
+            <valueName>IP Address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance</controllingFieldValue>
+            <valueName>Network Connection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance</controllingFieldValue>
+            <valueName>Password Problem</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance</controllingFieldValue>
+            <valueName>User Adoption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assistance</controllingFieldValue>
+            <valueName>User Management</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

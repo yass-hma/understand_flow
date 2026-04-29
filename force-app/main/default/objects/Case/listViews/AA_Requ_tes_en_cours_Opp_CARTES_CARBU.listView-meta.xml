@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AA_Requ_tes_en_cours_Opp_CARTES_CARBU</fullName>
+    <columns>Priority_Flag__c</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>zone bo,aldnet,crcm,mail</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Alert fraud,CARBURANT,Fuel</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Treaty in the absence of</value>
+    </filters>
+    <label>FRA - Requêtes en cours Opp CARTES CARBU</label>
+    <sharedTo>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_1</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_2</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_2_Resp</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_3</role>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_3_Resp</role>
+        <role>France_DSOP_Services_Clients_Dir</role>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

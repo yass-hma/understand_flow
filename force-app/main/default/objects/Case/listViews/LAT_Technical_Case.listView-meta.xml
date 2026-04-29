@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LAT_Technical_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>LAT - Technical</label>
+    <language>en_US</language>
+    <queue>LAT_Technical</queue>
+    <sharedTo>
+        <group>LAT_Technical</group>
+    </sharedTo>
+</ListView>

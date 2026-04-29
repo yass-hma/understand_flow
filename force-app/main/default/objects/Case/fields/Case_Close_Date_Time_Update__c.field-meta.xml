@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Close_Date_Time_Update__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For Dummy updating CZE cases to run triggers again and set correct time remaining in Hrs
+Comment: Reviewed in October 2020</description>
+    <label>Case Close Date Time Update</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

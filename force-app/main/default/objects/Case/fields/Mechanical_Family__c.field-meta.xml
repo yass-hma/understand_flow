@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mechanical_Family__c</fullName>
+    <label>Mechanical Family</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AIR CONDITIONING</fullName>
+                <default>false</default>
+                <label>AIR CONDITIONING</label>
+            </value>
+            <value>
+                <fullName>BODYWORK</fullName>
+                <default>false</default>
+                <label>BODYWORK</label>
+            </value>
+            <value>
+                <fullName>BRAKES</fullName>
+                <default>false</default>
+                <label>BRAKES</label>
+            </value>
+            <value>
+                <fullName>CLUTCH</fullName>
+                <default>false</default>
+                <label>CLUTCH</label>
+            </value>
+            <value>
+                <fullName>COOLING SYSTEM</fullName>
+                <default>false</default>
+                <label>COOLING SYSTEM</label>
+            </value>
+            <value>
+                <fullName>ELECTRONICS</fullName>
+                <default>false</default>
+                <label>ELECTRONICS</label>
+            </value>
+            <value>
+                <fullName>ELECTRICAL</fullName>
+                <default>false</default>
+                <label>ELECTRICAL</label>
+            </value>
+            <value>
+                <fullName>ENGINE</fullName>
+                <default>false</default>
+                <label>ENGINE</label>
+            </value>
+            <value>
+                <fullName>FUEL</fullName>
+                <default>false</default>
+                <label>FUEL</label>
+            </value>
+            <value>
+                <fullName>SUSPENSION</fullName>
+                <default>false</default>
+                <label>SUSPENSION</label>
+            </value>
+            <value>
+                <fullName>DIRECTION</fullName>
+                <default>false</default>
+                <label>DIRECTION</label>
+            </value>
+            <value>
+                <fullName>TRANSMISSION</fullName>
+                <default>false</default>
+                <label>TRANSMISSION</label>
+            </value>
+            <value>
+                <fullName>TYRES</fullName>
+                <default>false</default>
+                <label>TYRES</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

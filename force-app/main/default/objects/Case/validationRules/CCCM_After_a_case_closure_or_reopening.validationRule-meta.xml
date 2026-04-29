@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCM_After_a_case_closure_or_reopening</fullName>
+    <active>true</active>
+    <description>After a case closure or reopening, user cannot change key information on the case detail page.</description>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c),CONTAINS($Label.CCCMRetrieveRecordTypeIds,
+RecordType.DeveloperName),
+OR(
+AND(
+OR(
+ISPICKVAL(PRIORVALUE(Status), &apos;Closed&apos;),
+ISPICKVAL(PRIORVALUE(Status), &apos;Reopened&apos;),
+NOT(ISBLANK(TEXT(Reopening_Reason__c)))),
+OR(
+OR(
+/*AND(NOT(ISBLANK(AccountId)), ISCHANGED(AccountId) ),
+AND(NOT(ISBLANK(ContactId)), ISCHANGED(ContactId) ), */
+AND(NOT(ISBLANK(Contract__c)), ISCHANGED(Contract__c) ),
+AND(NOT(ISBLANK(TEXT(Type))), ISCHANGED(Type) ),
+/*AND(NOT(ISBLANK(Description)), ISCHANGED(Description) ),*/
+AND(NOT(ISBLANK(TEXT(External_Case_Detail__c))), ISCHANGED(External_Case_Detail__c) ),
+AND(NOT(ISBLANK(TEXT(External_Case_Category__c))), ISCHANGED(External_Case_Category__c) )),
+
+AND(
+OR(
+AND(NOT(ISBLANK(TEXT(Status))), ISCHANGED(Status),NOT(ISPICKVAL(Reopening_Reason__c, &apos;Case Not Solved&apos;)))),
+OR(
+ISPICKVAL(Status, &apos;New&apos;),
+AND(ISPICKVAL(PRIORVALUE(Status), &apos;Closed&apos;),ISPICKVAL(Status, &apos;In progress&apos;)),
+ISPICKVAL(Status, &apos;Pending - Internal&apos;),
+ISPICKVAL(Status, &apos;Pending - Customer&apos;),
+ISPICKVAL(Status, &apos;Pending - External&apos;))
+)
+)
+),
+AND(
+ISPICKVAL(PRIORVALUE(Status), &apos;Closed&apos;),
+NOT(ISPICKVAL((Status), &apos;Reopened&apos;)),
+NOT(ISPICKVAL((Status), &apos;Deleted&apos;)),
+ISCHANGED(Status))
+)
+)</errorConditionFormula>
+    <errorMessage>Impossible to change Case Status, Type, Category or Details if the case is already closed or reopened.</errorMessage>
+</ValidationRule>

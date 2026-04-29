@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Dept_Cases_Accepted_Sales_konomi</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Total_Time_Remaining__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Account_Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>dfrau,ijage,aohna,zgerm,anaes,bbjer,cjoha,blien,kkolb,mjohn</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>My Dept Cases &quot;Accepted&quot; Økonomi</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>NOR_My_Dept_Cases_Accepted_Okonomi</group>
+    </sharedTo>
+</ListView>

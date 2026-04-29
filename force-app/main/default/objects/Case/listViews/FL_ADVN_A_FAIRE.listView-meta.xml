@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FL_ADVN_A_FAIRE</fullName>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>External_Case_Type__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Followed_by__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé</value>
+    </filters>
+    <label>FL - ADVN - A FAIRE</label>
+    <language>en_US</language>
+    <queue>FL_FORD_LEASE_ADVN</queue>
+    <sharedTo>
+        <role>France_DREP_Retail_Partnerships_PSC</role>
+        <role>France_DREP_Retail_Partnerships_Resp_Transverse</role>
+    </sharedTo>
+</ListView>

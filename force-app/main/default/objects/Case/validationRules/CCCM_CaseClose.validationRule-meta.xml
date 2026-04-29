@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCM_CaseClose</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c),
+OR(
+    RecordType.Name = &quot;Case External Italy v2&quot;,
+    RecordType.Name = &quot;Case External Brazil&quot;
+    
+  ),
+
+NOT(CONTAINS($Label.Task_Management_Enabled_Countries_RecordTypes,
+RecordType.Name)),
+Is_Case_Closed__c=false,
+ALDSATOCSM__c=false,
+ISPICKVAL(Status, &apos;Closed&apos;),
+AND(NOT(ISBLANK(TEXT(Status))), ISCHANGED(Status) ),
+OR(
+AND(
+ISBLANK(TEXT(Reopening_Reason__c)),
+NOT(ISCHANGED(Reopening_Reason__c))),
+AND(NOT(ISPICKVAL(Reopening_Reason__c, &apos;New Request&apos;)),
+NOT(ISPICKVAL(Reopening_Reason__c, &apos;Sender Acknowledgement&apos;)),
+ISPICKVAL(Reopening_Reason__c, &apos;Case Not Solved&apos;))
+))</errorConditionFormula>
+    <errorMessage>Use the &quot;Close case&quot; button to close this case. If it is a complaint, provide all the necessary information related to it on the close page.</errorMessage>
+</ValidationRule>

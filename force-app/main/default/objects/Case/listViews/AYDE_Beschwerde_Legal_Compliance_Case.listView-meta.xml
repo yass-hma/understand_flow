@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AYDE_Beschwerde_Legal_Compliance_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>AYDE Beschwerde Legal &amp; Compliance</label>
+    <queue>AYDE_Beschwerde_Legal_Compliance</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_no_case_on_prospect</fullName>
+    <active>false</active>
+    <description>Prevent case opening on prospect account for ITALY.</description>
+    <errorConditionFormula>AND(NOT( $User.Bypass_Validation_Rules__c ),
+Account.RecordTypeId  = &apos;012200000009CsB&apos;
+&amp;&amp;
+ $User.Id &lt;&gt; &apos;005200000018tXs&apos;)</errorConditionFormula>
+    <errorMessage>Non è possibile aprire un case su Account di tipo Prospect.</errorMessage>
+</ValidationRule>

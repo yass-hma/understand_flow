@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALDSAT_Case_Close</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c ),CONTAINS($Label.ALDSATRecordTypeIds,RecordType.DeveloperName),ISPICKVAL(Status, &apos;Closed&apos;),
+NOT(ISPICKVAL(Maintenance_Status__c , &apos;STATE_NEW&apos;)),
+NOT(ISPICKVAL(Maintenance_Status__c, &apos;STATE_APPOINTMENT&apos;)))</errorConditionFormula>
+    <errorMessage>CASE can be CLOSED only when Maintenance Status values are New Issue ,Appointment Confirmation or NULL</errorMessage>
+</ValidationRule>

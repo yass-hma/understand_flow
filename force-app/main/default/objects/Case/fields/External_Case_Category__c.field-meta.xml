@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Case_Category__c</fullName>
+    <label>Case Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Accident Management</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Accident Management</label>
+            </value>
+            <value>
+                <fullName>Administration</fullName>
+                <default>false</default>
+                <label>Administration</label>
+            </value>
+            <value>
+                <fullName>Administration management</fullName>
+                <default>false</default>
+                <label>Administration management</label>
+            </value>
+            <value>
+                <fullName>Administration request</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Administration request</label>
+            </value>
+            <value>
+                <fullName>Administrative</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Administrative</label>
+            </value>
+            <value>
+                <fullName>Administrative requests</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Administrative requests</label>
+            </value>
+            <value>
+                <fullName>Aldavar Vehicle Upload</fullName>
+                <default>false</default>
+                <label>Aldavar Vehicle Upload</label>
+            </value>
+            <value>
+                <fullName>ALD Flex</fullName>
+                <default>false</default>
+                <label>ALD Flex</label>
+            </value>
+            <value>
+                <fullName>ALD Net</fullName>
+                <default>false</default>
+                <label>ALD Net</label>
+            </value>
+            <value>
+                <fullName>Alert fraud</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Alert fraud</label>
+            </value>
+            <value>
+                <fullName>Assignment service</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Assignment service</label>
+            </value>
+            <value>
+                <fullName>Assistance</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Assistance</label>
+            </value>
+            <value>
+                <fullName>Assistance support</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Assistance support</label>
+            </value>
+            <value>
+                <fullName>Authorisations</fullName>
+                <default>false</default>
+                <label>Authorisations</label>
+            </value>
+            <value>
+                <fullName>Billing</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Billing</label>
+            </value>
+            <value>
+                <fullName>Booking</fullName>
+                <default>false</default>
+                <label>Booking</label>
+            </value>
+            <value>
+                <fullName>Call Center</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Call Center</label>
+            </value>
+            <value>
+                <fullName>Call center_</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Call center_</label>
+            </value>
+            <value>
+                <fullName>Car Administration</fullName>
+                <default>false</default>
+                <label>Car Administration</label>
+            </value>
+            <value>
+                <fullName>Choose Mobility</fullName>
+                <default>false</default>
+                <label>Choose Mobility</label>
+            </value>
+            <value>
+                <fullName>Choose Vehicle</fullName>
+                <default>false</default>
+                <label>Choose Vehicle</label>
+            </value>
+            <value>
+                <fullName>Client Management</fullName>
+                <default>false</default>
+                <label>Client Management</label>
+            </value>
+            <value>
+                <fullName>Commercial dispute Lilly</fullName>
+                <default>false</default>
+                <label>Commercial dispute Lilly</label>
+            </value>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+            <value>
+                <fullName>Contract administration</fullName>
+                <default>false</default>
+                <label>Contract administration</label>
+            </value>
+            <value>
+                <fullName>Contract closure</fullName>
+                <default>false</default>
+                <label>Contract closure</label>
+            </value>
+            <value>
+                <fullName>Contract closure and remarketing</fullName>
+                <default>false</default>
+                <label>Contract closure and remarketing</label>
+            </value>
+            <value>
+                <fullName>Contract correction</fullName>
+                <default>false</default>
+                <label>Contract correction</label>
+            </value>
+            <value>
+                <fullName>Contract Management</fullName>
+                <default>false</default>
+                <label>Contract Management</label>
+            </value>
+            <value>
+                <fullName>Contract modification</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Contract modification</label>
+            </value>
+            <value>
+                <fullName>Contract termination cancellation</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Contract termination cancellation</label>
+            </value>
+            <value>
+                <fullName>Credit risk</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Credit risk</label>
+            </value>
+            <value>
+                <fullName>Customer care</fullName>
+                <default>false</default>
+                <label>Customer care</label>
+            </value>
+            <value>
+                <fullName>Damage</fullName>
+                <default>false</default>
+                <label>Damage</label>
+            </value>
+            <value>
+                <fullName>Delivery</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Delivery</label>
+            </value>
+            <value>
+                <fullName>DEMANDES ADMINISTRATIVES</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>DEMANDES ADMINISTRATIVES</label>
+            </value>
+            <value>
+                <fullName>Direct sale to driver</fullName>
+                <default>false</default>
+                <label>Direct sale to driver</label>
+            </value>
+            <value>
+                <fullName>Documentation</fullName>
+                <default>false</default>
+                <label>Documentation</label>
+            </value>
+            <value>
+                <fullName>Door2Door</fullName>
+                <default>false</default>
+                <label>Door2Door</label>
+            </value>
+            <value>
+                <fullName>Door To Door</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Door To Door</label>
+            </value>
+            <value>
+                <fullName>Door To Door_</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Door To Door_</label>
+            </value>
+            <value>
+                <fullName>Drop</fullName>
+                <default>false</default>
+                <label>Drop</label>
+            </value>
+            <value>
+                <fullName>ELECTRONIC TOLL</fullName>
+                <default>false</default>
+                <label>ELECTRONIC TOLL</label>
+            </value>
+            <value>
+                <fullName>End of contract</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>End of contract</label>
+            </value>
+            <value>
+                <fullName>End of Contract &amp; Remarketing</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>End of Contract &amp; Remarketing</label>
+            </value>
+            <value>
+                <fullName>Energy Solution</fullName>
+                <default>false</default>
+                <label>Energy Solution</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Finance management</fullName>
+                <default>false</default>
+                <label>Finance management</label>
+            </value>
+            <value>
+                <fullName>Fines</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Fines</label>
+            </value>
+            <value>
+                <fullName>FLEX</fullName>
+                <default>false</default>
+                <label>FLEX</label>
+            </value>
+            <value>
+                <fullName>Fuel</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Fuel</label>
+            </value>
+            <value>
+                <fullName>Fuel/Charge</fullName>
+                <default>false</default>
+                <label>Fuel/Charge</label>
+            </value>
+            <value>
+                <fullName>Fuel invoices</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Fuel invoices</label>
+            </value>
+            <value>
+                <fullName>Fuel Management</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Fuel Management</label>
+            </value>
+            <value>
+                <fullName>GDPR</fullName>
+                <default>false</default>
+                <label>GDPR</label>
+            </value>
+            <value>
+                <fullName>Guarantee</fullName>
+                <default>false</default>
+                <label>Guarantee</label>
+            </value>
+            <value>
+                <fullName>Help needed</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Help needed</label>
+            </value>
+            <value>
+                <fullName>Highway</fullName>
+                <default>false</default>
+                <label>Highway</label>
+            </value>
+            <value>
+                <fullName>Information</fullName>
+                <default>false</default>
+                <label>Information</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Insurance_</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Insurance_</label>
+            </value>
+            <value>
+                <fullName>Insurance contract</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Insurance contract</label>
+            </value>
+            <value>
+                <fullName>Insurance request</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Insurance request</label>
+            </value>
+            <value>
+                <fullName>Internal management</fullName>
+                <default>false</default>
+                <label>Internal management</label>
+            </value>
+            <value>
+                <fullName>Invoice</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>Invoices</fullName>
+                <default>false</default>
+                <label>Invoices</label>
+            </value>
+            <value>
+                <fullName>Invoices/Accounting</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Invoices/Accounting</label>
+            </value>
+            <value>
+                <fullName>Invoices/Accounting_</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Invoices/Accounting_</label>
+            </value>
+            <value>
+                <fullName>Invoices &amp; Accounting</fullName>
+                <default>false</default>
+                <label>Invoices &amp; Accounting</label>
+            </value>
+            <value>
+                <fullName>Invoicing</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Invoicing</label>
+            </value>
+            <value>
+                <fullName>Lease</fullName>
+                <default>false</default>
+                <label>Lease</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Limited term rental</fullName>
+                <default>false</default>
+                <label>Limited term rental</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>Maintenance/Tyres</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Maintenance/Tyres</label>
+            </value>
+            <value>
+                <fullName>Maintenance &amp; Repairs</fullName>
+                <default>false</default>
+                <label>Maintenance &amp; Repairs</label>
+            </value>
+            <value>
+                <fullName>Maintenance and repair</fullName>
+                <default>false</default>
+                <label>Maintenance and repair</label>
+            </value>
+            <value>
+                <fullName>Maintenance request</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Maintenance request</label>
+            </value>
+            <value>
+                <fullName>Management Services</fullName>
+                <default>false</default>
+                <label>Management Services</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Mechanical failure</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Mechanical failure</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>Mobile parking, GPS</fullName>
+                <default>false</default>
+                <label>Mobile parking, GPS</label>
+            </value>
+            <value>
+                <fullName>Mobility Services</fullName>
+                <default>false</default>
+                <label>Mobility Services</label>
+            </value>
+            <value>
+                <fullName>MyAyvens</fullName>
+                <default>false</default>
+                <label>MyAyvens</label>
+            </value>
+            <value>
+                <fullName>New Car Delivery</fullName>
+                <default>false</default>
+                <label>New Car Delivery</label>
+            </value>
+            <value>
+                <fullName>New order</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>New order</label>
+            </value>
+            <value>
+                <fullName>new quotation</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>new quotation</label>
+            </value>
+            <value>
+                <fullName>New Quote</fullName>
+                <default>false</default>
+                <label>New Quote</label>
+            </value>
+            <value>
+                <fullName>One call solution</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>One call solution</label>
+            </value>
+            <value>
+                <fullName>Order</fullName>
+                <default>false</default>
+                <label>Order</label>
+            </value>
+            <value>
+                <fullName>Order / Delivery</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Order / Delivery</label>
+            </value>
+            <value>
+                <fullName>Order &amp; Delivery</fullName>
+                <default>false</default>
+                <label>Order &amp; Delivery</label>
+            </value>
+            <value>
+                <fullName>Order and deliveries</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Order and deliveries</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>out of office</fullName>
+                <default>false</default>
+                <label>out of office</label>
+            </value>
+            <value>
+                <fullName>Parking ticket</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Parking ticket</label>
+            </value>
+            <value>
+                <fullName>Partners</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Partners</label>
+            </value>
+            <value>
+                <fullName>Placement</fullName>
+                <default>false</default>
+                <label>Placement</label>
+            </value>
+            <value>
+                <fullName>Pool and ALD Flex</fullName>
+                <default>false</default>
+                <label>Pool and ALD Flex</label>
+            </value>
+            <value>
+                <fullName>Quality</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Quality</label>
+            </value>
+            <value>
+                <fullName>Quality Management</fullName>
+                <default>false</default>
+                <label>Quality Management</label>
+            </value>
+            <value>
+                <fullName>Quotation</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Quotation</label>
+            </value>
+            <value>
+                <fullName>Quotation Review</fullName>
+                <default>false</default>
+                <label>Quotation Review</label>
+            </value>
+            <value>
+                <fullName>Quote Review</fullName>
+                <default>false</default>
+                <label>Quote Review</label>
+            </value>
+            <value>
+                <fullName>Quotes</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Quotes</label>
+            </value>
+            <value>
+                <fullName>Quoting</fullName>
+                <default>false</default>
+                <label>Quoting</label>
+            </value>
+            <value>
+                <fullName>Relief</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Relief</label>
+            </value>
+            <value>
+                <fullName>Remarketing</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Remarketing</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Repair</fullName>
+                <default>false</default>
+                <label>Repair</label>
+            </value>
+            <value>
+                <fullName>Report</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Report</label>
+            </value>
+            <value>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+                <label>Reporting</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Return</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Return</label>
+            </value>
+            <value>
+                <fullName>Road Assistance</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Road Assistance</label>
+            </value>
+            <value>
+                <fullName>Roadside &amp; Call Centre</fullName>
+                <default>false</default>
+                <label>Roadside &amp; Call Centre</label>
+            </value>
+            <value>
+                <fullName>Road support</fullName>
+                <default>false</default>
+                <label>Road support</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Sales administration</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Sales administration</label>
+            </value>
+            <value>
+                <fullName>Sales followup</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Sales followup</label>
+            </value>
+            <value>
+                <fullName>Sales inquiries</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Sales inquiries</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>Short term and relief vehicle</fullName>
+                <default>false</default>
+                <label>Short term and relief vehicle</label>
+            </value>
+            <value>
+                <fullName>Short term rental</fullName>
+                <default>false</default>
+                <label>Short term rental</label>
+            </value>
+            <value>
+                <fullName>STRC</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>STRC</label>
+            </value>
+            <value>
+                <fullName>Supplier</fullName>
+                <default>false</default>
+                <label>Supplier</label>
+            </value>
+            <value>
+                <fullName>Support Contract Modification</fullName>
+                <default>false</default>
+                <label>Support Contract Modification</label>
+            </value>
+            <value>
+                <fullName>Taxes</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Taxes</label>
+            </value>
+            <value>
+                <fullName>Technical interventions</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Technical interventions</label>
+            </value>
+            <value>
+                <fullName>Tender</fullName>
+                <default>false</default>
+                <label>Tender</label>
+            </value>
+            <value>
+                <fullName>Tires</fullName>
+                <default>false</default>
+                <label>Tires</label>
+            </value>
+            <value>
+                <fullName>Tires management</fullName>
+                <default>false</default>
+                <label>Tires management</label>
+            </value>
+            <value>
+                <fullName>Turn back</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Turn back</label>
+            </value>
+            <value>
+                <fullName>Tyre management</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Tyre management</label>
+            </value>
+            <value>
+                <fullName>Tyres</fullName>
+                <default>false</default>
+                <label>Tyres</label>
+            </value>
+            <value>
+                <fullName>Tyres Management</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Tyres Management</label>
+            </value>
+            <value>
+                <fullName>Tyres request</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Tyres request</label>
+            </value>
+            <value>
+                <fullName>Used car</fullName>
+                <default>false</default>
+                <label>Used car</label>
+            </value>
+            <value>
+                <fullName>Vehicle accesories and equipement</fullName>
+                <default>false</default>
+                <label>Vehicle accesories and equipement</label>
+            </value>
+            <value>
+                <fullName>VIP</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>VIP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

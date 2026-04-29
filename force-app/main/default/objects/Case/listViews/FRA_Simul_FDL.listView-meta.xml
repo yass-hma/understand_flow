@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Simul_FDL</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>Priority_Flag__c</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>NAME</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <label>FRA - FDL</label>
+    <queue>FRASimulFDL</queue>
+    <sharedTo>
+        <role>France_DFI_Comptabilite_Tiers</role>
+        <roleAndSubordinatesInternal>France_CSFF_TL</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DCSP_CSF_SAOC_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DCSP_Centre_Services_Partages_Dir</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

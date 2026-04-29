@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DECPM_Logistics_Mobility_Managem_VIP</fullName>
+    <booleanFilter>(1 AND 2 AND 3 AND 4 AND 5 AND 7) OR (6 AND 1 AND 2 AND 4 AND 5 AND 7)</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>NAME</columns>
+    <columns>Email_Sender__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CASES.MILESTONE_TIMER</columns>
+    <columns>Email_Status__c</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Deleted</value>
+    </filters>
+    <filters>
+        <field>Subsidiary_Indicator__c</field>
+        <operation>equals</operation>
+        <value>27604</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>End of contract,Fuel/Charge,Mobility Services</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>notEqual</operation>
+        <value>,6,290,297,323,345,347,394,398,402,470,546,550,561,583,584,588,632,634,639,652,653,673,697,702,513,534,430,431,615,629,636,681,118,614,642,643</value>
+    </filters>
+    <filters>
+        <field>VIPContact__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>equals</operation>
+        <value>Delivery,Registration</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>Garcia</value>
+    </filters>
+    <label>DECPM - Logistics &amp; Mobility Managem VIP</label>
+    <sharedTo>
+        <group>DECPM_Logistics_Mobility</group>
+    </sharedTo>
+</ListView>

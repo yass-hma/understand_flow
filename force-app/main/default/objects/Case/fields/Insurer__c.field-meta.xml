@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insurer__c</fullName>
+    <description>Case Management</description>
+    <label>Insurer</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Insurance__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Third party insurer</fullName>
+                <default>false</default>
+                <label>Third party insurer</label>
+            </value>
+            <value>
+                <fullName>Client&apos;s insurer</fullName>
+                <default>false</default>
+                <label>Client&apos;s insurer</label>
+            </value>
+            <value>
+                <fullName>Own resource</fullName>
+                <default>false</default>
+                <label>Own resource</label>
+            </value>
+            <value>
+                <fullName>Association/Cooperative</fullName>
+                <default>false</default>
+                <label>Association/Cooperative</label>
+            </value>
+            <value>
+                <fullName>Third party rental company</fullName>
+                <default>false</default>
+                <label>Third party rental company</label>
+            </value>
+            <value>
+                <fullName>Below the deductible</fullName>
+                <default>false</default>
+                <label>Below the deductible</label>
+            </value>
+            <value>
+                <fullName>Deductible</fullName>
+                <default>false</default>
+                <label>Deductible</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Below the deductible</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Deductible</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Third party insurer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Client&apos;s insurer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Own resource</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Association/Cooperative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Third party rental company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

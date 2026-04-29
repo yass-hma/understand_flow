@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_LP_REMARKETING</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 4)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>Followed_by__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>Emailtocasereceiver_FormulaField__c</field>
+        <operation>contains</operation>
+        <value>restitution-expertise@</value>
+    </filters>
+    <filters>
+        <field>Followed_by__c</field>
+        <operation>contains</operation>
+        <value>Remarketing</value>
+    </filters>
+    <filters>
+        <field>EM_Addresses__c</field>
+        <operation>contains</operation>
+        <value>expertise@</value>
+    </filters>
+    <label>FRA - LP REMARKETING</label>
+    <queue>FRA_MIGRATION</queue>
+    <sharedTo>
+        <group>FRA_REMARKETING</group>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

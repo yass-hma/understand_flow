@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Logo_Displayed__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE(&quot;/servlet/servlet.ImageServer?id=&quot;+ Account.Account_Logo__c+ &quot;&amp;oid=&quot;+$Organization.Id, TEXT(Account.Identification_Criteria__c)+&quot;.png&quot;,55,180)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>-</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_CASI_LEONARDO</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 4) AND 5</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Manual_Priority_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,chiuso,Closed without action plan,Deleted</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>104019,260414,328962,440570,868421,40579058,40587365,40587526,40587652,40587993,40588293,40588310,40588319,40588341,40588351,40588426,40588447,40588450,40588507,40588578</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>40588593,40589583,40589665,40589714,40589740,40589752,40589761,40589787,40589809,40590038,40869446,41771780,42321512,42321532,313203241,313224977,701329160,701329654,701331463,701331988,701332001,701332019</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>701332029,701332992,701375609,701458318,701477730,701477733,701477736,701477741,701477776,701477782,701477784</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>ITA - DELETED CASE</value>
+    </filters>
+    <label>ITA - CASI LEONARDO</label>
+    <sharedTo>
+        <role>ItalyBackOffice</role>
+        <role>Italy_Back_Office_Operator</role>
+        <role>Italy_Business_Administrator</role>
+    </sharedTo>
+</ListView>

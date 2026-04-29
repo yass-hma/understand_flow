@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_Mailtocase_Wreck_Furto</fullName>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>Overhead__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>Calder_Owner__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>Approvato modulo network</value>
+    </filters>
+    <label>ITA Mailtocase Wreck/Contratto scaduto</label>
+    <queue>ITAMailToCaseWRECKCSFR</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ItalyCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

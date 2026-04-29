@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_FINES3</fullName>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Manual_Priority_Date__c</columns>
+    <columns>NAME</columns>
+    <columns>Followed_by__c</columns>
+    <columns>Invoice_Nbr__c</columns>
+    <columns>Additional_info__c</columns>
+    <columns>Account_Local_ID__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>ITA - FINES</label>
+    <queue>ITAFINES</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ItalyAssistanceMgmt186711</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>ItalyBUInternational</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>ItalyBUVan</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>ItalyBackOffice</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_ALD_Default_User</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Back_Office_Operator</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Backoffice</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Business_Administrator</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

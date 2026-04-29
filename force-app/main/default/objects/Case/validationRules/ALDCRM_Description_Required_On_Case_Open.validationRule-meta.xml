@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALDCRM_Description_Required_On_Case_Open</fullName>
+    <active>true</active>
+    <description>[SWE, BGR]: when the case is open then the description is mandatory</description>
+    <errorConditionFormula>AND
+(
+      NOT( $User.Bypass_Validation_Rules__c ), 
+     CONTAINS($Label.ALDCRM_Description_Required_Countries,RecordTypeId) , 
+      ISBLANK(Description ), ISNEW()
+)</errorConditionFormula>
+    <errorDisplayField>Description</errorDisplayField>
+    <errorMessage>Description should be mandatory</errorMessage>
+</ValidationRule>

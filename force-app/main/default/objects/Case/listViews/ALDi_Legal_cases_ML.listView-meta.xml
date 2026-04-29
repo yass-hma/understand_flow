@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALDi_Legal_cases_ML</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Close_Date_Time_Objective__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Case_External_Legal</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>equals</operation>
+        <value>Mathieu Lavelle</value>
+    </filters>
+    <label>ALDi - Legal cases - New Biz - ML</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>IntSalesManagement</role>
+    </sharedTo>
+</ListView>

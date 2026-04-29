@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Detail_ActionPlan__c</fullName>
+    <inlineHelpText>Describe the actions that were or will be done in detail. If no action, insert NA</inlineHelpText>
+    <label>Action Taken</label>
+    <length>10240</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

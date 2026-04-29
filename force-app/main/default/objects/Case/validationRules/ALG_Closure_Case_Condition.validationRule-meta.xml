@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALG_Closure_Case_Condition</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c ),
+ISPICKVAL(External_Case_Category__c , &apos;Maintenance&apos;),
+ISPICKVAL(Status , &apos;Closed&apos;),
+ISBLANK(ROM_Repair_supplier__c),
+RecordType.DeveloperName=&apos;Case_External_Algeria&apos;)</errorConditionFormula>
+    <errorMessage>Please populate the field &apos;Repair supplier’​</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALDCRM_NOR_Case_Cat_Detail_Mandatory</fullName>
+    <active>false</active>
+    <description>[NOR]: Case Category,case detail is mandatory if Case Origin is Email</description>
+    <errorConditionFormula>AND(NOT( $User.Bypass_Validation_Rules__c ),
+   CONTAINS($Label.ALDCRM_Norway_CaseRT,RecordTypeId),
+ISPICKVAL( Origin , &apos;Email&apos;), ISPICKVAL(External_Case_Detail__c, &quot;&quot;)
+,ISPICKVAL(External_Case_Category__c, &quot;&quot;),
+ISPICKVAL (Status , &apos;Closed&apos;)
+
+)</errorConditionFormula>
+    <errorMessage>Case Category and Case Detail is mandatory if Case Origin is Email</errorMessage>
+</ValidationRule>

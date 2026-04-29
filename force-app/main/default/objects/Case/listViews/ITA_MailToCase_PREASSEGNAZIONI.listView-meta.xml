@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_MailToCase_PREASSEGNAZIONI</fullName>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Account_Qualification__c</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>Overhead__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>NAME</columns>
+    <filterScope>Queue</filterScope>
+    <label>ITA - MailToCase PREASSEGNAZIONI</label>
+    <language>it</language>
+    <queue>ITAMailToCasePREASSEGNAZIONI</queue>
+    <sharedTo>
+        <group>ITAAREACUSTOMERSERVICE</group>
+        <group>ITAAREACUSTOMERSERVICE268961</group>
+        <group>ITABackOfficeManagers</group>
+        <group>ITACorporateMediumCSIChannel</group>
+        <group>ITACorporateMediumNorthChannel</group>
+        <group>ITADELETEDCASES268961</group>
+        <group>ITADealerChannel</group>
+        <group>ITAIndirectUCLChannel</group>
+        <group>ITASalesAreaManagers</group>
+        <group>ITASalesPA</group>
+        <group>ITASalesforpiacentini</group>
+        <group>ITAStatodilavorazioneMailToCase</group>
+        <group>ITATelesales</group>
+        <group>ITATelesalesChannel</group>
+        <group>ITAUserAdoption</group>
+        <group>ITA_CUSTOMER_LEADER</group>
+        <group>ITA_SALES</group>
+        <group>ITA_Sales_dir</group>
+        <group>ITAgeneric</group>
+        <group>ITApartnerservice</group>
+        <group>ItalianPartners</group>
+        <group>Italianrolessharingwithpartners</group>
+        <group>ItalySalesManagement187541</group>
+        <group>Italy_Front_Back_Office</group>
+        <group>ItalyandSubordinateswithoutPartners</group>
+    </sharedTo>
+</ListView>

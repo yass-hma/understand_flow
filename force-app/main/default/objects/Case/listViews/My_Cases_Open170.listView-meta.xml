@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Cases_Open170</fullName>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>_My Cases Open</label>
+    <sharedTo>
+        <role>Bulgaria_CM</role>
+        <role>Bulgaria_Finance</role>
+        <role>Bulgaria_Finance_Manager</role>
+        <role>Bulgaria_IC</role>
+        <role>Bulgaria_Operations</role>
+        <role>Bulgaria_Operations_Manager</role>
+        <role>Bulgaria_Other</role>
+        <role>Bulgaria_Procurement</role>
+        <role>Bulgaria_Risk_Analyst</role>
+        <role>Bulgaria_Risk_Management</role>
+        <role>Bulgaria_Sales</role>
+        <role>Bulgaria_Sales_Management</role>
+        <role>Bulgaria_Sales_Manager</role>
+    </sharedTo>
+</ListView>

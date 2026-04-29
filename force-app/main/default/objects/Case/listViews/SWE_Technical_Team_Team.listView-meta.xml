@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SWE_Technical_Team_Team</fullName>
+    <booleanFilter>(1 AND 2 AND 4) OR (1 and 3 AND 4)</booleanFilter>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Reopen_Date__c</columns>
+    <columns>External_Case_Type__c</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Closed without action plan,Closed with action plan</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>Sherif Mahmoud,Dennis Edling,Linus Turesson,Gabriel Norstrom,Michael Letho,Damir Gazibegovic</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>Jennifer Lasson,Bengtjuan Cerda,Clas Österholm,Daniel Burgos,Jenny Roman,Mehdi Bajelvand,Hanna Näsholm,Mikael Hauffman</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>notEqual</operation>
+        <value>Booking</value>
+    </filters>
+    <label>SWE - RMT Team</label>
+    <sharedTo>
+        <group>SWE_Technical_Team_Team</group>
+    </sharedTo>
+</ListView>

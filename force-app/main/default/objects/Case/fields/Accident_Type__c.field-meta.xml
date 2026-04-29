@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accident_Type__c</fullName>
+    <label>Accident Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Theft</fullName>
+                <default>false</default>
+                <label>Theft</label>
+            </value>
+            <value>
+                <fullName>Damage</fullName>
+                <default>false</default>
+                <label>Damage</label>
+            </value>
+            <value>
+                <fullName>Total damage</fullName>
+                <default>false</default>
+                <label>Total damage</label>
+            </value>
+            <value>
+                <fullName>Class damage</fullName>
+                <default>false</default>
+                <label>Class damage</label>
+            </value>
+            <value>
+                <fullName>Sheet damage</fullName>
+                <default>false</default>
+                <label>Sheet damage</label>
+            </value>
+            <value>
+                <fullName>Dumber damage</fullName>
+                <default>false</default>
+                <label>Dumber damage</label>
+            </value>
+            <value>
+                <fullName>Sheet scratch</fullName>
+                <default>false</default>
+                <label>Sheet scratch</label>
+            </value>
+            <value>
+                <fullName>Dumber scratch</fullName>
+                <default>false</default>
+                <label>Dumber scratch</label>
+            </value>
+            <value>
+                <fullName>Vandalism</fullName>
+                <default>false</default>
+                <label>Vandalism</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Fortuit</fullName>
+                <default>false</default>
+                <label>Fortuit</label>
+            </value>
+            <value>
+                <fullName>Constat amiable</fullName>
+                <default>false</default>
+                <label>Constat amiable</label>
+            </value>
+            <value>
+                <fullName>PV</fullName>
+                <default>false</default>
+                <label>PV</label>
+            </value>
+            <value>
+                <fullName>Bris de glasse</fullName>
+                <default>false</default>
+                <label>Bris de glasse</label>
+            </value>
+            <value>
+                <fullName>Vol poste radio</fullName>
+                <default>false</default>
+                <label>Vol poste radio</label>
+            </value>
+            <value>
+                <fullName>Vol vehicule</fullName>
+                <default>false</default>
+                <label>Vol vehicule</label>
+            </value>
+            <value>
+                <fullName>Autre</fullName>
+                <default>false</default>
+                <label>Autre</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

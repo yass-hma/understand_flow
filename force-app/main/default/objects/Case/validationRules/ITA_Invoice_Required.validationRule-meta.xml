@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_Invoice_Required</fullName>
+    <active>true</active>
+    <description>PLC 16/12/08 : Italy CRM v2</description>
+    <errorConditionFormula>AND(NOT( $User.Bypass_Validation_Rules__c ),
+IF(
+AND(
+RecordTypeId = &quot;012200000009CuR&quot;,
+OR(
+ISPICKVAL(External_Case_Detail__c,&quot;Addtional debit for substitution&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Additional temp debit&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Additional tyre debit&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Addtional debit for substitution&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Bill extra Km&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Contract termination cancellation&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Debited transfer&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;End contract km&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Fines&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Fuel card bill&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Non received payment&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Purchase bill&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Quotation mistake debit&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Second-hand market&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Substitution&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Total sinister statement&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Traffic tax&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;Use statement&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;billing issues&quot;),
+ISPICKVAL(External_Case_Detail__c,&quot;closed car transfer&quot;)
+),
+Text(Origin) &lt;&gt; &quot;Email&quot;, 
+Invoice_Nbr__c = null
+),
+TRUE,
+FALSE
+))</errorConditionFormula>
+    <errorDisplayField>Invoice_Nbr__c</errorDisplayField>
+    <errorMessage>Invoice number is mandatory for this detail</errorMessage>
+</ValidationRule>

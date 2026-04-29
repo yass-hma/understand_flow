@@ -1,0 +1,3373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CaseInternal</fullName>
+    <active>true</active>
+    <businessProcess>Internal</businessProcess>
+    <compactLayoutAssignment>ALDI</compactLayoutAssignment>
+    <description>Record Type used for internal cases.</description>
+    <label>Case Internal</label>
+    <picklistValues>
+        <picklist>AWD_4WD__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Accident_Management_Sub_Status__c</picklist>
+        <values>
+            <fullName>Awaiting ALD Insurer Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Customer Insurer Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Quality Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Regulation Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Third Party Insurer Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting approval from ALD%27s insurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting approval from the Customer%27s insurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting approval from the manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting for Parts to Arrive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting for approval from the third party%27s insurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting for budget submission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting for driver%E2%80%99s documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting for vehicle stop%2Fparking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Budget in ALD Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Budget under negotiation with the Third Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Documentation in ALD Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parts in B%2EO at the Assembler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending regularization of Documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vehicle under repair in the ALD workshop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vehicle under repair in the third party%27s workshop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Customer to Call Insurance Company</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Submission of the Supplementary Budget</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Accident_Type__c</picklist>
+        <values>
+            <fullName>Theft</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Budget_type__c</picklist>
+        <values>
+            <fullName>Large amount%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium amount%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small amount</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Call_Type__c</picklist>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Source__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_resolved__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Closure_confirmation_status__c</picklist>
+        <values>
+            <fullName>Closure confirmed by customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closure rejected by customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No reply from customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send email to customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for customer feedback</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Commercial_Gesture__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Complaint_Closure_type__c</picklist>
+        <values>
+            <fullName>Abandoned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed with customer agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed without customer disagreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Litigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settlement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Complaint_Guilty_Party__c</picklist>
+        <values>
+            <fullName>Ayvens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Complaint_justified__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Complaint_reason__c</picklist>
+        <values>
+            <fullName>Responsiveness</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Complaint_recurrency__c</picklist>
+        <values>
+            <fullName>Recurrent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unique%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Complaints_Reason__c</picklist>
+        <values>
+            <fullName>ALD employee responsibility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint external</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer overreacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data confidentiality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disappointment external</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disappointment internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Execution error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fraud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of comm between ALD and supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of comm between departments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of procedure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misconduct of ALD or its partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misconduct of an external employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misconduct of an internal employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non conformity of product%2Fservice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non respect of contract clause</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Protest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soft error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier fault</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_200_000_KM__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_60_Months__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cost__c</picklist>
+        <values>
+            <fullName>120 min</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150 min</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 min</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60 min</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90 min</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Insurance__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_litigation__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deductible_Funded__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deductible__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>200</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deficiency_reason__c</picklist>
+        <values>
+            <fullName>HR related %28Human Ressources%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT System related</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Process related</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Dispute1__c</picklist>
+        <values>
+            <fullName>HR related</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT process related</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Process related</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Dispute_Justified__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Dispute__c</picklist>
+        <values>
+            <fullName>HR related</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT System related</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Process related</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Door_To_Door__c</picklist>
+        <values>
+            <fullName>B - D2D - On demand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B - D2D - Regular maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B - D2D - Seasonal tyre change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B - D2D - Yearly technical inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex - D2D - Damage repairs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex - D2D - Maintenance and repairs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex - D2D - On demand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex - D2D - Opening of the damage file</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex - D2D - Replacement vehicle delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex - D2D - Seasonal tyre change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex - D2D - Vehicle return at end of contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex - D2D - Yearly technical inspection</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Doors__c</picklist>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Escalation_Type__c</picklist>
+        <values>
+            <fullName>Internal fraud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ombudsman Involved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recurring commercial issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sensitive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estimated_Workload__c</picklist>
+        <values>
+            <fullName>%3E16h</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0h - 2h</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2h - 4h</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4h - 8h</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8h - 16h</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Extension_Cost__c</picklist>
+        <values>
+            <fullName>Contracted Rates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebill Rate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>External_Case_Category__c</picklist>
+        <values>
+            <fullName>Administrative</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>External_Case_Detail__c</picklist>
+        <values>
+            <fullName>Activation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>External_Case_Type__c</picklist>
+        <values>
+            <fullName>Cancellation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>External_description__c</picklist>
+        <values>
+            <fullName>ALD DIRETTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALD INDIRETTO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accessorio after market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Addebito giorni eccedenti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Addebito mora</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Addebito relief fuori ctr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Altro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amministrative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anticipo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistenza all%27estero</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attivazione Focus on Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bonifico%2FAssegno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carburante</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catene neve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check repair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Codice cliente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compesazione partite aperte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Condizioni generali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conguaglio Fuel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conguaglio Fuel card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Copie conformi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credito Sospeso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dissequestro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disservizio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dossier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EC Aperti e chiusi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EC RID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Esito messa a disposizione</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FBP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Franchigia veicolo Sostitutivo%2FPre-assegnazione</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Franchise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuel Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funzionamento conguaglio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuori orario</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Furto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Furto o Smarrimento Fuel Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gestione scaduto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gruppo inferiore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guasto ripetuto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HONDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance authorization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invio denuncia CON controparte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invio denuncia SENZA controparte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invio modulo RID ALD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invio modulo RID BP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invio modulo RID LRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Km eccedenti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEXUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOCAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAZDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mancata erogazione</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montaggio e difettosità</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NTW 1 %28Lombardia%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NTW 2 %28Altre regioni%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NTW 3 %28Emilia Romagna%2C Liguria%2C Lazio%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NTW 4 %28Sud Italia%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non inseribile nel web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuova Richiesta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Penale annullamento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Penale risoluzione anticipata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permesso ZTL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permesso di Espatrio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pneumatics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pneus diversi anteriore-posteriore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualità</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quantità franchigie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quota parte utilizzatore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recupero</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reimmatricolazione</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relitto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rete Assistenza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richiesta documenti sito ALD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richiesta documenti sito BP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richiesta documenti sito LRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richiestadocum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Riconsegna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Riconsegna per fine noleggio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rimborso maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rimborso user</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rinotifica verbali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Riparazione</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Riparazione a seguito di sinistro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ritrovamento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saldi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seggiolino baby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servizio offerto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smarrimento contrassegno assicurativo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sostitutiva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Storno addebito</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Storno canone quota relief</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Storno canone start contratto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOYOTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tariffa applicata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tempi consegna vettura in riparazione senza sostitutiva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Validazione contratto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Variazione recapito Focus on Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Variazioni coordinate bancarie ALD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Variazioni coordinate bancarie BP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verbali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verifica anagrafica centri convenzionati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verifica marchio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verifica stato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vettura non conforme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vettura pronta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voltura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>wreck</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FRA_TECH_sendMailCloseCase__c</picklist>
+        <values>
+            <fullName>Default</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FRA_Webquoter_Detail__c</picklist>
+        <values>
+            <fullName>Check received offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order to enter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refused</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To validate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Ayvens offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for customer validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for driver offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for fleet manager offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Won</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Federal_district__c</picklist>
+        <values>
+            <fullName>AC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Financial_Correction_status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not submitted</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending%C2%A0decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recalled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Financial_Impact_type__c</picklist>
+        <values>
+            <fullName>Commercial Gesture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operational Loss</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vehicle Allocation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>First_Contract_Mod__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fra_Tech_Which_Service__c</picklist>
+        <values>
+            <fullName>00G3X000006XOWZUA4-Flex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>00G3X000006XOWbUAO-Flex</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fuel_supplier__c</picklist>
+        <values>
+            <fullName>Afriquia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alexela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benzina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GALP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lukoil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Migrol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neste</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OMV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Olerex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orlen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petrol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Statoil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tamoil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vivo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fuel_type__c</picklist>
+        <values>
+            <fullName>Electric</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hybrid plug-in</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Guilty_party__c</picklist>
+        <values>
+            <fullName>Conditii Meteo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Insurance_Status__c</picklist>
+        <values>
+            <fullName>Quotation Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quotation in Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting Client Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting D035 Doc</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Insurance__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Insurer__c</picklist>
+        <values>
+            <fullName>Association%2FCooperative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Below the deductible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client%27s insurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deductible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Own resource</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third party insurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third party rental company</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Internal_Corrective_action_follow_up__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Maintenance_Contract__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Maintenance_Status__c</picklist>
+        <values>
+            <fullName>STATE_APPOINTMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE_AUTHORIZEDBYALD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE_AUTHORIZEDBYFM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE_AWAITINGFROMFM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE_BUDGET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE_CLOSED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE_DELIVERED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE_GARAGE_ARRIVAL_DATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE_NEW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE_WORKFINISHED</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Make__c</picklist>
+        <values>
+            <fullName>AUDI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BMW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHEVROLET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITROEN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DACIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FORD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HONDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HYUNDAI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INFINITY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MERCEDES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NISSAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28write in comments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEUGEOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RENAULT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SKODA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUBARU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUZUKI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOYOTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VOLVO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VW</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mechanical_Family__c</picklist>
+        <values>
+            <fullName>AIR CONDITIONING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BODYWORK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRAKES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CLUTCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COOLING SYSTEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIRECTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELECTRICAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELECTRONICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENGINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUSPENSION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSMISSION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TYRES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mileage_Suggestion__c</picklist>
+        <values>
+            <fullName>Decrease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Increase%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maintain</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Non_standard_budget__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Notification_type__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Object_Information__c</picklist>
+        <values>
+            <fullName>Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract%2FVehicle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sharing Rules</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Offer_Request_Type__c</picklist>
+        <values>
+            <fullName>Factory Release</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stock</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Operational_Status__c</picklist>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Legal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website %28ALD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website %28not ALD%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Partner__c</picklist>
+        <values>
+            <fullName>ALD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Parts_Sourcing__c</picklist>
+        <values>
+            <fullName>Association</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ayvens insurance company</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client%27s insurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dealership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance company %26 Workshop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third party insurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workshop</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Parts__c</picklist>
+        <values>
+            <fullName>3%2F4 ENGINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A%2FC COMPRESSOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A%2FC CONDENSER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A%2FC CONTROL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A%2FC HOSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A%2FC SYSTEM CLEANING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ABS MODULE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ABS SENSOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ACCESSORY BELT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIR FILTER PIPE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIRBAG MODULE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALTERNATOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANTI-ROLL BAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANTI-ROLL BAR BOLTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANTIFREEZE TANK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BATTERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOOSTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOOT LID DAMPER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRAKE CALIPER OR CALIPER CLAMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRAKE CYLINDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRAKE DISCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRAKE FLUID RESERVOIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRAKE PIPE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BURNER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CANISTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CARDAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CATALYZER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHANGE A%2FC FILTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CLUTCH COLLAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CLUTCH KIT %28DISC%2FPLATE%2FCOLLAR%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CLUTCH PUMP OR CLUTCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRANKSHAFT SEAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CYLINDERS DOOR LOCK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIFFERENTIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DISTRIBUTION KIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOOR HINGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOOR LOCK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOOR PLATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOOR SLIDE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DUSTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ECM ELECTRONIC CONTROL MODULE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELECTRIC LOCK ACTUATOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENGINE COVER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENGINE CRANKCASE GASKET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENGINE HEAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENGINE HINGES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENGINE MOUNT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENGINE REPAIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENGINE SERVO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EXHAUST MANIFOLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAN CLUTCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIRE EXTINGUISHER REFILL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FORK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FRONT AXLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FRONT AXLE REPAIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FRONT BEARINGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FRONT BRAKE PADS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FRONT SHOCK ABSORBER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FRONT SHOCK ABSORBER BASE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUEL PUMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUEL TANK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUSE BOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GAS A%2FC CHARGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GEAR SELECTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GEARBOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GEARBOX BRACKET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GEARBOX LEVER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GENERAL BRAKE PADS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GLASS LIFT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HANDBRAKE HANDLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HIGH PRESSURE PUMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOMOKINETIC SHAFT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IGNITION SWITCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INJECTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INSTRUMENT PANEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTERIOR GRAB HANDLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KEY CODE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIGHTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MASTER CYLINDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PARKING BRAKE LEVER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RADIATOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RADIATOR CAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RADIATOR HOSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RADIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REAR AXLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REAR BEARINGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REAR BRAKE PADS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REAR SHOCK ABSORBER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REAR SHOCK ABSORBER BASE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REAR VIEW MIRROR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REPAIR OF ELECTRICAL INSTALLATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REPAIR SUSPENSION BRIDGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SILENCER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPRING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>START</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STEERING BOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STEERING COLUMN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STEERING LINKAGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STEERING PUMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STEERING RACK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEMPERATURE SENSOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TENSIONER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>THERMOSTAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSMISSION MODULE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSMISSION OIL SEAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSMISSION REPAIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TURBOCHARGER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UNIVERSAL JOINT BEARING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VALVE BODY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WATER PUMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHEEL HANDLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHEEL PRESSURE SENSOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WHEELS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WINDSCREEN WIPER RUBBERS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payments_Up_to_Date__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Positve_Answer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Top 5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Problem_Class__c</picklist>
+        <values>
+            <fullName>Anomaly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evolution - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evolution - Salesforce%2Ecom</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Problem_Type__c</picklist>
+        <values>
+            <fullName>Bug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Question</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dashboards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Future Version</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Future Version - New Module</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP Address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network Connection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Password Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Adoption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>Vehicle Upgrade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_Repair_Delay__c</picklist>
+        <values>
+            <fullName>3rd Party - Body damage appraisal delay from 3rd party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Party - Body damage appraisal delay from Ayvens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Party - Insurance approval delays from 3rd party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Party - Insurance approval delays from Ayvens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ayvens approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ayvens failure to follow-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSP - Approval delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSP - Delay in opening claim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSP - Missing documents%2Fkeys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSP - Pick-up delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM - Spare parts delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM - Warranty capacity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM - Warranty dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier - Availability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier - Fail to adhere to SLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier - GEFCO delays %28upfit parts%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier - GEOTAB device issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier - Major or complex repairs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier - Multiple repairs discovered by supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier - Recover company fail to attend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier - Spare parts delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier - Tow availability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reception_hour__c</picklist>
+        <values>
+            <fullName>10%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%3A30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%3A30</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relief_Supplier__c</picklist>
+        <values>
+            <fullName>ALD Pool car</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car club</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eurobike</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Europcar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facil Assist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gürses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hertz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LTR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Localiza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Myles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REVV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sixt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workshop car</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zeplin</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relief_vehicle_category__c</picklist>
+        <values>
+            <fullName>A-ECMN VW Polo%2C Renault Clio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reopening_Reason__c</picklist>
+        <values>
+            <fullName>Case Not Solved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sender Acknowledgement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Repair_code__c</picklist>
+        <values>
+            <fullName>D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_reason__c</picklist>
+        <values>
+            <fullName>Accident</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Responsibility_of_communication__c</picklist>
+        <values>
+            <fullName>ALD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RiskSeverity__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very High</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Risk_risk_taxonomy__c</picklist>
+        <values>
+            <fullName>Business risks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliance %26 Legal Risks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Counterparty Credit Risk %28CCR%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debtor Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESG Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liquidity and funding risks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market risk on Banking Book</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Model risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operational Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reputational Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Risk on employee benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settlement and delivery risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategy risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Underwriting risk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SAT_Closure_Reason__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Close %26 Solved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer did not enter the garage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Entry Confirmation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rescheduled Appointment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vehicle ready for delivery</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Channel__c</picklist>
+        <values>
+            <fullName>fsl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>pl</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Service_Provider__c</picklist>
+        <values>
+            <fullName>ALD Salesforce</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Solution__c</picklist>
+        <values>
+            <fullName>Adaptation of existing process %2F IT infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expansion of resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Implementation of a new process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training %28internal staff and suppliers%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Synchronization_status__c</picklist>
+        <values>
+            <fullName>ACK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAILED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out_of_scope</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROCESSED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>sending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Third_Party_Involved__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tires_Repl_99__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Total_Loss_Substatus__c</picklist>
+        <values>
+            <fullName>Accreditation of ownership%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assignment of legal representative%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting FM authorisation%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting appointment with the authority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting budget%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting expertise%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting official release of the vehicle%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting opinions%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting release of documents%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting transfer of the unit by the insurance company%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancellation of plates by customer%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In process of payment of deductible%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending FM approval%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending client documents%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending documents external insurer%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending documents from internal insurer%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending invoicing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending payment%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plate cancellation%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Release agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requesting information from client%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Validation of documentation by AYVENS%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Validation of documents with external insurer%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Validation of documents with internal insurer%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Total_Loss_status__c</picklist>
+        <values>
+            <fullName>Claim under investigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired claim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In process of total loss%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In the process of being reported and accredited%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repair%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unit indemnified by customer%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unit recovered after theft%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Total_loss_reason__c</picklist>
+        <values>
+            <fullName>Abuse of confidence%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material damage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Theft recovered%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Theft%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Cost__c</picklist>
+        <values>
+            <fullName>ALD Cost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebill</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_customer_service__c</picklist>
+        <values>
+            <fullName>1 - Chiusura e notifica a cura del reparto di competenza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Chiusura e notifica a cura del Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4-  Chiusura a cura del reparto di competenza e notifica a cura del commerciale</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_financial_correction__c</picklist>
+        <values>
+            <fullName>Commercial%C2%A0gesture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operational%C2%A0loss%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vehicle__c</picklist>
+        <values>
+            <fullName>Nedeplasabil</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>frenchOnichannelSAOCLevel1Mapping__c</picklist>
+        <values>
+            <fullName>No support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support ALD Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support DGEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support FLEX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support FORD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support PART</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

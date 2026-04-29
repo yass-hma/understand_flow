@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_WATCH_LIST</fullName>
+    <booleanFilter>(1 AND 2) OR (1 AND 3 AND 4)</booleanFilter>
+    <columns>Email_Status__c</columns>
+    <columns>Priority_Date__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>External_description__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>Account_Environement__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>ITA WATCH LIST</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>ITA CUSTOMER FINANCE 2ND LEVEL</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>equals</operation>
+        <value>Defected client,Cliente moroso</value>
+    </filters>
+    <label>ITA - WATCH LIST</label>
+    <language>it</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ItalyCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

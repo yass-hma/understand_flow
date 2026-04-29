@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Casi_da_assegnare_a_ITA_Ordini_Sospesi</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.ORIGIN</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>startsWith</operation>
+        <value>sospeso ordine</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Deleted</value>
+    </filters>
+    <filters>
+        <field>CASES.CREATED_DATE_DATE_ONLY</field>
+        <operation>greaterOrEqual</operation>
+        <value>5/28/2025 12:00 AM</value>
+    </filters>
+    <label>Casi da assegnare a ITA - Ordini Sospesi</label>
+    <sharedTo>
+        <role>ItalyCM</role>
+        <role>Italy_Business_Administrator</role>
+    </sharedTo>
+</ListView>

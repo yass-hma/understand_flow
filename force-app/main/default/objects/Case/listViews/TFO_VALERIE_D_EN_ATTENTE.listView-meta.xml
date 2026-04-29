@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TFO_VALERIE_D_EN_ATTENTE</fullName>
+    <booleanFilter>1 AND 4 AND (2 OR 3 OR 5 OR 6 OR 7)</booleanFilter>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Followed_by__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Open,A faire,New,In Progress,En cours,Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>contains</operation>
+        <value>5154376,5363221,5151119,5351594,5437730,5437745,5351596,5144596,5350083,5394480,5350069,5351577,5361094,5370923,5350084,5152732,5351632,5335681,5350073,5351592,5350072,5351616</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>contains</operation>
+        <value>ERCOM,GTS FRANCE,MOSS SAS,RCS VS,THALES,TRIXELL,UMS SAS</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>Valerie DUBOS,outsourcing</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>THALES,Valerie DUBOS</value>
+    </filters>
+    <filters>
+        <field>EM_Addresses__c</field>
+        <operation>contains</operation>
+        <value>thales</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>contains</operation>
+        <value>5350086,5350080,5351598,5351775,5350124,5144595,5351607,5351574,5350067,5350066,5014758,5351595,5128202,5351613,5350128</value>
+    </filters>
+    <label>TFO VALERIE D EN ATTENTE</label>
+    <sharedTo>
+        <group>FRA_TFO_Team</group>
+    </sharedTo>
+</ListView>

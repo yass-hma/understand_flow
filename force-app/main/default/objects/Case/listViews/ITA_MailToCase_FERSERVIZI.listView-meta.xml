@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_MailToCase_FERSERVIZI</fullName>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>ITA - MailToCase FERSERVIZI</label>
+    <language>en_US</language>
+    <queue>ITA_MailToCase_FERSERVIZI</queue>
+    <sharedTo>
+        <role>ItalyAssistanceMgmt186711</role>
+        <role>ItalyBackOffice</role>
+        <role>Italy_Back_Office_Operator</role>
+    </sharedTo>
+</ListView>

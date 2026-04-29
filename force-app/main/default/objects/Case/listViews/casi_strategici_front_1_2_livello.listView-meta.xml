@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>casi_strategici_front_1_2_livello</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>Email_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Environement__c</field>
+        <operation>contains</operation>
+        <value>STR,TPA</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notContain</operation>
+        <value>Chiuso</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>FRONT OFFICE</value>
+    </filters>
+    <label>casi strategici front 1-2 livello</label>
+    <language>it</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ItalyBackOffice</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>ItalyCM</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Back_Office_Operator</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Backoffice</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Italy_Business_Administrator</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NOR_Case_Financial_Impact_mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( NOT(CONTAINS($Label.ALDSATRecordTypeIds,RecordType.DeveloperName)),NOT( $User.Bypass_Validation_Rules__c ),
+OR(ISPICKVAL( Complaint_Dispute__c , &apos;Yes&apos;), 
+AND(RecordType.Name = &apos;Case External Sweden&apos;, 
+ISPICKVAL( External_Case_Type__c , &apos;Complaint&apos;))), 
+ISBLANK( Financial_impact__c ), 
+ISPICKVAL(Status ,&apos;Closed&apos;) 
+)</errorConditionFormula>
+    <errorDisplayField>Financial_impact__c</errorDisplayField>
+    <errorMessage>The field Financial Impact must be informed to save the record</errorMessage>
+</ValidationRule>

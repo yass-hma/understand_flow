@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROM_Repair_supplier__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>08/2017Label was updated from ROM Repair supplier to repair supplier to be able to use it for other countries.
+Replacing Service Reparator</description>
+    <label>Repair Supplier</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 AND 2 AND 3) OR 4 OR 5</booleanFilter>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Supplier</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.SUB_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Subsidiary_Indicator__c</field>
+            <operation>equals</operation>
+            <valueField>$User.Subsidiary_Indicator__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$User.Id</field>
+            <operation>equals</operation>
+            <value>005200000018tXs</value>
+        </filterItems>
+        <filterItems>
+            <field>$Profile.Name</field>
+            <operation>equals</operation>
+            <value>API User 2</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Cases (Repair Supplier)</relationshipLabel>
+    <relationshipName>Cases2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

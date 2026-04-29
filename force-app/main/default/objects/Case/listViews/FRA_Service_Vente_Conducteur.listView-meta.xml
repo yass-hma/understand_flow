@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Service_Vente_Conducteur</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Account_Environement__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.ORIGIN</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <label>FRA - Service Vente à Conducteur</label>
+    <queue>FRA_Services_Vente_Conducteur</queue>
+    <sharedTo>
+        <group>FRA_ServicesVenteConducteur</group>
+        <role>France_DREP_VOP_Ventes_Resp</role>
+        <role>France_Expert_VO</role>
+        <role>France_VOR</role>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

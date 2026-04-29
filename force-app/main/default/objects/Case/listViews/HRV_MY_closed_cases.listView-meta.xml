@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HRV_MY_closed_cases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Case_Related__c</columns>
+    <columns>Adriatic_Contract__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.CLOSED_DATE</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Case_External_Croatia</value>
+    </filters>
+    <label>HRV - MY closed cases</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>HRV_SVN</group>
+        <group>HRVallcasesusers</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_customer_service__c</fullName>
+    <label>Type of customer service</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>1 - Chiusura e notifica a cura del reparto di competenza</fullName>
+                <default>false</default>
+                <label>1 - Chiusura e notifica a cura del reparto di competenza</label>
+            </value>
+            <value>
+                <fullName>2 - Chiusura e notifica a cura del Customer Service</fullName>
+                <default>false</default>
+                <label>2 - Chiusura e notifica a cura del Customer Service</label>
+            </value>
+            <value>
+                <fullName>4-  Chiusura a cura del reparto di competenza e notifica a cura del commerciale</fullName>
+                <default>false</default>
+                <label>4-  Chiusura a cura del reparto di competenza e notifica a cura del commerciale</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

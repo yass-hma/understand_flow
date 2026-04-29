@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POL_Micha_kejses_2</fullName>
+    <booleanFilter>(1 or 2 or 3 or 4 or 6)  AND 5</booleanFilter>
+    <columns>Priority_Flag__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Email_Status__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.ORIGIN</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Case_Age_In_Business_Hour__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Assistance</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Claims Handling</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Tyres</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Technical support</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Quality</value>
+    </filters>
+    <label>POL Michał kejses!2</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>POL_ALD_SA</group>
+    </sharedTo>
+</ListView>

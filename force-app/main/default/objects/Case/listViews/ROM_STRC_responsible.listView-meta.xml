@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROM_STRC_responsible</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>STRC_Locality__c</columns>
+    <columns>CONTACT.FIRST_NAME</columns>
+    <columns>CONTACT.LAST_NAME</columns>
+    <columns>Vehicle_request_date__c</columns>
+    <filterScope>Queue</filterScope>
+    <label>ROM - STRC responsible</label>
+    <language>en_US</language>
+    <queue>ROMSTRCresponsible</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>RomaniaCM</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>RomaniaCallCenter</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>RomaniaCallCenterFrontOffice</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

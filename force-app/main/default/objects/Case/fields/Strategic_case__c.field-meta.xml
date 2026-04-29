@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Strategic_case__c</fullName>
+    <description>This field indicates if the account is a strategic one based on the potential and help to prioritize the cases.​</description>
+    <formula>Account.Strategic_Prospect__c</formula>
+    <inlineHelpText>This field indicates if the account is a strategic one based on the potential and help to prioritize the cases.​</inlineHelpText>
+    <label>Strategic case</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

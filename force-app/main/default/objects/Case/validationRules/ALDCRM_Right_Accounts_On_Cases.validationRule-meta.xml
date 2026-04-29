@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALDCRM_Right_Accounts_On_Cases</fullName>
+    <active>true</active>
+    <description>This validation block user to add the wrong account on the cases.</description>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c), RecordType.DeveloperName &lt;&gt; &quot;CaseExternalFrance&quot;,
+NOT(CONTAINS($Label.Hub_Latam_Subsidiaries,TEXT(Account.Subsidiary__c))),RecordType.DeveloperName &lt;&gt; &quot;Case_External_Legal&quot;,
+NOT(ISBLANK(AccountId)),
+OR(
+AND(
+RecordType.DeveloperName &lt;&gt; &quot;Case_External_Legal&quot;, (NOT(CONTAINS ($Label.Baltics_Nordics_Croatia, TEXT($User.Subsidiary__c)))), NOT(OR(TEXT(Account.Subsidiary__c) = TEXT($User.Subsidiary__c),
+AND(ISPICKVAL($User.Subsidiary__c,&apos;AUSTRIA&apos;),ISPICKVAL(Account.Subsidiary__c,&apos;SWITZERLAND&apos;))))),
+AND(
+RecordType.DeveloperName &lt;&gt; &quot;Case_External_Legal&quot;, (CONTAINS($Label.SRM_Baltic_Subsidiaries, TEXT($User.Subsidiary__c))), NOT(CONTAINS($Label.SRM_Baltic_Subsidiaries, TEXT(Account.Subsidiary__c)))),
+AND(
+RecordType.DeveloperName &lt;&gt; &quot;Case_External_Legal&quot;, (CONTAINS($Label.Croatia_CPM, TEXT ($User.Subsidiary__c))), NOT(CONTAINS($Label.Croatia_CPM, TEXT(Account.Subsidiary__c)))),
+AND(
+RecordType.DeveloperName &lt;&gt; &quot;Case_External_Legal&quot;, (CONTAINS($Label.Finland_subsidiaries, TEXT($User.Subsidiary__c))), NOT(CONTAINS($Label.Finland_subsidiaries, TEXT(Account.Subsidiary__c)))),
+AND(
+RecordType.DeveloperName &lt;&gt; &quot;Case_External_Legal&quot;, (CONTAINS($Label.Denmark_subsidiaries, TEXT($User.Subsidiary__c))), NOT(CONTAINS($Label.Denmark_subsidiaries, TEXT(Account.Subsidiary__c)))),
+AND(
+RecordType.DeveloperName &lt;&gt; &quot;Case_External_Legal&quot;, (CONTAINS($Label.Sweden_subsidiaries, TEXT ($User.Subsidiary__c))), NOT(CONTAINS($Label.Sweden_subsidiaries, TEXT(Account.Subsidiary__c)))),
+AND(
+RecordType.DeveloperName &lt;&gt; &quot;Case_External_Legal&quot;, (CONTAINS($Label.Norway_Subsidiaries, TEXT ($User.Subsidiary__c))), NOT(CONTAINS($Label.Norway_Subsidiaries, TEXT(Account.Subsidiary__c)))),
+AND(
+RecordType.DeveloperName = &quot;Case_External_Legal&quot;, OR($Permission.BIZ_InternationalCoordinator,  CONTAINS($Label.International_Profile, $Profile.Name)), NOT(ISPICKVAL(Account.Subsidiary_Indicator__c,&quot;25000&quot;)))
+)
+)</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>You are not allowed to use this account. On local cases, you can only add local accounts from a subsidiary you are working for. On international cases, you can only add IVAs or NVAs. If you have any concern, please contact your local admin.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_DSI_Rewriting_M2C</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>EM_Addresses__c</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>REWRITING 28-04-2024</value>
+    </filters>
+    <label>Test DSI Rewriting M2C</label>
+    <sharedTo>
+        <role>SystemAdministrator</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Equipe_EDF_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <label>FRA - Equipe EDF</label>
+    <language>en_US</language>
+    <queue>FRA_Equipe_EDF</queue>
+    <sharedTo>
+        <group>FRA_Equipe_EDF</group>
+        <role>France_DCOI_BIG_PSC_4</role>
+        <role>France_DCOI_BIG_PSC_4_Man</role>
+        <role>France_DCOI_BIG_PSC_5</role>
+        <role>France_DCOI_BIG_PSC_5_Man</role>
+        <role>France_DCOI_BIG_PSC_A</role>
+        <role>France_DCOI_BIG_PSC_A_Resp</role>
+        <role>France_DCOI_BIG_PSC_B</role>
+        <role>France_DCOI_BIG_PSC_B_Resp</role>
+        <role>France_DCOI_BIG_PSC_D</role>
+        <role>France_DCOI_BIG_PSC_D_Resp</role>
+        <role>France_DCOI_BIG_PSC_E</role>
+        <role>France_DCOI_BIG_PSC_E_Resp</role>
+        <role>France_DCOI_BIG_PSC_Fleet</role>
+        <role>France_DCOI_BIG_PSC_Fleet_Resp</role>
+        <role>France_DCOI_BIG_PSC_Resp</role>
+        <role>France_DCOI_BIG_Ventes_2_Resp</role>
+        <role>France_DCOI_LARGE_Local_1_Ventes_Resp</role>
+        <role>France_DCOI_LARGE_Local_2_Ventes_Resp</role>
+    </sharedTo>
+</ListView>

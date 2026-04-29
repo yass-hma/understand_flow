@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_Supplier_Field_Numeric</fullName>
+    <active>false</active>
+    <description>Supplier field should only be numeric</description>
+    <errorConditionFormula>AND(NOT(ISBLANK(Supplier__c)),NOT(ISNUMBER(Supplier__c)))</errorConditionFormula>
+    <errorDisplayField>Supplier__c</errorDisplayField>
+    <errorMessage>Supplier field should only be numeric</errorMessage>
+</ValidationRule>

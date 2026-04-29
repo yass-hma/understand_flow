@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRA_MyALD_Suporte_RESSER</fullName>
+    <columns>CASES.TYPE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>Plate_No__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Pending - External</value>
+    </filters>
+    <label>BRA - MyALD Suporte RESSER</label>
+    <language>pt_BR</language>
+    <queue>BRA_MyALD</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>BRA_Back_Office</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>BRA_Credit_Check_Finance</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>BRA_Customer_Care</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>BRA_Customer_service</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>BRA_Direct_Channel</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>BRA_In_Plants</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>BRA_Legal</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>BRA_Pricing</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>BRA_Sales</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>BrazilCM</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Brazil_Ext_Call_Center</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Brazil_Procurement</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>ProspecoBrasil</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

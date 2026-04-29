@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SVK_Termination_OL_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Email_Status__c</columns>
+    <filterScope>Queue</filterScope>
+    <label>SVK - Termination OL</label>
+    <queue>SVK_Termination_OL</queue>
+    <sharedTo>
+        <group>SVK_Termination_OL</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B2STD_Case_Close_Mandatory_fields</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+NOT( $User.Bypass_Validation_Rules__c ),
+NOT( CONTAINS($Label.CCCMRetrieveRecordTypeIds,RecordType.DeveloperName) ),NOT(CONTAINS($Label.ALDSATRecordTypeIds,RecordType.DeveloperName)),
+ISPICKVAL(Status,&quot;Closed&quot;),
+ISPICKVAL(Complaint_justified__c,&quot;Yes&quot;),
+OR(
+RecordType.Name = &quot;Case External India&quot;,
+RecordType.Name = &quot;Case External Turkey&quot;,
+RecordType.Name = &quot;Case External Latvia&quot;,
+RecordType.Name = &quot;Case External Lithuania&quot;,
+RecordType.Name = &quot;Case External Estonia&quot;,
+RecordType.Name = &quot;Case External Brazil&quot;,
+RecordType.Name = &quot;Case External Algeria&quot;,
+RecordType.Name = &quot;Case External Bulgaria&quot;,
+RecordType.Name = &quot;Case External Norway&quot;,
+RecordType.Name = &quot;Case External Morocco&quot;,
+RecordType.Name = &quot;Case External Greece&quot;,
+RecordType.Name = &quot;Case External Romania&quot;,
+RecordType.Name = &quot;Case External Russia&quot;,
+RecordType.Name = &quot;Case External Sweden&quot;),
+AND(ISPICKVAL(External_Case_Type__c,&quot;Complaint&quot;),
+OR(ISPICKVAL(Complaint_type__c,&quot;&quot;),ISPICKVAL(Complaint_reason__c,&quot;&quot;),ISBLANK(Financial_impact__c),
+ISBLANK(Complaint_Description__c),ISPICKVAL(Solution__c,&quot;&quot;),ISBLANK(Detail_ActionPlan__c),
+AND(
+RecordType.Name &lt;&gt; &quot;Case External Romania&quot;,
+ISBLANK(Text(Commercial_Gesture_Amount__c))
+),
+ISPICKVAL(Commercial_Gesture__c,&quot;&quot;))))</errorConditionFormula>
+    <errorMessage>You must fill in all fields in the “Complaints” section</errorMessage>
+</ValidationRule>

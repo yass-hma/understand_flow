@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UKR_Legal_Receivables_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UKR - Legal &amp; Receivables</label>
+    <language>en_US</language>
+    <queue>UKR_Legal_Receivables</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>UkraineCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SWE_IBT_Case</fullName>
+    <booleanFilter>(1 AND 2)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Calder_Owner__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>SWE - IBT,Elin Granberg,Tim Engren,Oscar Sundwall,Burak Yenidogan,Linus Söderlund,SWE - AM IKA &amp; CORP</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Closed without action plan,Closed with action plan</value>
+    </filters>
+    <label>SWE - AM IKA &amp; CORP</label>
+    <sharedTo>
+        <group>SWE_IBT</group>
+        <roleAndSubordinatesInternal>SwedenCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RQ_JULIEN_EN_ATTENTE</fullName>
+    <booleanFilter>1 AND (3 OR (3 AND 2))</booleanFilter>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Followed_by__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Open,A faire,New,In Progress,En cours,Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>contains</operation>
+        <value>COOK,JANSSEN,PATHEON,LIFE Tech,thermo,FEI,FISHER,ppd,the binding site</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>Julien LEBOUCHER,outsourcing</value>
+    </filters>
+    <label>RQ JULIEN EN ATTENTE</label>
+    <sharedTo>
+        <group>FRA_TFO_Team</group>
+    </sharedTo>
+</ListView>

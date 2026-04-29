@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POL_Number_of_Items</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT( $User.Bypass_Validation_Rules__c ), 
+$RecordType.Id =&apos;01220000000MLar&apos;,
+OR(ISBLANK( Number_of_items__c ),ISNULL( Number_of_items__c )) ,
+OR(
+AND(
+TEXT( External_Case_Category__c )=&quot;Customer Support&quot;,
+TEXT( External_Case_Detail__c ) = &quot;Quotation&quot;,
+OR(
+TEXT(External_description__c ) = &quot;Initial&quot;,
+TEXT(External_description__c ) = &quot;Revision&quot;
+)
+),
+AND(
+TEXT( External_Case_Category__c )=&quot;Contract Support&quot;,
+OR(
+AND(
+OR(
+TEXT( External_Case_Detail__c ) = &quot;Contract Modification Proposal&quot;,
+TEXT( External_Case_Detail__c ) = &quot;Early Termination Proposal&quot;
+),
+OR(
+TEXT(External_description__c ) = &quot;Initial&quot;,
+TEXT(External_description__c ) = &quot;Revision&quot;
+)
+),
+AND(
+OR(
+TEXT( External_Case_Detail__c ) = &quot;Change of Conditions&quot;,
+TEXT( External_Case_Detail__c ) = &quot;Lengthening&quot;
+),
+TEXT(External_description__c ) = &quot;Offer&quot;
+)
+)
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Number_of_items__c</errorDisplayField>
+    <errorMessage>Please Fill Number Of Items.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mesrequtesfermes</fullName>
+    <columns>Priority_Flag__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>Total_Time_Remaining__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.CaseExternalFrance</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Closed,Terminé</value>
+    </filters>
+    <filters>
+        <field>CASES.CLOSED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2025 12:00 AM</value>
+    </filters>
+    <label>Mes requêtes fermées A en cours</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

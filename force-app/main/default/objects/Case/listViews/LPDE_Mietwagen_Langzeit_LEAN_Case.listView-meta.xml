@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LPDE_Mietwagen_Langzeit_LEAN_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>LPDE Mietwagen Langzeit (LEAN)</label>
+    <queue>LPDE_Mietwagen_Langzeit_LEAN</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

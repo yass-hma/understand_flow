@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HUN_Body_repair</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>Case_Follower__c</columns>
+    <columns>Email_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>HUN - Body repair</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Closed without action plan,Closed with action plan</value>
+    </filters>
+    <label>HUN - Body repair</label>
+    <sharedTo>
+        <group>HUN_Body_repair</group>
+        <group>HUN_Driver_Desk</group>
+        <group>HUN_KAM</group>
+        <group>HUN_Service</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SWE_vrigaTeam</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>OWNER_NAME</columns>
+    <columns>Customer_Service_Account_Owner__c</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Reopen_Date__c</columns>
+    <columns>External_Case_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Closed without action plan,Closed with action plan</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>earon,slind,lnauc,ppart,msven,ehagw</value>
+    </filters>
+    <label>SWE - ÖvrigaTeam</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>SWE_Sales_NF_Team</group>
+    </sharedTo>
+</ListView>

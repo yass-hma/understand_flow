@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insurance_Status__c</fullName>
+    <label>Insurance Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Waiting D035 Doc</fullName>
+                <default>false</default>
+                <label>Waiting D035 Doc</label>
+            </value>
+            <value>
+                <fullName>Waiting Client Response</fullName>
+                <default>false</default>
+                <label>Waiting Client Response</label>
+            </value>
+            <value>
+                <fullName>Quotation in Progress</fullName>
+                <default>false</default>
+                <label>Quotation in Progress</label>
+            </value>
+            <value>
+                <fullName>Quotation Lost</fullName>
+                <default>false</default>
+                <label>Quotation Lost</label>
+            </value>
+            <value>
+                <fullName>Signature</fullName>
+                <default>false</default>
+                <label>Signature</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

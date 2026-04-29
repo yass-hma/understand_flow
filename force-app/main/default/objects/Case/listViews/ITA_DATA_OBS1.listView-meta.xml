@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_DATA_OBS1</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Account_Qualification__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>Followed_by__c</columns>
+    <columns>Additional_info__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>ITA - DATA OBS</label>
+    <queue>ITA_DATA_OBS</queue>
+    <sharedTo>
+        <roleAndSubordinates>ItalyAssistanceMgmt186711</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBUInternational</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBUVan</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBackOffice</roleAndSubordinates>
+        <roleAndSubordinates>Italy_ALD_Default_User</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Back_Office_Operator</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Backoffice</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Business_Administrator</roleAndSubordinates>
+    </sharedTo>
+</ListView>

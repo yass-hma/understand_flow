@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vehicle__c</fullName>
+    <description>ROMANIA ACCIDENT MANAGEMENT</description>
+    <label>Vehicle Condition</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nedeplasabil</fullName>
+                <default>false</default>
+                <label>Nedeplasabil</label>
+            </value>
+            <value>
+                <fullName>Movable</fullName>
+                <default>false</default>
+                <label>Movable</label>
+            </value>
+            <value>
+                <fullName>Immobile</fullName>
+                <default>false</default>
+                <label>Immobile</label>
+            </value>
+            <value>
+                <fullName>Movable_MOR</fullName>
+                <default>false</default>
+                <label>Movable_MOR</label>
+            </value>
+            <value>
+                <fullName>Immobile_MOR</fullName>
+                <default>false</default>
+                <label>Immobile_MOR</label>
+            </value>
+            <value>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+                <label>Mobile</label>
+            </value>
+            <value>
+                <fullName>Immovable</fullName>
+                <default>false</default>
+                <label>Immovable</label>
+            </value>
+            <value>
+                <fullName>Not found</fullName>
+                <default>false</default>
+                <label>Not found</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POL_Quality_All_Cases</fullName>
+    <columns>Priority_Flag__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Total_Time_Remaining__c</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Quality</value>
+    </filters>
+    <filters>
+        <field>Owner_Name__c</field>
+        <operation>equals</operation>
+        <value>POL - Quality</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>equals</operation>
+    </filters>
+    <label>POL - Koński Casys</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>PolandCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

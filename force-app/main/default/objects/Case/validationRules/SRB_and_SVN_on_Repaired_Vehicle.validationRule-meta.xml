@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SRB_and_SVN_on_Repaired_Vehicle</fullName>
+    <active>true</active>
+    <description>Accident Management/New damage file cases cannot be Closed if Vehicle repaired is not checked</description>
+    <errorConditionFormula>AND(NOT(CONTAINS($Label.ALDSATRecordTypeIds,RecordType.DeveloperName)),NOT( $User.Bypass_Validation_Rules__c ),
+OR(RecordTypeId = &quot;012R0000000945e&quot;,RecordTypeId = &quot;012R000000094BS&quot;),
+ISPICKVAL( External_Case_Category__c ,&quot;Accident Management&quot;),
+ISPICKVAL( External_Case_Detail__c , &quot;New damage file&quot;), 
+ISPICKVAL(Status , &quot;Closed&quot;),
+Vehicle_Repaired__c = FALSE)</errorConditionFormula>
+    <errorDisplayField>Vehicle_Repaired__c</errorDisplayField>
+    <errorMessage>Field: &quot;Vehicle Repaired&quot; must be checked in before closing your case</errorMessage>
+</ValidationRule>

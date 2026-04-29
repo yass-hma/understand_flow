@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closure_confirmation_status__c</fullName>
+    <description>This field is created as part of BR-6190 to enhance the case re-opening process.</description>
+    <label>Closure confirmation status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Send email to customer</fullName>
+                <default>false</default>
+                <label>Send email to customer</label>
+            </value>
+            <value>
+                <fullName>Waiting for customer feedback</fullName>
+                <default>false</default>
+                <label>Waiting for customer feedback</label>
+            </value>
+            <value>
+                <fullName>Closure confirmed by customer</fullName>
+                <default>false</default>
+                <label>Closure confirmed by customer</label>
+            </value>
+            <value>
+                <fullName>No reply from customer</fullName>
+                <default>false</default>
+                <label>No reply from customer</label>
+            </value>
+            <value>
+                <fullName>Closure rejected by customer</fullName>
+                <default>false</default>
+                <label>Closure rejected by customer</label>
+            </value>
+            <value>
+                <fullName>Service request opening</fullName>
+                <default>false</default>
+                <label>Service request opening</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

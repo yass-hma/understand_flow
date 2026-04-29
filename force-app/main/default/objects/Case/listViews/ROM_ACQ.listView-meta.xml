@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROM_ACQ</fullName>
+    <columns>PARENT.CASE_NUMBER</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Qty__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>Make__c</columns>
+    <columns>Model__c</columns>
+    <columns>Body_Type__c</columns>
+    <columns>Fuel_type__c</columns>
+    <columns>Options__c</columns>
+    <columns>Trim_level__c</columns>
+    <columns>Transmission_type__c</columns>
+    <columns>Is_case_related__c</columns>
+    <filterScope>Queue</filterScope>
+    <label>ROM - Logistics</label>
+    <language>en_US</language>
+    <queue>ROM_ACQ</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>RomaniaCM</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>RomaniaCallCenter</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>RomaniaCallCenterFrontOffice</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

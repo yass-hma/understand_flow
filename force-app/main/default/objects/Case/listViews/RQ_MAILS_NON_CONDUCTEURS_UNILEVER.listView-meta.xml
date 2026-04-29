@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RQ_MAILS_NON_CONDUCTEURS_UNILEVER</fullName>
+    <booleanFilter>1 AND 5 and ((3 AND 2) OR (3 AND 4))</booleanFilter>
+    <columns>CASES.PRIORITY</columns>
+    <columns>NAME</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Pending,Pending - Internal,Pending - Customer,Pending - External,En attente d&apos;éléments - Externe,Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>contains</operation>
+        <value>UNILEVER</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>outsourcing,margerin,deron</value>
+    </filters>
+    <filters>
+        <field>EM_Addresses__c</field>
+        <operation>contains</operation>
+        <value>unilever</value>
+    </filters>
+    <filters>
+        <field>Email_to_Case_Sender_formula__c</field>
+        <operation>notContain</operation>
+        <value>unilever.com</value>
+    </filters>
+    <label>RQ MAILS NON CONDUCTEURS UNILEVER</label>
+    <sharedTo>
+        <group>FRA_TFO_Team</group>
+    </sharedTo>
+</ListView>

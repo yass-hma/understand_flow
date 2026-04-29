@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insurance__c</fullName>
+    <description>#176297</description>
+    <label>Insurance</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>AIG</fullName>
+                <default>false</default>
+                <label>AIG</label>
+            </value>
+            <value>
+                <fullName>Allianz</fullName>
+                <default>false</default>
+                <label>Allianz</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Damage</fullName>
+                <default>false</default>
+                <label>Damage</label>
+            </value>
+            <value>
+                <fullName>Total damage</fullName>
+                <default>false</default>
+                <label>Total damage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

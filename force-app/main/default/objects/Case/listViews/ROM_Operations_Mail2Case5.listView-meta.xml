@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROM_Operations_Mail2Case5</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.ESCALATION_STATE</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,Closed,Reopened</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notContain</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>CASES.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:7</value>
+    </filters>
+    <label>ROM - Operations - Mail2Case</label>
+    <queue>ROM_Operations_mail2case</queue>
+    <sharedTo>
+        <group>ROM_Operations_mail2case</group>
+        <role>RomaniaCallCenter</role>
+        <role>RomaniaCallCenterFrontOffice</role>
+    </sharedTo>
+</ListView>

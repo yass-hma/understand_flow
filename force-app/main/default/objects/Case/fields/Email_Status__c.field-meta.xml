@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( New_Email__c = &quot;True&quot; , IMAGE(&quot;/resource/1528993331000/unreadMail&quot;, &quot;icon B&quot;, 20, 20) , 
+      IF( New_Email__c = &quot;False&quot; , IMAGE(&quot;/resource/1528992941000/readMail&quot;, &quot;icon A&quot;, 20, 20), 
+         &quot;&quot;) 
+   )</formula>
+    <label>Email Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_Contact_is_required</fullName>
+    <active>true</active>
+    <description>PLC 16/12/08 : Italy CRM v2
+Contact obligatoire pour ITA, sauf pour mails créés depuis Mail2Case
+
+PLC10/02/2009 : Contact non obligatoire sur requête de l&apos;Italie
+
+ADM 27/05: Contact à nouveau obligatoire sauf pour Mail2Case et Web2Case</description>
+    <errorConditionFormula>AND(NOT( $User.Bypass_Validation_Rules__c ),
+RecordTypeId = &apos;012200000009CuR&apos; &amp;&amp; ContactId =&apos;&apos; &amp;&amp; Contract__c =&apos;&apos; &amp;&amp;
+Not(OR((ISPICKVAL(Origin, &quot;Email&quot;)), (ISPICKVAL(Origin, &quot;Website&quot;)),(ISPICKVAL(Origin, &quot;WebForm&quot;)))))</errorConditionFormula>
+    <errorDisplayField>ContactId</errorDisplayField>
+    <errorMessage>Contact name is required</errorMessage>
+</ValidationRule>

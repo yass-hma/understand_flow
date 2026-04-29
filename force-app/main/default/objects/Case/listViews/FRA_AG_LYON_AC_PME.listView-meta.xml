@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_AG_LYON_AC_PME</fullName>
+    <booleanFilter>1 AND (2 OR 3) AND 4</booleanFilter>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>ANSELMINI,beaufort,belayachi,rougemont,bufi,demurger,benedetto,chellat,delfabro,martino,degletagne</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>Elena MARIN,simon cousse,chloe renault,Hugo Robin</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.CaseExternalFrance</value>
+    </filters>
+    <label>FRA - AG LYON AC PME</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>France_DCOI_Small_Region_ARA_PSC_1_Man</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DCOI_Small_Region_ARA_PSC_Resp</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <label>Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Vehicle Upgrade</fullName>
+                <default>false</default>
+                <label>Vehicle Upgrade</label>
+            </value>
+            <value>
+                <fullName>Fleet Management</fullName>
+                <default>false</default>
+                <label>Fleet Management</label>
+            </value>
+            <value>
+                <fullName>Long term rental</fullName>
+                <default>false</default>
+                <label>Long term rental</label>
+            </value>
+            <value>
+                <fullName>2nd Life</fullName>
+                <default>false</default>
+                <label>2nd Life</label>
+            </value>
+            <value>
+                <fullName>Exchange</fullName>
+                <default>false</default>
+                <label>Exchange</label>
+            </value>
+            <value>
+                <fullName>Bike</fullName>
+                <default>false</default>
+                <label>Bike</label>
+            </value>
+            <value>
+                <fullName>Easy</fullName>
+                <default>false</default>
+                <label>Easy</label>
+            </value>
+            <value>
+                <fullName>Flex</fullName>
+                <default>false</default>
+                <label>Flex</label>
+            </value>
+            <value>
+                <fullName>Ricaricar</fullName>
+                <default>false</default>
+                <label>Ricaricar</label>
+            </value>
+            <value>
+                <fullName>Electric</fullName>
+                <default>false</default>
+                <label>Electric</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

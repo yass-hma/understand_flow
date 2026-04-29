@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Area_for_case_closure__c</fullName>
+    <description>JGV 15/12/2008 : workflow ALD Italy
+24/02/2009 length 40 -&gt; 122</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only users belonging to this area can close the case</inlineHelpText>
+    <label>Area for case closure</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

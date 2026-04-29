@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_POSTE_CODICI_701452574_701481094</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Manual_Priority_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,chiuso</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>701452574,701481094</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notEqual</operation>
+        <value>ITA - DELETED CASES</value>
+    </filters>
+    <label>ITA POSTE CODICI 701452574 701481094</label>
+    <sharedTo>
+        <roleAndSubordinates>ItalyAssistanceMgmt186711</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBUInternational</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBUVan</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBackOffice</roleAndSubordinates>
+        <roleAndSubordinates>Italy_ALD_Default_User</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Back_Office_Operator</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Backoffice</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Business_Administrator</roleAndSubordinates>
+    </sharedTo>
+</ListView>

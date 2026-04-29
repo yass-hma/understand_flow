@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_TECH_sendMailCloseCase__c</fullName>
+    <description>Technical field for France Quick Action that send email and close case</description>
+    <label>FRA TECH sendMailCloseCase</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Default</fullName>
+                <default>false</default>
+                <label>Default</label>
+            </value>
+            <value>
+                <fullName>UseCase1</fullName>
+                <default>false</default>
+                <label>UseCase1</label>
+            </value>
+            <value>
+                <fullName>UseCase2</fullName>
+                <default>false</default>
+                <label>UseCase2</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

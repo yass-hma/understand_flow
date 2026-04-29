@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AYDE_KB_Logistics_Infleeting_Defleeting_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>AYDE KB Logistics Infleeting/Defleeting</label>
+    <queue>AYDE_KB_Logistics_Infleeting_Defleeting</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Colog_DR_IDF_NORD</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.MILESTONE_TIMER</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Closed without action plan</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>Dep:10,Dep:28,Dep:51,Dep:77,Dep:78,Dep:89,Dep:91,Dep:93,Dep:94,Dep:02,Dep:08,Dep:59,Dep:62,Dep:80,Dep:27,Dep:60,Dep:75,Dep:76,Dep:92,Dep:95</value>
+    </filters>
+    <label>FRA - Colog DR IDF/NORD</label>
+    <queue>FRA_CP_Coordination_Logistique</queue>
+    <sharedTo>
+        <group>FRA_CP_Coordination_Logistique</group>
+    </sharedTo>
+</ListView>

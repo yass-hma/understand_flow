@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_Outsourcer_BO_2</fullName>
+    <booleanFilter>1 AND ((2 AND (4 OR 5)) OR (3 AND 6)) AND 7</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Local_ID__c</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Customer_Type__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,chiuso,Deleted</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Finance</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Management Services</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>contains</operation>
+        <value>Bank account detail,E-invoicing,Sending copy of accounting document</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>contains</operation>
+        <value>Billing and reading accounting document,Bank trasfert registration</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>equals</operation>
+        <value>Digital tools - MyAyvens</value>
+    </filters>
+    <filters>
+        <field>Customer_Type__c</field>
+        <operation>notContain</operation>
+        <value>TOP ACCOUNT 1,TOP ACCOUNT 2,CORPORATE 1,CONSIP,FERSERVIZI,TOP ACCOUNT INDIRECT</value>
+    </filters>
+    <label>ITA Outsourcer BO 2</label>
+    <queue>ITA_CS_SECONDO_LIVELLO</queue>
+    <sharedTo>
+        <roleAndSubordinates>ItalyAssistanceMgmt186711</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBUInternational</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBUVan</roleAndSubordinates>
+        <roleAndSubordinates>ItalyBackOffice</roleAndSubordinates>
+        <roleAndSubordinates>Italy_ALD_Default_User</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Back_Office_Operator</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Backoffice</roleAndSubordinates>
+        <roleAndSubordinates>Italy_Business_Administrator</roleAndSubordinates>
+    </sharedTo>
+</ListView>

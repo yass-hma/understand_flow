@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complaints_Reason__c</fullName>
+    <description>With Belgium Customer Care</description>
+    <label>Complaints Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Execution error</fullName>
+                <default>false</default>
+                <label>Execution error</label>
+            </value>
+            <value>
+                <fullName>Non respect of contract clause</fullName>
+                <default>false</default>
+                <label>Non respect of contract clause</label>
+            </value>
+            <value>
+                <fullName>Non conformity of product/service</fullName>
+                <default>false</default>
+                <label>Non conformity of product/service</label>
+            </value>
+            <value>
+                <fullName>Misconduct of an internal employee</fullName>
+                <default>false</default>
+                <label>Misconduct of an internal employee</label>
+            </value>
+            <value>
+                <fullName>Misconduct of an external employee</fullName>
+                <default>false</default>
+                <label>Misconduct of an external employee</label>
+            </value>
+            <value>
+                <fullName>Complaint external</fullName>
+                <default>false</default>
+                <label>Complaint external</label>
+            </value>
+            <value>
+                <fullName>Complaint internal</fullName>
+                <default>false</default>
+                <label>Complaint internal</label>
+            </value>
+            <value>
+                <fullName>Disappointment external</fullName>
+                <default>false</default>
+                <label>Disappointment external</label>
+            </value>
+            <value>
+                <fullName>Disappointment internal</fullName>
+                <default>false</default>
+                <label>Disappointment internal</label>
+            </value>
+            <value>
+                <fullName>Protest</fullName>
+                <default>false</default>
+                <label>Protest</label>
+            </value>
+            <value>
+                <fullName>Misconduct of ALD or its partners</fullName>
+                <default>false</default>
+                <label>Misconduct of ALD or its partners</label>
+            </value>
+            <value>
+                <fullName>Data confidentiality</fullName>
+                <default>false</default>
+                <label>Data confidentiality</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>ALD employee responsibility</fullName>
+                <default>false</default>
+                <label>ALD employee responsibility</label>
+            </value>
+            <value>
+                <fullName>Customer overreacts</fullName>
+                <default>false</default>
+                <label>Customer overreacts</label>
+            </value>
+            <value>
+                <fullName>Lack of comm between departments</fullName>
+                <default>false</default>
+                <label>Lack of comm between departments</label>
+            </value>
+            <value>
+                <fullName>Lack of comm between ALD and supplier</fullName>
+                <default>false</default>
+                <label>Lack of comm between ALD and supplier</label>
+            </value>
+            <value>
+                <fullName>Supplier fault</fullName>
+                <default>false</default>
+                <label>Supplier fault</label>
+            </value>
+            <value>
+                <fullName>Soft error</fullName>
+                <default>false</default>
+                <label>Soft error</label>
+            </value>
+            <value>
+                <fullName>Lack of procedure</fullName>
+                <default>false</default>
+                <label>Lack of procedure</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Non standard business practise</fullName>
+                <default>false</default>
+                <label>Non standard business practise</label>
+            </value>
+            <value>
+                <fullName>Lack of services</fullName>
+                <default>false</default>
+                <label>Lack of services</label>
+            </value>
+            <value>
+                <fullName>Not good customer care</fullName>
+                <default>false</default>
+                <label>Not good customer care</label>
+            </value>
+            <value>
+                <fullName>Contract problem</fullName>
+                <default>false</default>
+                <label>Contract problem</label>
+            </value>
+            <value>
+                <fullName>Pricing mistake</fullName>
+                <default>false</default>
+                <label>Pricing mistake</label>
+            </value>
+            <value>
+                <fullName>Payments issue</fullName>
+                <default>false</default>
+                <label>Payments issue</label>
+            </value>
+            <value>
+                <fullName>Failure to follow the contract</fullName>
+                <default>false</default>
+                <label>Failure to follow the contract</label>
+            </value>
+            <value>
+                <fullName>Lack of procedures/organisation</fullName>
+                <default>false</default>
+                <label>Lack of procedures/organisation</label>
+            </value>
+            <value>
+                <fullName>Supplier services</fullName>
+                <default>false</default>
+                <label>Supplier services</label>
+            </value>
+            <value>
+                <fullName>Loss of data</fullName>
+                <default>false</default>
+                <label>Loss of data</label>
+            </value>
+            <value>
+                <fullName>Loss of services</fullName>
+                <default>false</default>
+                <label>Loss of services</label>
+            </value>
+            <value>
+                <fullName>Systems Failiures</fullName>
+                <default>false</default>
+                <label>Systems Failiures</label>
+            </value>
+            <value>
+                <fullName>Technical problem/IT failure</fullName>
+                <default>false</default>
+                <label>Technical problem/IT failure</label>
+            </value>
+            <value>
+                <fullName>Complaint not justified</fullName>
+                <default>false</default>
+                <label>Complaint not justified</label>
+            </value>
+            <value>
+                <fullName>Incorrect execution of contractual clauses</fullName>
+                <default>false</default>
+                <label>Incorrect execution of contractual clauses</label>
+            </value>
+            <value>
+                <fullName>Breach of consumer regulatory req.</fullName>
+                <default>false</default>
+                <label>Breach of consumer regulatory req.</label>
+            </value>
+            <value>
+                <fullName>Breach of other regulatroy req.</fullName>
+                <default>false</default>
+                <label>Breach of other regulatroy req.</label>
+            </value>
+            <value>
+                <fullName>Breach of other legal or regulatory requirements</fullName>
+                <default>false</default>
+                <label>Breach of other legal or regulatory requirements</label>
+            </value>
+            <value>
+                <fullName>Lack of procedures / internal organization</fullName>
+                <default>false</default>
+                <label>Lack of procedures / internal organization</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

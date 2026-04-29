@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Priority_Flag__c</fullName>
+    <externalId>false</externalId>
+    <formula>If ((ISBLANK(Total_Time_Remaining__c )),&quot;6-&quot;&amp;IMAGE( &quot;/servlet/servlet.ImageServer?id=01520000000Y4gb&amp;oid=&quot;&amp;$Organization.Id,&quot;Priority 6&quot;,16,32),
+if( IsClosed,&quot;7-&quot;&amp;IMAGE( &quot;/servlet/servlet.ImageServer?id=01520000000Y4gl&amp;oid=&quot;&amp;$Organization.Id,&quot;F&quot;,16,32) ,
+if(ispickval( Priority,&quot;High&quot;),
+
+IF (Total_Time_Remaining__c &lt;= 0,
+&quot;1-&quot;&amp;IMAGE( &quot;/servlet/servlet.ImageServer?id=01520000000Y4h5&amp;oid=&quot;&amp;$Organization.Id,&quot;Priority 1&quot;,16,32),
+IF( ((Total_Time_Remaining__c+ Week_end_Day_bonus_number__c ) / Treatment_Time_Objective__c ) &lt; 0.5,
+&quot;3-&quot;&amp;IMAGE( &quot;/servlet/servlet.ImageServer?id=01520000000Y4gv&amp;oid=&quot;&amp;$Organization.Id,&quot;Priority 3&quot;,16,32),
+&quot;5-&quot;&amp;IMAGE( &quot;/servlet/servlet.ImageServer?id=01520000000Y4gg&amp;oid=&quot;&amp;$Organization.Id,&quot;Priority 5&quot;,16,32)
+))
+,
+IF (Total_Time_Remaining__c &lt;= 0,
+&quot;2-&quot;&amp;IMAGE( &quot;/servlet/servlet.ImageServer?id=01520000000Y4h0&amp;oid=&quot;&amp;$Organization.Id,&quot;Priority 2&quot;,16,32),
+IF( ((Total_Time_Remaining__c+ Week_end_Day_bonus_number__c ) /Treatment_Time_Objective__c) &lt; 0.5,
+&quot;4-&quot;&amp;IMAGE( &quot;/servlet/servlet.ImageServer?id=01520000000Y4gq&amp;oid=&quot;&amp;$Organization.Id,&quot;Priority 4&quot;,16,32),
+&quot;6-&quot;&amp;IMAGE( &quot;/servlet/servlet.ImageServer?id=01520000000Y4gb&amp;oid=&quot;&amp;$Organization.Id,&quot;Priority 6&quot;,16,32)
+))
+)
+)
+)</formula>
+    <inlineHelpText>Red when time exceeded, Orange when 50 % of the time had been spent</inlineHelpText>
+    <label>Priority Flag</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

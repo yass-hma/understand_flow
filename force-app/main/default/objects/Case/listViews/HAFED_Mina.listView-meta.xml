@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HAFED_Mina</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>hafed,bardieu,bouquin,teixeira,ambroise,cakpo,haond,surville,tulasne</value>
+    </filters>
+    <filters>
+        <field>CASES.CREATED_DATE_DATE_ONLY</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2012 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,In Progress,Pending</value>
+    </filters>
+    <label>Relation clients Partenariats</label>
+    <sharedTo>
+        <role>France_DREP_Implement_Commerciale_Ventes</role>
+        <role>France_DREP_Retail_Partnerships_PSC</role>
+        <role>France_DREP_Retail_Partnerships_Resp_Transverse</role>
+        <role>France_DREP_Volvo_Ventes</role>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

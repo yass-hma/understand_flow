@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HUN_Relief_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>Request_reason__c</columns>
+    <columns>Relief_SupplierA__c</columns>
+    <columns>Case_Follower__c</columns>
+    <columns>Vehicle_request_date__c</columns>
+    <columns>Vehicle_relief_category__c</columns>
+    <columns>Email_Status__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Closed without action plan,Closed with action plan</value>
+    </filters>
+    <label>HUN - Relief</label>
+    <language>en_US</language>
+    <queue>HUN_Relief</queue>
+    <sharedTo>
+        <group>HUN_Driver_Desk</group>
+        <group>HUN_KAM</group>
+        <group>HUN_Pool</group>
+        <group>HUN_Relief</group>
+    </sharedTo>
+</ListView>

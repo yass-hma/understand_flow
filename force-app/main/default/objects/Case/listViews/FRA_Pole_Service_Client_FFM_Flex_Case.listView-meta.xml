@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Pole_Service_Client_FFM_Flex_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>External_Case_Type__c</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <label>FRA - FFM FLEX PSC</label>
+    <queue>FRA_FFM_FLEX_PSC</queue>
+    <sharedTo>
+        <role>France_DREP_Implement_Commerciale_Ventes</role>
+        <role>France_DRMC_Services_Operations_Flex_Resp</role>
+        <roleAndSubordinatesInternal>France_DREP_FFM_Ventes</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DRMC_Commerce_Flex_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

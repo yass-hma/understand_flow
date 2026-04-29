@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CHL_PENDIENTES_ENTRADA_A_TALLER</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Appointment_date_time__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>CHL - PENDIENTES ENTRADA A TALLER</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>CHL_Mantencion</group>
+    </sharedTo>
+</ListView>

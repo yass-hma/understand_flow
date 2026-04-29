@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>INT_ALD_net_cases_ONGOING1</fullName>
+    <booleanFilter>1 AND 2 AND (3 OR 4 OR 5) AND 6 AND 7</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Case_External_Legal</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>notEqual</operation>
+        <value>Legal</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>HEROLD</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>FRAGORZI</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>contains</operation>
+        <value>INT - ALD Net</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>notEqual</operation>
+        <value>Votre boîte aux lettres est presque pleine.</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>In Progress,Pending - Internal,Pending - Customer,Pending - External</value>
+    </filters>
+    <label>INT - ALD net cases - ONGOING</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>CEO</role>
+    </sharedTo>
+</ListView>

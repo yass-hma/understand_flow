@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_demande_de_transfert</fullName>
+    <filterScope>Queue</filterScope>
+    <label>FRA - demande de transfert</label>
+    <language>en_US</language>
+    <queue>FRA_demande_de_transfert</queue>
+    <sharedTo>
+        <role>SystemAdministrator</role>
+    </sharedTo>
+</ListView>

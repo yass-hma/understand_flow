@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MOR_Finance_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>MOR - Finance</label>
+    <language>en_US</language>
+    <queue>MOR_Finance</queue>
+    <sharedTo>
+        <group>MOR_Finance</group>
+    </sharedTo>
+</ListView>

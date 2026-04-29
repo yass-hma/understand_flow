@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relief_Supplier__c</fullName>
+    <description>Case Management</description>
+    <label>Relief Supplier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ALD Pool car</fullName>
+                <default>false</default>
+                <label>ALD Pool car</label>
+            </value>
+            <value>
+                <fullName>Workshop car</fullName>
+                <default>false</default>
+                <label>Workshop car</label>
+            </value>
+            <value>
+                <fullName>Myles</fullName>
+                <default>false</default>
+                <label>Myles</label>
+            </value>
+            <value>
+                <fullName>REVV</fullName>
+                <default>false</default>
+                <label>REVV</label>
+            </value>
+            <value>
+                <fullName>Car club</fullName>
+                <default>false</default>
+                <label>Car club</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Localiza</fullName>
+                <default>false</default>
+                <label>LOCALIZA</label>
+            </value>
+            <value>
+                <fullName>Facil Assist</fullName>
+                <default>false</default>
+                <label>FACIL ASSIST</label>
+            </value>
+            <value>
+                <fullName>Eurobike</fullName>
+                <default>false</default>
+                <label>Eurobike</label>
+            </value>
+            <value>
+                <fullName>LTR</fullName>
+                <default>false</default>
+                <label>LTR</label>
+            </value>
+            <value>
+                <fullName>Europcar</fullName>
+                <default>false</default>
+                <label>Europcar</label>
+            </value>
+            <value>
+                <fullName>Hertz</fullName>
+                <default>false</default>
+                <label>Hertz</label>
+            </value>
+            <value>
+                <fullName>Zeplin</fullName>
+                <default>false</default>
+                <label>Zeplin</label>
+            </value>
+            <value>
+                <fullName>Sixt</fullName>
+                <default>false</default>
+                <label>sixt</label>
+            </value>
+            <value>
+                <fullName>Gürses</fullName>
+                <default>false</default>
+                <label>Gürses</label>
+            </value>
+            <value>
+                <fullName>Servis</fullName>
+                <default>false</default>
+                <label>Servis</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

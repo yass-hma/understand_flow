@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LUX_Finance_Contract_Management_RO_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>LUX - Finance Contract Management RO</label>
+    <queue>LUX_Finance_Contract_Management_RO</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

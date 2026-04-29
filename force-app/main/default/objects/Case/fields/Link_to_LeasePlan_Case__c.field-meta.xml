@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_to_LeasePlan_Case__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(DM_LOADID__c), &quot;&quot;,
+HYPERLINK(&quot; https://leaseplan.my.salesforce.com/lightning/r/Case/&quot; &amp; DM_LOADID__c &amp; &quot;/view&quot; , &quot;View Case&quot; ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Link to LeasePlan Case</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

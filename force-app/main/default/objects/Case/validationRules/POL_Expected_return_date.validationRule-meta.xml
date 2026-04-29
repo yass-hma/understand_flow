@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POL_Expected_return_date</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+NOT( $User.Bypass_Validation_Rules__c ), 
+$RecordType.Id =&apos;01220000000MLar&apos;,
+ISBLANK(  Return_date_time__c ),
+ISBLANK(  Expected_Return_Date__c ) ,
+( TEXT(External_Case_Category__c)=&apos;Assistance&apos; ),
+(TEXT( External_Case_Detail__c )=&apos;Case&apos;),
+(TEXT( External_description__c )=&apos;Registered&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Expected_Return_Date__c</errorDisplayField>
+    <errorMessage>This field is mandatory and must be filled if &apos;Return Date and Time&apos; stays empty.</errorMessage>
+</ValidationRule>

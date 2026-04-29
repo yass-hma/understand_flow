@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Return_Date__c</fullName>
+    <description>Q1/2020: OK to be deleted from Poland - but just removed from PL. Deletion to be done when all the apex classes will be reviewed</description>
+    <label>Expected Return Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

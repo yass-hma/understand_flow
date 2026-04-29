@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_DE_VN_Gr4</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Followed_by__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>cottet,gatteau</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.CaseExternalFrance</value>
+    </filters>
+    <label>FRA - DE VN Gr4</label>
+    <queue>FRAServiceVhiculesNeufs</queue>
+    <sharedTo>
+        <role>France_DFI_Assurance_Resp</role>
+        <role>France_DSOP_Cmd_Liv_Resp</role>
+        <role>France_DSOP_Cmd_Liv_Specific_Grp1_Resp</role>
+        <role>France_DSOP_Cmd_Liv_Specific_Grp2_Resp</role>
+        <role>France_DSOP_Cmd_Liv_Standard_Grp1_Resp</role>
+        <role>France_DSOP_Cmd_Liv_Standard_Grp2_Resp</role>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

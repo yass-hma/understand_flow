@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Driver__c</fullName>
+    <description>Populate Driver based on the Contract details available</description>
+    <externalId>false</externalId>
+    <formula>IF( RecordTypeId = &quot;01220000000V4TZ&quot;,  Contract__r.Driver__r.FirstName + &quot; &quot; + Contract__r.Driver__r.LastName , &quot; &quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Driver</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

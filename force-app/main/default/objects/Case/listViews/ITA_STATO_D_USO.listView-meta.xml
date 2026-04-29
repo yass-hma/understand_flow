@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITA_STATO_D_USO</fullName>
+    <columns>Manual_Priority_Date__c</columns>
+    <columns>Priority_Date__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Additional_info__c</columns>
+    <columns>Invoice_Nbr__c</columns>
+    <columns>Followed_by__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,chiuso,Deleted</value>
+    </filters>
+    <label>ITA - FN NON MARCIANTI</label>
+    <queue>ITASTATODUSO</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>ItalyCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

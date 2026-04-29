@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_loss_reason__c</fullName>
+    <label>Total loss reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Theft​</fullName>
+                <default>false</default>
+                <label>Theft​</label>
+            </value>
+            <value>
+                <fullName>Material damage</fullName>
+                <default>false</default>
+                <label>Material damage</label>
+            </value>
+            <value>
+                <fullName>Theft recovered​</fullName>
+                <default>false</default>
+                <label>Theft recovered​</label>
+            </value>
+            <value>
+                <fullName>Abuse of confidence​</fullName>
+                <default>false</default>
+                <label>Abuse of confidence​</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

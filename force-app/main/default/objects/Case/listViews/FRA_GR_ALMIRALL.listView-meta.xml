@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_GR_ALMIRALL</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 4 OR 5 OR 6)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Email_to_Case_Sender_formula__c</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>EM_Addresses__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>EM_Addresses__c</field>
+        <operation>contains</operation>
+        <value>o-i.fr,dxc,zebra,terumo,steris,shimano,scj,omya,microfocus,energizer,kohler,iron,ondulys,almirall,ecotone,esf,biogen,enercon</value>
+    </filters>
+    <filters>
+        <field>Emailtocasereceiver_FormulaField__c</field>
+        <operation>contains</operation>
+        <value>o-i.france,dxc,zebra terumo,steris,shimano,scj,omya,microfocus,energizer,kohler,iron,ondulys,almirall,ecotone,esf,biogen,enercon</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>contains</operation>
+        <value>o-i.france,dxc,zebra terumo,steris,shimano,scj,omya,microfocus,energizer,kohler,iron,ondulys,almirall,ecotone,esf,biogen,enercon</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>o-i.france,dxc,zebra,terumo,steris,shimano,scj,omya,microfocus,energizer,kohler,iron,ondulys,almirall,ecotone,esf,biogen,enercon</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>contains</operation>
+        <value>5421284,5415671,5221145,5033549,5394398,5393592,5397560,5018987,5097506,5425217,5226655,5155379,5418576,5033812,5470896,5098082,5407879,5296565,5394603,5009116,5016131,5396872,5465943,5395491</value>
+    </filters>
+    <label>FRA - BOX 2 TFO</label>
+    <queue>FRA_TOTAL_FLEET_OUTSOURCING</queue>
+    <sharedTo>
+        <group>FRA_TFO_Team</group>
+    </sharedTo>
+</ListView>

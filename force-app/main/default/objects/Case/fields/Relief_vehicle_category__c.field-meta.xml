@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relief_vehicle_category__c</fullName>
+    <label>Relief Vehicle Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>4X4 Especial (Pick-up)</fullName>
+                <default>false</default>
+                <label>4X4 Especial (Pick-up)</label>
+            </value>
+            <value>
+                <fullName>4X4 Utilitario (Duster)</fullName>
+                <default>false</default>
+                <label>4X4 Utilitario (Duster)</label>
+            </value>
+            <value>
+                <fullName>A</fullName>
+                <default>false</default>
+                <label>A</label>
+            </value>
+            <value>
+                <fullName>A (Small category)</fullName>
+                <default>false</default>
+                <label>A (Small category)</label>
+            </value>
+            <value>
+                <fullName>A0 - VW Polo, Opel Corsa, Renault Clio</fullName>
+                <default>false</default>
+                <label>A0 - VW Polo, Opel Corsa, Renault Clio</label>
+            </value>
+            <value>
+                <fullName>A1 - VW Polo, Opel Corsa, Renault Clio</fullName>
+                <default>false</default>
+                <label>A1 - VW Polo, Opel Corsa, Renault Clio</label>
+            </value>
+            <value>
+                <fullName>AD</fullName>
+                <default>false</default>
+                <label>AD</label>
+            </value>
+            <value>
+                <fullName>A-ECMN VW Polo, Renault Clio</fullName>
+                <default>false</default>
+                <label>A-ECMN VW Polo, Renault Clio</label>
+            </value>
+            <value>
+                <fullName>A - EDMR - Opel Corsa, Fiat Punto, Renault Clio</fullName>
+                <default>false</default>
+                <label>A - EDMR - Opel Corsa, Fiat Punto, Renault Clio</label>
+            </value>
+            <value>
+                <fullName>A kat Ayvens - OPEL CORSA ; FIAT GRANDE PUNTO (A/C) or similar</fullName>
+                <default>false</default>
+                <label>A kat Ayvens - OPEL CORSA ; FIAT GRANDE PUNTO (A/C) or similar</label>
+            </value>
+            <value>
+                <fullName>A Opel Corsa 1.2 ; Fiat Grande Punto or similar</fullName>
+                <default>false</default>
+                <label>A Opel Corsa 1.2 ; Fiat Grande Punto or similar</label>
+            </value>
+            <value>
+                <fullName>A - Small</fullName>
+                <default>false</default>
+                <label>A - Small</label>
+            </value>
+            <value>
+                <fullName>Automatic</fullName>
+                <default>false</default>
+                <label>Automatic</label>
+            </value>
+            <value>
+                <fullName>A  VW Polo, RENAULT Clio, OPEL Corsa,R. Twingo, Smart for two</fullName>
+                <default>false</default>
+                <label>A  VW Polo, RENAULT Clio, OPEL Corsa,R. Twingo, Smart for two</label>
+            </value>
+            <value>
+                <fullName>B</fullName>
+                <default>false</default>
+                <label>B</label>
+            </value>
+            <value>
+                <fullName>B (Hatchback)</fullName>
+                <default>false</default>
+                <label>B (Hatchback)</label>
+            </value>
+            <value>
+                <fullName>B - City Car</fullName>
+                <default>false</default>
+                <label>B - City Car</label>
+            </value>
+            <value>
+                <fullName>BD</fullName>
+                <default>false</default>
+                <label>BD</label>
+            </value>
+            <value>
+                <fullName>B - Lower class</fullName>
+                <default>false</default>
+                <label>B - Lower class</label>
+            </value>
+            <value>
+                <fullName>C</fullName>
+                <default>false</default>
+                <label>C</label>
+            </value>
+            <value>
+                <fullName>C (entry level Sedan)</fullName>
+                <default>false</default>
+                <label>C (entry level Sedan)</label>
+            </value>
+            <value>
+                <fullName>C0 - VW Golf, Opel Astra, Renault Megane (Hatchback)</fullName>
+                <default>false</default>
+                <label>C0 - VW Golf, Opel Astra, Renault Megane (Hatchback)</label>
+            </value>
+            <value>
+                <fullName>C1 - VW Golf, Opel Astra, Renault Megane (Hatchback)</fullName>
+                <default>false</default>
+                <label>C1 - VW Golf, Opel Astra, Renault Megane (Hatchback)</label>
+            </value>
+            <value>
+                <fullName>Car van</fullName>
+                <default>false</default>
+                <label>Car van</label>
+            </value>
+            <value>
+                <fullName>C - CDMR - Opel Astra, Ford Focus, Renault Megane</fullName>
+                <default>false</default>
+                <label>C - CDMR - Opel Astra, Ford Focus, Renault Megane</label>
+            </value>
+            <value>
+                <fullName>CD</fullName>
+                <default>false</default>
+                <label>CD</label>
+            </value>
+            <value>
+                <fullName>C kat Ayvens - Peugeot 308; OPEL ASTRA (A/C) or similar</fullName>
+                <default>false</default>
+                <label>C kat Ayvens - Peugeot 308; OPEL ASTRA (A/C) or similar</label>
+            </value>
+            <value>
+                <fullName>C - Medium</fullName>
+                <default>false</default>
+                <label>C - Medium</label>
+            </value>
+            <value>
+                <fullName>C Opel Astra 1.4 , Ford Focus or similar</fullName>
+                <default>false</default>
+                <label>C Opel Astra 1.4 , Ford Focus or similar</label>
+            </value>
+            <value>
+                <fullName>C - Subcompact car</fullName>
+                <default>false</default>
+                <label>C - Subcompact car</label>
+            </value>
+            <value>
+                <fullName>C  VW Golf, RENAULT Megane, OPEL Astra, MB A, R.Clio Grandtour</fullName>
+                <default>false</default>
+                <label>C  VW Golf, RENAULT Megane, OPEL Astra, MB A, R.Clio Grandtour</label>
+            </value>
+            <value>
+                <fullName>D</fullName>
+                <default>false</default>
+                <label>D</label>
+            </value>
+            <value>
+                <fullName>D (Sedan)</fullName>
+                <default>false</default>
+                <label>D (Sedan)</label>
+            </value>
+            <value>
+                <fullName>D+ (Premium Sedan)</fullName>
+                <default>false</default>
+                <label>D+ (Premium Sedan)</label>
+            </value>
+            <value>
+                <fullName>D0 - VW Passat, Opel Insignia, Renault Talisman (Sedan)</fullName>
+                <default>false</default>
+                <label>D0 - VW Passat, Opel Insignia, Renault Talisman (Sedan)</label>
+            </value>
+            <value>
+                <fullName>D1</fullName>
+                <default>false</default>
+                <label>D1</label>
+            </value>
+            <value>
+                <fullName>D1 - VW Passat, Opel Insignia, Renault Talisman (Sedan)</fullName>
+                <default>false</default>
+                <label>D1 - VW Passat, Opel Insignia, Renault Talisman (Sedan)</label>
+            </value>
+            <value>
+                <fullName>DD</fullName>
+                <default>false</default>
+                <label>DD</label>
+            </value>
+            <value>
+                <fullName>D kat Ayvens - VOLVO S40;Peugeot 508; FORD MONDEO A/C or similar</fullName>
+                <default>false</default>
+                <label>D kat Ayvens - VOLVO S40;Peugeot 508; FORD MONDEO A/C or similar</label>
+            </value>
+            <value>
+                <fullName>D - Large family car</fullName>
+                <default>false</default>
+                <label>D - Large family car</label>
+            </value>
+            <value>
+                <fullName>D Opel Vectra 1.9 TDI or similar</fullName>
+                <default>false</default>
+                <label>D Opel Vectra 1.9 TDI or similar</label>
+            </value>
+            <value>
+                <fullName>D - SDMR - Ford Mondeo, Opel Insignia</fullName>
+                <default>false</default>
+                <label>D - SDMR - Ford Mondeo, Opel Insignia</label>
+            </value>
+            <value>
+                <fullName>D - Upper medium</fullName>
+                <default>false</default>
+                <label>D - Upper medium</label>
+            </value>
+            <value>
+                <fullName>D  VW Passat, RENAULT Laguna, OPEL Insignia</fullName>
+                <default>false</default>
+                <label>D  VW Passat, RENAULT Laguna, OPEL Insignia</label>
+            </value>
+            <value>
+                <fullName>E</fullName>
+                <default>false</default>
+                <label>E</label>
+            </value>
+            <value>
+                <fullName>E - Compact executive car</fullName>
+                <default>false</default>
+                <label>E - Compact executive car</label>
+            </value>
+            <value>
+                <fullName>Electric</fullName>
+                <default>false</default>
+                <label>Electric</label>
+            </value>
+            <value>
+                <fullName>E - Luxury</fullName>
+                <default>false</default>
+                <label>E - Luxury</label>
+            </value>
+            <value>
+                <fullName>E - PDMR - VW Passat, Audi A4</fullName>
+                <default>false</default>
+                <label>E - PDMR - VW Passat, Audi A4</label>
+            </value>
+            <value>
+                <fullName>F</fullName>
+                <default>false</default>
+                <label>F</label>
+            </value>
+            <value>
+                <fullName>F+ - Luxury car</fullName>
+                <default>false</default>
+                <label>F+ - Luxury car</label>
+            </value>
+            <value>
+                <fullName>F0 - VW Passat, Opel Insignia, Renault Talisman (Karavan)</fullName>
+                <default>false</default>
+                <label>F0 - VW Passat, Opel Insignia, Renault Talisman (Karavan)</label>
+            </value>
+            <value>
+                <fullName>F1 - VW Passat, Opel Insignia, Renault Talisman (Karavan)</fullName>
+                <default>false</default>
+                <label>F1 - VW Passat, Opel Insignia, Renault Talisman (Karavan)</label>
+            </value>
+            <value>
+                <fullName>Family</fullName>
+                <default>false</default>
+                <label>Family</label>
+            </value>
+            <value>
+                <fullName>Family diesel</fullName>
+                <default>false</default>
+                <label>Family diesel</label>
+            </value>
+            <value>
+                <fullName>FD</fullName>
+                <default>false</default>
+                <label>FD</label>
+            </value>
+            <value>
+                <fullName>F Executive car</fullName>
+                <default>false</default>
+                <label>F Executive car</label>
+            </value>
+            <value>
+                <fullName>F - Executive car</fullName>
+                <default>false</default>
+                <label>F - Executive car</label>
+            </value>
+            <value>
+                <fullName>F - Off-road</fullName>
+                <default>false</default>
+                <label>F - Off-road</label>
+            </value>
+            <value>
+                <fullName>F  VW Passat STW AUT, RENAULT Laguna STW, Škoda Oct.STW</fullName>
+                <default>false</default>
+                <label>F  VW Passat STW AUT, RENAULT Laguna STW, Škoda Oct.STW</label>
+            </value>
+            <value>
+                <fullName>G</fullName>
+                <default>false</default>
+                <label>G</label>
+            </value>
+            <value>
+                <fullName>G0 - VW Golf, Opel Astra, Renault Megane (Karavan)</fullName>
+                <default>false</default>
+                <label>G0 - VW Golf, Opel Astra, Renault Megane (Karavan)</label>
+            </value>
+            <value>
+                <fullName>G1 - VW Golf, Opel Astra, Renault Megane (Karavan)</fullName>
+                <default>false</default>
+                <label>G1 - VW Golf, Opel Astra, Renault Megane (Karavan)</label>
+            </value>
+            <value>
+                <fullName>GD</fullName>
+                <default>false</default>
+                <label>GD</label>
+            </value>
+            <value>
+                <fullName>G  FORD Focus STW, OPEL Astra STW, Renault Megane STW</fullName>
+                <default>false</default>
+                <label>G  FORD Focus STW, OPEL Astra STW, Renault Megane STW</label>
+            </value>
+            <value>
+                <fullName>G kat Ayvens - HYUNDAI I30 SW A/C or similar</fullName>
+                <default>false</default>
+                <label>G kat Ayvens - HYUNDAI I30 SW A/C or similar</label>
+            </value>
+            <value>
+                <fullName>G Opel Astra SW  or similar</fullName>
+                <default>false</default>
+                <label>G Opel Astra SW  or similar</label>
+            </value>
+            <value>
+                <fullName>G - Van</fullName>
+                <default>false</default>
+                <label>G - Van</label>
+            </value>
+            <value>
+                <fullName>H</fullName>
+                <default>false</default>
+                <label>H</label>
+            </value>
+            <value>
+                <fullName>H0 - Audi A6, Mercedes Benz E, BMW 5 (Manual, automatic)</fullName>
+                <default>false</default>
+                <label>H0 - Audi A6, Mercedes Benz E, BMW 5 (Manual, automatic)</label>
+            </value>
+            <value>
+                <fullName>H1 - Audi A6, Mercedes Benz E, BMW 5 (Manual, automatic)</fullName>
+                <default>false</default>
+                <label>H1 - Audi A6, Mercedes Benz E, BMW 5 (Manual, automatic)</label>
+            </value>
+            <value>
+                <fullName>H  AUDI A6, MERCEDES E-Class,...</fullName>
+                <default>false</default>
+                <label>H  AUDI A6, MERCEDES E-Class,...</label>
+            </value>
+            <value>
+                <fullName>HD</fullName>
+                <default>false</default>
+                <label>HD</label>
+            </value>
+            <value>
+                <fullName>H kat Ayvens - VOLVO S80 D5 Automatic A/C or similar</fullName>
+                <default>false</default>
+                <label>H kat Ayvens - VOLVO S80 D5 Automatic A/C or similar</label>
+            </value>
+            <value>
+                <fullName>H - Utility</fullName>
+                <default>false</default>
+                <label>H - Utility</label>
+            </value>
+            <value>
+                <fullName>H Volvo S80 D5 AT or similar</fullName>
+                <default>false</default>
+                <label>H Volvo S80 D5 AT or similar</label>
+            </value>
+            <value>
+                <fullName>I0 - Skoda Octavia (Karavan/Sedan, manual/automatic)</fullName>
+                <default>false</default>
+                <label>I0 - Skoda Octavia (Karavan/Sedan, manual/automatic)</label>
+            </value>
+            <value>
+                <fullName>I1 - Skoda Octavia (Karavan/Sedan, manual/automatic)</fullName>
+                <default>false</default>
+                <label>I1 - Skoda Octavia (Karavan/Sedan, manual/automatic)</label>
+            </value>
+            <value>
+                <fullName>I - Microbus</fullName>
+                <default>false</default>
+                <label>I - Microbus</label>
+            </value>
+            <value>
+                <fullName>J</fullName>
+                <default>false</default>
+                <label>J</label>
+            </value>
+            <value>
+                <fullName>J0 - Renault Trafic, Opel Vivaro, CI Jumper (8+1, furgon)</fullName>
+                <default>false</default>
+                <label>J0 - Renault Trafic, Opel Vivaro, CI Jumper (8+1, furgon)</label>
+            </value>
+            <value>
+                <fullName>J1 - Renault Trafic, Opel Vivaro, CI Jumper (8+1, furgon)</fullName>
+                <default>false</default>
+                <label>J1 - Renault Trafic, Opel Vivaro, CI Jumper (8+1, furgon)</label>
+            </value>
+            <value>
+                <fullName>JD</fullName>
+                <default>false</default>
+                <label>JD</label>
+            </value>
+            <value>
+                <fullName>J kat Ayvens - OPEL VIVARO LWB 9 sjedala/seats A/C or similar</fullName>
+                <default>false</default>
+                <label>J kat Ayvens - OPEL VIVARO LWB 9 sjedala/seats A/C or similar</label>
+            </value>
+            <value>
+                <fullName>J Opel Vivaro  1.9 TDI 9 sjedala or similar</fullName>
+                <default>false</default>
+                <label>J Opel Vivaro  1.9 TDI 9 sjedala or similar</label>
+            </value>
+            <value>
+                <fullName>J  VW Transporter 8+1, OPEL Vivaro 8+1,Renault trafic</fullName>
+                <default>false</default>
+                <label>J  VW Transporter 8+1, OPEL Vivaro 8+1,Renault trafic</label>
+            </value>
+            <value>
+                <fullName>K</fullName>
+                <default>false</default>
+                <label>K</label>
+            </value>
+            <value>
+                <fullName>K0 - VW Touran, Opel Zafira, Renault Scenic</fullName>
+                <default>false</default>
+                <label>K0 - VW Touran, Opel Zafira, Renault Scenic</label>
+            </value>
+            <value>
+                <fullName>K1 - VW Touran, Opel Zafira, Renault Scenic</fullName>
+                <default>false</default>
+                <label>K1 - VW Touran, Opel Zafira, Renault Scenic</label>
+            </value>
+            <value>
+                <fullName>KD</fullName>
+                <default>false</default>
+                <label>KD</label>
+            </value>
+            <value>
+                <fullName>K  MERCEDES B, RENAULT Scenic, VW Touran …</fullName>
+                <default>false</default>
+                <label>K  MERCEDES B, RENAULT Scenic, VW Touran …</label>
+            </value>
+            <value>
+                <fullName>K - Mini-VAN-VP</fullName>
+                <default>false</default>
+                <label>K - Mini-VAN-VP</label>
+            </value>
+            <value>
+                <fullName>L0 - Peugeot Partner, Renault Kangoo</fullName>
+                <default>false</default>
+                <label>L0 - Peugeot Partner, Renault Kangoo</label>
+            </value>
+            <value>
+                <fullName>L1 - Peugeot Partner, Renault Kangoo</fullName>
+                <default>false</default>
+                <label>L1 - Peugeot Partner, Renault Kangoo</label>
+            </value>
+            <value>
+                <fullName>Large car</fullName>
+                <default>false</default>
+                <label>Large car</label>
+            </value>
+            <value>
+                <fullName>L - Mini-VAN-VU</fullName>
+                <default>false</default>
+                <label>L - Mini-VAN-VU</label>
+            </value>
+            <value>
+                <fullName>Localiza-B</fullName>
+                <default>false</default>
+                <label>Localiza-B</label>
+            </value>
+            <value>
+                <fullName>Localiza-C</fullName>
+                <default>false</default>
+                <label>Localiza-C</label>
+            </value>
+            <value>
+                <fullName>Localiza-CS</fullName>
+                <default>false</default>
+                <label>Localiza-CS</label>
+            </value>
+            <value>
+                <fullName>Localiza-F</fullName>
+                <default>false</default>
+                <label>Localiza-F</label>
+            </value>
+            <value>
+                <fullName>Localiza-FS</fullName>
+                <default>false</default>
+                <label>Localiza-FS</label>
+            </value>
+            <value>
+                <fullName>Localiza-FX</fullName>
+                <default>false</default>
+                <label>Localiza-FX</label>
+            </value>
+            <value>
+                <fullName>Localiza-G</fullName>
+                <default>false</default>
+                <label>Localiza-G</label>
+            </value>
+            <value>
+                <fullName>Localiza-GX</fullName>
+                <default>false</default>
+                <label>Localiza-GX</label>
+            </value>
+            <value>
+                <fullName>Localiza-L</fullName>
+                <default>false</default>
+                <label>Localiza-L</label>
+            </value>
+            <value>
+                <fullName>Localiza-LE</fullName>
+                <default>false</default>
+                <label>Localiza-LE</label>
+            </value>
+            <value>
+                <fullName>Localiza-LP</fullName>
+                <default>false</default>
+                <label>Localiza-LP</label>
+            </value>
+            <value>
+                <fullName>Localiza-NX</fullName>
+                <default>false</default>
+                <label>Localiza-NX</label>
+            </value>
+            <value>
+                <fullName>Localiza-P</fullName>
+                <default>false</default>
+                <label>Localiza-P</label>
+            </value>
+            <value>
+                <fullName>Localiza-RX</fullName>
+                <default>false</default>
+                <label>Localiza-RX</label>
+            </value>
+            <value>
+                <fullName>Localiza-T</fullName>
+                <default>false</default>
+                <label>Localiza-T</label>
+            </value>
+            <value>
+                <fullName>Localiza-U</fullName>
+                <default>false</default>
+                <label>Localiza-U</label>
+            </value>
+            <value>
+                <fullName>Localiza-V</fullName>
+                <default>false</default>
+                <label>Localiza-V</label>
+            </value>
+            <value>
+                <fullName>Long panel van</fullName>
+                <default>false</default>
+                <label>Long panel van</label>
+            </value>
+            <value>
+                <fullName>Luxury</fullName>
+                <default>false</default>
+                <label>Luxury</label>
+            </value>
+            <value>
+                <fullName>Luxury car</fullName>
+                <default>false</default>
+                <label>Luxury car</label>
+            </value>
+            <value>
+                <fullName>M</fullName>
+                <default>false</default>
+                <label>M</label>
+            </value>
+            <value>
+                <fullName>M0 - Opel Astra, VW Golf, Renault Megane (HB/Karavan, auto.)</fullName>
+                <default>false</default>
+                <label>M0 - Opel Astra, VW Golf, Renault Megane (HB/Karavan, auto.)</label>
+            </value>
+            <value>
+                <fullName>M1 - Opel Astra, VW Golf, Renault Megane (HB/Karavan, auto.)</fullName>
+                <default>false</default>
+                <label>M1 - Opel Astra, VW Golf, Renault Megane (HB/Karavan, auto.)</label>
+            </value>
+            <value>
+                <fullName>MD</fullName>
+                <default>false</default>
+                <label>MD</label>
+            </value>
+            <value>
+                <fullName>Media</fullName>
+                <default>false</default>
+                <label>Media</label>
+            </value>
+            <value>
+                <fullName>Medium</fullName>
+                <default>false</default>
+                <label>Medium</label>
+            </value>
+            <value>
+                <fullName>Medium Car</fullName>
+                <default>false</default>
+                <label>Medium Car</label>
+            </value>
+            <value>
+                <fullName>Medium diesel</fullName>
+                <default>false</default>
+                <label>Medium diesel</label>
+            </value>
+            <value>
+                <fullName>Medium panel van</fullName>
+                <default>false</default>
+                <label>Medium panel van</label>
+            </value>
+            <value>
+                <fullName>Medium SW</fullName>
+                <default>false</default>
+                <label>Medium SW</label>
+            </value>
+            <value>
+                <fullName>Minibus</fullName>
+                <default>false</default>
+                <label>Minibus</label>
+            </value>
+            <value>
+                <fullName>MiniCar</fullName>
+                <default>false</default>
+                <label>MiniCar</label>
+            </value>
+            <value>
+                <fullName>MiniVan</fullName>
+                <default>false</default>
+                <label>MiniVan</label>
+            </value>
+            <value>
+                <fullName>M  OPEL Meriva, RENAULT Megane AUT,MB A AUT, VW polo AUT</fullName>
+                <default>false</default>
+                <label>M  OPEL Meriva, RENAULT Megane AUT,MB A AUT, VW polo AUT</label>
+            </value>
+            <value>
+                <fullName>MPV</fullName>
+                <default>false</default>
+                <label>MPV</label>
+            </value>
+            <value>
+                <fullName>M - VAN</fullName>
+                <default>false</default>
+                <label>M - VAN</label>
+            </value>
+            <value>
+                <fullName>N</fullName>
+                <default>false</default>
+                <label>N</label>
+            </value>
+            <value>
+                <fullName>N - Minibus</fullName>
+                <default>false</default>
+                <label>N - Minibus</label>
+            </value>
+            <value>
+                <fullName>O</fullName>
+                <default>false</default>
+                <label>O</label>
+            </value>
+            <value>
+                <fullName>O0 - VW Sharan, Ford Galaxy</fullName>
+                <default>false</default>
+                <label>O0 - VW Sharan, Ford Galaxy</label>
+            </value>
+            <value>
+                <fullName>O1 - VW Sharan, Ford Galaxy</fullName>
+                <default>false</default>
+                <label>O1 - VW Sharan, Ford Galaxy</label>
+            </value>
+            <value>
+                <fullName>OD</fullName>
+                <default>false</default>
+                <label>OD</label>
+            </value>
+            <value>
+                <fullName>O Fiat Doblo Cargo 1.9 JTD or similar</fullName>
+                <default>false</default>
+                <label>O Fiat Doblo Cargo 1.9 JTD or similar</label>
+            </value>
+            <value>
+                <fullName>O kat Ayvens - Fiat Doblo Furgon or similar</fullName>
+                <default>false</default>
+                <label>O kat Ayvens - Fiat Doblo Furgon or similar</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>O  VW Sharan , RENAULT Espace,...</fullName>
+                <default>false</default>
+                <label>O  VW Sharan , RENAULT Espace,...</label>
+            </value>
+            <value>
+                <fullName>P</fullName>
+                <default>false</default>
+                <label>P</label>
+            </value>
+            <value>
+                <fullName>P0 - VW Passat, OP Insignia, RE Talisman (Kar./Sedan, auto.)</fullName>
+                <default>false</default>
+                <label>P0 - VW Passat, OP Insignia, RE Talisman (Kar./Sedan, auto.)</label>
+            </value>
+            <value>
+                <fullName>P1 - VW Passat, OP Insignia, RE Talisman (Kar./Sedan, auto.)</fullName>
+                <default>false</default>
+                <label>P1 - VW Passat, OP Insignia, RE Talisman (Kar./Sedan, auto.)</label>
+            </value>
+            <value>
+                <fullName>Panel van</fullName>
+                <default>false</default>
+                <label>Panel van</label>
+            </value>
+            <value>
+                <fullName>PD</fullName>
+                <default>false</default>
+                <label>PD</label>
+            </value>
+            <value>
+                <fullName>Pickup</fullName>
+                <default>false</default>
+                <label>Pickup</label>
+            </value>
+            <value>
+                <fullName>Pick Up</fullName>
+                <default>false</default>
+                <label>Pick Up</label>
+            </value>
+            <value>
+                <fullName>Pick-up</fullName>
+                <default>false</default>
+                <label>Pick-up</label>
+            </value>
+            <value>
+                <fullName>Premium</fullName>
+                <default>false</default>
+                <label>Premium</label>
+            </value>
+            <value>
+                <fullName>P  ŠKODA Octavia STW, RENAULT Laguna STW, Mercedes B- AUT.</fullName>
+                <default>false</default>
+                <label>P  ŠKODA Octavia STW, RENAULT Laguna STW, Mercedes B- AUT.</label>
+            </value>
+            <value>
+                <fullName>S</fullName>
+                <default>false</default>
+                <label>S</label>
+            </value>
+            <value>
+                <fullName>S  AUDI A6, MERCEDES E-Class,… - AUT.</fullName>
+                <default>false</default>
+                <label>S  AUDI A6, MERCEDES E-Class,… - AUT.</label>
+            </value>
+            <value>
+                <fullName>SD</fullName>
+                <default>false</default>
+                <label>SD</label>
+            </value>
+            <value>
+                <fullName>Sedan</fullName>
+                <default>false</default>
+                <label>Sedan</label>
+            </value>
+            <value>
+                <fullName>Small AC</fullName>
+                <default>false</default>
+                <label>Small AC</label>
+            </value>
+            <value>
+                <fullName>Small car</fullName>
+                <default>false</default>
+                <label>Small car</label>
+            </value>
+            <value>
+                <fullName>Small diesel</fullName>
+                <default>false</default>
+                <label>Small diesel</label>
+            </value>
+            <value>
+                <fullName>Small petrol</fullName>
+                <default>false</default>
+                <label>Small petrol</label>
+            </value>
+            <value>
+                <fullName>Small van</fullName>
+                <default>false</default>
+                <label>Small van</label>
+            </value>
+            <value>
+                <fullName>SportsCar</fullName>
+                <default>false</default>
+                <label>SportsCar</label>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>SUV</fullName>
+                <default>false</default>
+                <label>SUV</label>
+            </value>
+            <value>
+                <fullName>SUV - L - 4x4 Luxe</fullName>
+                <default>false</default>
+                <label>SUV - L - 4x4 Luxe</label>
+            </value>
+            <value>
+                <fullName>SUV - MP - Medium Premium</fullName>
+                <default>false</default>
+                <label>SUV - MP - Medium Premium</label>
+            </value>
+            <value>
+                <fullName>SUV - M - SUV Medium</fullName>
+                <default>false</default>
+                <label>SUV - M - SUV Medium</label>
+            </value>
+            <value>
+                <fullName>SUV - S - SUV Small</fullName>
+                <default>false</default>
+                <label>SUV - S - SUV Small</label>
+            </value>
+            <value>
+                <fullName>SUV - XS - SUV Extra Small</fullName>
+                <default>false</default>
+                <label>SUV - XS - SUV Extra Small</label>
+            </value>
+            <value>
+                <fullName>Switch C</fullName>
+                <default>false</default>
+                <label>Switch C</label>
+            </value>
+            <value>
+                <fullName>Switch SUV</fullName>
+                <default>false</default>
+                <label>Switch SUV</label>
+            </value>
+            <value>
+                <fullName>T</fullName>
+                <default>false</default>
+                <label>T</label>
+            </value>
+            <value>
+                <fullName>T Citroen Jumper 2.8 HDI furgon or similar</fullName>
+                <default>false</default>
+                <label>T Citroen Jumper 2.8 HDI furgon or similar</label>
+            </value>
+            <value>
+                <fullName>TD</fullName>
+                <default>false</default>
+                <label>TD</label>
+            </value>
+            <value>
+                <fullName>T  FIAT Ducato VAN, RENAULT Master VAN, RENAULT Trafic VAN,...</fullName>
+                <default>false</default>
+                <label>T  FIAT Ducato VAN, RENAULT Master VAN, RENAULT Trafic VAN,...</label>
+            </value>
+            <value>
+                <fullName>T kat Ayvens - C Jumper furgon Van or similar</fullName>
+                <default>false</default>
+                <label>T kat Ayvens - C Jumper furgon Van or similar</label>
+            </value>
+            <value>
+                <fullName>Unidas-AT</fullName>
+                <default>false</default>
+                <label>Unidas-AT</label>
+            </value>
+            <value>
+                <fullName>Unidas-B</fullName>
+                <default>false</default>
+                <label>Unidas-B</label>
+            </value>
+            <value>
+                <fullName>Unidas-BL</fullName>
+                <default>false</default>
+                <label>Unidas-BL</label>
+            </value>
+            <value>
+                <fullName>Unidas-BS</fullName>
+                <default>false</default>
+                <label>Unidas-BS</label>
+            </value>
+            <value>
+                <fullName>Unidas-C</fullName>
+                <default>false</default>
+                <label>Unidas-C</label>
+            </value>
+            <value>
+                <fullName>Unidas-CA</fullName>
+                <default>false</default>
+                <label>Unidas-CA</label>
+            </value>
+            <value>
+                <fullName>Unidas-CG</fullName>
+                <default>false</default>
+                <label>Unidas-CG</label>
+            </value>
+            <value>
+                <fullName>Unidas-E</fullName>
+                <default>false</default>
+                <label>Unidas-E</label>
+            </value>
+            <value>
+                <fullName>Unidas-EA</fullName>
+                <default>false</default>
+                <label>Unidas-EA</label>
+            </value>
+            <value>
+                <fullName>Unidas-EE</fullName>
+                <default>false</default>
+                <label>Unidas-EE</label>
+            </value>
+            <value>
+                <fullName>Unidas-G1</fullName>
+                <default>false</default>
+                <label>Unidas-G1</label>
+            </value>
+            <value>
+                <fullName>Unidas-I</fullName>
+                <default>false</default>
+                <label>Unidas-I</label>
+            </value>
+            <value>
+                <fullName>Unidas-J</fullName>
+                <default>false</default>
+                <label>Unidas-J</label>
+            </value>
+            <value>
+                <fullName>Unidas-LX</fullName>
+                <default>false</default>
+                <label>Unidas-LX</label>
+            </value>
+            <value>
+                <fullName>Unidas-SG</fullName>
+                <default>false</default>
+                <label>Unidas-SG</label>
+            </value>
+            <value>
+                <fullName>Unidas-SM</fullName>
+                <default>false</default>
+                <label>Unidas-SM</label>
+            </value>
+            <value>
+                <fullName>Unidas-SP</fullName>
+                <default>false</default>
+                <label>Unidas-SP</label>
+            </value>
+            <value>
+                <fullName>Unidas-SU</fullName>
+                <default>false</default>
+                <label>Unidas-SU</label>
+            </value>
+            <value>
+                <fullName>Unidas-SV</fullName>
+                <default>false</default>
+                <label>Unidas-SV</label>
+            </value>
+            <value>
+                <fullName>Unidas-T</fullName>
+                <default>false</default>
+                <label>Unidas-T</label>
+            </value>
+            <value>
+                <fullName>Unidas-TS</fullName>
+                <default>false</default>
+                <label>Unidas-TS</label>
+            </value>
+            <value>
+                <fullName>Utilitario</fullName>
+                <default>false</default>
+                <label>Utilitario</label>
+            </value>
+            <value>
+                <fullName>Utilitario de Lujo</fullName>
+                <default>false</default>
+                <label>Utilitario de Lujo</label>
+            </value>
+            <value>
+                <fullName>V2</fullName>
+                <default>false</default>
+                <label>V2</label>
+            </value>
+            <value>
+                <fullName>V3</fullName>
+                <default>false</default>
+                <label>V3</label>
+            </value>
+            <value>
+                <fullName>V4</fullName>
+                <default>false</default>
+                <label>V4</label>
+            </value>
+            <value>
+                <fullName>VC</fullName>
+                <default>false</default>
+                <label>VC</label>
+            </value>
+            <value>
+                <fullName>Vh sedan economico AT</fullName>
+                <default>false</default>
+                <label>Vh sedan economico AT</label>
+            </value>
+            <value>
+                <fullName>Vh sedan economico MT</fullName>
+                <default>false</default>
+                <label>Vh sedan economico MT</label>
+            </value>
+            <value>
+                <fullName>Vh sedan intermedio AT</fullName>
+                <default>false</default>
+                <label>Vh sedan intermedio AT</label>
+            </value>
+            <value>
+                <fullName>Vh SUV pequeño MT</fullName>
+                <default>false</default>
+                <label>Vh SUV pequeño MT</label>
+            </value>
+            <value>
+                <fullName>VIP</fullName>
+                <default>false</default>
+                <label>VIP</label>
+            </value>
+            <value>
+                <fullName>W</fullName>
+                <default>false</default>
+                <label>W</label>
+            </value>
+            <value>
+                <fullName>WD</fullName>
+                <default>false</default>
+                <label>WD</label>
+            </value>
+            <value>
+                <fullName>Y</fullName>
+                <default>false</default>
+                <label>Y</label>
+            </value>
+            <value>
+                <fullName>YD</fullName>
+                <default>false</default>
+                <label>YD</label>
+            </value>
+            <value>
+                <fullName>Z</fullName>
+                <default>false</default>
+                <label>Z</label>
+            </value>
+            <value>
+                <fullName>Z1</fullName>
+                <default>false</default>
+                <label>Z1</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

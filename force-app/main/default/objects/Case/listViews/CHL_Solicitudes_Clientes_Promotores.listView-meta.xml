@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CHL_Solicitudes_Clientes_Promotores</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Client_number__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>notContain</operation>
+        <value>CHL - Trash</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notContain</operation>
+        <value>Cerrado</value>
+    </filters>
+    <filters>
+        <field>Client_number__c</field>
+        <operation>equals</operation>
+        <value>000926,000749,000942,002076,002072,002070,000803,000836,002192,001971,002105,000708,000755,000258,001105,002081,001895,000648,001447,001827,000429,000649</value>
+    </filters>
+    <label>CHL - Solicitudes Clientes Promotores</label>
+    <sharedTo>
+        <group>CHL_Comerciales</group>
+        <group>CHL_Management</group>
+    </sharedTo>
+</ListView>

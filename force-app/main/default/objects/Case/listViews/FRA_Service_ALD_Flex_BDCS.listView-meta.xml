@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Service_ALD_Flex_BDCS</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Followed_by__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>bon de commande signes,Bon de commande - LOCATION MOYENNE,RE-EMISSION Confirm</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>Email_to_Case_Sender_formula__c</field>
+        <operation>notContain</operation>
+        <value>@aldautomotive.com,@ayvens.com</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>FRA - ALD Flex reservation,FRA - BDCS Flex</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>FISSIROU,BERNIS,ABDENNOURI</value>
+    </filters>
+    <label>FRA - Service ALD Flex BDCS</label>
+    <sharedTo>
+        <role>France_DREP_Implement_Commerciale_Ventes</role>
+        <roleAndSubordinatesInternal>France_DRMC_Commerce_Flex_Resp</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DRMC_Services_Operation_Flex</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>France_DRMC_Services_Operations_Flex_Resp</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

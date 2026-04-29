@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Consultant_Description__c</fullName>
+    <label>Sales Consultant Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sales_Consultant_Detail__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open Dossier</fullName>
+                <default>false</default>
+                <label>Open Dossier</label>
+            </value>
+            <value>
+                <fullName>Completed Dossier</fullName>
+                <default>false</default>
+                <label>Completed Dossier</label>
+            </value>
+            <value>
+                <fullName>Follow up Dossier</fullName>
+                <default>false</default>
+                <label>Follow up Dossier</label>
+            </value>
+            <value>
+                <fullName>Code Vehicle Start Up</fullName>
+                <default>false</default>
+                <label>Code Vehicle Start Up</label>
+            </value>
+            <value>
+                <fullName>Standard Quote</fullName>
+                <default>false</default>
+                <label>Standard Quote</label>
+            </value>
+            <value>
+                <fullName>List Price Quote</fullName>
+                <default>false</default>
+                <label>List Price Quote</label>
+            </value>
+            <value>
+                <fullName>Speciale  Quote</fullName>
+                <default>false</default>
+                <label>Speciale  Quote</label>
+            </value>
+            <value>
+                <fullName>Follow up</fullName>
+                <default>false</default>
+                <label>Follow up</label>
+            </value>
+            <value>
+                <fullName>Bill Payment</fullName>
+                <default>false</default>
+                <label>Bill Payment</label>
+            </value>
+            <value>
+                <fullName>RID and SEPA</fullName>
+                <default>false</default>
+                <label>RID and SEPA</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Corporate Code</fullName>
+                <default>false</default>
+                <label>Corporate Code</label>
+            </value>
+            <value>
+                <fullName>FBP Code</fullName>
+                <default>false</default>
+                <label>FBP Code</label>
+            </value>
+            <value>
+                <fullName>Captive Code</fullName>
+                <default>false</default>
+                <label>Captive Code</label>
+            </value>
+            <value>
+                <fullName>Agent Code</fullName>
+                <default>false</default>
+                <label>Agent Code</label>
+            </value>
+            <value>
+                <fullName>Technical Code</fullName>
+                <default>false</default>
+                <label>Technical Code</label>
+            </value>
+            <value>
+                <fullName>District Code</fullName>
+                <default>false</default>
+                <label>District Code</label>
+            </value>
+            <value>
+                <fullName>Multibrand Code</fullName>
+                <default>false</default>
+                <label>Multibrand Code</label>
+            </value>
+            <value>
+                <fullName>Must Code</fullName>
+                <default>false</default>
+                <label>Must Code</label>
+            </value>
+            <value>
+                <fullName>Request of Info</fullName>
+                <default>false</default>
+                <label>Request of Info</label>
+            </value>
+            <value>
+                <fullName>DURC request</fullName>
+                <default>false</default>
+                <label>DURC request</label>
+            </value>
+            <value>
+                <fullName>Equal Dossier</fullName>
+                <default>false</default>
+                <label>Equal Dossier</label>
+            </value>
+            <value>
+                <fullName>Dossier Change</fullName>
+                <default>false</default>
+                <label>Dossier Change</label>
+            </value>
+            <value>
+                <fullName>New Model</fullName>
+                <default>false</default>
+                <label>New Model</label>
+            </value>
+            <value>
+                <fullName>Customer Code</fullName>
+                <default>false</default>
+                <label>Customer Code</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Order Hang</fullName>
+                <default>false</default>
+                <label>Order Hang</label>
+            </value>
+            <value>
+                <fullName>Trim</fullName>
+                <default>false</default>
+                <label>Trim</label>
+            </value>
+            <value>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+                <label>Delivery</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>Risk and Invoicing</fullName>
+                <default>false</default>
+                <label>Risk and Invoicing</label>
+            </value>
+            <value>
+                <fullName>Scrapping</fullName>
+                <default>false</default>
+                <label>Scrapping</label>
+            </value>
+            <value>
+                <fullName>Ordering</fullName>
+                <default>false</default>
+                <label>Ordering</label>
+            </value>
+            <value>
+                <fullName>Error</fullName>
+                <default>false</default>
+                <label>Error</label>
+            </value>
+            <value>
+                <fullName>Generic Request</fullName>
+                <default>false</default>
+                <label>Generic Request</label>
+            </value>
+            <value>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+                <label>Customer Service</label>
+            </value>
+            <value>
+                <fullName>Request</fullName>
+                <default>false</default>
+                <label>Request</label>
+            </value>
+            <value>
+                <fullName>Attached Bank Transfer</fullName>
+                <default>false</default>
+                <label>Attached Bank Transfer</label>
+            </value>
+            <value>
+                <fullName>IP Request</fullName>
+                <default>false</default>
+                <label>IP Request</label>
+            </value>
+            <value>
+                <fullName>License Request</fullName>
+                <default>false</default>
+                <label>License Request</label>
+            </value>
+            <value>
+                <fullName>Code view</fullName>
+                <default>false</default>
+                <label>Code view</label>
+            </value>
+            <value>
+                <fullName>Staff Member</fullName>
+                <default>false</default>
+                <label>Staff Member</label>
+            </value>
+            <value>
+                <fullName>Upload</fullName>
+                <default>false</default>
+                <label>Upload</label>
+            </value>
+            <value>
+                <fullName>Ner Partner</fullName>
+                <default>false</default>
+                <label>Ner Partner</label>
+            </value>
+            <value>
+                <fullName>Rappel</fullName>
+                <default>false</default>
+                <label>Rappel</label>
+            </value>
+            <value>
+                <fullName>New Report</fullName>
+                <default>false</default>
+                <label>New Report</label>
+            </value>
+            <value>
+                <fullName>Vehicle Code Start Up</fullName>
+                <default>false</default>
+                <label>Vehicle Code Start Up</label>
+            </value>
+            <value>
+                <fullName>Special  Quote</fullName>
+                <default>false</default>
+                <label>Special  Quote</label>
+            </value>
+            <value>
+                <fullName>Service Change</fullName>
+                <default>false</default>
+                <label>Service Change</label>
+            </value>
+            <value>
+                <fullName>Duration/KM</fullName>
+                <default>false</default>
+                <label>Duration/KM</label>
+            </value>
+            <value>
+                <fullName>Tyre Number</fullName>
+                <default>false</default>
+                <label>Tyre Number</label>
+            </value>
+            <value>
+                <fullName>Ratification</fullName>
+                <default>false</default>
+                <label>Ratification</label>
+            </value>
+            <value>
+                <fullName>After Market Accessories</fullName>
+                <default>false</default>
+                <label>After Market Accessories</label>
+            </value>
+            <value>
+                <fullName>After Market Accessories (ratification)</fullName>
+                <default>false</default>
+                <label>After Market Accessories (ratification)</label>
+            </value>
+            <value>
+                <fullName>Iscrizione/Modifica FM</fullName>
+                <default>false</default>
+                <label>Iscrizione/Modifica FM</label>
+            </value>
+            <value>
+                <fullName>Iscrizione Driver</fullName>
+                <default>false</default>
+                <label>Iscrizione Driver</label>
+            </value>
+            <value>
+                <fullName>Ricaricar</fullName>
+                <default>false</default>
+                <label>Ricaricar</label>
+            </value>
+            <value>
+                <fullName>Associazione Targa-Driver</fullName>
+                <default>false</default>
+                <label>Associazione Targa-Driver</label>
+            </value>
+            <value>
+                <fullName>Rettifica chilometri</fullName>
+                <default>false</default>
+                <label>Rettifica chilometri</label>
+            </value>
+            <value>
+                <fullName>Varie</fullName>
+                <default>false</default>
+                <label>Varie</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Change Agenti</controllingFieldValue>
+            <controllingFieldValue>Change Stategic</controllingFieldValue>
+            <controllingFieldValue>Change Dealer Captive</controllingFieldValue>
+            <controllingFieldValue>Change Dealer Service</controllingFieldValue>
+            <controllingFieldValue>Change Dealer FBP</controllingFieldValue>
+            <controllingFieldValue>Partner Change</controllingFieldValue>
+            <controllingFieldValue>Change Consumer Sales RM</controllingFieldValue>
+            <controllingFieldValue>Corporate Change RM Large</controllingFieldValue>
+            <controllingFieldValue>Corporate Change PA</controllingFieldValue>
+            <controllingFieldValue>Change Consumer Sales MI</controllingFieldValue>
+            <controllingFieldValue>Corporate Change RM Small</controllingFieldValue>
+            <controllingFieldValue>Corporate Change MI</controllingFieldValue>
+            <valueName>Service Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Agenti</controllingFieldValue>
+            <controllingFieldValue>Change Stategic</controllingFieldValue>
+            <controllingFieldValue>Change Dealer Captive</controllingFieldValue>
+            <controllingFieldValue>Change Dealer Service</controllingFieldValue>
+            <controllingFieldValue>Change Dealer FBP</controllingFieldValue>
+            <controllingFieldValue>Partner Change</controllingFieldValue>
+            <controllingFieldValue>Change Consumer Sales RM</controllingFieldValue>
+            <controllingFieldValue>Corporate Change RM Large</controllingFieldValue>
+            <controllingFieldValue>Corporate Change PA</controllingFieldValue>
+            <controllingFieldValue>Change Consumer Sales MI</controllingFieldValue>
+            <controllingFieldValue>Corporate Change RM Small</controllingFieldValue>
+            <controllingFieldValue>Corporate Change MI</controllingFieldValue>
+            <valueName>Duration/KM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Agenti</controllingFieldValue>
+            <controllingFieldValue>Change Stategic</controllingFieldValue>
+            <controllingFieldValue>Change Dealer Captive</controllingFieldValue>
+            <controllingFieldValue>Change Dealer Service</controllingFieldValue>
+            <controllingFieldValue>Change Dealer FBP</controllingFieldValue>
+            <controllingFieldValue>Partner Change</controllingFieldValue>
+            <controllingFieldValue>Change Consumer Sales RM</controllingFieldValue>
+            <controllingFieldValue>Corporate Change RM Large</controllingFieldValue>
+            <controllingFieldValue>Corporate Change PA</controllingFieldValue>
+            <controllingFieldValue>Change Consumer Sales MI</controllingFieldValue>
+            <controllingFieldValue>Corporate Change RM Small</controllingFieldValue>
+            <controllingFieldValue>Corporate Change MI</controllingFieldValue>
+            <valueName>Tyre Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Agenti</controllingFieldValue>
+            <controllingFieldValue>Change Stategic</controllingFieldValue>
+            <controllingFieldValue>Change Dealer Captive</controllingFieldValue>
+            <controllingFieldValue>Change Dealer Service</controllingFieldValue>
+            <controllingFieldValue>Change Dealer FBP</controllingFieldValue>
+            <controllingFieldValue>Partner Change</controllingFieldValue>
+            <controllingFieldValue>Corporate Change RM Large</controllingFieldValue>
+            <controllingFieldValue>Corporate Change PA</controllingFieldValue>
+            <controllingFieldValue>Corporate Change RM Small</controllingFieldValue>
+            <controllingFieldValue>Corporate Change MI</controllingFieldValue>
+            <valueName>Ratification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Agenti</controllingFieldValue>
+            <controllingFieldValue>Change Stategic</controllingFieldValue>
+            <controllingFieldValue>Change Dealer Captive</controllingFieldValue>
+            <controllingFieldValue>Change Dealer Service</controllingFieldValue>
+            <controllingFieldValue>Change Dealer FBP</controllingFieldValue>
+            <controllingFieldValue>Partner Change</controllingFieldValue>
+            <controllingFieldValue>Change Consumer Sales RM</controllingFieldValue>
+            <controllingFieldValue>Corporate Change RM Large</controllingFieldValue>
+            <controllingFieldValue>Corporate Change PA</controllingFieldValue>
+            <controllingFieldValue>Change Consumer Sales MI</controllingFieldValue>
+            <controllingFieldValue>Corporate Change RM Small</controllingFieldValue>
+            <controllingFieldValue>Corporate Change MI</controllingFieldValue>
+            <valueName>After Market Accessories</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change Agenti</controllingFieldValue>
+            <controllingFieldValue>Change Stategic</controllingFieldValue>
+            <controllingFieldValue>Change Dealer Captive</controllingFieldValue>
+            <controllingFieldValue>Change Dealer Service</controllingFieldValue>
+            <controllingFieldValue>Change Dealer FBP</controllingFieldValue>
+            <controllingFieldValue>Partner Change</controllingFieldValue>
+            <controllingFieldValue>Change Consumer Sales RM</controllingFieldValue>
+            <controllingFieldValue>Corporate Change RM Large</controllingFieldValue>
+            <controllingFieldValue>Corporate Change PA</controllingFieldValue>
+            <controllingFieldValue>Change Consumer Sales MI</controllingFieldValue>
+            <controllingFieldValue>Corporate Change RM Small</controllingFieldValue>
+            <controllingFieldValue>Corporate Change MI</controllingFieldValue>
+            <valueName>After Market Accessories (ratification)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit Process</controllingFieldValue>
+            <valueName>Customer Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Document PA</controllingFieldValue>
+            <controllingFieldValue>Document</controllingFieldValue>
+            <valueName>DURC request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <valueName>Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Document SM</controllingFieldValue>
+            <controllingFieldValue>Document LG</controllingFieldValue>
+            <controllingFieldValue>Document</controllingFieldValue>
+            <valueName>Customer Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Document SM</controllingFieldValue>
+            <controllingFieldValue>Document LG</controllingFieldValue>
+            <controllingFieldValue>Document</controllingFieldValue>
+            <valueName>Attached Bank Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Hang</controllingFieldValue>
+            <valueName>Order Hang</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Document Adm</controllingFieldValue>
+            <controllingFieldValue>Information SM</controllingFieldValue>
+            <controllingFieldValue>Information LG</controllingFieldValue>
+            <controllingFieldValue>Information</controllingFieldValue>
+            <controllingFieldValue>Salesforce</controllingFieldValue>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <controllingFieldValue>Document</controllingFieldValue>
+            <controllingFieldValue>Salesforce Adm</controllingFieldValue>
+            <controllingFieldValue>PQ Adm</controllingFieldValue>
+            <valueName>Generic Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Document Adm</controllingFieldValue>
+            <controllingFieldValue>Document</controllingFieldValue>
+            <valueName>Ner Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Document Adm</controllingFieldValue>
+            <controllingFieldValue>Document</controllingFieldValue>
+            <valueName>Rappel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote trim</controllingFieldValue>
+            <valueName>Trim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PA Support</controllingFieldValue>
+            <controllingFieldValue>Information</controllingFieldValue>
+            <valueName>Delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PA Support</controllingFieldValue>
+            <valueName>Legal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PA Support</controllingFieldValue>
+            <valueName>IT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PA Support</controllingFieldValue>
+            <valueName>Risk and Invoicing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PA Support</controllingFieldValue>
+            <valueName>Scrapping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PA Support</controllingFieldValue>
+            <valueName>Ordering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Request</controllingFieldValue>
+            <valueName>Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quotation SM</controllingFieldValue>
+            <controllingFieldValue>Quotation LG</controllingFieldValue>
+            <valueName>Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salesforce</controllingFieldValue>
+            <valueName>IP Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salesforce</controllingFieldValue>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>License Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salesforce</controllingFieldValue>
+            <valueName>Code view</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>Staff Member</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>Upload</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Report</controllingFieldValue>
+            <valueName>New Report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Document management</controllingFieldValue>
+            <valueName>Open Dossier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Document management</controllingFieldValue>
+            <valueName>Completed Dossier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Document management</controllingFieldValue>
+            <valueName>Follow up Dossier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quotation</controllingFieldValue>
+            <valueName>Code Vehicle Start Up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quotation</controllingFieldValue>
+            <valueName>Standard Quote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quotation</controllingFieldValue>
+            <valueName>List Price Quote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quotation</controllingFieldValue>
+            <valueName>Speciale  Quote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contract Modification</controllingFieldValue>
+            <controllingFieldValue>Contract Transfer</controllingFieldValue>
+            <valueName>Follow up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Info</controllingFieldValue>
+            <valueName>Bill Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Info</controllingFieldValue>
+            <valueName>RID and SEPA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Info</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Copy code contract transfer</controllingFieldValue>
+            <valueName>Corporate Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Copy code contract transfer</controllingFieldValue>
+            <valueName>FBP Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Copy code contract transfer</controllingFieldValue>
+            <valueName>Captive Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Copy code contract transfer</controllingFieldValue>
+            <valueName>Agent Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Copy code contract transfer</controllingFieldValue>
+            <valueName>Technical Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Copy code contract transfer</controllingFieldValue>
+            <valueName>District Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Copy code contract transfer</controllingFieldValue>
+            <valueName>Multibrand Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Copy code contract transfer</controllingFieldValue>
+            <valueName>Must Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support</controllingFieldValue>
+            <valueName>Request of Info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Prototype</controllingFieldValue>
+            <valueName>Equal Dossier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Prototype</controllingFieldValue>
+            <valueName>Dossier Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Prototype</controllingFieldValue>
+            <valueName>New Model</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Richiesta al Fornitore</controllingFieldValue>
+            <valueName>Iscrizione/Modifica FM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Richiesta al Fornitore</controllingFieldValue>
+            <valueName>Iscrizione Driver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Richiesta al Fornitore</controllingFieldValue>
+            <valueName>Ricaricar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Richiesta al Fornitore</controllingFieldValue>
+            <valueName>Associazione Targa-Driver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Richiesta al Fornitore</controllingFieldValue>
+            <valueName>Rettifica chilometri</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Richiesta al Fornitore</controllingFieldValue>
+            <valueName>Varie</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

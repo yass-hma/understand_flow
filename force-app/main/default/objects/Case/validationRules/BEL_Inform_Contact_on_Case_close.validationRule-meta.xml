@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BEL_Inform_Contact_on_Case_close</fullName>
+    <active>true</active>
+    <description>Display error if Language  field is blank and Inform Contact on Case closed checkbox is active.</description>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c ),
+RecordType.Name = &apos;Case External Belgium&apos; ,NOT(CONTAINS($Label.ALDSATRecordTypeIds,RecordType.DeveloperName)),
+Language__c = Null,
+Inform_Contact_On_Case_Closed__c = True 
+)</errorConditionFormula>
+    <errorMessage>“Warning – No email notification was sent to the contact as the Contact Language is unknown. Please uncheck the check box  ‘inform contact on case close’ to Save this case without notification”</errorMessage>
+</ValidationRule>

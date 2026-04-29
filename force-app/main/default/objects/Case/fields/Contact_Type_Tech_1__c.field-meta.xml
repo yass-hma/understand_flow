@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Type_Tech_1__c</fullName>
+    <description>This field is created as part of the BR-4413 to store some of the contact types to display on the field contact type</description>
+    <externalId>false</externalId>
+    <formula>IF ( INCLUDES ( Contact.Type__c , &quot;APP-Apporteur d&apos;affaire&quot; ), &quot;APP-Apporteur d&apos;affaire; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;BROKER&quot; ), &quot;BROKER; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;DAILY CONTACT&quot; ), &quot;DAILY CONTACT; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;Dealer Principle&quot; ), &quot;Dealer Principle; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;DECISION MAKER&quot; ), &quot;DECISION MAKER; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;DRIVER&quot; ), &quot;DRIVER; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;EXTERNAL PARTNER&quot; ), &quot;EXTERNAL PARTNER; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;Insurance broker representative&quot; ), &quot;Insurance broker representative; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;Insurance company representative&quot; ), &quot;Insurance company representative; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;Insurance contact&quot; ), &quot;Insurance contact; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;Internal sponsor&quot; ), &quot;Internal sponsor; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;Owner&quot; ), &quot;Owner; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;Partner&quot; ), &quot;Partner; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;Primary Decision Maker&quot; ), &quot;Primary Decision Maker; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;Sales manager&quot; ), &quot;Sales manager; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;Secondary Decision Maker&quot; ), &quot;Secondary Decision Maker; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;Stakeholder&quot; ), &quot;Stakeholder; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;Temp. Driver&quot; ), &quot;Temp. Driver; &quot;,null )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Contact Type - Tech 1</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

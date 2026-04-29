@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRA_Rent_a_Car</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.MILESTONE_STATUSICON</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Total_Time_Remaining__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>BRA - Rent a Car</label>
+    <language>en_US</language>
+    <queue>BRA_Rent_a_Car</queue>
+    <sharedTo>
+        <group>BRA_Gest_o_de_produtos</group>
+        <group>BRA_Gestao_de_produtos</group>
+        <group>BRA_Relief_car</group>
+        <group>BRA_Relief_car_approval</group>
+        <group>BRA_Rent_a_Car</group>
+        <role>BRA_Back_Office</role>
+    </sharedTo>
+</ListView>

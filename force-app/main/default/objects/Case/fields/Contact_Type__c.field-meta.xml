@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( INCLUDES ( Contact.Type__c , &quot;001 - Decision Maker&quot; ), &quot;001 - Decision Maker; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;002 - Stakeholder&quot; ), &quot;002 - Stakeholder; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;010 - Fleet Administrator&quot; ), &quot;010 - Fleet Administrator; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;01 - Fleet Manager&quot; ), &quot;01 - Fleet Manager; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;03 - Driver&quot; ), &quot;03 - Driver; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;02 - Contact Person&quot; ), &quot;02 - Contact Person; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;04 - Administrative Contact&quot; ), &quot;04 - Administrative Contact; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;04 - Other&quot; ), &quot;04 - Other; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;05 - CFO&quot; ), &quot;05 - CFO; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;05 - Fleet and Administrative Manager&quot; ), &quot;05 - Fleet and Administrative Manager; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;05 - Operational Contact&quot; ), &quot;05 - Operational Contact; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;06 - Debt collection agency&quot; ), &quot;06 - Debt collection agency; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;06 - Payment Authorizer&quot; ), &quot;06 - Payment Authorizer; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;07 - Partner&quot; ), &quot;07 - Partner; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;07 - Technical Buyer / coach / influencer&quot; ), &quot;07 - Technical Buyer / coach / influencer; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;08 - Unknown&quot; ), &quot;08 - Unknown; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;09 - Conducente VIP&quot; ), &quot;09 - Conducente VIP; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;09 - Left Company&quot; ), &quot;09 - Left Company; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;09 - Third Party&quot; ), &quot;09 - Third Party; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;10 - CEO&quot; ), &quot;10 - CEO; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;11 - Purchase Manager&quot; ), &quot;10 - CEO; &quot;,null ) &amp;
+IF ( INCLUDES ( Contact.Type__c , &quot;12 - Accounting&quot; ), &quot;12 - Accounting; &quot;,null ) &amp;
+ Contact_Type_Tech_1__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Contact Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

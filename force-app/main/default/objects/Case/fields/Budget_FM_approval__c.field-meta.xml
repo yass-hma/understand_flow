@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_FM_approval__c</fullName>
+    <description>The date when the FM Answers on budget.
+This allows the maintenance team to know if this field is filled means that they have received the answer of the FM and that they have to check it 
+Also it will help us to track the KPI&apos;s and SLA&apos;s to measure th FM answer</description>
+    <label>FM Answer</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

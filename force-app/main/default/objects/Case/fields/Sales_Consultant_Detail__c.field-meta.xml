@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Consultant_Detail__c</fullName>
+    <label>Sales Consultant Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sales_Consultant_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Document management</fullName>
+                <default>false</default>
+                <label>Document management</label>
+            </value>
+            <value>
+                <fullName>Quotation</fullName>
+                <default>false</default>
+                <label>Quotation</label>
+            </value>
+            <value>
+                <fullName>Contract Modification</fullName>
+                <default>false</default>
+                <label>Contract Modification</label>
+            </value>
+            <value>
+                <fullName>Contract Transfer</fullName>
+                <default>false</default>
+                <label>Contract Transfer</label>
+            </value>
+            <value>
+                <fullName>Info</fullName>
+                <default>false</default>
+                <label>Info</label>
+            </value>
+            <value>
+                <fullName>Copy code contract transfer</fullName>
+                <default>false</default>
+                <label>Copy code contract transfer</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>Document</fullName>
+                <default>false</default>
+                <label>Document</label>
+            </value>
+            <value>
+                <fullName>New Prototype</fullName>
+                <default>false</default>
+                <label>New Prototype</label>
+            </value>
+            <value>
+                <fullName>Credit Process</fullName>
+                <default>false</default>
+                <label>Credit Process</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Order Hang</fullName>
+                <default>false</default>
+                <label>Order Hang</label>
+            </value>
+            <value>
+                <fullName>Quote trim</fullName>
+                <default>false</default>
+                <label>Quote trim</label>
+            </value>
+            <value>
+                <fullName>PA Support</fullName>
+                <default>false</default>
+                <label>PA Support</label>
+            </value>
+            <value>
+                <fullName>Request</fullName>
+                <default>false</default>
+                <label>Request</label>
+            </value>
+            <value>
+                <fullName>Information</fullName>
+                <default>false</default>
+                <label>Information</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>PQ</fullName>
+                <default>false</default>
+                <label>PQ</label>
+            </value>
+            <value>
+                <fullName>Report</fullName>
+                <default>false</default>
+                <label>Report</label>
+            </value>
+            <value>
+                <fullName>Corporate Change RM Small</fullName>
+                <default>false</default>
+                <label>Corporate Change RM Small</label>
+            </value>
+            <value>
+                <fullName>Corporate Change MI</fullName>
+                <default>false</default>
+                <label>Corporate Change MI</label>
+            </value>
+            <value>
+                <fullName>Change Agenti</fullName>
+                <default>false</default>
+                <label>Change Agenti</label>
+            </value>
+            <value>
+                <fullName>Change Stategic</fullName>
+                <default>false</default>
+                <label>Change Stategic</label>
+            </value>
+            <value>
+                <fullName>Change Dealer Captive</fullName>
+                <default>false</default>
+                <label>Change Dealer Captive</label>
+            </value>
+            <value>
+                <fullName>Change Dealer Service</fullName>
+                <default>false</default>
+                <label>Change Dealer Service</label>
+            </value>
+            <value>
+                <fullName>Change Dealer FBP</fullName>
+                <default>false</default>
+                <label>Change Dealer FBP</label>
+            </value>
+            <value>
+                <fullName>Partner Change</fullName>
+                <default>false</default>
+                <label>Partner Change</label>
+            </value>
+            <value>
+                <fullName>Change Consumer Sales RM</fullName>
+                <default>false</default>
+                <label>Change Consumer Sales RM</label>
+            </value>
+            <value>
+                <fullName>Corporate Change RM Large</fullName>
+                <default>false</default>
+                <label>Corporate Change RM Large</label>
+            </value>
+            <value>
+                <fullName>Corporate Change PA</fullName>
+                <default>false</default>
+                <label>Corporate Change PA</label>
+            </value>
+            <value>
+                <fullName>Change Consumer Sales MI</fullName>
+                <default>false</default>
+                <label>Change Consumer Sales MI</label>
+            </value>
+            <value>
+                <fullName>Document PA</fullName>
+                <default>false</default>
+                <label>Document PA</label>
+            </value>
+            <value>
+                <fullName>Document SM</fullName>
+                <default>false</default>
+                <label>Document SM</label>
+            </value>
+            <value>
+                <fullName>Document Adm</fullName>
+                <default>false</default>
+                <label>Document Adm</label>
+            </value>
+            <value>
+                <fullName>Document LG</fullName>
+                <default>false</default>
+                <label>Document LG</label>
+            </value>
+            <value>
+                <fullName>Information SM</fullName>
+                <default>false</default>
+                <label>Information SM</label>
+            </value>
+            <value>
+                <fullName>Information LG</fullName>
+                <default>false</default>
+                <label>Information LG</label>
+            </value>
+            <value>
+                <fullName>Quotation SM</fullName>
+                <default>false</default>
+                <label>Quotation SM</label>
+            </value>
+            <value>
+                <fullName>Quotation LG</fullName>
+                <default>false</default>
+                <label>Quotation LG</label>
+            </value>
+            <value>
+                <fullName>Salesforce Adm</fullName>
+                <default>false</default>
+                <label>Salesforce Adm</label>
+            </value>
+            <value>
+                <fullName>PQ Adm</fullName>
+                <default>false</default>
+                <label>PQ Adm</label>
+            </value>
+            <value>
+                <fullName>Richiesta al Fornitore</fullName>
+                <default>false</default>
+                <label>Richiesta al Fornitore</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>SALES CONSULTANT CHANGE</controllingFieldValue>
+            <valueName>Corporate Change RM Small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALES CONSULTANT CHANGE</controllingFieldValue>
+            <valueName>Corporate Change MI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALES CONSULTANT CHANGE</controllingFieldValue>
+            <valueName>Change Agenti</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALES CONSULTANT CHANGE</controllingFieldValue>
+            <valueName>Change Stategic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALES CONSULTANT CHANGE</controllingFieldValue>
+            <valueName>Change Dealer Captive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALES CONSULTANT CHANGE</controllingFieldValue>
+            <valueName>Change Dealer Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALES CONSULTANT CHANGE</controllingFieldValue>
+            <valueName>Change Dealer FBP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALES CONSULTANT CHANGE</controllingFieldValue>
+            <valueName>Partner Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALES CONSULTANT CHANGE</controllingFieldValue>
+            <valueName>Change Consumer Sales RM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALES CONSULTANT CHANGE</controllingFieldValue>
+            <valueName>Corporate Change RM Large</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALES CONSULTANT CHANGE</controllingFieldValue>
+            <valueName>Corporate Change PA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALES CONSULTANT CHANGE</controllingFieldValue>
+            <valueName>Change Consumer Sales MI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CAPTIVE</controllingFieldValue>
+            <controllingFieldValue>DEALER SERVICE</controllingFieldValue>
+            <controllingFieldValue>FBP</controllingFieldValue>
+            <controllingFieldValue>PARTNER CONSULTANT</controllingFieldValue>
+            <controllingFieldValue>AGENT CONSULTANT</controllingFieldValue>
+            <valueName>Document management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CAPTIVE</controllingFieldValue>
+            <controllingFieldValue>DEALER SERVICE</controllingFieldValue>
+            <controllingFieldValue>FBP</controllingFieldValue>
+            <controllingFieldValue>PARTNER CONSULTANT</controllingFieldValue>
+            <controllingFieldValue>AGENT CONSULTANT</controllingFieldValue>
+            <valueName>Quotation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CAPTIVE</controllingFieldValue>
+            <controllingFieldValue>DEALER SERVICE</controllingFieldValue>
+            <controllingFieldValue>FBP</controllingFieldValue>
+            <controllingFieldValue>PARTNER CONSULTANT</controllingFieldValue>
+            <controllingFieldValue>AGENT CONSULTANT</controllingFieldValue>
+            <valueName>Contract Modification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CAPTIVE</controllingFieldValue>
+            <controllingFieldValue>DEALER SERVICE</controllingFieldValue>
+            <controllingFieldValue>FBP</controllingFieldValue>
+            <controllingFieldValue>PARTNER CONSULTANT</controllingFieldValue>
+            <controllingFieldValue>AGENT CONSULTANT</controllingFieldValue>
+            <valueName>Contract Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CAPTIVE</controllingFieldValue>
+            <controllingFieldValue>DEALER SERVICE</controllingFieldValue>
+            <controllingFieldValue>FBP</controllingFieldValue>
+            <controllingFieldValue>PARTNER CONSULTANT</controllingFieldValue>
+            <controllingFieldValue>AGENT CONSULTANT</controllingFieldValue>
+            <valueName>Info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fornitore</controllingFieldValue>
+            <valueName>Richiesta al Fornitore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OVERLAP CODE</controllingFieldValue>
+            <valueName>Copy code contract transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT PA</controllingFieldValue>
+            <valueName>Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT PA</controllingFieldValue>
+            <valueName>New Prototype</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT PA</controllingFieldValue>
+            <valueName>Credit Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT PA</controllingFieldValue>
+            <valueName>Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT PA</controllingFieldValue>
+            <valueName>Order Hang</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT PA</controllingFieldValue>
+            <valueName>Quote trim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT PA</controllingFieldValue>
+            <valueName>PA Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT PA</controllingFieldValue>
+            <valueName>Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT PA</controllingFieldValue>
+            <valueName>Document PA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT ROMA SMALL</controllingFieldValue>
+            <valueName>Document SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT ROMA SMALL</controllingFieldValue>
+            <valueName>Information SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT ROMA SMALL</controllingFieldValue>
+            <valueName>Quotation SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT ROMA LARGE</controllingFieldValue>
+            <valueName>Document LG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT ROMA LARGE</controllingFieldValue>
+            <valueName>Information LG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CONSULTANT ROMA LARGE</controllingFieldValue>
+            <valueName>Quotation LG</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

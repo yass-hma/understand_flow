@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution__c</fullName>
+    <inlineHelpText>What kind of action was or will be taken to solve this kind of situation ? Insert &quot;No action&quot; if not applicable</inlineHelpText>
+    <label>Internal Corrective action</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No action</fullName>
+                <default>false</default>
+                <label>No action</label>
+            </value>
+            <value>
+                <fullName>Adaptation of existing process / IT infrastructure</fullName>
+                <default>false</default>
+                <label>Adaptation of existing process / IT infrastructure</label>
+            </value>
+            <value>
+                <fullName>Implementation of a new process</fullName>
+                <default>false</default>
+                <label>Implementation of a new process</label>
+            </value>
+            <value>
+                <fullName>Training (internal staff and suppliers)</fullName>
+                <default>false</default>
+                <label>Training (internal staff and suppliers)</label>
+            </value>
+            <value>
+                <fullName>Expansion of resources</fullName>
+                <default>false</default>
+                <label>Expansion of resources</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Informed</fullName>
+                <default>false</default>
+                <label>Informed</label>
+            </value>
+            <value>
+                <fullName>Unjustified request</fullName>
+                <default>false</default>
+                <label>Unjustified request</label>
+            </value>
+            <value>
+                <fullName>Agreement</fullName>
+                <default>false</default>
+                <label>Agreement</label>
+            </value>
+            <value>
+                <fullName>Adaptation process/IT infrastructure</fullName>
+                <default>false</default>
+                <label>Adaptation process/IT infrastructure</label>
+            </value>
+            <value>
+                <fullName>REVERSAL FOR INVESTMENT</fullName>
+                <default>false</default>
+                <label>REVERSAL FOR INVESTMENT</label>
+            </value>
+            <value>
+                <fullName>CANCELLATION FOR INEFFICIENCY</fullName>
+                <default>false</default>
+                <label>CANCELLATION FOR INEFFICIENCY</label>
+            </value>
+            <value>
+                <fullName>CANCELLATION DUE TO INCORRECT INFORMATION</fullName>
+                <default>false</default>
+                <label>CANCELLATION DUE TO INCORRECT INFORMATION</label>
+            </value>
+            <value>
+                <fullName>PROCEDURAL INFORMATION/CLARIFICATIONS</fullName>
+                <default>false</default>
+                <label>PROCEDURAL INFORMATION/CLARIFICATIONS</label>
+            </value>
+            <value>
+                <fullName>Upgrade/offering of additional services</fullName>
+                <default>false</default>
+                <label>Upgrade/offering of additional services</label>
+            </value>
+            <value>
+                <fullName>Other caring actions (gifts)</fullName>
+                <default>false</default>
+                <label>Other caring actions (gifts)</label>
+            </value>
+            <value>
+                <fullName>Action Plan</fullName>
+                <default>false</default>
+                <label>Action Plan</label>
+            </value>
+            <value>
+                <fullName>Ecalated to Legal</fullName>
+                <default>false</default>
+                <label>Ecalated to Legal</label>
+            </value>
+            <value>
+                <fullName>Policy clarification</fullName>
+                <default>false</default>
+                <label>Policy clarification</label>
+            </value>
+            <value>
+                <fullName>Process Improvement</fullName>
+                <default>false</default>
+                <label>Process Improvement</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bestellung_Status_OFFEN_Team_Airport</fullName>
+    <booleanFilter>(1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7) OR (1 AND 2 AND 3  AND 8)</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>External_Case_Detail__c</columns>
+    <columns>NAME</columns>
+    <columns>Email_Sender__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE</columns>
+    <columns>CASES.MILESTONE_TIMER</columns>
+    <columns>Email_Status__c</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Deleted</value>
+    </filters>
+    <filters>
+        <field>Subsidiary_Indicator__c</field>
+        <operation>equals</operation>
+        <value>27604</value>
+    </filters>
+    <filters>
+        <field>Account_Local_ID__c</field>
+        <operation>equals</operation>
+        <value>434,410,674,369,666,357,443,680,691,468,461,530,675,367,334,255,549,683,373,522,291,330,162,622,424,662,442,234,698,567,570,397,700,606,594,526,610,236,693,450,354,260,480,495</value>
+    </filters>
+    <filters>
+        <field>External_Case_Category__c</field>
+        <operation>equals</operation>
+        <value>Order</value>
+    </filters>
+    <filters>
+        <field>VIPContact__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>External_Case_Detail__c</field>
+        <operation>notEqual</operation>
+        <value>Delivery,Registration</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>notContain</operation>
+        <value>DECPM – Vertragsmanagement,DECPM – Schaden &amp; Versicherung,DECPM – Logistik &amp; Mobilitätsservice,DECPM – Abrechnung / Buchhaltung,DECPM – KB FL,DECPM – NB FL,DECPM - CaseToAssign</value>
+    </filters>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>DECPM – Bestellung</value>
+    </filters>
+    <label>DECPM - Fleet Supply Team Airport</label>
+    <sharedTo>
+        <group>DECPM_Customer_Care</group>
+    </sharedTo>
+</ListView>

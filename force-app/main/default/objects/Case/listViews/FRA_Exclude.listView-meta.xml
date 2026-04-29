@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_Exclude</fullName>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Queue</filterScope>
+    <label>FRA - Exclude</label>
+    <queue>FRAExclude</queue>
+    <sharedTo>
+        <role>France_DSOP_Rel_Client_Niv_2_GRP_1_Resp</role>
+        <role>SystemAdministrator</role>
+        <roleAndSubordinates>France_DSOP_Rel_Client_Niv_2_GRP_2_Resp</roleAndSubordinates>
+        <roleAndSubordinates>France_DSOP_Rel_Client_Niv_2_GRP_3</roleAndSubordinates>
+        <roleAndSubordinates>France_DSOP_Rel_Client_Niv_2_GRP_3_Resp</roleAndSubordinates>
+        <roleAndSubordinatesInternal>France_Global_CM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

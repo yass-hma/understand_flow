@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Veredict__c</fullName>
+    <description>Reviewed in June 2020. Reviewed during CCCM</description>
+    <label>Veredict</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Total Loss by theft</fullName>
+                <default>false</default>
+                <label>Total Loss by theft</label>
+            </value>
+            <value>
+                <fullName>Recovered</fullName>
+                <default>false</default>
+                <label>Recovered</label>
+            </value>
+            <value>
+                <fullName>Recovered - Valuation</fullName>
+                <default>false</default>
+                <label>Recovered - Valuation</label>
+            </value>
+            <value>
+                <fullName>Total lost by Accident</fullName>
+                <default>false</default>
+                <label>Total lost by Accident</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

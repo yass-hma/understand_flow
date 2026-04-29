@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quad_1_2_3__c</fullName>
+    <description>Shows the quad (first, second or third) based on the case date opened.</description>
+    <externalId>false</externalId>
+    <formula>CASE( 
+MONTH(DATEVALUE( CreatedDate )), 
+1, 1, 
+2, 1, 
+3, 1, 
+4, 1, 
+5, 2, 
+6, 2, 
+7, 2, 
+8, 2, 
+3 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>First, second or third quad depending on case opening date.</inlineHelpText>
+    <label>Quad (1/2/3)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

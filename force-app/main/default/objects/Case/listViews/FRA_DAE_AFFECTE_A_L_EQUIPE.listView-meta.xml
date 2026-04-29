@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FRA_DAE_AFFECTE_A_L_EQUIPE</fullName>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Followed_by__c</columns>
+    <columns>External_Case_Category__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>Contract__c</columns>
+    <columns>Emailtocasereceiver_FormulaField__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Terminé,Closed without action plan,Canceled</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>rclai,fgicq,sbouz,hjala,ccham,emich,mtona,avite,jlaff,eteix,jlote,lbarry,jfort</value>
+    </filters>
+    <label>FRA - DAE AFFECTE A L&apos;EQUIPE</label>
+    <sharedTo>
+        <role>France_DCOI_BIG_PSC_4</role>
+        <role>France_DCOI_BIG_PSC_4_Man</role>
+        <role>France_DCOI_BIG_PSC_5</role>
+        <role>France_DCOI_BIG_PSC_5_Man</role>
+        <role>France_DCOI_BIG_PSC_A</role>
+        <role>France_DCOI_BIG_PSC_A_Resp</role>
+        <role>France_DCOI_BIG_PSC_B</role>
+        <role>France_DCOI_BIG_PSC_B_Resp</role>
+        <role>France_DCOI_BIG_PSC_D</role>
+        <role>France_DCOI_BIG_PSC_D_Resp</role>
+        <role>France_DCOI_BIG_PSC_E</role>
+        <role>France_DCOI_BIG_PSC_E_Resp</role>
+        <role>France_DCOI_BIG_PSC_Fleet</role>
+        <role>France_DCOI_BIG_PSC_Fleet_Resp</role>
+        <role>France_DCOI_BIG_PSC_Resp</role>
+        <role>France_DCOI_BIG_Ventes_2</role>
+        <role>France_DCOI_BIG_Ventes_Fleet_Man</role>
+        <role>France_DOC_Perf_Commerciale_Resp</role>
+    </sharedTo>
+</ListView>

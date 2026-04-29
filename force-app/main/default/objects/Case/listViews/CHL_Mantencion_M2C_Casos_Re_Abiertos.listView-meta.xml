@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CHL_Mantencion_M2C_Casos_Re_Abiertos</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Email_Status__c</columns>
+    <columns>Vehicle_No__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>Appointment_date_time__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.MILESTONE_STATUSICON</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Latest_Email_Message_Date__c</columns>
+    <columns>Email_From_Address__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Reopened</value>
+    </filters>
+    <label>CHL - Mantencion Casos Re Abiertos</label>
+    <language>en_US</language>
+    <queue>CHL_Mantencion</queue>
+    <sharedTo>
+        <group>CHL_Management</group>
+        <group>CHL_Mantencion</group>
+        <role>Chile_CM</role>
+    </sharedTo>
+</ListView>

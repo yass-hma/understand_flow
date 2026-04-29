@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SRB_Finance</fullName>
+    <filterScope>Queue</filterScope>
+    <label>SRB - Finance</label>
+    <language>en_US</language>
+    <queue>SRBFinance</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>SerbiaCM</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

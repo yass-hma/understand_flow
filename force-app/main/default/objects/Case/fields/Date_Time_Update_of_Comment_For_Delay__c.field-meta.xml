@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Time_Update_of_Comment_For_Delay__c</fullName>
+    <description>Automation to populate the field &quot; Date/Time Update of Comment For Delay&quot; when the field &quot; Comment for delay&quot; is updated</description>
+    <label>Date/Time Update of Comment For Delay</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

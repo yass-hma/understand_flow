@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Maintenance_Status__c</fullName>
+    <defaultValue>IF(CONTAINS($Label.ALDSATRecordTypeIds, $RecordType.DeveloperName ), &quot;STATE_NEW&quot;, &quot;&quot;)</defaultValue>
+    <label>Maintenance Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>STATE_NEW</fullName>
+                <default>false</default>
+                <label>New Issue</label>
+            </value>
+            <value>
+                <fullName>STATE_APPOINTMENT</fullName>
+                <default>false</default>
+                <label>Appointment Confirmation</label>
+            </value>
+            <value>
+                <fullName>STATE_GARAGE_ARRIVAL_DATE</fullName>
+                <default>false</default>
+                <label>Garage Arrival</label>
+            </value>
+            <value>
+                <fullName>STATE_DIAGNOSTIC</fullName>
+                <default>false</default>
+                <label>Under Diagnostic</label>
+            </value>
+            <value>
+                <fullName>STATE_BUDGET</fullName>
+                <default>false</default>
+                <label>Budget Received</label>
+            </value>
+            <value>
+                <fullName>STATE_AWAITINGFROMFM</fullName>
+                <default>false</default>
+                <label>Awaiting Authorization from Fleet Manager</label>
+            </value>
+            <value>
+                <fullName>STATE_AUTHORIZEDBYFM</fullName>
+                <default>false</default>
+                <label>Authorized from Fleet Manager</label>
+            </value>
+            <value>
+                <fullName>STATE_AUTHORIZEDBYALD</fullName>
+                <default>false</default>
+                <label>Authorized by ALD</label>
+            </value>
+            <value>
+                <fullName>STATE_BACK_ORDER_SPARE_PARTS</fullName>
+                <default>false</default>
+                <label>Back order spare parts</label>
+            </value>
+            <value>
+                <fullName>STATE_REPARATION</fullName>
+                <default>false</default>
+                <label>Under reparation</label>
+            </value>
+            <value>
+                <fullName>STATE_WORKFINISHED</fullName>
+                <default>false</default>
+                <label>Maintenance Concluded</label>
+            </value>
+            <value>
+                <fullName>STATE_DELIVERED</fullName>
+                <default>false</default>
+                <label>Vehicle Delivered</label>
+            </value>
+            <value>
+                <fullName>STATE_CLOSED</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

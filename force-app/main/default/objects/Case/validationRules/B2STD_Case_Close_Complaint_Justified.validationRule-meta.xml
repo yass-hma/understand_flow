@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B2STD_Case_Close_Complaint_Justified</fullName>
+    <active>false</active>
+    <description>To make the field Complaint Jusified mandatory for B2STD countries when the type of the case is complaint</description>
+    <errorConditionFormula>AND(NOT($User.Bypass_Validation_Rules__c),
+NOT( CONTAINS($Label.CCCMRetrieveRecordTypeIds,RecordType.DeveloperName) ),
+OR(
+RecordType.Name = &quot;Case External India&quot;,
+RecordType.Name = &quot;Case External Turkey&quot;,
+RecordType.Name = &quot;Case External Latvia&quot;,
+RecordType.Name = &quot;Case External Lithuania&quot;,
+RecordType.Name = &quot;Case External Estonia&quot;,
+RecordType.Name = &quot;Case External Brazil&quot;,
+RecordType.Name = &quot;Case External Algeria&quot;,
+RecordType.Name = &quot;Case External Bulgaria&quot;,
+RecordType.Name = &quot;Case External Norway&quot;,
+RecordType.Name = &quot;Case External Morocco&quot;,
+RecordType.Name = &quot;Case External Greece&quot;,
+RecordType.Name = &quot;Case External Romania&quot;,
+RecordType.Name = &quot;Case External Russia&quot;
+),
+ISPICKVAL(Status, &apos;Closed&apos;),
+AND(NOT(ISBLANK(TEXT(Status))) ),
+OR(
+ISPICKVAL(Type,&quot;Complaint&quot;),
+ISPICKVAL(External_Case_Type__c,&quot;Complaint&quot;)
+),
+ISBLANK(TEXT(Complaint_justified__c))
+)</errorConditionFormula>
+    <errorDisplayField>Complaint_justified__c</errorDisplayField>
+    <errorMessage>Please populate the field &apos;Complaint justified&apos;</errorMessage>
+</ValidationRule>
